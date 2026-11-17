@@ -19,25 +19,39 @@
 ## 目录结构
 
 ```
-kuaile_yingyu/          # Flutter 工程
-  lib/
-    pages/              # 页面：年级选择/册选择/单元/课文点读/单词/跟读/设置
-    services/           # 音频播放/打分/语音识别/知识卡
-    data/               # 数据模型/进度数据库/内容加载
-  assets/
-    data/content.json   # 教材内容（12 册）
-    data/riddles/       # 916 道知识卡 JSON
-    audio/              # 标准发音音频
-    images/             # 插图
-需求文档/                # 产品需求文档
+快乐英语/
+  kuaile_yingyu/          # Flutter 工程
+    lib/
+      pages/              # 页面：年级选择/册选择/单元/课文点读/单词/跟读/设置
+      services/           # 音频播放/打分/语音识别/知识卡
+      data/               # 数据模型/进度数据库/内容加载
+    assets/
+      data/content.json   # 教材内容（12 册）
+      data/riddles/       # 916 道知识卡 JSON
+      audio/              # 标准发音音频
+      images/             # 插图
+  快乐英语APP_V1.3.7.apk  # 安装包（不进版本库）
+  小程序上架所需内容及操作步骤.docx
+学生习题/                  # 一年级练习与期末卷
+  111_41-60.docx          # 每日一练主册（101 页）
+  一年级上册每日一练（语文+数学）第1周.docx
+  期末卷/                 # 语文/数学 基础卷+提高卷+参考答案，各 4 页 A4
+需求文档/                  # 产品需求文档
+plan_edit_work/           # 历史任务脚本
 ```
+
+## 工作目录约定
+
+- 新产物按主题放进对应目录，不直接堆在根目录。
+- 临时脚本和渲染中间文件放 `_tmp/`；历史目录确认无用后先移入 `_归档/` 再删。
+- 已忽略：`_tmp/`、`_归档/`、Flutter 构建缓存、`*.apk`、`*.rar`、Word 临时文件（`~$*`）。源码、Word 产物、需求资料进版本库，构建产物和安装包不进。
 
 ## 构建
 
 环境：Flutter 3.x + Android SDK。
 
 ```bash
-cd kuaile_yingyu
+cd 快乐英语/kuaile_yingyu
 flutter pub get
 flutter build apk --release
 # 产物：build/app/outputs/flutter-apk/app-release.apk
