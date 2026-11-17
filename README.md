@@ -46,6 +46,27 @@ plan_edit_work/           # 历史任务脚本
 - 临时脚本和渲染中间文件放 `_tmp/`；历史目录确认无用后先移入 `_归档/` 再删。
 - 已忽略：`_tmp/`、`_归档/`、Flutter 构建缓存、`*.apk`、`*.rar`、Word 临时文件（`~$*`）。源码、Word 产物、需求资料进版本库，构建产物和安装包不进。
 
+## 生成脚本（工具/）
+
+期末卷由脚本生成，改内容改脚本，不要手工改成品。
+
+| 脚本 | 作用 |
+|---|---|
+| `gen_exams2.py` | 生成四份卷（语文/数学 × 基础/提高），数据都在文件内 |
+| `gen_answers.py` | 生成参考答案（每卷 1 页，共 4 页） |
+| `exam_lib.py` | 公共版式库：A4 页面、得分表、页码域、米字格、写话方格、装订线 |
+| `render_any.py` | 用 WPS 转 PDF 并打印页数 |
+| `audit_final.py` | 结构审计：纸张、页数、页脚、大题分合计 |
+| `audit_fill2.py` | 小题分核对 |
+| `audit_ink4.py` | 页面填充率（找空白） |
+| `audit_match.py` | 答案题号与试卷题号是否一一对应 |
+
+用法（在 `工具/` 下）：`gen_exams2.py` → `gen_answers.py` → `render_any.py <docx> _tmp/ex1.pdf` → `audit_final.py`。
+
+- 产物写回 `学生习题/期末卷/`。
+- 中间 PDF 和米字格缓存放 `工具/_tmp/`，不进版本库。
+- 米字格式：单格 1.47cm、线宽统一、相邻格共用边线；`mizige_strip` 是整行一张图绘制。
+
 ## 构建
 
 环境：Flutter 3.x + Android SDK。
