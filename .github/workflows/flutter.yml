@@ -137,13 +137,23 @@ jobs:
           set -o pipefail
           flutter build apk --release --target-platform android-arm64 2>&1 | tee build.log
 
-      # 失败时把关键行转成 annotation，这样不下载日志也能直接看到根因
+      # 失败时把日志尾部整体带出来，这样不下载日志也能看到根因
       - name: 失败时输出关键日志
         if: failure()
         shell: bash
         run: |
-          grep -E "What went wrong|Caused by|> A problem|> [A-Z]|error:|FAILURE:`$|not installed|not found" -A 2 build.log \
-            | tail -n 40 | while IFS= read -r line; do echo "::error::$line"; done
+          echo "===== build.log 尾部 ====="
+          tail -n 60 build.log | while IFS= read -r line; do echo "::error::${line}"; done
+          echo "===== pubspec/gradle 版本 ====="
+          echo "::error::flutter=$(flutter --version | head -n 1)"
+          exit 0
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: build-log
+          path: 快乐英语/kuaile_yingyu/build.log
+          if-no-files-found: warn
 
       - uses: actions/upload-artifact@v4
         with:
