@@ -1090,399 +1090,1808 @@
   {
    "book_id": 2,
    "book_name": "下册",
-   "book_name_en": "Book 2",
+   "book_name_en": "Book 1B",
+   "grade": 1,
    "units": [
     {
      "unit_id": 1,
-     "title": "Unit 1 Colour",
-     "title_en": "Colour",
+     "title": "Unit 1 Toys",
+     "title_en": "Toys",
      "sentences": [
       {
        "id": "U1_S1",
-       "text": "Red.",
+       "text": "I have a toy car.",
+       "cn": "我有一辆玩具车。",
        "audio": "book2/U1_S1.mp3",
-       "image": "book2/U1_S1.png",
-       "image_desc": "红色苹果卡通"
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一辆玩具车。"
       },
       {
        "id": "U1_S2",
-       "text": "Blue.",
+       "text": "You have a balloon.",
+       "cn": "你有一个气球。",
        "audio": "book2/U1_S2.mp3",
-       "image": "book2/U1_S2.png",
-       "image_desc": "蓝色天空卡通"
+       "image": "book2/U1_cover.png",
+       "image_desc": "你有一个气球。"
       },
       {
        "id": "U1_S3",
-       "text": "Yellow.",
+       "text": "A big yellow balloon.",
+       "cn": "一个大的黄色气球。",
        "audio": "book2/U1_S3.mp3",
-       "image": "book2/U1_S3.png",
-       "image_desc": "黄色香蕉卡通"
+       "image": "book2/U1_cover.png",
+       "image_desc": "一个大的黄色气球。"
       },
       {
        "id": "U1_S4",
-       "text": "Green.",
+       "text": "I have a ball.",
+       "cn": "我有一个球。",
        "audio": "book2/U1_S4.mp3",
-       "image": "book2/U1_S4.png",
-       "image_desc": "绿色树叶卡通"
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一个球。"
+      },
+      {
+       "id": "U1_S5",
+       "text": "A small brown ball.",
+       "cn": "一个小的棕色的球。",
+       "audio": "book2/U1_S5.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "一个小的棕色的球。"
+      },
+      {
+       "id": "U1_S6",
+       "text": "Purple balls, brown balls.",
+       "cn": "紫色的球、棕色的球。",
+       "audio": "book2/U1_S6.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "紫色的球、棕色的球。"
+      },
+      {
+       "id": "U1_S7",
+       "text": "Bounce, bounce, bounce.",
+       "cn": "拍、拍、拍。",
+       "audio": "book2/U1_S7.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "拍、拍、拍。"
+      },
+      {
+       "id": "U1_S8",
+       "text": "Bounce the ball.",
+       "cn": "拍球。",
+       "audio": "book2/U1_S8.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "拍球。"
+      },
+      {
+       "id": "U1_S9",
+       "text": "Great!",
+       "cn": "太棒了！",
+       "audio": "book2/U1_S9.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "太棒了！"
+      },
+      {
+       "id": "U1_S10",
+       "text": "I have a train.",
+       "cn": "我有一辆火车。",
+       "audio": "book2/U1_S10.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一辆火车。"
+      },
+      {
+       "id": "U1_S11",
+       "text": "I have a car.",
+       "cn": "我有一辆汽车。",
+       "audio": "book2/U1_S11.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一辆汽车。"
+      },
+      {
+       "id": "U1_S12",
+       "text": "My train is coming.",
+       "cn": "我的火车来了。",
+       "audio": "book2/U1_S12.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我的火车来了。"
+      },
+      {
+       "id": "U1_S13",
+       "text": "My car is coming.",
+       "cn": "我的汽车来了。",
+       "audio": "book2/U1_S13.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我的汽车来了。"
+      },
+      {
+       "id": "U1_S14",
+       "text": "Oh, yeah!",
+       "cn": "噢，耶！",
+       "audio": "book2/U1_S14.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "噢，耶！"
+      },
+      {
+       "id": "U1_S15",
+       "text": "a teddy bear a teddy bear",
+       "cn": "1. 一只泰迪熊一只泰迪熊",
+       "audio": "book2/U1_S15.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "1. 一只泰迪熊一只泰迪熊"
+      },
+      {
+       "id": "U1_S16",
+       "text": "a toy car a toy car",
+       "cn": "3. 一辆玩具车一辆玩具车",
+       "audio": "book2/U1_S16.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "3. 一辆玩具车一辆玩具车"
+      },
+      {
+       "id": "U1_S17",
+       "text": "a balloon a balloon",
+       "cn": "4. 一个气球一个气球",
+       "audio": "book2/U1_S17.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "4. 一个气球一个气球"
+      },
+      {
+       "id": "U1_S18",
+       "text": "a doll a doll",
+       "cn": "6. 一个洋娃娃一个洋娃娃",
+       "audio": "book2/U1_S18.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "6. 一个洋娃娃一个洋娃娃"
+      },
+      {
+       "id": "U1_S19",
+       "text": "Hello, I'm Tiantian.",
+       "cn": "1. 你好，我是天天。",
+       "audio": "book2/U1_S19.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "1. 你好，我是天天。"
+      },
+      {
+       "id": "U1_S20",
+       "text": "Hello, I'm Jinjin.",
+       "cn": "2. 你好，我是金金。",
+       "audio": "book2/U1_S20.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "2. 你好，我是金金。"
+      },
+      {
+       "id": "U1_S21",
+       "text": "I have a doll.",
+       "cn": "我有一个洋娃娃。",
+       "audio": "book2/U1_S21.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一个洋娃娃。"
+      },
+      {
+       "id": "U1_S22",
+       "text": "Hello, I'm Lele.",
+       "cn": "3. 你好，我是乐乐。",
+       "audio": "book2/U1_S22.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "3. 你好，我是乐乐。"
+      },
+      {
+       "id": "U1_S23",
+       "text": "I have a balloon.",
+       "cn": "我有一个气球。",
+       "audio": "book2/U1_S23.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一个气球。"
+      },
+      {
+       "id": "U1_S24",
+       "text": "Hello, I'm Meimei.",
+       "cn": "4. 你好，我是梅梅。",
+       "audio": "book2/U1_S24.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "4. 你好，我是梅梅。"
+      },
+      {
+       "id": "U1_S25",
+       "text": "I have a teddy bear.",
+       "cn": "我有一只泰迪熊。",
+       "audio": "book2/U1_S25.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一只泰迪熊。"
+      },
+      {
+       "id": "U1_S26",
+       "text": "Draw a toy train.",
+       "cn": "1. 画一列玩具火车。",
+       "audio": "book2/U1_S26.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "1. 画一列玩具火车。"
+      },
+      {
+       "id": "U1_S27",
+       "text": "Draw a toy car.",
+       "cn": "2. 画一辆玩具车",
+       "audio": "book2/U1_S27.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "2. 画一辆玩具车"
+      },
+      {
+       "id": "U1_S28",
+       "text": "Draw two teddy bears.",
+       "cn": "3. 画两只泰迪熊。",
+       "audio": "book2/U1_S28.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "3. 画两只泰迪熊。"
+      },
+      {
+       "id": "U1_S29",
+       "text": "Draw three balloons.",
+       "cn": "4. 画三个气球。",
+       "audio": "book2/U1_S29.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "4. 画三个气球。"
+      },
+      {
+       "id": "U1_S30",
+       "text": "Goodbye, kids.",
+       "cn": "再见，孩子们。",
+       "audio": "book2/U1_S30.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "再见，孩子们。"
+      },
+      {
+       "id": "U1_S31",
+       "text": "Look, I have a toy car.",
+       "cn": "—看，我有一辆玩具车。",
+       "audio": "book2/U1_S31.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "—看，我有一辆玩具车。"
+      },
+      {
+       "id": "U1_S32",
+       "text": "How nice.",
+       "cn": "—真棒啊。",
+       "audio": "book2/U1_S32.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "—真棒啊。"
+      },
+      {
+       "id": "U1_S33",
+       "text": "I have a toy train.",
+       "cn": "我有一列玩具火车。",
+       "audio": "book2/U1_S33.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "我有一列玩具火车。"
+      },
+      {
+       "id": "U1_S34",
+       "text": "Ha ha.",
+       "cn": "哈哈。",
+       "audio": "book2/U1_S34.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "哈哈。"
+      },
+      {
+       "id": "U1_S35",
+       "text": "Super. I have a teddy bear.",
+       "cn": "—非常棒。我有一只泰迪熊。",
+       "audio": "book2/U1_S35.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "—非常棒。我有一只泰迪熊。"
+      },
+      {
+       "id": "U1_S36",
+       "text": "Wow, so cute!",
+       "cn": "—哇，真可爱。",
+       "audio": "book2/U1_S36.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "—哇，真可爱。"
+      },
+      {
+       "id": "U1_S37",
+       "text": "Look, I have a balloon.",
+       "cn": "看，我有一个气球。",
+       "audio": "book2/U1_S37.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "看，我有一个气球。"
+      },
+      {
+       "id": "U1_S38",
+       "text": "I have a toy plane.",
+       "cn": "—我有一架玩具飞机。",
+       "audio": "book2/U1_S38.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "—我有一架玩具飞机。"
+      },
+      {
+       "id": "U1_S39",
+       "text": "Cool.",
+       "cn": "—酷啊。",
+       "audio": "book2/U1_S39.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "—酷啊。"
       }
      ],
      "words": [
       {
-       "id": "U1_W1",
-       "text": "red",
+       "text": "a toy car",
        "audio": "book2/U1_W1.mp3",
-       "image": "book2/U1_W1.png",
-       "image_desc": "红苹果",
-       "meaning": "红色"
+       "image": "book2/U1_cover.png",
+       "image_desc": "一辆玩具车",
+       "meaning": "一辆玩具车"
       },
       {
-       "id": "U1_W2",
-       "text": "blue",
+       "text": "a toy train",
        "audio": "book2/U1_W2.mp3",
-       "image": "book2/U1_W2.png",
-       "image_desc": "蓝天",
-       "meaning": "蓝色"
+       "image": "book2/U1_cover.png",
+       "image_desc": "一列玩具火车",
+       "meaning": "一列玩具火车"
       },
       {
-       "id": "U1_W3",
-       "text": "yellow",
+       "text": "a doll",
        "audio": "book2/U1_W3.mp3",
-       "image": "book2/U1_W3.png",
-       "image_desc": "香蕉",
-       "meaning": "黄色"
+       "image": "book2/U1_cover.png",
+       "image_desc": "一个洋娃娃",
+       "meaning": "一个洋娃娃"
       },
       {
-       "id": "U1_W4",
-       "text": "green",
+       "text": "a balloon",
        "audio": "book2/U1_W4.mp3",
-       "image": "book2/U1_W4.png",
-       "image_desc": "绿叶",
-       "meaning": "绿色"
+       "image": "book2/U1_cover.png",
+       "image_desc": "一个气球",
+       "meaning": "一个气球"
+      },
+      {
+       "text": "a teddy bear",
+       "audio": "book2/U1_W5.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "一只泰迪熊",
+       "meaning": "一只泰迪熊"
+      },
+      {
+       "text": "a ball",
+       "audio": "book2/U1_W6.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "2. 一个球",
+       "meaning": "2. 一个球"
+      },
+      {
+       "text": "Goodbye.",
+       "audio": "book2/U1_W7.mp3",
+       "image": "book2/U1_cover.png",
+       "image_desc": "—再见。",
+       "meaning": "—再见。"
       }
      ]
     },
     {
      "unit_id": 2,
-     "title": "Unit 2 Face",
-     "title_en": "Face",
+     "title": "Unit 2 Food",
+     "title_en": "Food",
      "sentences": [
       {
        "id": "U2_S1",
-       "text": "Eye.",
+       "text": "I like hamburgers.",
+       "cn": "我喜欢汉堡。",
        "audio": "book2/U2_S1.mp3",
-       "image": "book2/U2_S1.png",
-       "image_desc": "卡通大眼睛"
+       "image": "book2/U2_cover.png",
+       "image_desc": "我喜欢汉堡。"
       },
       {
        "id": "U2_S2",
-       "text": "Ear.",
+       "text": "What do you like?",
+       "cn": "你喜欢什么？",
        "audio": "book2/U2_S2.mp3",
-       "image": "book2/U2_S2.png",
-       "image_desc": "卡通耳朵"
+       "image": "book2/U2_cover.png",
+       "image_desc": "你喜欢什么？"
       },
       {
        "id": "U2_S3",
-       "text": "Nose.",
+       "text": "I like noodles.",
+       "cn": "我喜欢面条。",
        "audio": "book2/U2_S3.mp3",
-       "image": "book2/U2_S3.png",
-       "image_desc": "卡通鼻子"
+       "image": "book2/U2_cover.png",
+       "image_desc": "我喜欢面条。"
       },
       {
        "id": "U2_S4",
-       "text": "Mouth.",
+       "text": "What about you?",
+       "cn": "你呢？",
        "audio": "book2/U2_S4.mp3",
-       "image": "book2/U2_S4.png",
-       "image_desc": "卡通嘴巴"
+       "image": "book2/U2_cover.png",
+       "image_desc": "你呢？"
+      },
+      {
+       "id": "U2_S5",
+       "text": "I like rice.",
+       "cn": "我喜欢米饭。",
+       "audio": "book2/U2_S5.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "我喜欢米饭。"
+      },
+      {
+       "id": "U2_S6",
+       "text": "And you?",
+       "cn": "你呢？",
+       "audio": "book2/U2_S6.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "你呢？"
+      },
+      {
+       "id": "U2_S7",
+       "text": "I like soup and vegetables.",
+       "cn": "我喜欢喝汤，也喜欢吃蔬菜。",
+       "audio": "book2/U2_S7.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "我喜欢喝汤，也喜欢吃蔬菜。"
+      },
+      {
+       "id": "U2_S8",
+       "text": "Me too.",
+       "cn": "我也是。",
+       "audio": "book2/U2_S8.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "我也是。"
+      },
+      {
+       "id": "U2_S9",
+       "text": "I like chicken.",
+       "cn": "我喜欢鸡肉。",
+       "audio": "book2/U2_S9.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "我喜欢鸡肉。"
+      },
+      {
+       "id": "U2_S10",
+       "text": "Me too. Yummy!",
+       "cn": "我也是。真好吃！",
+       "audio": "book2/U2_S10.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "我也是。真好吃！"
+      },
+      {
+       "id": "U2_S11",
+       "text": "Have a hamburger, Mum.",
+       "cn": "吃个汉堡包，妈妈。",
+       "audio": "book2/U2_S11.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃个汉堡包，妈妈。"
+      },
+      {
+       "id": "U2_S12",
+       "text": "OK, thanks.",
+       "cn": "好的，谢谢。",
+       "audio": "book2/U2_S12.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "好的，谢谢。"
+      },
+      {
+       "id": "U2_S13",
+       "text": "Have some vegetables, Dad.",
+       "cn": "吃些蔬菜，爸爸。",
+       "audio": "book2/U2_S13.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃些蔬菜，爸爸。"
+      },
+      {
+       "id": "U2_S14",
+       "text": "Have some noodles, Grandma.",
+       "cn": "吃些面条，奶奶。",
+       "audio": "book2/U2_S14.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃些面条，奶奶。"
+      },
+      {
+       "id": "U2_S15",
+       "text": "Have some chicken, Grandpa.",
+       "cn": "吃些鸡肉，爷爷。",
+       "audio": "book2/U2_S15.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃些鸡肉，爷爷。"
+      },
+      {
+       "id": "U2_S16",
+       "text": "Have a hamburger, Tiantian.",
+       "cn": "吃个汉堡包，天天。",
+       "audio": "book2/U2_S16.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃个汉堡包，天天。"
+      },
+      {
+       "id": "U2_S17",
+       "text": "Have some vegetables, Tiantian.",
+       "cn": "吃些蔬菜，天天。",
+       "audio": "book2/U2_S17.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃些蔬菜，天天。"
+      },
+      {
+       "id": "U2_S18",
+       "text": "Have some noodles, Tiantian.",
+       "cn": "吃些面条，天天。",
+       "audio": "book2/U2_S18.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃些面条，天天。"
+      },
+      {
+       "id": "U2_S19",
+       "text": "Have some chicken and soup, Tiantian.",
+       "cn": "吃些鸡肉和汤，天天。",
+       "audio": "book2/U2_S19.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "吃些鸡肉和汤，天天。"
+      },
+      {
+       "id": "U2_S20",
+       "text": "Oh, no. I'm full.",
+       "cn": "哦，不，我吃饱了。",
+       "audio": "book2/U2_S20.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "哦，不，我吃饱了。"
+      },
+      {
+       "id": "U2_S21",
+       "text": "Hello, I like noodles.",
+       "cn": "1. 你好，我喜欢面条。",
+       "audio": "book2/U2_S21.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "1. 你好，我喜欢面条。"
+      },
+      {
+       "id": "U2_S22",
+       "text": "I have a hamburger.",
+       "cn": "2. 我有一个汉堡包。",
+       "audio": "book2/U2_S22.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "2. 我有一个汉堡包。"
+      },
+      {
+       "id": "U2_S23",
+       "text": "Thank you, Mum.",
+       "cn": "谢谢你，妈妈。",
+       "audio": "book2/U2_S23.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "谢谢你，妈妈。"
+      },
+      {
+       "id": "U2_S24",
+       "text": "I like vegetables.",
+       "cn": "4. 我喜欢蔬菜。",
+       "audio": "book2/U2_S24.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "4. 我喜欢蔬菜。"
+      },
+      {
+       "id": "U2_S25",
+       "text": "Hi, I'm Big Ben.",
+       "cn": "5.嗨，我是大本。",
+       "audio": "book2/U2_S25.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "5.嗨，我是大本。"
+      },
+      {
+       "id": "U2_S26",
+       "text": "I want three hamburgers.",
+       "cn": "1. 我想要三个汉堡包。",
+       "audio": "book2/U2_S26.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "1. 我想要三个汉堡包。"
+      },
+      {
+       "id": "U2_S27",
+       "text": "Hello, I like rice.",
+       "cn": "4. 你好，我喜欢米饭。",
+       "audio": "book2/U2_S27.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "4. 你好，我喜欢米饭。"
+      },
+      {
+       "id": "U2_S28",
+       "text": "Mum, what do you have for supper, Mum?",
+       "cn": "1. —妈妈，晚饭你准备了什么？",
+       "audio": "book2/U2_S28.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "1. —妈妈，晚饭你准备了什么？"
+      },
+      {
+       "id": "U2_S29",
+       "text": "Tomorrow is your birthday.",
+       "cn": "—明天是你的生日。",
+       "audio": "book2/U2_S29.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "—明天是你的生日。"
+      },
+      {
+       "id": "U2_S30",
+       "text": "Today we have jiaozi.",
+       "cn": "今天我们吃饺子。",
+       "audio": "book2/U2_S30.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "今天我们吃饺子。"
+      },
+      {
+       "id": "U2_S31",
+       "text": "Great. I like jiaozi.",
+       "cn": "—太棒了。 我喜欢饺子。",
+       "audio": "book2/U2_S31.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "—太棒了。 我喜欢饺子。"
+      },
+      {
+       "id": "U2_S32",
+       "text": "Yummy! Thank you.",
+       "cn": "好吃！ 谢谢。",
+       "audio": "book2/U2_S32.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "好吃！ 谢谢。"
+      },
+      {
+       "id": "U2_S33",
+       "text": "Good morning, Mum.",
+       "cn": "2. —早上好，妈妈。",
+       "audio": "book2/U2_S33.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "2. —早上好，妈妈。"
+      },
+      {
+       "id": "U2_S34",
+       "text": "Good morning, Dad.",
+       "cn": "早上好，爸爸。",
+       "audio": "book2/U2_S34.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "早上好，爸爸。"
+      },
+      {
+       "id": "U2_S35",
+       "text": "Morning, Tiantian.",
+       "cn": "—早上好，天天。",
+       "audio": "book2/U2_S35.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "—早上好，天天。"
+      },
+      {
+       "id": "U2_S36",
+       "text": "Today is your birthday.",
+       "cn": "今天是你的生日。",
+       "audio": "book2/U2_S36.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "今天是你的生日。"
+      },
+      {
+       "id": "U2_S37",
+       "text": "We have noodles.",
+       "cn": "我们吃面条。",
+       "audio": "book2/U2_S37.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "我们吃面条。"
+      },
+      {
+       "id": "U2_S38",
+       "text": "Oh, great.",
+       "cn": "—哦，太好了。",
+       "audio": "book2/U2_S38.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "—哦，太好了。"
+      },
+      {
+       "id": "U2_S39",
+       "text": "Happy birthday, Tiantian.",
+       "cn": "3.—生日快乐，天天。",
+       "audio": "book2/U2_S39.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "3.—生日快乐，天天。"
+      },
+      {
+       "id": "U2_S40",
+       "text": "Thank you.",
+       "cn": "—谢谢。",
+       "audio": "book2/U2_S40.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "—谢谢。"
+      },
+      {
+       "id": "U2_S41",
+       "text": "Super yummy.",
+       "cn": "—超级好吃。",
+       "audio": "book2/U2_S41.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "—超级好吃。"
       }
      ],
      "words": [
       {
-       "id": "U2_W1",
-       "text": "eye",
+       "text": "a hamburger",
        "audio": "book2/U2_W1.mp3",
-       "image": "book2/U2_W1.png",
-       "image_desc": "眼睛",
-       "meaning": "眼睛"
+       "image": "book2/U2_cover.png",
+       "image_desc": "一个汉堡",
+       "meaning": "一个汉堡"
       },
       {
-       "id": "U2_W2",
-       "text": "ear",
+       "text": "noodles",
        "audio": "book2/U2_W2.mp3",
-       "image": "book2/U2_W2.png",
-       "image_desc": "耳朵",
-       "meaning": "耳朵"
+       "image": "book2/U2_cover.png",
+       "image_desc": "面条",
+       "meaning": "面条"
       },
       {
-       "id": "U2_W3",
-       "text": "nose",
+       "text": "rice",
        "audio": "book2/U2_W3.mp3",
-       "image": "book2/U2_W3.png",
-       "image_desc": "鼻子",
-       "meaning": "鼻子"
+       "image": "book2/U2_cover.png",
+       "image_desc": "米饭",
+       "meaning": "米饭"
       },
       {
-       "id": "U2_W4",
-       "text": "mouth",
+       "text": "vegetables",
        "audio": "book2/U2_W4.mp3",
-       "image": "book2/U2_W4.png",
-       "image_desc": "嘴巴",
-       "meaning": "嘴巴"
+       "image": "book2/U2_cover.png",
+       "image_desc": "蔬菜",
+       "meaning": "蔬菜"
+      },
+      {
+       "text": "chicken",
+       "audio": "book2/U2_W5.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "鸡肉",
+       "meaning": "鸡肉"
+      },
+      {
+       "text": "Yummy!",
+       "audio": "book2/U2_W6.mp3",
+       "image": "book2/U2_cover.png",
+       "image_desc": "真好吃！",
+       "meaning": "真好吃！"
       }
      ]
     },
     {
      "unit_id": 3,
-     "title": "Unit 3 Animals",
-     "title_en": "Animals",
+     "title": "Unit 3 Drinks",
+     "title_en": "Drinks",
      "sentences": [
       {
        "id": "U3_S1",
-       "text": "It’s a cat.",
+       "text": "Have some water, please.",
+       "cn": "请喝些水。",
        "audio": "book2/U3_S1.mp3",
-       "image": "book2/U3_S1.png",
-       "image_desc": "卡通小猫"
+       "image": "book2/U3_cover.png",
+       "image_desc": "请喝些水。"
       },
       {
        "id": "U3_S2",
-       "text": "It’s a dog.",
+       "text": "Would you like some water?",
+       "cn": "你想要水吗？",
        "audio": "book2/U3_S2.mp3",
-       "image": "book2/U3_S2.png",
-       "image_desc": "卡通小狗"
+       "image": "book2/U3_cover.png",
+       "image_desc": "你想要水吗？"
       },
       {
        "id": "U3_S3",
-       "text": "It’s a bird.",
+       "text": "Yes, please, please.",
+       "cn": "是的，请给我来水。",
        "audio": "book2/U3_S3.mp3",
-       "image": "book2/U3_S3.png",
-       "image_desc": "卡通小鸟"
+       "image": "book2/U3_cover.png",
+       "image_desc": "是的，请给我来水。"
+      },
+      {
+       "id": "U3_S4",
+       "text": "Would you like some tea?",
+       "cn": "你想要来杯茶吗？",
+       "audio": "book2/U3_S4.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "你想要来杯茶吗？"
+      },
+      {
+       "id": "U3_S5",
+       "text": "Would you like some Coke?",
+       "cn": "你想要可乐吗？",
+       "audio": "book2/U3_S5.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "你想要可乐吗？"
+      },
+      {
+       "id": "U3_S6",
+       "text": "Would you like some juice?",
+       "cn": "你想要果汁吗？",
+       "audio": "book2/U3_S6.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "你想要果汁吗？"
+      },
+      {
+       "id": "U3_S7",
+       "text": "Would you like some coffee?",
+       "cn": "你想要杯咖啡吗？",
+       "audio": "book2/U3_S7.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "你想要杯咖啡吗？"
+      },
+      {
+       "id": "U3_S8",
+       "text": "Oh, no, thanks.",
+       "cn": "哦，不，谢谢。",
+       "audio": "book2/U3_S8.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "哦，不，谢谢。"
+      },
+      {
+       "id": "U3_S9",
+       "text": "What would you like?",
+       "cn": "你想要点什么？",
+       "audio": "book2/U3_S9.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "你想要点什么？"
+      },
+      {
+       "id": "U3_S10",
+       "text": "Tea, please.",
+       "cn": "给我一杯茶，谢谢。",
+       "audio": "book2/U3_S10.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "给我一杯茶，谢谢。"
+      },
+      {
+       "id": "U3_S11",
+       "text": "Have some milk, please.",
+       "cn": "请喝些牛奶吧。",
+       "audio": "book2/U3_S11.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "请喝些牛奶吧。"
+      },
+      {
+       "id": "U3_S12",
+       "text": "Thank you, I like milk.",
+       "cn": "谢谢，我喜欢牛奶。",
+       "audio": "book2/U3_S12.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "谢谢，我喜欢牛奶。"
+      },
+      {
+       "id": "U3_S13",
+       "text": "Have some juice, please.",
+       "cn": "请喝些果汁吧。",
+       "audio": "book2/U3_S13.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "请喝些果汁吧。"
+      },
+      {
+       "id": "U3_S14",
+       "text": "Thank you, I like juice.",
+       "cn": "谢谢，我喜欢果汁。",
+       "audio": "book2/U3_S14.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "谢谢，我喜欢果汁。"
+      },
+      {
+       "id": "U3_S15",
+       "text": "Yes, please.",
+       "cn": "是的，请给我可乐。",
+       "audio": "book2/U3_S15.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "是的，请给我可乐。"
+      },
+      {
+       "id": "U3_S16",
+       "text": "What about some tea?",
+       "cn": "你想要杯茶吗？",
+       "audio": "book2/U3_S16.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "你想要杯茶吗？"
+      },
+      {
+       "id": "U3_S17",
+       "text": "No, thanks.",
+       "cn": "不了，谢谢。",
+       "audio": "book2/U3_S17.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "不了，谢谢。"
+      },
+      {
+       "id": "U3_S18",
+       "text": "music",
+       "cn": "音乐",
+       "audio": "book2/U3_S18.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "音乐"
+      },
+      {
+       "id": "U3_S19",
+       "text": "water water",
+       "cn": "1. 水水",
+       "audio": "book2/U3_S19.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "1. 水水"
+      },
+      {
+       "id": "U3_S20",
+       "text": "juice juice",
+       "cn": "2. 果汁果汁",
+       "audio": "book2/U3_S20.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "2. 果汁果汁"
+      },
+      {
+       "id": "U3_S21",
+       "text": "Coke Coke",
+       "cn": "3. 可乐可乐",
+       "audio": "book2/U3_S21.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "3. 可乐可乐"
+      },
+      {
+       "id": "U3_S22",
+       "text": "tea tea",
+       "cn": "4. 茶茶",
+       "audio": "book2/U3_S22.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "4. 茶茶"
+      },
+      {
+       "id": "U3_S23",
+       "text": "coffee coffee",
+       "cn": "5. 咖啡咖啡",
+       "audio": "book2/U3_S23.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "5. 咖啡咖啡"
+      },
+      {
+       "id": "U3_S24",
+       "text": "milk milk",
+       "cn": "6. 牛奶牛奶",
+       "audio": "book2/U3_S24.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "6. 牛奶牛奶"
+      },
+      {
+       "id": "U3_S25",
+       "text": "I like tea.",
+       "cn": "1. 我喜欢茶。",
+       "audio": "book2/U3_S25.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "1. 我喜欢茶。"
+      },
+      {
+       "id": "U3_S26",
+       "text": "I like water.",
+       "cn": "2. 我喜欢水。",
+       "audio": "book2/U3_S26.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "2. 我喜欢水。"
+      },
+      {
+       "id": "U3_S27",
+       "text": "I like juice.",
+       "cn": "3. 我喜欢果汁。",
+       "audio": "book2/U3_S27.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "3. 我喜欢果汁。"
+      },
+      {
+       "id": "U3_S28",
+       "text": "I like Coke.",
+       "cn": "4. 我喜欢可乐。",
+       "audio": "book2/U3_S28.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "4. 我喜欢可乐。"
+      },
+      {
+       "id": "U3_S29",
+       "text": "What about you, Tiantian?",
+       "cn": "—你呢，天天？",
+       "audio": "book2/U3_S29.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "—你呢，天天？"
+      },
+      {
+       "id": "U3_S30",
+       "text": "I like a glass of juice.",
+       "cn": "—我想要一杯果汁。",
+       "audio": "book2/U3_S30.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "—我想要一杯果汁。"
+      },
+      {
+       "id": "U3_S31",
+       "text": "I like juice very much.",
+       "cn": "我非常喜欢果汁。",
+       "audio": "book2/U3_S31.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "我非常喜欢果汁。"
+      },
+      {
+       "id": "U3_S32",
+       "text": "Here you are.",
+       "cn": "—给你。",
+       "audio": "book2/U3_S32.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "—给你。"
+      },
+      {
+       "id": "U3_S33",
+       "text": "Thank you.",
+       "cn": "—谢谢。",
+       "audio": "book2/U3_S33.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "—谢谢。"
       }
      ],
      "words": [
       {
-       "id": "U3_W1",
-       "text": "cat",
+       "text": "water",
        "audio": "book2/U3_W1.mp3",
-       "image": "book2/U3_W1.png",
-       "image_desc": "小猫",
-       "meaning": "猫"
+       "image": "book2/U3_cover.png",
+       "image_desc": "水",
+       "meaning": "水"
       },
       {
-       "id": "U3_W2",
-       "text": "dog",
+       "text": "tea",
        "audio": "book2/U3_W2.mp3",
-       "image": "book2/U3_W2.png",
-       "image_desc": "小狗",
-       "meaning": "狗"
+       "image": "book2/U3_cover.png",
+       "image_desc": "茶",
+       "meaning": "茶"
       },
       {
-       "id": "U3_W3",
-       "text": "bird",
+       "text": "milk",
        "audio": "book2/U3_W3.mp3",
-       "image": "book2/U3_W3.png",
-       "image_desc": "小鸟",
-       "meaning": "鸟"
+       "image": "book2/U3_cover.png",
+       "image_desc": "牛奶",
+       "meaning": "牛奶"
+      },
+      {
+       "text": "juice",
+       "audio": "book2/U3_W4.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "果汁",
+       "meaning": "果汁"
+      },
+      {
+       "text": "Coke",
+       "audio": "book2/U3_W5.mp3",
+       "image": "book2/U3_cover.png",
+       "image_desc": "可乐",
+       "meaning": "可乐"
       }
      ]
     },
     {
      "unit_id": 4,
-     "title": "Unit 4 Fruit",
-     "title_en": "Fruit",
+     "title": "Unit 4 My Body",
+     "title_en": "My Body",
      "sentences": [
       {
        "id": "U4_S1",
-       "text": "Apple.",
+       "text": "Touch your nose, please.",
+       "cn": "请摸摸你的鼻子。",
        "audio": "book2/U4_S1.mp3",
-       "image": "book2/U4_S1.png",
-       "image_desc": "苹果卡通"
+       "image": "book2/U4_cover.png",
+       "image_desc": "请摸摸你的鼻子。"
       },
       {
        "id": "U4_S2",
-       "text": "Banana.",
+       "text": "Wash your hands.",
+       "cn": "洗洗你的手。",
        "audio": "book2/U4_S2.mp3",
-       "image": "book2/U4_S2.png",
-       "image_desc": "香蕉卡通"
+       "image": "book2/U4_cover.png",
+       "image_desc": "洗洗你的手。"
       },
       {
        "id": "U4_S3",
-       "text": "Orange.",
+       "text": "OK.",
+       "cn": "好的。",
        "audio": "book2/U4_S3.mp3",
-       "image": "book2/U4_S3.png",
-       "image_desc": "橙子卡通"
+       "image": "book2/U4_cover.png",
+       "image_desc": "好的。"
+      },
+      {
+       "id": "U4_S4",
+       "text": "Wash your face.",
+       "cn": "洗洗你的脸。",
+       "audio": "book2/U4_S4.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "洗洗你的脸。"
+      },
+      {
+       "id": "U4_S5",
+       "text": "Come on, come on.",
+       "cn": "洗啊洗、洗啊洗。",
+       "audio": "book2/U4_S5.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "洗啊洗、洗啊洗。"
+      },
+      {
+       "id": "U4_S6",
+       "text": "Come on and on.",
+       "cn": "快快洗。",
+       "audio": "book2/U4_S6.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "快快洗。"
+      },
+      {
+       "id": "U4_S7",
+       "text": "Hands and face,",
+       "cn": "手和脸，",
+       "audio": "book2/U4_S7.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "手和脸，"
+      },
+      {
+       "id": "U4_S8",
+       "text": "clean, clean, clean.",
+       "cn": "干净、干净、干净。",
+       "audio": "book2/U4_S8.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "干净、干净、干净。"
+      },
+      {
+       "id": "U4_S9",
+       "text": "Point to his ears.",
+       "cn": "指出他的耳朵。",
+       "audio": "book2/U4_S9.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "指出他的耳朵。"
+      },
+      {
+       "id": "U4_S10",
+       "text": "OK. Ears.",
+       "cn": "好的。耳朵（在这里）。",
+       "audio": "book2/U4_S10.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "好的。耳朵（在这里）。"
+      },
+      {
+       "id": "U4_S11",
+       "text": "Touch your nose.",
+       "cn": "摸摸你的鼻子。",
+       "audio": "book2/U4_S11.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "摸摸你的鼻子。"
+      },
+      {
+       "id": "U4_S12",
+       "text": "Touch your ears.",
+       "cn": "摸摸你的耳朵。",
+       "audio": "book2/U4_S12.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "摸摸你的耳朵。"
+      },
+      {
+       "id": "U4_S13",
+       "text": "Touch your eyes.",
+       "cn": "摸摸你的眼睛。",
+       "audio": "book2/U4_S13.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "摸摸你的眼睛。"
+      },
+      {
+       "id": "U4_S14",
+       "text": "Touch your mouth.",
+       "cn": "摸摸你的嘴巴。",
+       "audio": "book2/U4_S14.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "摸摸你的嘴巴。"
+      },
+      {
+       "id": "U4_S15",
+       "text": "Touch your face.",
+       "cn": "摸摸你的脸。",
+       "audio": "book2/U4_S15.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "摸摸你的脸。"
+      },
+      {
+       "id": "U4_S16",
+       "text": "Touch your head.",
+       "cn": "摸摸你的头。",
+       "audio": "book2/U4_S16.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "摸摸你的头。"
+      },
+      {
+       "id": "U4_S17",
+       "text": "Come on.",
+       "cn": "快来呀。",
+       "audio": "book2/U4_S17.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "快来呀。"
+      },
+      {
+       "id": "U4_S18",
+       "text": "My nose, my eyes, my mouth, my ears.",
+       "cn": "我的鼻子、我的眼睛、我的嘴巴、我的耳朵。",
+       "audio": "book2/U4_S18.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "我的鼻子、我的眼睛、我的嘴巴、我的耳朵。"
+      },
+      {
+       "id": "U4_S19",
+       "text": "eye eye",
+       "cn": "1. 眼睛眼睛",
+       "audio": "book2/U4_S19.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "1. 眼睛眼睛"
+      },
+      {
+       "id": "U4_S20",
+       "text": "ear ear",
+       "cn": "2. 耳朵耳朵",
+       "audio": "book2/U4_S20.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "2. 耳朵耳朵"
+      },
+      {
+       "id": "U4_S21",
+       "text": "face face",
+       "cn": "3. 脸脸",
+       "audio": "book2/U4_S21.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "3. 脸脸"
+      },
+      {
+       "id": "U4_S22",
+       "text": "nose nose",
+       "cn": "4. 鼻子鼻子",
+       "audio": "book2/U4_S22.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "4. 鼻子鼻子"
+      },
+      {
+       "id": "U4_S23",
+       "text": "mouth mouth",
+       "cn": "5. 嘴巴嘴巴",
+       "audio": "book2/U4_S23.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "5. 嘴巴嘴巴"
+      },
+      {
+       "id": "U4_S24",
+       "text": "hand hand",
+       "cn": "6. 手手",
+       "audio": "book2/U4_S24.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "6. 手手"
+      },
+      {
+       "id": "U4_S25",
+       "text": "Trace the eyes.",
+       "cn": "1. 描一描眼睛。",
+       "audio": "book2/U4_S25.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "1. 描一描眼睛。"
+      },
+      {
+       "id": "U4_S26",
+       "text": "Trace the nose.",
+       "cn": "2. 描一描鼻子。",
+       "audio": "book2/U4_S26.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "2. 描一描鼻子。"
+      },
+      {
+       "id": "U4_S27",
+       "text": "Trace the ears.",
+       "cn": "3. 描一描耳朵。",
+       "audio": "book2/U4_S27.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "3. 描一描耳朵。"
+      },
+      {
+       "id": "U4_S28",
+       "text": "Trace the mouth.",
+       "cn": "4. 描一描嘴巴。",
+       "audio": "book2/U4_S28.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "4. 描一描嘴巴。"
+      },
+      {
+       "id": "U4_S29",
+       "text": "Colour the eyes blue and red.",
+       "cn": "1. 把眼睛涂成蓝色和红色。",
+       "audio": "book2/U4_S29.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "1. 把眼睛涂成蓝色和红色。"
+      },
+      {
+       "id": "U4_S30",
+       "text": "Colour the mouth red and yellow.",
+       "cn": "2. 把嘴涂成红色和黄色。",
+       "audio": "book2/U4_S30.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "2. 把嘴涂成红色和黄色。"
+      },
+      {
+       "id": "U4_S31",
+       "text": "Colour the nose purple.",
+       "cn": "3. 把鼻子涂成紫色。",
+       "audio": "book2/U4_S31.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "3. 把鼻子涂成紫色。"
+      },
+      {
+       "id": "U4_S32",
+       "text": "Colour the ears green and pink.",
+       "cn": "4. 把耳朵涂成绿色和粉色。",
+       "audio": "book2/U4_S32.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "4. 把耳朵涂成绿色和粉色。"
+      },
+      {
+       "id": "U4_S33",
+       "text": "Colour the face grey.",
+       "cn": "5. 把脸涂成灰色。",
+       "audio": "book2/U4_S33.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "5. 把脸涂成灰色。"
+      },
+      {
+       "id": "U4_S34",
+       "text": "Colour the hands orange and black.",
+       "cn": "6. 把手涂成橙色和黑色。",
+       "audio": "book2/U4_S34.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "6. 把手涂成橙色和黑色。"
+      },
+      {
+       "id": "U4_S35",
+       "text": "It has a small mouth, a small nose,",
+       "cn": "它有一个小嘴、一个小鼻子、",
+       "audio": "book2/U4_S35.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "它有一个小嘴、一个小鼻子、"
+      },
+      {
+       "id": "U4_S36",
+       "text": "red eyes and long ears.",
+       "cn": "红色的眼睛和长耳朵。",
+       "audio": "book2/U4_S36.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "红色的眼睛和长耳朵。"
+      },
+      {
+       "id": "U4_S37",
+       "text": "What is it?",
+       "cn": "它是什么？",
+       "audio": "book2/U4_S37.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "它是什么？"
+      },
+      {
+       "id": "U4_S38",
+       "text": "Do you know?",
+       "cn": "你知道吗？",
+       "audio": "book2/U4_S38.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "你知道吗？"
+      },
+      {
+       "id": "U4_S39",
+       "text": "It's a rabbit.",
+       "cn": "—它是一只兔子。",
+       "audio": "book2/U4_S39.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "—它是一只兔子。"
       }
      ],
      "words": [
       {
-       "id": "U4_W1",
-       "text": "apple",
+       "text": "eye",
        "audio": "book2/U4_W1.mp3",
-       "image": "book2/U4_W1.png",
-       "image_desc": "苹果",
-       "meaning": "苹果"
+       "image": "book2/U4_cover.png",
+       "image_desc": "眼睛",
+       "meaning": "眼睛"
       },
       {
-       "id": "U4_W2",
-       "text": "banana",
+       "text": "ear",
        "audio": "book2/U4_W2.mp3",
-       "image": "book2/U4_W2.png",
-       "image_desc": "香蕉",
-       "meaning": "香蕉"
+       "image": "book2/U4_cover.png",
+       "image_desc": "耳朵",
+       "meaning": "耳朵"
       },
       {
-       "id": "U4_W3",
-       "text": "orange",
+       "text": "face",
        "audio": "book2/U4_W3.mp3",
-       "image": "book2/U4_W3.png",
-       "image_desc": "橙子",
-       "meaning": "橙子"
+       "image": "book2/U4_cover.png",
+       "image_desc": "脸",
+       "meaning": "脸"
+      },
+      {
+       "text": "nose",
+       "audio": "book2/U4_W4.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "鼻子",
+       "meaning": "鼻子"
+      },
+      {
+       "text": "mouth",
+       "audio": "book2/U4_W5.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "嘴巴",
+       "meaning": "嘴巴"
+      },
+      {
+       "text": "My hands.",
+       "audio": "book2/U4_W6.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "我的手。",
+       "meaning": "我的手。"
+      },
+      {
+       "text": "My face.",
+       "audio": "book2/U4_W7.mp3",
+       "image": "book2/U4_cover.png",
+       "image_desc": "我的脸。",
+       "meaning": "我的脸。"
       }
      ]
     },
     {
      "unit_id": 5,
-     "title": "Unit 5 Body",
-     "title_en": "Body",
+     "title": "Unit 5 Sports",
+     "title_en": "Sports",
      "sentences": [
       {
        "id": "U5_S1",
-       "text": "Hand.",
+       "text": "I can run.",
+       "cn": "我会跑步。",
        "audio": "book2/U5_S1.mp3",
-       "image": "book2/U5_S1.png",
-       "image_desc": "卡通小手"
+       "image": "book2/U5_cover.png",
+       "image_desc": "我会跑步。"
       },
       {
        "id": "U5_S2",
-       "text": "Foot.",
+       "text": "play football",
+       "cn": "踢足球",
        "audio": "book2/U5_S2.mp3",
-       "image": "book2/U5_S2.png",
-       "image_desc": "卡通小脚"
+       "image": "book2/U5_cover.png",
+       "image_desc": "踢足球"
       },
       {
        "id": "U5_S3",
-       "text": "Arm.",
+       "text": "play table tennis",
+       "cn": "打乒乓球",
        "audio": "book2/U5_S3.mp3",
-       "image": "book2/U5_S3.png",
-       "image_desc": "卡通胳膊"
+       "image": "book2/U5_cover.png",
+       "image_desc": "打乒乓球"
+      },
+      {
+       "id": "U5_S4",
+       "text": "You can ski, and I can ski, too.",
+       "cn": "你会滑雪，我也会滑雪。",
+       "audio": "book2/U5_S4.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "你会滑雪，我也会滑雪。"
+      },
+      {
+       "id": "U5_S5",
+       "text": "You can skate, and I can skate, too.",
+       "cn": "你会溜冰，我也会溜冰。",
+       "audio": "book2/U5_S5.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "你会溜冰，我也会溜冰。"
+      },
+      {
+       "id": "U5_S6",
+       "text": "You can swim, and I can swim, too.",
+       "cn": "你会游泳，我也会游泳。",
+       "audio": "book2/U5_S6.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "你会游泳，我也会游泳。"
+      },
+      {
+       "id": "U5_S7",
+       "text": "You can play football.",
+       "cn": "你会踢足球。",
+       "audio": "book2/U5_S7.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "你会踢足球。"
+      },
+      {
+       "id": "U5_S8",
+       "text": "Me too.",
+       "cn": "我也会。",
+       "audio": "book2/U5_S8.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我也会。"
+      },
+      {
+       "id": "U5_S9",
+       "text": "What can you do?",
+       "cn": "你会做什么？",
+       "audio": "book2/U5_S9.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "你会做什么？"
+      },
+      {
+       "id": "U5_S10",
+       "text": "I can play table tennis.",
+       "cn": "我会打乒乓球。",
+       "audio": "book2/U5_S10.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我会打乒乓球。"
+      },
+      {
+       "id": "U5_S11",
+       "text": "What a sunny day!",
+       "cn": "多么晴朗的一天啊！",
+       "audio": "book2/U5_S11.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "多么晴朗的一天啊！"
+      },
+      {
+       "id": "U5_S12",
+       "text": "Swim, swim, swim with me.",
+       "cn": "游泳，游泳，和我一起游。",
+       "audio": "book2/U5_S12.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "游泳，游泳，和我一起游。"
+      },
+      {
+       "id": "U5_S13",
+       "text": "Swim, swim, swim far away.",
+       "cn": "游泳，游泳，越游越远。",
+       "audio": "book2/U5_S13.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "游泳，游泳，越游越远。"
+      },
+      {
+       "id": "U5_S14",
+       "text": "Play, play, play with me.",
+       "cn": "玩啊，玩啊，和我一起玩。",
+       "audio": "book2/U5_S14.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "玩啊，玩啊，和我一起玩。"
+      },
+      {
+       "id": "U5_S15",
+       "text": "Football, football, kick this way!",
+       "cn": "足球，足球，往这边踢！",
+       "audio": "book2/U5_S15.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "足球，足球，往这边踢！"
+      },
+      {
+       "id": "U5_S16",
+       "text": "I'm a dog.",
+       "cn": "1. 我是一只狗。",
+       "audio": "book2/U5_S16.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "1. 我是一只狗。"
+      },
+      {
+       "id": "U5_S17",
+       "text": "I'm a rabbit.",
+       "cn": "2. 我是一只兔子。",
+       "audio": "book2/U5_S17.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "2. 我是一只兔子。"
+      },
+      {
+       "id": "U5_S18",
+       "text": "I can ski.",
+       "cn": "我会滑雪。",
+       "audio": "book2/U5_S18.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我会滑雪。"
+      },
+      {
+       "id": "U5_S19",
+       "text": "I'm a cat.",
+       "cn": "3. 我是一只猫。",
+       "audio": "book2/U5_S19.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "3. 我是一只猫。"
+      },
+      {
+       "id": "U5_S20",
+       "text": "I can skate.",
+       "cn": "我会滑冰。",
+       "audio": "book2/U5_S20.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我会滑冰。"
+      },
+      {
+       "id": "U5_S21",
+       "text": "I'm a fish.",
+       "cn": "4. 我是一条鱼。",
+       "audio": "book2/U5_S21.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "4. 我是一条鱼。"
+      },
+      {
+       "id": "U5_S22",
+       "text": "I can swim.",
+       "cn": "我会游泳。",
+       "audio": "book2/U5_S22.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我会游泳。"
+      },
+      {
+       "id": "U5_S23",
+       "text": "I'm a puppy.",
+       "cn": "5.我是一只小狗。",
+       "audio": "book2/U5_S23.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "5.我是一只小狗。"
+      },
+      {
+       "id": "U5_S24",
+       "text": "I can play football.",
+       "cn": "我会踢足球。",
+       "audio": "book2/U5_S24.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我会踢足球。"
+      },
+      {
+       "id": "U5_S25",
+       "text": "I'm a kitten.",
+       "cn": "我是一只小猫。",
+       "audio": "book2/U5_S25.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我是一只小猫。"
+      },
+      {
+       "id": "U5_S26",
+       "text": "I can play football, too.",
+       "cn": "我也会踢足球。",
+       "audio": "book2/U5_S26.mp3",
+       "image": "book2/U5_cover.png",
+       "image_desc": "我也会踢足球。"
       }
      ],
      "words": [
       {
-       "id": "U5_W1",
-       "text": "hand",
+       "text": "ski",
        "audio": "book2/U5_W1.mp3",
-       "image": "book2/U5_W1.png",
-       "image_desc": "手",
-       "meaning": "手"
+       "image": "book2/U5_cover.png",
+       "image_desc": "滑雪",
+       "meaning": "滑雪"
       },
       {
-       "id": "U5_W2",
-       "text": "foot",
+       "text": "skate",
        "audio": "book2/U5_W2.mp3",
-       "image": "book2/U5_W2.png",
-       "image_desc": "脚",
-       "meaning": "脚"
+       "image": "book2/U5_cover.png",
+       "image_desc": "滑冰",
+       "meaning": "滑冰"
       },
       {
-       "id": "U5_W3",
-       "text": "arm",
+       "text": "swim",
        "audio": "book2/U5_W3.mp3",
-       "image": "book2/U5_W3.png",
-       "image_desc": "胳膊",
-       "meaning": "手臂"
+       "image": "book2/U5_cover.png",
+       "image_desc": "游泳",
+       "meaning": "游泳"
       }
      ]
     },
     {
      "unit_id": 6,
-     "title": "Unit 6 Numbers 6-10",
-     "title_en": "Numbers 6-10",
+     "title": "Unit 6 Happy Time",
+     "title_en": "Happy Time",
      "sentences": [
       {
        "id": "U6_S1",
-       "text": "Six.",
+       "text": "Welcome to the picnic!",
+       "cn": "欢迎来本次野餐！",
        "audio": "book2/U6_S1.mp3",
-       "image": "book2/U6_S1.png",
-       "image_desc": "数字6卡通"
+       "image": "book2/U6_cover.png",
+       "image_desc": "欢迎来本次野餐！"
       },
       {
        "id": "U6_S2",
-       "text": "Seven.",
+       "text": "Hi, I'm Tom.",
+       "cn": "1. 嗨，我是汤姆。",
        "audio": "book2/U6_S2.mp3",
-       "image": "book2/U6_S2.png",
-       "image_desc": "数字7卡通"
+       "image": "book2/U6_cover.png",
+       "image_desc": "1. 嗨，我是汤姆。"
       },
       {
        "id": "U6_S3",
-       "text": "Eight.",
+       "text": "I like hamburgers, hot dogs, Coke.",
+       "cn": "我喜欢汉堡、热狗、可乐。",
        "audio": "book2/U6_S3.mp3",
-       "image": "book2/U6_S3.png",
-       "image_desc": "数字8卡通"
+       "image": "book2/U6_cover.png",
+       "image_desc": "我喜欢汉堡、热狗、可乐。"
       },
       {
        "id": "U6_S4",
-       "text": "Nine.",
+       "text": "Tom, here's some chicken for you.",
+       "cn": "2. —汤姆，这些鸡肉给你。",
        "audio": "book2/U6_S4.mp3",
-       "image": "book2/U6_S4.png",
-       "image_desc": "数字9卡通"
+       "image": "book2/U6_cover.png",
+       "image_desc": "2. —汤姆，这些鸡肉给你。"
       },
       {
        "id": "U6_S5",
-       "text": "Ten.",
+       "text": "Thank you.",
+       "cn": "—谢谢你。",
        "audio": "book2/U6_S5.mp3",
-       "image": "book2/U6_S5.png",
-       "image_desc": "数字10卡通"
+       "image": "book2/U6_cover.png",
+       "image_desc": "—谢谢你。"
+      },
+      {
+       "id": "U6_S6",
+       "text": "Here's some water for you.",
+       "cn": "3. —这些水给你。",
+       "audio": "book2/U6_S6.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "3. —这些水给你。"
+      },
+      {
+       "id": "U6_S7",
+       "text": "Thanks.",
+       "cn": "—谢谢。",
+       "audio": "book2/U6_S7.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "—谢谢。"
+      },
+      {
+       "id": "U6_S8",
+       "text": "Here's some juice for you.",
+       "cn": "4. —这些果汁给你。",
+       "audio": "book2/U6_S8.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "4. —这些果汁给你。"
+      },
+      {
+       "id": "U6_S9",
+       "text": "Here are some pears.",
+       "cn": "5. —这里有一些梨。",
+       "audio": "book2/U6_S9.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "5. —这里有一些梨。"
+      },
+      {
+       "id": "U6_S10",
+       "text": "Any more?",
+       "cn": "6. —还要吗？",
+       "audio": "book2/U6_S10.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "6. —还要吗？"
+      },
+      {
+       "id": "U6_S11",
+       "text": "No, no, no.",
+       "cn": "—不，不，不。",
+       "audio": "book2/U6_S11.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "—不，不，不。"
+      },
+      {
+       "id": "U6_S12",
+       "text": "I like dogs.",
+       "cn": "我喜欢狗。",
+       "audio": "book2/U6_S12.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "我喜欢狗。"
+      },
+      {
+       "id": "U6_S13",
+       "text": "Dogs, dogs, dogs.",
+       "cn": "狗，狗，狗。",
+       "audio": "book2/U6_S13.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "狗，狗，狗。"
+      },
+      {
+       "id": "U6_S14",
+       "text": "Dogs can run.",
+       "cn": "狗会跑。",
+       "audio": "book2/U6_S14.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "狗会跑。"
+      },
+      {
+       "id": "U6_S15",
+       "text": "Run, run, run.",
+       "cn": "跑，跑，跑。",
+       "audio": "book2/U6_S15.mp3",
+       "image": "book2/U6_cover.png",
+       "image_desc": "跑，跑，跑。"
       }
      ],
-     "words": [
-      {
-       "id": "U6_W1",
-       "text": "six",
-       "audio": "book2/U6_W1.mp3",
-       "image": "book2/U6_W1.png",
-       "image_desc": "数字6",
-       "meaning": "六"
-      },
-      {
-       "id": "U6_W2",
-       "text": "seven",
-       "audio": "book2/U6_W2.mp3",
-       "image": "book2/U6_W2.png",
-       "image_desc": "数字7",
-       "meaning": "七"
-      },
-      {
-       "id": "U6_W3",
-       "text": "eight",
-       "audio": "book2/U6_W3.mp3",
-       "image": "book2/U6_W3.png",
-       "image_desc": "数字8",
-       "meaning": "八"
-      },
-      {
-       "id": "U6_W4",
-       "text": "nine",
-       "audio": "book2/U6_W4.mp3",
-       "image": "book2/U6_W4.png",
-       "image_desc": "数字9",
-       "meaning": "九"
-      },
-      {
-       "id": "U6_W5",
-       "text": "ten",
-       "audio": "book2/U6_W5.mp3",
-       "image": "book2/U6_W5.png",
-       "image_desc": "数字10",
-       "meaning": "十"
-      }
-     ]
+     "words": []
     }
-   ],
-   "grade": 1
+   ]
   },
   {
    "book_id": 3,
    "book_name": "二年级上册",
-   "book_name_en": "Book 3",
+   "book_name_en": "Book 2A",
    "grade": 2,
    "units": [
     {
@@ -1493,79 +2902,280 @@
       {
        "id": "U1_S1",
        "text": "Look at my robot.",
+       "cn": "看看我的机器人。",
        "audio": "book3/U1_S1.mp3",
-       "image": "book3/U1_S1.png",
-       "image_desc": "Look at my robot. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U1_cover.png",
+       "image_desc": "看看我的机器人。"
       },
       {
        "id": "U1_S2",
-       "text": "Look at my toy truck. Wow! Good!",
+       "text": "building blocks",
+       "cn": "积木",
        "audio": "book3/U1_S2.mp3",
-       "image": "book3/U1_S2.png",
-       "image_desc": "Look at my toy truck. Wow! Good! 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U1_cover.png",
+       "image_desc": "积木"
       },
       {
        "id": "U1_S3",
-       "text": "Let's play together.",
+       "text": "Look at my toy truck.",
+       "cn": "看我的玩具卡车。",
        "audio": "book3/U1_S3.mp3",
-       "image": "book3/U1_S3.png",
-       "image_desc": "Let's play together. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U1_cover.png",
+       "image_desc": "看我的玩具卡车。"
       },
       {
        "id": "U1_S4",
-       "text": "I have a toy truck. Beep, beep...",
+       "text": "Wow! Good!",
+       "cn": "哇哦！ 很棒！",
        "audio": "book3/U1_S4.mp3",
-       "image": "book3/U1_S4.png",
-       "image_desc": "I have a toy truck. Beep, beep... 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U1_cover.png",
+       "image_desc": "哇哦！ 很棒！"
       },
       {
        "id": "U1_S5",
-       "text": "Do you have a robot?",
+       "text": "Look at my toy jeep.",
+       "cn": "看我的玩具吉普车。",
        "audio": "book3/U1_S5.mp3",
-       "image": "book3/U1_S5.png",
-       "image_desc": "Do you have a robot? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U1_cover.png",
+       "image_desc": "看我的玩具吉普车。"
+      },
+      {
+       "id": "U1_S6",
+       "text": "Wow! Great!",
+       "cn": "哇哦！ 真棒！",
+       "audio": "book3/U1_S6.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "哇哦！ 真棒！"
+      },
+      {
+       "id": "U1_S7",
+       "text": "Look at my toy digger.",
+       "cn": "看我的玩具挖掘机。",
+       "audio": "book3/U1_S7.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "看我的玩具挖掘机。"
+      },
+      {
+       "id": "U1_S8",
+       "text": "Wow! Cool!",
+       "cn": "哇哦！ 真酷！",
+       "audio": "book3/U1_S8.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "哇哦！ 真酷！"
+      },
+      {
+       "id": "U1_S9",
+       "text": "Look at my building blocks.",
+       "cn": "看我的积木。",
+       "audio": "book3/U1_S9.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "看我的积木。"
+      },
+      {
+       "id": "U1_S10",
+       "text": "Wow! Nice!",
+       "cn": "哇哦！ 真不错！",
+       "audio": "book3/U1_S10.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "哇哦！ 真不错！"
+      },
+      {
+       "id": "U1_S11",
+       "text": "Look!",
+       "cn": "看！",
+       "audio": "book3/U1_S11.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "看！"
+      },
+      {
+       "id": "U1_S12",
+       "text": "Wow!",
+       "cn": "哇哦！",
+       "audio": "book3/U1_S12.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "哇哦！"
+      },
+      {
+       "id": "U1_S13",
+       "text": "Super!",
+       "cn": "超级棒！",
+       "audio": "book3/U1_S13.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "超级棒！"
+      },
+      {
+       "id": "U1_S14",
+       "text": "Great!",
+       "cn": "太好了！",
+       "audio": "book3/U1_S14.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "太好了！"
+      },
+      {
+       "id": "U1_S15",
+       "text": "I have a toy truck.",
+       "cn": "我有一辆玩具卡车。",
+       "audio": "book3/U1_S15.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "我有一辆玩具卡车。"
+      },
+      {
+       "id": "U1_S16",
+       "text": "Beep, beep...",
+       "cn": "哔哔，哔哔……",
+       "audio": "book3/U1_S16.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "哔哔，哔哔……"
+      },
+      {
+       "id": "U1_S17",
+       "text": "I have a toy jeep.",
+       "cn": "我有一辆玩具吉普车。",
+       "audio": "book3/U1_S17.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "我有一辆玩具吉普车。"
+      },
+      {
+       "id": "U1_S18",
+       "text": "I have a toy digger.",
+       "cn": "我有一辆玩具挖掘机。",
+       "audio": "book3/U1_S18.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "我有一辆玩具挖掘机。"
+      },
+      {
+       "id": "U1_S19",
+       "text": "Do you have a robot?",
+       "cn": "你有机器人吗？",
+       "audio": "book3/U1_S19.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "你有机器人吗？"
+      },
+      {
+       "id": "U1_S20",
+       "text": "Yes, I do.",
+       "cn": "是的，我有。",
+       "audio": "book3/U1_S20.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "是的，我有。"
+      },
+      {
+       "id": "U1_S21",
+       "text": "a toy jeep a toy jeep",
+       "cn": "1. 一辆玩具吉普车一辆玩具吉普车",
+       "audio": "book3/U1_S21.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "1. 一辆玩具吉普车一辆玩具吉普车"
+      },
+      {
+       "id": "U1_S22",
+       "text": "a robot a robot",
+       "cn": "3. 一个机器人一个机器人",
+       "audio": "book3/U1_S22.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "3. 一个机器人一个机器人"
+      },
+      {
+       "id": "U1_S23",
+       "text": "building blocks building blocks",
+       "cn": "4. 积木积木",
+       "audio": "book3/U1_S23.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "4. 积木积木"
+      },
+      {
+       "id": "U1_S24",
+       "text": "a teddy bear a teddy bear",
+       "cn": "6. 一只泰迪熊一只泰迪熊",
+       "audio": "book3/U1_S24.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "6. 一只泰迪熊一只泰迪熊"
+      },
+      {
+       "id": "U1_S25",
+       "text": "I have a ball.",
+       "cn": "3. 我有一个球。",
+       "audio": "book3/U1_S25.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "3. 我有一个球。"
+      },
+      {
+       "id": "U1_S26",
+       "text": "I have a robot.",
+       "cn": "4. 我有一个机器人。",
+       "audio": "book3/U1_S26.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "4. 我有一个机器人。"
+      },
+      {
+       "id": "U1_S27",
+       "text": "Wow, I have a toy digger and a toy truck.",
+       "cn": "—哇，我有一个玩具挖掘机和一辆玩具卡车。",
+       "audio": "book3/U1_S27.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "—哇，我有一个玩具挖掘机和一辆玩具卡车。"
+      },
+      {
+       "id": "U1_S28",
+       "text": "Cool. Look at my building blocks.",
+       "cn": "—酷。 看看我的积木。",
+       "audio": "book3/U1_S28.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "—酷。 看看我的积木。"
+      },
+      {
+       "id": "U1_S29",
+       "text": "All right!",
+       "cn": "—好吧！",
+       "audio": "book3/U1_S29.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "—好吧！"
+      },
+      {
+       "id": "U1_S30",
+       "text": "Listen.",
+       "cn": "听。",
+       "audio": "book3/U1_S30.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "听。"
+      },
+      {
+       "id": "U1_S31",
+       "text": "'Hello! A sunny day, isn't it? '",
+       "cn": "“你好，这是一个阳光明媚的日子，不是吗？”",
+       "audio": "book3/U1_S31.mp3",
+       "image": "book3/U1_cover.png",
+       "image_desc": "“你好，这是一个阳光明媚的日子，不是吗？”"
       }
      ],
      "words": [
       {
-       "id": "U1_W1",
-       "text": "toy truck",
+       "text": "a toy truck",
        "audio": "book3/U1_W1.mp3",
-       "image": "book3/U1_W1.png",
-       "image_desc": "toy truck 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "玩具卡车"
+       "image": "book3/U1_cover.png",
+       "image_desc": "一辆玩具卡车",
+       "meaning": "一辆玩具卡车"
       },
       {
-       "id": "U1_W2",
-       "text": "toy jeep",
+       "text": "a toy jeep",
        "audio": "book3/U1_W2.mp3",
-       "image": "book3/U1_W2.png",
-       "image_desc": "toy jeep 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "玩具吉普车"
+       "image": "book3/U1_cover.png",
+       "image_desc": "一辆玩具吉普车",
+       "meaning": "一辆玩具吉普车"
       },
       {
-       "id": "U1_W3",
-       "text": "toy digger",
+       "text": "a toy digger",
        "audio": "book3/U1_W3.mp3",
-       "image": "book3/U1_W3.png",
-       "image_desc": "toy digger 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "玩具挖掘机"
+       "image": "book3/U1_cover.png",
+       "image_desc": "一个玩具挖掘机",
+       "meaning": "一个玩具挖掘机"
       },
       {
-       "id": "U1_W4",
-       "text": "robot",
+       "text": "a robot",
        "audio": "book3/U1_W4.mp3",
-       "image": "book3/U1_W4.png",
-       "image_desc": "robot 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "机器人"
-      },
-      {
-       "id": "U1_W5",
-       "text": "building blocks",
-       "audio": "book3/U1_W5.mp3",
-       "image": "book3/U1_W5.png",
-       "image_desc": "building blocks 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "积木"
+       "image": "book3/U1_cover.png",
+       "image_desc": "一个机器人",
+       "meaning": "一个机器人"
       }
      ]
     },
@@ -1577,416 +3187,1240 @@
       {
        "id": "U2_S1",
        "text": "It's a square.",
+       "cn": "它是一个正方形。",
        "audio": "book3/U2_S1.mp3",
-       "image": "book3/U2_S1.png",
-       "image_desc": "It's a square. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U2_cover.png",
+       "image_desc": "它是一个正方形。"
       },
       {
        "id": "U2_S2",
-       "text": "What shape is it?",
+       "text": "What shape?",
+       "cn": "什么形状？",
        "audio": "book3/U2_S2.mp3",
-       "image": "book3/U2_S2.png",
-       "image_desc": "What shape is it? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U2_cover.png",
+       "image_desc": "什么形状？"
       },
       {
        "id": "U2_S3",
-       "text": "It's a diamond.",
+       "text": "What shape is it?",
+       "cn": "它是什么形状？",
        "audio": "book3/U2_S3.mp3",
-       "image": "book3/U2_S3.png",
-       "image_desc": "It's a diamond. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U2_cover.png",
+       "image_desc": "它是什么形状？"
       },
       {
        "id": "U2_S4",
-       "text": "It's a triangle.",
+       "text": "It's a diamond.",
+       "cn": "它是菱形。",
        "audio": "book3/U2_S4.mp3",
-       "image": "book3/U2_S4.png",
-       "image_desc": "It's a triangle. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U2_cover.png",
+       "image_desc": "它是菱形。"
       },
       {
        "id": "U2_S5",
-       "text": "I can draw a triangle.",
+       "text": "Aha?",
+       "cn": "啊哈？",
        "audio": "book3/U2_S5.mp3",
-       "image": "book3/U2_S5.png",
-       "image_desc": "I can draw a triangle. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U2_cover.png",
+       "image_desc": "啊哈？"
+      },
+      {
+       "id": "U2_S6",
+       "text": "It's a triangle.",
+       "cn": "它是三角形。",
+       "audio": "book3/U2_S6.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "它是三角形。"
+      },
+      {
+       "id": "U2_S7",
+       "text": "It's a heart.",
+       "cn": "它是心形。",
+       "audio": "book3/U2_S7.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "它是心形。"
+      },
+      {
+       "id": "U2_S8",
+       "text": "It's a rectangle.",
+       "cn": "它是长方形。",
+       "audio": "book3/U2_S8.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "它是长方形。"
+      },
+      {
+       "id": "U2_S9",
+       "text": "I can draw a triangle.",
+       "cn": "我会画三角形。",
+       "audio": "book3/U2_S9.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "我会画三角形。"
+      },
+      {
+       "id": "U2_S10",
+       "text": "I can draw a rectangle.",
+       "cn": "我会画长方形。",
+       "audio": "book3/U2_S10.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "我会画长方形。"
+      },
+      {
+       "id": "U2_S11",
+       "text": "I can draw two squares.",
+       "cn": "我会画两个正方形。",
+       "audio": "book3/U2_S11.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "我会画两个正方形。"
+      },
+      {
+       "id": "U2_S12",
+       "text": "I can draw a robot, a very nice robot.",
+       "cn": "我会画一个机器人，一个非常漂亮的机器人。",
+       "audio": "book3/U2_S12.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "我会画一个机器人，一个非常漂亮的机器人。"
+      },
+      {
+       "id": "U2_S13",
+       "text": "Look at my robot!",
+       "cn": "看看我的机器人！",
+       "audio": "book3/U2_S13.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "看看我的机器人！"
+      },
+      {
+       "id": "U2_S14",
+       "text": "Wow!",
+       "cn": "哇！",
+       "audio": "book3/U2_S14.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "哇！"
+      },
+      {
+       "id": "U2_S15",
+       "text": "Cool!",
+       "cn": "酷！",
+       "audio": "book3/U2_S15.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "酷！"
+      },
+      {
+       "id": "U2_S16",
+       "text": "How many shapes?",
+       "cn": "有多少个形状？",
+       "audio": "book3/U2_S16.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "有多少个形状？"
+      },
+      {
+       "id": "U2_S17",
+       "text": "Look, his head is a triangle.",
+       "cn": "—看，它的头是个三角形。",
+       "audio": "book3/U2_S17.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "—看，它的头是个三角形。"
+      },
+      {
+       "id": "U2_S18",
+       "text": "Yes.",
+       "cn": "—是的。",
+       "audio": "book3/U2_S18.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "—是的。"
+      },
+      {
+       "id": "U2_S19",
+       "text": "Look at the arm.",
+       "cn": "看看它的胳膊。",
+       "audio": "book3/U2_S19.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "看看它的胳膊。"
+      },
+      {
+       "id": "U2_S20",
+       "text": "Look at the body.",
+       "cn": "看看它的身体。",
+       "audio": "book3/U2_S20.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "看看它的身体。"
+      },
+      {
+       "id": "U2_S21",
+       "text": "Look at my heart.",
+       "cn": "看看我的心。",
+       "audio": "book3/U2_S21.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "看看我的心。"
+      },
+      {
+       "id": "U2_S22",
+       "text": "I love you all. '",
+       "cn": "我爱你们所有人。”",
+       "audio": "book3/U2_S22.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "我爱你们所有人。”"
+      },
+      {
+       "id": "U2_S23",
+       "text": "Wow, we love you, too.",
+       "cn": "—哇，我们也爱你。",
+       "audio": "book3/U2_S23.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "—哇，我们也爱你。"
+      },
+      {
+       "id": "U2_S24",
+       "text": "Ha, ha, ha!",
+       "cn": "—哈，哈，哈！",
+       "audio": "book3/U2_S24.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "—哈，哈，哈！"
       }
      ],
      "words": [
       {
-       "id": "U2_W1",
-       "text": "square",
+       "text": "a square",
        "audio": "book3/U2_W1.mp3",
-       "image": "book3/U2_W1.png",
-       "image_desc": "square 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "正方形"
+       "image": "book3/U2_cover.png",
+       "image_desc": "一个正方形",
+       "meaning": "一个正方形"
       },
       {
-       "id": "U2_W2",
-       "text": "triangle",
+       "text": "a triangle",
        "audio": "book3/U2_W2.mp3",
-       "image": "book3/U2_W2.png",
-       "image_desc": "triangle 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "三角形"
+       "image": "book3/U2_cover.png",
+       "image_desc": "一个三角形",
+       "meaning": "一个三角形"
       },
       {
-       "id": "U2_W3",
-       "text": "rectangle",
+       "text": "a rectangle",
        "audio": "book3/U2_W3.mp3",
-       "image": "book3/U2_W3.png",
-       "image_desc": "rectangle 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "长方形"
+       "image": "book3/U2_cover.png",
+       "image_desc": "一个长方形",
+       "meaning": "一个长方形"
       },
       {
-       "id": "U2_W4",
-       "text": "heart",
+       "text": "a heart",
        "audio": "book3/U2_W4.mp3",
-       "image": "book3/U2_W4.png",
-       "image_desc": "heart 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "心形"
+       "image": "book3/U2_cover.png",
+       "image_desc": "一个心形",
+       "meaning": "一个心形"
       },
       {
-       "id": "U2_W5",
-       "text": "diamond",
+       "text": "a diamond",
        "audio": "book3/U2_W5.mp3",
-       "image": "book3/U2_W5.png",
-       "image_desc": "diamond 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "菱形"
+       "image": "book3/U2_cover.png",
+       "image_desc": "一个菱形",
+       "meaning": "一个菱形"
+      },
+      {
+       "text": "Hey.",
+       "audio": "book3/U2_W6.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "—嘿。",
+       "meaning": "—嘿。"
+      },
+      {
+       "text": "'Hello!",
+       "audio": "book3/U2_W7.mp3",
+       "image": "book3/U2_cover.png",
+       "image_desc": "—“你好！",
+       "meaning": "—“你好！"
       }
      ]
     },
     {
      "unit_id": 3,
-     "title": "Unit 3 My School",
-     "title_en": "My School",
+     "title": "Unit 3 Our School",
+     "title_en": "Our School",
      "sentences": [
       {
        "id": "U3_S1",
        "text": "This is our school.",
+       "cn": "这是我们的学校。",
        "audio": "book3/U3_S1.mp3",
-       "image": "book3/U3_S1.png",
-       "image_desc": "This is our school. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U3_cover.png",
+       "image_desc": "这是我们的学校。"
       },
       {
        "id": "U3_S2",
-       "text": "Welcome to our school!",
+       "text": "Happy School",
+       "cn": "快乐学校",
        "audio": "book3/U3_S2.mp3",
-       "image": "book3/U3_S2.png",
-       "image_desc": "Welcome to our school! 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U3_cover.png",
+       "image_desc": "快乐学校"
       },
       {
        "id": "U3_S3",
-       "text": "This is our classroom.",
+       "text": "Welcome to our school!",
+       "cn": "欢迎来到我们的学校！",
        "audio": "book3/U3_S3.mp3",
-       "image": "book3/U3_S3.png",
-       "image_desc": "This is our classroom. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U3_cover.png",
+       "image_desc": "欢迎来到我们的学校！"
       },
       {
        "id": "U3_S4",
-       "text": "This is our gym.",
+       "text": "This is our classroom.",
+       "cn": "这是我们的教室。",
        "audio": "book3/U3_S4.mp3",
-       "image": "book3/U3_S4.png",
-       "image_desc": "This is our gym. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U3_cover.png",
+       "image_desc": "这是我们的教室。"
       },
       {
        "id": "U3_S5",
-       "text": "This way, please.",
+       "text": "Welcome to our classroom!",
+       "cn": "欢迎来到我们的教室！",
        "audio": "book3/U3_S5.mp3",
-       "image": "book3/U3_S5.png",
-       "image_desc": "This way, please. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U3_cover.png",
+       "image_desc": "欢迎来到我们的教室！"
+      },
+      {
+       "id": "U3_S6",
+       "text": "This is our gym.",
+       "cn": "这是我们的体育馆。",
+       "audio": "book3/U3_S6.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "这是我们的体育馆。"
+      },
+      {
+       "id": "U3_S7",
+       "text": "Welcome to our gym!",
+       "cn": "欢迎来到我们的体育馆！",
+       "audio": "book3/U3_S7.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "欢迎来到我们的体育馆！"
+      },
+      {
+       "id": "U3_S8",
+       "text": "This way, please.",
+       "cn": "请这边走。",
+       "audio": "book3/U3_S8.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "请这边走。"
+      },
+      {
+       "id": "U3_S9",
+       "text": "Thank you.",
+       "cn": "谢谢你。",
+       "audio": "book3/U3_S9.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "谢谢你。"
+      },
+      {
+       "id": "U3_S10",
+       "text": "We all love it.",
+       "cn": "我们都爱它。",
+       "audio": "book3/U3_S10.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "我们都爱它。"
+      },
+      {
+       "id": "U3_S11",
+       "text": "This is our music room.",
+       "cn": "这是我们的音乐教室。",
+       "audio": "book3/U3_S11.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "这是我们的音乐教室。"
+      },
+      {
+       "id": "U3_S12",
+       "text": "This is our art room.",
+       "cn": "这是我们的美术教室。",
+       "audio": "book3/U3_S12.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "这是我们的美术教室。"
+      },
+      {
+       "id": "U3_S13",
+       "text": "We are happy!",
+       "cn": "我们很快乐！",
+       "audio": "book3/U3_S13.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "我们很快乐！"
+      },
+      {
+       "id": "U3_S14",
+       "text": "We love our school.",
+       "cn": "我们爱我们的学校。",
+       "audio": "book3/U3_S14.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "我们爱我们的学校。"
+      },
+      {
+       "id": "U3_S15",
+       "text": "Hello, I'm Tiantian.",
+       "cn": "1. 你好，我是天天。",
+       "audio": "book3/U3_S15.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "1. 你好，我是天天。"
+      },
+      {
+       "id": "U3_S16",
+       "text": "Hello, I'm Jinjin.",
+       "cn": "2. 你好，我是金金。",
+       "audio": "book3/U3_S16.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "2. 你好，我是金金。"
+      },
+      {
+       "id": "U3_S17",
+       "text": "This is our library.",
+       "cn": "这是我们的图书馆。",
+       "audio": "book3/U3_S17.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "这是我们的图书馆。"
+      },
+      {
+       "id": "U3_S18",
+       "text": "Hi, I'm Meimei.",
+       "cn": "3. 嗨，我是梅梅。",
+       "audio": "book3/U3_S18.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "3. 嗨，我是梅梅。"
+      },
+      {
+       "id": "U3_S19",
+       "text": "Hello, I'm Lele.",
+       "cn": "4. 你好，我是乐乐。",
+       "audio": "book3/U3_S19.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "4. 你好，我是乐乐。"
+      },
+      {
+       "id": "U3_S20",
+       "text": "Hi, I'm Lili.",
+       "cn": "5. 嗨，我是丽丽。",
+       "audio": "book3/U3_S20.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "5. 嗨，我是丽丽。"
+      },
+      {
+       "id": "U3_S21",
+       "text": "Wow, what a clean classroom!",
+       "cn": "—哇，多干净的教室啊！",
+       "audio": "book3/U3_S21.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "—哇，多干净的教室啊！"
+      },
+      {
+       "id": "U3_S22",
+       "text": "Wow, how big!",
+       "cn": "—哇，好大啊！",
+       "audio": "book3/U3_S22.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "—哇，好大啊！"
+      },
+      {
+       "id": "U3_S23",
+       "text": "Ha ha.",
+       "cn": "—哈哈。",
+       "audio": "book3/U3_S23.mp3",
+       "image": "book3/U3_cover.png",
+       "image_desc": "—哈哈。"
       }
      ],
      "words": [
       {
-       "id": "U3_W1",
-       "text": "school",
+       "text": "a school",
        "audio": "book3/U3_W1.mp3",
-       "image": "book3/U3_W1.png",
-       "image_desc": "school 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "学校"
+       "image": "book3/U3_cover.png",
+       "image_desc": "一所学校",
+       "meaning": "一所学校"
       },
       {
-       "id": "U3_W2",
-       "text": "classroom",
+       "text": "a classroom",
        "audio": "book3/U3_W2.mp3",
-       "image": "book3/U3_W2.png",
-       "image_desc": "classroom 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "教室"
+       "image": "book3/U3_cover.png",
+       "image_desc": "一间教室",
+       "meaning": "一间教室"
       },
       {
-       "id": "U3_W3",
-       "text": "library",
+       "text": "a library",
        "audio": "book3/U3_W3.mp3",
-       "image": "book3/U3_W3.png",
-       "image_desc": "library 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "图书馆"
+       "image": "book3/U3_cover.png",
+       "image_desc": "一个图书馆",
+       "meaning": "一个图书馆"
       },
       {
-       "id": "U3_W4",
-       "text": "music room",
+       "text": "a music room",
        "audio": "book3/U3_W4.mp3",
-       "image": "book3/U3_W4.png",
-       "image_desc": "music room 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "音乐教室"
+       "image": "book3/U3_cover.png",
+       "image_desc": "一间音乐教室",
+       "meaning": "一间音乐教室"
       },
       {
-       "id": "U3_W5",
-       "text": "gym",
+       "text": "a gym",
        "audio": "book3/U3_W5.mp3",
-       "image": "book3/U3_W5.png",
-       "image_desc": "gym 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "体育馆"
+       "image": "book3/U3_cover.png",
+       "image_desc": "一座体育馆",
+       "meaning": "一座体育馆"
       }
      ]
     },
     {
      "unit_id": 4,
-     "title": "Unit 4 In the Classroom",
-     "title_en": "In the Classroom",
+     "title": "Unit 4 My Classroom",
+     "title_en": "My Classroom",
      "sentences": [
       {
        "id": "U4_S1",
        "text": "Come to the blackboard, please.",
+       "cn": "请到黑板前来。",
        "audio": "book3/U4_S1.mp3",
-       "image": "book3/U4_S1.png",
-       "image_desc": "Come to the blackboard, please. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U4_cover.png",
+       "image_desc": "请到黑板前来。"
       },
       {
        "id": "U4_S2",
-       "text": "OK. We are coming.",
+       "text": "Come to the desk, please, please.",
+       "cn": "请到桌子旁来。",
        "audio": "book3/U4_S2.mp3",
-       "image": "book3/U4_S2.png",
-       "image_desc": "OK. We are coming. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U4_cover.png",
+       "image_desc": "请到桌子旁来。"
       },
       {
        "id": "U4_S3",
-       "text": "Come to the desk, please.",
+       "text": "OK. I'm coming.",
+       "cn": "好的，我来了。",
        "audio": "book3/U4_S3.mp3",
-       "image": "book3/U4_S3.png",
-       "image_desc": "Come to the desk, please. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U4_cover.png",
+       "image_desc": "好的，我来了。"
       },
       {
        "id": "U4_S4",
-       "text": "OK. I'm coming.",
+       "text": "Come to the chair, please, please.",
+       "cn": "请到椅子旁来。",
        "audio": "book3/U4_S4.mp3",
-       "image": "book3/U4_S4.png",
-       "image_desc": "OK. I'm coming. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U4_cover.png",
+       "image_desc": "请到椅子旁来。"
       },
       {
        "id": "U4_S5",
-       "text": "What's this?",
+       "text": "Go to the window, please, please.",
+       "cn": "请去窗户旁。",
        "audio": "book3/U4_S5.mp3",
-       "image": "book3/U4_S5.png",
-       "image_desc": "What's this? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U4_cover.png",
+       "image_desc": "请去窗户旁。"
+      },
+      {
+       "id": "U4_S6",
+       "text": "OK, OK.",
+       "cn": "好的，好的。",
+       "audio": "book3/U4_S6.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "好的，好的。"
+      },
+      {
+       "id": "U4_S7",
+       "text": "Go to the door, please, please.",
+       "cn": "请去门旁。",
+       "audio": "book3/U4_S7.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "请去门旁。"
+      },
+      {
+       "id": "U4_S8",
+       "text": "OK. We are coming.",
+       "cn": "好的。我们来了。",
+       "audio": "book3/U4_S8.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "好的。我们来了。"
+      },
+      {
+       "id": "U4_S9",
+       "text": "I sit on my chair.",
+       "cn": "我坐在我的椅子上。",
+       "audio": "book3/U4_S9.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "我坐在我的椅子上。"
+      },
+      {
+       "id": "U4_S10",
+       "text": "I sing the happy song.",
+       "cn": "我唱着欢快的歌。",
+       "audio": "book3/U4_S10.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "我唱着欢快的歌。"
+      },
+      {
+       "id": "U4_S11",
+       "text": "I sit at my desk.",
+       "cn": "我坐在我的书桌旁，",
+       "audio": "book3/U4_S11.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "我坐在我的书桌旁，"
+      },
+      {
+       "id": "U4_S12",
+       "text": "Come to the windows and come to the door.",
+       "cn": "快来窗户边，快来门边。",
+       "audio": "book3/U4_S12.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "快来窗户边，快来门边。"
+      },
+      {
+       "id": "U4_S13",
+       "text": "Come to the blackboard and dance for us all.",
+       "cn": "快来到黑板前，为我们所有人跳舞。",
+       "audio": "book3/U4_S13.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "快来到黑板前，为我们所有人跳舞。"
+      },
+      {
+       "id": "U4_S14",
+       "text": "Draw a desk, please.",
+       "cn": "1. 请画一张桌子。",
+       "audio": "book3/U4_S14.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "1. 请画一张桌子。"
+      },
+      {
+       "id": "U4_S15",
+       "text": "Draw a chair, please.",
+       "cn": "2. 请画一把椅子。",
+       "audio": "book3/U4_S15.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "2. 请画一把椅子。"
+      },
+      {
+       "id": "U4_S16",
+       "text": "Draw a blackboard, please.",
+       "cn": "3. 请画一块黑板。",
+       "audio": "book3/U4_S16.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "3. 请画一块黑板。"
+      },
+      {
+       "id": "U4_S17",
+       "text": "Draw a door, please.",
+       "cn": "4. 请画一扇门。",
+       "audio": "book3/U4_S17.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "4. 请画一扇门。"
+      },
+      {
+       "id": "U4_S18",
+       "text": "Draw a window, please.",
+       "cn": "5. 请画一扇窗户。",
+       "audio": "book3/U4_S18.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "5. 请画一扇窗户。"
+      },
+      {
+       "id": "U4_S19",
+       "text": "Colour the door green.",
+       "cn": "1. 把门涂成绿色。",
+       "audio": "book3/U4_S19.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "1. 把门涂成绿色。"
+      },
+      {
+       "id": "U4_S20",
+       "text": "Colour the desk brown.",
+       "cn": "2. 把桌子涂成棕色。",
+       "audio": "book3/U4_S20.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "2. 把桌子涂成棕色。"
+      },
+      {
+       "id": "U4_S21",
+       "text": "Colour the chair blue.",
+       "cn": "3. 把椅子涂成蓝色。",
+       "audio": "book3/U4_S21.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "3. 把椅子涂成蓝色。"
+      },
+      {
+       "id": "U4_S22",
+       "text": "Colour the window yellow.",
+       "cn": "4. 把窗户涂成黄色。",
+       "audio": "book3/U4_S22.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "4. 把窗户涂成黄色。"
+      },
+      {
+       "id": "U4_S23",
+       "text": "Colour the blackboard black.",
+       "cn": "5. 把黑板涂成黑色。",
+       "audio": "book3/U4_S23.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "5. 把黑板涂成黑色。"
+      },
+      {
+       "id": "U4_S24",
+       "text": "It's a nice classroom.",
+       "cn": "这是一间很漂亮的教室。",
+       "audio": "book3/U4_S24.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "这是一间很漂亮的教室。"
+      },
+      {
+       "id": "U4_S25",
+       "text": "Here is the door.",
+       "cn": "这是门。",
+       "audio": "book3/U4_S25.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "这是门。"
+      },
+      {
+       "id": "U4_S26",
+       "text": "The door is green.",
+       "cn": "门是绿色的。",
+       "audio": "book3/U4_S26.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "门是绿色的。"
+      },
+      {
+       "id": "U4_S27",
+       "text": "There are three windows here.",
+       "cn": "这里有三扇窗户。",
+       "audio": "book3/U4_S27.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "这里有三扇窗户。"
+      },
+      {
+       "id": "U4_S28",
+       "text": "They are all yellow.",
+       "cn": "它们都是黄色的。",
+       "audio": "book3/U4_S28.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "它们都是黄色的。"
+      },
+      {
+       "id": "U4_S29",
+       "text": "This is my desk and this is my chair.",
+       "cn": "这是我的桌子，这是我的椅子。",
+       "audio": "book3/U4_S29.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "这是我的桌子，这是我的椅子。"
+      },
+      {
+       "id": "U4_S30",
+       "text": "The desks in the classroom are all brown and the chairs here are blue.",
+       "cn": "教室里的课桌都是棕色的，教室里的椅子是蓝色的。",
+       "audio": "book3/U4_S30.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "教室里的课桌都是棕色的，教室里的椅子是蓝色的。"
+      },
+      {
+       "id": "U4_S31",
+       "text": "We can see a big blackboard on the wall, too.",
+       "cn": "我们还可以看到墙上有一块大黑板。",
+       "audio": "book3/U4_S31.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "我们还可以看到墙上有一块大黑板。"
+      },
+      {
+       "id": "U4_S32",
+       "text": "Every day, my teachers write and draw on it.",
+       "cn": "每天，我的老师都在上面写字和画画。",
+       "audio": "book3/U4_S32.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "每天，我的老师都在上面写字和画画。"
+      },
+      {
+       "id": "U4_S33",
+       "text": "I like my classroom.",
+       "cn": "我喜欢我的教室。",
+       "audio": "book3/U4_S33.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "我喜欢我的教室。"
+      },
+      {
+       "id": "U4_S34",
+       "text": "What about you?",
+       "cn": "你呢？",
+       "audio": "book3/U4_S34.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "你呢？"
       }
      ],
      "words": [
       {
-       "id": "U4_W1",
-       "text": "blackboard",
+       "text": "a blackboard",
        "audio": "book3/U4_W1.mp3",
-       "image": "book3/U4_W1.png",
-       "image_desc": "blackboard 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "黑板"
+       "image": "book3/U4_cover.png",
+       "image_desc": "一块黑板",
+       "meaning": "一块黑板"
       },
       {
-       "id": "U4_W2",
-       "text": "door",
+       "text": "a door",
        "audio": "book3/U4_W2.mp3",
-       "image": "book3/U4_W2.png",
-       "image_desc": "door 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "门"
+       "image": "book3/U4_cover.png",
+       "image_desc": "一扇门",
+       "meaning": "一扇门"
       },
       {
-       "id": "U4_W3",
-       "text": "window",
+       "text": "a window",
        "audio": "book3/U4_W3.mp3",
-       "image": "book3/U4_W3.png",
-       "image_desc": "window 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "窗户"
+       "image": "book3/U4_cover.png",
+       "image_desc": "一扇窗",
+       "meaning": "一扇窗"
       },
       {
-       "id": "U4_W4",
-       "text": "desk",
+       "text": "a desk",
        "audio": "book3/U4_W4.mp3",
-       "image": "book3/U4_W4.png",
-       "image_desc": "desk 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "课桌"
+       "image": "book3/U4_cover.png",
+       "image_desc": "一张桌子",
+       "meaning": "一张桌子"
       },
       {
-       "id": "U4_W5",
-       "text": "chair",
+       "text": "a chair",
        "audio": "book3/U4_W5.mp3",
-       "image": "book3/U4_W5.png",
-       "image_desc": "chair 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "椅子"
+       "image": "book3/U4_cover.png",
+       "image_desc": "一把椅子",
+       "meaning": "一把椅子"
+      },
+      {
+       "text": "A minute, please.",
+       "audio": "book3/U4_W6.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "请给我一分钟，",
+       "meaning": "请给我一分钟，"
+      },
+      {
+       "text": "blackboard",
+       "audio": "book3/U4_W7.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "1. 黑板",
+       "meaning": "1. 黑板"
+      },
+      {
+       "text": "door",
+       "audio": "book3/U4_W8.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "2. 门",
+       "meaning": "2. 门"
+      },
+      {
+       "text": "window",
+       "audio": "book3/U4_W9.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "3. 窗",
+       "meaning": "3. 窗"
+      },
+      {
+       "text": "chair",
+       "audio": "book3/U4_W10.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "4. 椅子",
+       "meaning": "4. 椅子"
+      },
+      {
+       "text": "desk",
+       "audio": "book3/U4_W11.mp3",
+       "image": "book3/U4_cover.png",
+       "image_desc": "5. 桌子",
+       "meaning": "5. 桌子"
       }
      ]
     },
     {
      "unit_id": 5,
-     "title": "Unit 5 My Favourite Subject",
-     "title_en": "My Favourite Subject",
+     "title": "Unit 5 Subjects",
+     "title_en": "Subjects",
      "sentences": [
       {
        "id": "U5_S1",
        "text": "English is my favourite subject.",
+       "cn": "英语是我最喜欢的科目。",
        "audio": "book3/U5_S1.mp3",
-       "image": "book3/U5_S1.png",
-       "image_desc": "English is my favourite subject. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U5_cover.png",
+       "image_desc": "英语是我最喜欢的科目。"
       },
       {
        "id": "U5_S2",
-       "text": "What's your favourite subject?",
+       "text": "music",
+       "cn": "音乐",
        "audio": "book3/U5_S2.mp3",
-       "image": "book3/U5_S2.png",
-       "image_desc": "What's your favourite subject? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U5_cover.png",
+       "image_desc": "音乐"
       },
       {
        "id": "U5_S3",
-       "text": "It's English, of course.",
+       "text": "What's your favourite subject?",
+       "cn": "你最喜欢的科目是什么？",
        "audio": "book3/U5_S3.mp3",
-       "image": "book3/U5_S3.png",
-       "image_desc": "It's English, of course. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U5_cover.png",
+       "image_desc": "你最喜欢的科目是什么？"
       },
       {
        "id": "U5_S4",
-       "text": "I think it's maths.",
+       "text": "It's English, of course.",
+       "cn": "当然是英语。",
        "audio": "book3/U5_S4.mp3",
-       "image": "book3/U5_S4.png",
-       "image_desc": "I think it's maths. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U5_cover.png",
+       "image_desc": "当然是英语。"
       },
       {
        "id": "U5_S5",
-       "text": "I like them all.",
+       "text": "I think it's maths.",
+       "cn": "我想是数学。",
        "audio": "book3/U5_S5.mp3",
-       "image": "book3/U5_S5.png",
-       "image_desc": "I like them all. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U5_cover.png",
+       "image_desc": "我想是数学。"
+      },
+      {
+       "id": "U5_S6",
+       "text": "It's Chinese.",
+       "cn": "是语文。",
+       "audio": "book3/U5_S6.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "是语文。"
+      },
+      {
+       "id": "U5_S7",
+       "text": "What's yours?",
+       "cn": "你最喜欢的科目是什么？",
+       "audio": "book3/U5_S7.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "你最喜欢的科目是什么？"
+      },
+      {
+       "id": "U5_S8",
+       "text": "I like them all.",
+       "cn": "我都喜欢。",
+       "audio": "book3/U5_S8.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "我都喜欢。"
+      },
+      {
+       "id": "U5_S9",
+       "text": "Chinese, art and English.",
+       "cn": "语文、美术和英语。",
+       "audio": "book3/U5_S9.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "语文、美术和英语。"
+      },
+      {
+       "id": "U5_S10",
+       "text": "Chinese is interesting.",
+       "cn": "语文很有意思。",
+       "audio": "book3/U5_S10.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "语文很有意思。"
+      },
+      {
+       "id": "U5_S11",
+       "text": "Maths is fantastic.",
+       "cn": "数学很奇妙。",
+       "audio": "book3/U5_S11.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "数学很奇妙。"
+      },
+      {
+       "id": "U5_S12",
+       "text": "Art is fun.",
+       "cn": "美术很有趣。",
+       "audio": "book3/U5_S12.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "美术很有趣。"
+      },
+      {
+       "id": "U5_S13",
+       "text": "What is your favourite subject?",
+       "cn": "1. —你最喜欢的科目是什么？",
+       "audio": "book3/U5_S13.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "1. —你最喜欢的科目是什么？"
       }
      ],
      "words": [
       {
-       "id": "U5_W1",
        "text": "Chinese",
        "audio": "book3/U5_W1.mp3",
-       "image": "book3/U5_W1.png",
-       "image_desc": "Chinese 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U5_cover.png",
+       "image_desc": "语文",
        "meaning": "语文"
       },
       {
-       "id": "U5_W2",
        "text": "maths",
        "audio": "book3/U5_W2.mp3",
-       "image": "book3/U5_W2.png",
-       "image_desc": "maths 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U5_cover.png",
+       "image_desc": "数学",
        "meaning": "数学"
       },
       {
-       "id": "U5_W3",
        "text": "English",
        "audio": "book3/U5_W3.mp3",
-       "image": "book3/U5_W3.png",
-       "image_desc": "English 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U5_cover.png",
+       "image_desc": "英语",
        "meaning": "英语"
       },
       {
-       "id": "U5_W4",
-       "text": "music",
+       "text": "art",
        "audio": "book3/U5_W4.mp3",
-       "image": "book3/U5_W4.png",
-       "image_desc": "music 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "音乐"
+       "image": "book3/U5_cover.png",
+       "image_desc": "美术；艺术",
+       "meaning": "美术；艺术"
       },
       {
-       "id": "U5_W5",
-       "text": "art",
+       "text": "Timetable",
        "audio": "book3/U5_W5.mp3",
-       "image": "book3/U5_W5.png",
-       "image_desc": "art 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "美术"
+       "image": "book3/U5_cover.png",
+       "image_desc": "时刻表",
+       "meaning": "时刻表"
+      },
+      {
+       "text": "Mon.",
+       "audio": "book3/U5_W6.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "星期一",
+       "meaning": "星期一"
+      },
+      {
+       "text": "Tue.",
+       "audio": "book3/U5_W7.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "星期二",
+       "meaning": "星期二"
+      },
+      {
+       "text": "Wed.",
+       "audio": "book3/U5_W8.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "星期三",
+       "meaning": "星期三"
+      },
+      {
+       "text": "Thu.",
+       "audio": "book3/U5_W9.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "星期四",
+       "meaning": "星期四"
+      },
+      {
+       "text": "Fri.",
+       "audio": "book3/U5_W10.mp3",
+       "image": "book3/U5_cover.png",
+       "image_desc": "星期五",
+       "meaning": "星期五"
       }
      ]
     },
     {
      "unit_id": 6,
-     "title": "Unit 6 Days of the Week",
-     "title_en": "Days of the Week",
+     "title": "Unit 6 Week",
+     "title_en": "Week",
      "sentences": [
       {
        "id": "U6_S1",
        "text": "It's Monday today.",
+       "cn": "今天是星期一。",
        "audio": "book3/U6_S1.mp3",
-       "image": "book3/U6_S1.png",
-       "image_desc": "It's Monday today. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U6_cover.png",
+       "image_desc": "今天是星期一。"
       },
       {
        "id": "U6_S2",
        "text": "What day is it today?",
+       "cn": "今天是星期几？",
        "audio": "book3/U6_S2.mp3",
-       "image": "book3/U6_S2.png",
-       "image_desc": "What day is it today? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U6_cover.png",
+       "image_desc": "今天是星期几？"
       },
       {
        "id": "U6_S3",
-       "text": "Sunday!",
+       "text": "Sunday, Monday, Tuesday,",
+       "cn": "星期天，星期一，星期二，",
        "audio": "book3/U6_S3.mp3",
-       "image": "book3/U6_S3.png",
-       "image_desc": "Sunday! 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期天，星期一，星期二，"
+      },
+      {
+       "id": "U6_S4",
+       "text": "Wednesday, Thursday, Friday,",
+       "cn": "星期三，星期四，星期五，",
+       "audio": "book3/U6_S4.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期三，星期四，星期五，"
+      },
+      {
+       "id": "U6_S5",
+       "text": "Saturday, Saturday, Saturday.",
+       "cn": "星期六，星期六，星期六。",
+       "audio": "book3/U6_S5.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期六，星期六，星期六。"
+      },
+      {
+       "id": "U6_S6",
+       "text": "A fine day, a fine day.",
+       "cn": "美好的一天，美好的一天。",
+       "audio": "book3/U6_S6.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "美好的一天，美好的一天。"
+      },
+      {
+       "id": "U6_S7",
+       "text": "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday.",
+       "cn": "星期天，星期一，星期二，星期三，星期四，星期五。",
+       "audio": "book3/U6_S7.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期天，星期一，星期二，星期三，星期四，星期五。"
+      },
+      {
+       "id": "U6_S8",
+       "text": "What day is today?",
+       "cn": "今天是星期几？",
+       "audio": "book3/U6_S8.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "今天是星期几？"
+      },
+      {
+       "id": "U6_S9",
+       "text": "Today is Sunday.",
+       "cn": "今天是星期天。",
+       "audio": "book3/U6_S9.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "今天是星期天。"
+      },
+      {
+       "id": "U6_S10",
+       "text": "It's a sunny day.",
+       "cn": "是晴朗的一天。",
+       "audio": "book3/U6_S10.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "是晴朗的一天。"
+      },
+      {
+       "id": "U6_S11",
+       "text": "We can go to play! Hey!",
+       "cn": "我们可以出去玩！ 嘿！",
+       "audio": "book3/U6_S11.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "我们可以出去玩！ 嘿！"
+      },
+      {
+       "id": "U6_S12",
+       "text": "Good idea!",
+       "cn": "好主意！",
+       "audio": "book3/U6_S12.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "好主意！"
+      },
+      {
+       "id": "U6_S13",
+       "text": "It's Sunday.",
+       "cn": "—今天是星期天。",
+       "audio": "book3/U6_S13.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "—今天是星期天。"
+      },
+      {
+       "id": "U6_S14",
+       "text": "It's Monday.",
+       "cn": "—今天是星期一。",
+       "audio": "book3/U6_S14.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "—今天是星期一。"
+      },
+      {
+       "id": "U6_S15",
+       "text": "It's Thursday.",
+       "cn": "—今天是星期四。",
+       "audio": "book3/U6_S15.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "—今天是星期四。"
       }
      ],
      "words": [
       {
-       "id": "U6_W1",
        "text": "Sunday",
        "audio": "book3/U6_W1.mp3",
-       "image": "book3/U6_W1.png",
-       "image_desc": "Sunday 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "星期日"
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期天",
+       "meaning": "星期天"
       },
       {
-       "id": "U6_W2",
        "text": "Monday",
        "audio": "book3/U6_W2.mp3",
-       "image": "book3/U6_W2.png",
-       "image_desc": "Monday 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期一",
        "meaning": "星期一"
       },
       {
-       "id": "U6_W3",
        "text": "Tuesday",
        "audio": "book3/U6_W3.mp3",
-       "image": "book3/U6_W3.png",
-       "image_desc": "Tuesday 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期二",
        "meaning": "星期二"
       },
       {
-       "id": "U6_W4",
        "text": "Wednesday",
        "audio": "book3/U6_W4.mp3",
-       "image": "book3/U6_W4.png",
-       "image_desc": "Wednesday 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期三",
        "meaning": "星期三"
       },
       {
-       "id": "U6_W5",
        "text": "Thursday",
        "audio": "book3/U6_W5.mp3",
-       "image": "book3/U6_W5.png",
-       "image_desc": "Thursday 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期四",
        "meaning": "星期四"
       },
       {
-       "id": "U6_W6",
        "text": "Friday",
        "audio": "book3/U6_W6.mp3",
-       "image": "book3/U6_W6.png",
-       "image_desc": "Friday 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期五",
        "meaning": "星期五"
       },
       {
-       "id": "U6_W7",
        "text": "Saturday",
        "audio": "book3/U6_W7.mp3",
-       "image": "book3/U6_W7.png",
-       "image_desc": "Saturday 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期六",
+       "meaning": "星期六"
+      },
+      {
+       "text": "Sun.",
+       "audio": "book3/U6_W8.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期天",
+       "meaning": "星期天"
+      },
+      {
+       "text": "Mon.",
+       "audio": "book3/U6_W9.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期一",
+       "meaning": "星期一"
+      },
+      {
+       "text": "Tue.",
+       "audio": "book3/U6_W10.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期二",
+       "meaning": "星期二"
+      },
+      {
+       "text": "Wed.",
+       "audio": "book3/U6_W11.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期三",
+       "meaning": "星期三"
+      },
+      {
+       "text": "Thu.",
+       "audio": "book3/U6_W12.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期四",
+       "meaning": "星期四"
+      },
+      {
+       "text": "Fri.",
+       "audio": "book3/U6_W13.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期五",
+       "meaning": "星期五"
+      },
+      {
+       "text": "Sat.",
+       "audio": "book3/U6_W14.mp3",
+       "image": "book3/U6_cover.png",
+       "image_desc": "星期六",
        "meaning": "星期六"
       }
      ]
@@ -1996,89 +4430,353 @@
   {
    "book_id": 4,
    "book_name": "二年级下册",
-   "book_name_en": "Book 4",
+   "book_name_en": "Book 2B",
    "grade": 2,
    "units": [
     {
      "unit_id": 1,
-     "title": "Unit 1 Appearance",
-     "title_en": "Appearance",
+     "title": "Unit 1 Looks",
+     "title_en": "Looks",
      "sentences": [
       {
        "id": "U1_S1",
        "text": "I'm tall.",
+       "cn": "我个子高。",
        "audio": "book4/U1_S1.mp3",
-       "image": "book4/U1_S1.png",
-       "image_desc": "I'm tall. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U1_cover.png",
+       "image_desc": "我个子高。"
       },
       {
        "id": "U1_S2",
-       "text": "Is he strong?",
+       "text": "My father is tall.",
+       "cn": "我的父亲个子高。",
        "audio": "book4/U1_S2.mp3",
-       "image": "book4/U1_S2.png",
-       "image_desc": "Is he strong? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U1_cover.png",
+       "image_desc": "我的父亲个子高。"
       },
       {
        "id": "U1_S3",
-       "text": "Yes, he's strong.",
+       "text": "My mother is short.",
+       "cn": "我的母亲个子矮。",
        "audio": "book4/U1_S3.mp3",
-       "image": "book4/U1_S3.png",
-       "image_desc": "Yes, he's strong. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U1_cover.png",
+       "image_desc": "我的母亲个子矮。"
       },
       {
        "id": "U1_S4",
-       "text": "Is she old?",
+       "text": "Is he strong?",
+       "cn": "他强壮吗？",
        "audio": "book4/U1_S4.mp3",
-       "image": "book4/U1_S4.png",
-       "image_desc": "Is she old? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U1_cover.png",
+       "image_desc": "他强壮吗？"
       },
       {
        "id": "U1_S5",
-       "text": "No. She's young.",
+       "text": "Yes, he's strong.",
+       "cn": "是的，他很强壮。",
        "audio": "book4/U1_S5.mp3",
-       "image": "book4/U1_S5.png",
-       "image_desc": "No. She's young. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U1_cover.png",
+       "image_desc": "是的，他很强壮。"
+      },
+      {
+       "id": "U1_S6",
+       "text": "Is she old?",
+       "cn": "她年龄大吗？",
+       "audio": "book4/U1_S6.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "她年龄大吗？"
+      },
+      {
+       "id": "U1_S7",
+       "text": "No. She's young.",
+       "cn": "不，她很年轻。",
+       "audio": "book4/U1_S7.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "不，她很年轻。"
+      },
+      {
+       "id": "U1_S8",
+       "text": "She isn't old.",
+       "cn": "她不老。",
+       "audio": "book4/U1_S8.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "她不老。"
+      },
+      {
+       "id": "U1_S9",
+       "text": "She's young.",
+       "cn": "她很年轻。",
+       "audio": "book4/U1_S9.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "她很年轻。"
+      },
+      {
+       "id": "U1_S10",
+       "text": "Is he tall?",
+       "cn": "他个子高吗？",
+       "audio": "book4/U1_S10.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "他个子高吗？"
+      },
+      {
+       "id": "U1_S11",
+       "text": "Yes, he is.",
+       "cn": "是的，他个子高。",
+       "audio": "book4/U1_S11.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "是的，他个子高。"
+      },
+      {
+       "id": "U1_S12",
+       "text": "Is she tall, too?",
+       "cn": "她个子也高吗？",
+       "audio": "book4/U1_S12.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "她个子也高吗？"
+      },
+      {
+       "id": "U1_S13",
+       "text": "No, she isn't.",
+       "cn": "不，她个子不高。",
+       "audio": "book4/U1_S13.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "不，她个子不高。"
+      },
+      {
+       "id": "U1_S14",
+       "text": "She's short.",
+       "cn": "她个子矮。",
+       "audio": "book4/U1_S14.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "她个子矮。"
+      },
+      {
+       "id": "U1_S15",
+       "text": "Look at me.",
+       "cn": "看看我。",
+       "audio": "book4/U1_S15.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "看看我。"
+      },
+      {
+       "id": "U1_S16",
+       "text": "I'm strong.",
+       "cn": "我很强壮。",
+       "audio": "book4/U1_S16.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "我很强壮。"
+      },
+      {
+       "id": "U1_S17",
+       "text": "I can help her.",
+       "cn": "我可以帮助她。",
+       "audio": "book4/U1_S17.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "我可以帮助她。"
+      },
+      {
+       "id": "U1_S18",
+       "text": "Great!",
+       "cn": "棒极了！",
+       "audio": "book4/U1_S18.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "棒极了！"
+      },
+      {
+       "id": "U1_S19",
+       "text": "Duoduo isn't old.",
+       "cn": "1. 朵朵不老。",
+       "audio": "book4/U1_S19.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "1. 朵朵不老。"
+      },
+      {
+       "id": "U1_S20",
+       "text": "This is Mingming.",
+       "cn": "2. 这是明明。",
+       "audio": "book4/U1_S20.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "2. 这是明明。"
+      },
+      {
+       "id": "U1_S21",
+       "text": "He is short.",
+       "cn": "他个子矮。",
+       "audio": "book4/U1_S21.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "他个子矮。"
+      },
+      {
+       "id": "U1_S22",
+       "text": "Is Junjun strong?",
+       "cn": "3. —军军强壮吗？",
+       "audio": "book4/U1_S22.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "3. —军军强壮吗？"
+      },
+      {
+       "id": "U1_S23",
+       "text": "No, he isn't.",
+       "cn": "—不，他不强壮。",
+       "audio": "book4/U1_S23.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—不，他不强壮。"
+      },
+      {
+       "id": "U1_S24",
+       "text": "Is Miss Li short?",
+       "cn": "4. —李小姐个子矮吗？",
+       "audio": "book4/U1_S24.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "4. —李小姐个子矮吗？"
+      },
+      {
+       "id": "U1_S25",
+       "text": "No, she's tall.",
+       "cn": "—不，她很高。",
+       "audio": "book4/U1_S25.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—不，她很高。"
+      },
+      {
+       "id": "U1_S26",
+       "text": "Grandma Zhao is old.",
+       "cn": "5. 赵奶奶年纪大了。",
+       "audio": "book4/U1_S26.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "5. 赵奶奶年纪大了。"
+      },
+      {
+       "id": "U1_S27",
+       "text": "Here comes a baby horse.",
+       "cn": "来了一匹小马。",
+       "audio": "book4/U1_S27.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "来了一匹小马。"
+      },
+      {
+       "id": "U1_S28",
+       "text": "It's very young.",
+       "cn": "—它很年轻。",
+       "audio": "book4/U1_S28.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—它很年轻。"
+      },
+      {
+       "id": "U1_S29",
+       "text": "Look at the bear.",
+       "cn": "—看那只熊。",
+       "audio": "book4/U1_S29.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—看那只熊。"
+      },
+      {
+       "id": "U1_S30",
+       "text": "Oh!",
+       "cn": "—哦！",
+       "audio": "book4/U1_S30.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—哦！"
+      },
+      {
+       "id": "U1_S31",
+       "text": "It's so strong.",
+       "cn": "它太强壮了。",
+       "audio": "book4/U1_S31.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "它太强壮了。"
+      },
+      {
+       "id": "U1_S32",
+       "text": "Look at the monkey.",
+       "cn": "—看这只猴子。",
+       "audio": "book4/U1_S32.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—看这只猴子。"
+      },
+      {
+       "id": "U1_S33",
+       "text": "Do you think it's young?",
+       "cn": "—你认为它年轻吗？",
+       "audio": "book4/U1_S33.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—你认为它年轻吗？"
+      },
+      {
+       "id": "U1_S34",
+       "text": "No, it's very old.",
+       "cn": "—不，它很老了。",
+       "audio": "book4/U1_S34.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—不，它很老了。"
+      },
+      {
+       "id": "U1_S35",
+       "text": "What a poor monkey!",
+       "cn": "多么可怜的猴子！",
+       "audio": "book4/U1_S35.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "多么可怜的猴子！"
+      },
+      {
+       "id": "U1_S36",
+       "text": "What a happy monkey.",
+       "cn": "—多么快乐的猴子。",
+       "audio": "book4/U1_S36.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—多么快乐的猴子。"
+      },
+      {
+       "id": "U1_S37",
+       "text": "Look!",
+       "cn": "看！",
+       "audio": "book4/U1_S37.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "看！"
+      },
+      {
+       "id": "U1_S38",
+       "text": "Ha ha.",
+       "cn": "—哈哈。",
+       "audio": "book4/U1_S38.mp3",
+       "image": "book4/U1_cover.png",
+       "image_desc": "—哈哈。"
       }
      ],
      "words": [
       {
-       "id": "U1_W1",
        "text": "tall",
        "audio": "book4/U1_W1.mp3",
-       "image": "book4/U1_W1.png",
-       "image_desc": "tall 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U1_cover.png",
+       "image_desc": "高的",
        "meaning": "高的"
       },
       {
-       "id": "U1_W2",
        "text": "short",
        "audio": "book4/U1_W2.mp3",
-       "image": "book4/U1_W2.png",
-       "image_desc": "short 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U1_cover.png",
+       "image_desc": "矮的",
        "meaning": "矮的"
       },
       {
-       "id": "U1_W3",
        "text": "young",
        "audio": "book4/U1_W3.mp3",
-       "image": "book4/U1_W3.png",
-       "image_desc": "young 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U1_cover.png",
+       "image_desc": "年轻的",
        "meaning": "年轻的"
       },
       {
-       "id": "U1_W4",
        "text": "old",
        "audio": "book4/U1_W4.mp3",
-       "image": "book4/U1_W4.png",
-       "image_desc": "old 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U1_cover.png",
+       "image_desc": "年老的",
        "meaning": "年老的"
       },
       {
-       "id": "U1_W5",
        "text": "strong",
        "audio": "book4/U1_W5.mp3",
-       "image": "book4/U1_W5.png",
-       "image_desc": "strong 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U1_cover.png",
+       "image_desc": "强壮的",
        "meaning": "强壮的"
       }
      ]
@@ -2091,72 +4789,414 @@
       {
        "id": "U2_S1",
        "text": "Do you like my new dress?",
+       "cn": "你喜欢我的新连衣裙吗？",
        "audio": "book4/U2_S1.mp3",
-       "image": "book4/U2_S1.png",
-       "image_desc": "Do you like my new dress? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U2_cover.png",
+       "image_desc": "你喜欢我的新连衣裙吗？"
       },
       {
        "id": "U2_S2",
        "text": "Yes, I do.",
+       "cn": "是的，我喜欢。",
        "audio": "book4/U2_S2.mp3",
-       "image": "book4/U2_S2.png",
-       "image_desc": "Yes, I do. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U2_cover.png",
+       "image_desc": "是的，我喜欢。"
       },
       {
        "id": "U2_S3",
        "text": "Do you like her skirt?",
+       "cn": "你喜欢她的短裙吗？",
        "audio": "book4/U2_S3.mp3",
-       "image": "book4/U2_S3.png",
-       "image_desc": "Do you like her skirt? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U2_cover.png",
+       "image_desc": "你喜欢她的短裙吗？"
       },
       {
        "id": "U2_S4",
-       "text": "No, I don't.",
+       "text": "Do you like his shirt?",
+       "cn": "你喜欢他的衬衫吗？",
        "audio": "book4/U2_S4.mp3",
-       "image": "book4/U2_S4.png",
-       "image_desc": "No, I don't. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U2_cover.png",
+       "image_desc": "你喜欢他的衬衫吗？"
+      },
+      {
+       "id": "U2_S5",
+       "text": "No, I don't.",
+       "cn": "不，我不喜欢。",
+       "audio": "book4/U2_S5.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "不，我不喜欢。"
+      },
+      {
+       "id": "U2_S6",
+       "text": "Her skirt is red.",
+       "cn": "她的短裙是红色的。",
+       "audio": "book4/U2_S6.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "她的短裙是红色的。"
+      },
+      {
+       "id": "U2_S7",
+       "text": "His shirt is black.",
+       "cn": "他的衬衫是黑色的。",
+       "audio": "book4/U2_S7.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "他的衬衫是黑色的。"
+      },
+      {
+       "id": "U2_S8",
+       "text": "I like red.",
+       "cn": "我喜欢红色。",
+       "audio": "book4/U2_S8.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "我喜欢红色。"
+      },
+      {
+       "id": "U2_S9",
+       "text": "I don't like black.",
+       "cn": "我不喜欢黑色。",
+       "audio": "book4/U2_S9.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "我不喜欢黑色。"
+      },
+      {
+       "id": "U2_S10",
+       "text": "Look at my sweater.",
+       "cn": "看我的毛衣。",
+       "audio": "book4/U2_S10.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "看我的毛衣。"
+      },
+      {
+       "id": "U2_S11",
+       "text": "Oh, I like it.",
+       "cn": "哦，我喜欢。",
+       "audio": "book4/U2_S11.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "哦，我喜欢。"
+      },
+      {
+       "id": "U2_S12",
+       "text": "I like my cap.",
+       "cn": "我喜欢我的鸭舌帽。",
+       "audio": "book4/U2_S12.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "我喜欢我的鸭舌帽。"
+      },
+      {
+       "id": "U2_S13",
+       "text": "My cap is blue.",
+       "cn": "我的鸭舌帽是蓝色的。",
+       "audio": "book4/U2_S13.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "我的鸭舌帽是蓝色的。"
+      },
+      {
+       "id": "U2_S14",
+       "text": "I like my hat.",
+       "cn": "我喜欢我的遮阳帽。",
+       "audio": "book4/U2_S14.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "我喜欢我的遮阳帽。"
+      },
+      {
+       "id": "U2_S15",
+       "text": "My hat is yellow.",
+       "cn": "我的遮阳帽是黄色的。",
+       "audio": "book4/U2_S15.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "我的遮阳帽是黄色的。"
+      },
+      {
+       "id": "U2_S16",
+       "text": "Does she like her dress?",
+       "cn": "她喜欢她的裙子吗？",
+       "audio": "book4/U2_S16.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "她喜欢她的裙子吗？"
+      },
+      {
+       "id": "U2_S17",
+       "text": "Yes, she does.",
+       "cn": "是的，她喜欢。",
+       "audio": "book4/U2_S17.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "是的，她喜欢。"
+      },
+      {
+       "id": "U2_S18",
+       "text": "Her dress is green.",
+       "cn": "她的裙子是绿色的。",
+       "audio": "book4/U2_S18.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "她的裙子是绿色的。"
+      },
+      {
+       "id": "U2_S19",
+       "text": "Does he like his T shirt?",
+       "cn": "他喜欢他的T恤吗？",
+       "audio": "book4/U2_S19.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "他喜欢他的T恤吗？"
+      },
+      {
+       "id": "U2_S20",
+       "text": "No, he doesn't.",
+       "cn": "不，他不喜欢。",
+       "audio": "book4/U2_S20.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "不，他不喜欢。"
+      },
+      {
+       "id": "U2_S21",
+       "text": "He does not like pink.",
+       "cn": "他不喜欢粉色。",
+       "audio": "book4/U2_S21.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "他不喜欢粉色。"
+      },
+      {
+       "id": "U2_S22",
+       "text": "She is short.",
+       "cn": "1. 她个子矮。",
+       "audio": "book4/U2_S22.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "1. 她个子矮。"
+      },
+      {
+       "id": "U2_S23",
+       "text": "She has a red skirt.",
+       "cn": "她有一条红色短裙。",
+       "audio": "book4/U2_S23.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "她有一条红色短裙。"
+      },
+      {
+       "id": "U2_S24",
+       "text": "She is tall.",
+       "cn": "2. 她个子高。",
+       "audio": "book4/U2_S24.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "2. 她个子高。"
+      },
+      {
+       "id": "U2_S25",
+       "text": "She has a yellow dress.",
+       "cn": "她有一件黄色的连衣裙。",
+       "audio": "book4/U2_S25.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "她有一件黄色的连衣裙。"
+      },
+      {
+       "id": "U2_S26",
+       "text": "He is strong.",
+       "cn": "3. 他很强壮。",
+       "audio": "book4/U2_S26.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "3. 他很强壮。"
+      },
+      {
+       "id": "U2_S27",
+       "text": "He has a green shirt.",
+       "cn": "他有一件绿色的衬衫。",
+       "audio": "book4/U2_S27.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "他有一件绿色的衬衫。"
+      },
+      {
+       "id": "U2_S28",
+       "text": "He is old.",
+       "cn": "4. 他老了。",
+       "audio": "book4/U2_S28.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "4. 他老了。"
+      },
+      {
+       "id": "U2_S29",
+       "text": "He has a blue coat.",
+       "cn": "他有一件蓝色的外套。",
+       "audio": "book4/U2_S29.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "他有一件蓝色的外套。"
+      },
+      {
+       "id": "U2_S30",
+       "text": "She is young.",
+       "cn": "5. 她很年轻。",
+       "audio": "book4/U2_S30.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "5. 她很年轻。"
+      },
+      {
+       "id": "U2_S31",
+       "text": "She has a pink sweater.",
+       "cn": "她有一件粉色的毛衣。",
+       "audio": "book4/U2_S31.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "她有一件粉色的毛衣。"
+      },
+      {
+       "id": "U2_S32",
+       "text": "Do you like my/her/his ...?",
+       "cn": "你喜欢我的/她的/他的⋯⋯吗？",
+       "audio": "book4/U2_S32.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "你喜欢我的/她的/他的⋯⋯吗？"
+      },
+      {
+       "id": "U2_S33",
+       "text": "He's in a big coat.",
+       "cn": "它穿着一件大外套。",
+       "audio": "book4/U2_S33.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "它穿着一件大外套。"
+      },
+      {
+       "id": "U2_S34",
+       "text": "How funny!",
+       "cn": "真有趣！",
+       "audio": "book4/U2_S34.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "真有趣！"
+      },
+      {
+       "id": "U2_S35",
+       "text": "Ha ha.",
+       "cn": "—哈哈。",
+       "audio": "book4/U2_S35.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "—哈哈。"
+      },
+      {
+       "id": "U2_S36",
+       "text": "Look at the cat.",
+       "cn": "看这只猫。",
+       "audio": "book4/U2_S36.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "看这只猫。"
+      },
+      {
+       "id": "U2_S37",
+       "text": "She's in a red skirt.",
+       "cn": "它穿着一条红色短裙。",
+       "audio": "book4/U2_S37.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "它穿着一条红色短裙。"
+      },
+      {
+       "id": "U2_S38",
+       "text": "She is beautiful.",
+       "cn": "它很漂亮。",
+       "audio": "book4/U2_S38.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "它很漂亮。"
+      },
+      {
+       "id": "U2_S39",
+       "text": "Yes, she is beautiful.",
+       "cn": "—是的，它很漂亮。",
+       "audio": "book4/U2_S39.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "—是的，它很漂亮。"
+      },
+      {
+       "id": "U2_S40",
+       "text": "Where is the dog?",
+       "cn": "—狗在哪里？",
+       "audio": "book4/U2_S40.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "—狗在哪里？"
+      },
+      {
+       "id": "U2_S41",
+       "text": "He's on the ball.",
+       "cn": "它在球上。",
+       "audio": "book4/U2_S41.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "它在球上。"
+      },
+      {
+       "id": "U2_S42",
+       "text": "He's in a blue sweater and green trousers.",
+       "cn": "它穿着蓝色毛衣和绿色裤子。",
+       "audio": "book4/U2_S42.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "它穿着蓝色毛衣和绿色裤子。"
+      },
+      {
+       "id": "U2_S43",
+       "text": "He's dancing there.",
+       "cn": "它在那里跳舞。",
+       "audio": "book4/U2_S43.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "它在那里跳舞。"
+      },
+      {
+       "id": "U2_S44",
+       "text": "Who's in a yellow dress over there?",
+       "cn": "—那边穿着黄色连衣裙的人是谁？",
+       "audio": "book4/U2_S44.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "—那边穿着黄色连衣裙的人是谁？"
+      },
+      {
+       "id": "U2_S45",
+       "text": "That's the duck.",
+       "cn": "—那是鸭子。",
+       "audio": "book4/U2_S45.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "—那是鸭子。"
+      },
+      {
+       "id": "U2_S46",
+       "text": "She is dancing, too.",
+       "cn": "它也在跳舞。",
+       "audio": "book4/U2_S46.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "它也在跳舞。"
       }
      ],
      "words": [
       {
-       "id": "U2_W1",
-       "text": "shirt",
+       "text": "a shirt",
        "audio": "book4/U2_W1.mp3",
-       "image": "book4/U2_W1.png",
-       "image_desc": "shirt 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "衬衫"
+       "image": "book4/U2_cover.png",
+       "image_desc": "一件衬衫",
+       "meaning": "一件衬衫"
       },
       {
-       "id": "U2_W2",
-       "text": "jacket",
+       "text": "a jacket",
        "audio": "book4/U2_W2.mp3",
-       "image": "book4/U2_W2.png",
-       "image_desc": "jacket 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "夹克"
+       "image": "book4/U2_cover.png",
+       "image_desc": "一件夹克",
+       "meaning": "一件夹克"
       },
       {
-       "id": "U2_W3",
-       "text": "skirt",
+       "text": "a skirt",
        "audio": "book4/U2_W3.mp3",
-       "image": "book4/U2_W3.png",
-       "image_desc": "skirt 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "短裙"
+       "image": "book4/U2_cover.png",
+       "image_desc": "一条短裙",
+       "meaning": "一条短裙"
       },
       {
-       "id": "U2_W4",
-       "text": "sweater",
+       "text": "a sweater",
        "audio": "book4/U2_W4.mp3",
-       "image": "book4/U2_W4.png",
-       "image_desc": "sweater 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "毛衣"
+       "image": "book4/U2_cover.png",
+       "image_desc": "一件毛衣",
+       "meaning": "一件毛衣"
       },
       {
-       "id": "U2_W5",
-       "text": "coat",
+       "text": "a coat",
        "audio": "book4/U2_W5.mp3",
-       "image": "book4/U2_W5.png",
-       "image_desc": "coat 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "外套"
+       "image": "book4/U2_cover.png",
+       "image_desc": "一件外套",
+       "meaning": "一件外套"
+      },
+      {
+       "text": "a dress",
+       "audio": "book4/U2_W6.mp3",
+       "image": "book4/U2_cover.png",
+       "image_desc": "5. 一条连衣裙",
+       "meaning": "5. 一条连衣裙"
       }
      ]
     },
@@ -2168,156 +5208,517 @@
       {
        "id": "U3_S1",
        "text": "It's sunny.",
+       "cn": "天气晴朗。",
        "audio": "book4/U3_S1.mp3",
-       "image": "book4/U3_S1.png",
-       "image_desc": "It's sunny. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U3_cover.png",
+       "image_desc": "天气晴朗。"
       },
       {
        "id": "U3_S2",
        "text": "How's the weather?",
+       "cn": "天气怎么样？",
        "audio": "book4/U3_S2.mp3",
-       "image": "book4/U3_S2.png",
-       "image_desc": "How's the weather? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U3_cover.png",
+       "image_desc": "天气怎么样？"
       },
       {
        "id": "U3_S3",
        "text": "It's windy.",
+       "cn": "在刮风。",
        "audio": "book4/U3_S3.mp3",
-       "image": "book4/U3_S3.png",
-       "image_desc": "It's windy. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U3_cover.png",
+       "image_desc": "在刮风。"
       },
       {
        "id": "U3_S4",
-       "text": "Is it rainy?",
+       "text": "It's cloudy.",
+       "cn": "多云。",
        "audio": "book4/U3_S4.mp3",
-       "image": "book4/U3_S4.png",
-       "image_desc": "Is it rainy? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U3_cover.png",
+       "image_desc": "多云。"
       },
       {
        "id": "U3_S5",
-       "text": "Yes, it is.",
+       "text": "It's snowy.",
+       "cn": "在下雪。",
        "audio": "book4/U3_S5.mp3",
-       "image": "book4/U3_S5.png",
-       "image_desc": "Yes, it is. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U3_cover.png",
+       "image_desc": "在下雪。"
+      },
+      {
+       "id": "U3_S6",
+       "text": "Is it rainy?",
+       "cn": "外面下雨了吗？",
+       "audio": "book4/U3_S6.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "外面下雨了吗？"
+      },
+      {
+       "id": "U3_S7",
+       "text": "Yes, it is.",
+       "cn": "是的，下雨了。",
+       "audio": "book4/U3_S7.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "是的，下雨了。"
+      },
+      {
+       "id": "U3_S8",
+       "text": "Is it sunny?",
+       "cn": "外面是晴天吗？",
+       "audio": "book4/U3_S8.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "外面是晴天吗？"
+      },
+      {
+       "id": "U3_S9",
+       "text": "It's a sunny day.",
+       "cn": "这是一个阳光明媚的日子。",
+       "audio": "book4/U3_S9.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "这是一个阳光明媚的日子。"
+      },
+      {
+       "id": "U3_S10",
+       "text": "How's the weather today?",
+       "cn": "今天的天气如何？",
+       "audio": "book4/U3_S10.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "今天的天气如何？"
+      },
+      {
+       "id": "U3_S11",
+       "text": "How's the weather in Beijing?",
+       "cn": "—北京的天气怎么样？",
+       "audio": "book4/U3_S11.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—北京的天气怎么样？"
+      },
+      {
+       "id": "U3_S12",
+       "text": "It's fine.",
+       "cn": "—很好。",
+       "audio": "book4/U3_S12.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—很好。"
+      },
+      {
+       "id": "U3_S13",
+       "text": "How's the weather in Tianjin?",
+       "cn": "—天津的天气怎么样？",
+       "audio": "book4/U3_S13.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—天津的天气怎么样？"
+      },
+      {
+       "id": "U3_S14",
+       "text": "How's the weather in Nanjing?",
+       "cn": "—南京的天气怎么样？",
+       "audio": "book4/U3_S14.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—南京的天气怎么样？"
+      },
+      {
+       "id": "U3_S15",
+       "text": "How's the weather in Hongkong?",
+       "cn": "—香港的天气怎么样？",
+       "audio": "book4/U3_S15.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—香港的天气怎么样？"
+      },
+      {
+       "id": "U3_S16",
+       "text": "How's the weather in London?",
+       "cn": "—伦敦的天气怎么样？",
+       "audio": "book4/U3_S16.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—伦敦的天气怎么样？"
+      },
+      {
+       "id": "U3_S17",
+       "text": "It's rainy.",
+       "cn": "—在下雨。",
+       "audio": "book4/U3_S17.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—在下雨。"
+      },
+      {
+       "id": "U3_S18",
+       "text": "Great.",
+       "cn": "—太棒了。",
+       "audio": "book4/U3_S18.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—太棒了。"
+      },
+      {
+       "id": "U3_S19",
+       "text": "Can I wear my new dress?",
+       "cn": "—我能穿我的新裙子吗？",
+       "audio": "book4/U3_S19.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—我能穿我的新裙子吗？"
+      },
+      {
+       "id": "U3_S20",
+       "text": "Thank you, Mum.",
+       "cn": "—谢谢你，妈妈。",
+       "audio": "book4/U3_S20.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—谢谢你，妈妈。"
       }
      ],
      "words": [
       {
-       "id": "U3_W1",
        "text": "sunny",
        "audio": "book4/U3_W1.mp3",
-       "image": "book4/U3_W1.png",
-       "image_desc": "sunny 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U3_cover.png",
+       "image_desc": "晴朗的",
        "meaning": "晴朗的"
       },
       {
-       "id": "U3_W2",
        "text": "cloudy",
        "audio": "book4/U3_W2.mp3",
-       "image": "book4/U3_W2.png",
-       "image_desc": "cloudy 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U3_cover.png",
+       "image_desc": "多云的",
        "meaning": "多云的"
       },
       {
-       "id": "U3_W3",
        "text": "windy",
        "audio": "book4/U3_W3.mp3",
-       "image": "book4/U3_W3.png",
-       "image_desc": "windy 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U3_cover.png",
+       "image_desc": "有风的",
        "meaning": "有风的"
       },
       {
-       "id": "U3_W4",
        "text": "rainy",
        "audio": "book4/U3_W4.mp3",
-       "image": "book4/U3_W4.png",
-       "image_desc": "rainy 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U3_cover.png",
+       "image_desc": "下雨的",
        "meaning": "下雨的"
       },
       {
-       "id": "U3_W5",
        "text": "snowy",
        "audio": "book4/U3_W5.mp3",
-       "image": "book4/U3_W5.png",
-       "image_desc": "snowy 相关卡通主题配图（简约2D、白底、无文字）",
+       "image": "book4/U3_cover.png",
+       "image_desc": "下雪的",
        "meaning": "下雪的"
+      },
+      {
+       "text": "Sure.",
+       "audio": "book4/U3_W6.mp3",
+       "image": "book4/U3_cover.png",
+       "image_desc": "—当然。",
+       "meaning": "—当然。"
       }
      ]
     },
     {
      "unit_id": 4,
-     "title": "Unit 4 Transport",
-     "title_en": "Transport",
+     "title": "Unit 4 Vehicles",
+     "title_en": "Vehicles",
      "sentences": [
       {
        "id": "U4_S1",
-       "text": "Let's go by plane.",
+       "text": "by taxi",
+       "cn": "坐出租车",
        "audio": "book4/U4_S1.mp3",
-       "image": "book4/U4_S1.png",
-       "image_desc": "Let's go by plane. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U4_cover.png",
+       "image_desc": "坐出租车"
       },
       {
        "id": "U4_S2",
-       "text": "How do you go to school?",
+       "text": "by bus",
+       "cn": "坐公共汽车",
        "audio": "book4/U4_S2.mp3",
-       "image": "book4/U4_S2.png",
-       "image_desc": "How do you go to school? 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U4_cover.png",
+       "image_desc": "坐公共汽车"
       },
       {
        "id": "U4_S3",
-       "text": "I go to school by bike.",
+       "text": "by plane",
+       "cn": "坐飞机",
        "audio": "book4/U4_S3.mp3",
-       "image": "book4/U4_S3.png",
-       "image_desc": "I go to school by bike. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U4_cover.png",
+       "image_desc": "坐飞机"
       },
       {
        "id": "U4_S4",
-       "text": "I go to school by bus.",
+       "text": "by bike",
+       "cn": "骑自行车",
        "audio": "book4/U4_S4.mp3",
-       "image": "book4/U4_S4.png",
-       "image_desc": "I go to school by bus. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U4_cover.png",
+       "image_desc": "骑自行车"
+      },
+      {
+       "id": "U4_S5",
+       "text": "by ship",
+       "cn": "坐轮船",
+       "audio": "book4/U4_S5.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "坐轮船"
+      },
+      {
+       "id": "U4_S6",
+       "text": "How do you go to Beijing?",
+       "cn": "你怎么去北京？",
+       "audio": "book4/U4_S6.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "你怎么去北京？"
+      },
+      {
+       "id": "U4_S7",
+       "text": "How do you go to Shanghai?",
+       "cn": "你怎么去上海？",
+       "audio": "book4/U4_S7.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "你怎么去上海？"
+      },
+      {
+       "id": "U4_S8",
+       "text": "How do you go to Hongkong?",
+       "cn": "你怎么去香港？",
+       "audio": "book4/U4_S8.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "你怎么去香港？"
+      },
+      {
+       "id": "U4_S9",
+       "text": "How do you go to Dalian?",
+       "cn": "你怎么去大连？",
+       "audio": "book4/U4_S9.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "你怎么去大连？"
+      },
+      {
+       "id": "U4_S10",
+       "text": "OK.",
+       "cn": "好的。",
+       "audio": "book4/U4_S10.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "好的。"
+      },
+      {
+       "id": "U4_S11",
+       "text": "By train?",
+       "cn": "坐火车？",
+       "audio": "book4/U4_S11.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "坐火车？"
+      },
+      {
+       "id": "U4_S12",
+       "text": "Oh, yes.",
+       "cn": "哦，是的。",
+       "audio": "book4/U4_S12.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "哦，是的。"
+      },
+      {
+       "id": "U4_S13",
+       "text": "Oh, great.",
+       "cn": "哦，棒极了。",
+       "audio": "book4/U4_S13.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "哦，棒极了。"
+      },
+      {
+       "id": "U4_S14",
+       "text": "Oh, super!",
+       "cn": "哦，超级酷！",
+       "audio": "book4/U4_S14.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "哦，超级酷！"
+      },
+      {
+       "id": "U4_S15",
+       "text": "How do you go to ...?",
+       "cn": "你怎么去⋯⋯？",
+       "audio": "book4/U4_S15.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "你怎么去⋯⋯？"
+      },
+      {
+       "id": "U4_S16",
+       "text": "How do you go to school?",
+       "cn": "你怎么去学校？",
+       "audio": "book4/U4_S16.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "你怎么去学校？"
+      },
+      {
+       "id": "U4_S17",
+       "text": "Can you make a guess?",
+       "cn": "你可以猜一猜吗？",
+       "audio": "book4/U4_S17.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "你可以猜一猜吗？"
+      },
+      {
+       "id": "U4_S18",
+       "text": "By taxi, by bus, by car or by bike?",
+       "cn": "坐出租车、坐公共汽车、坐小汽车或者骑自行车？",
+       "audio": "book4/U4_S18.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "坐出租车、坐公共汽车、坐小汽车或者骑自行车？"
+      },
+      {
+       "id": "U4_S19",
+       "text": "I go to school on foot.",
+       "cn": "我步行去学校。",
+       "audio": "book4/U4_S19.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "我步行去学校。"
+      },
+      {
+       "id": "U4_S20",
+       "text": "Ha ha!",
+       "cn": "哈哈！",
+       "audio": "book4/U4_S20.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "哈哈！"
+      },
+      {
+       "id": "U4_S21",
+       "text": "I go to Shanghai by plane.",
+       "cn": "我坐飞机去上海。",
+       "audio": "book4/U4_S21.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "我坐飞机去上海。"
+      },
+      {
+       "id": "U4_S22",
+       "text": "Hello, I'm Mr. Zhang.",
+       "cn": "1. 你好，我是张先生。",
+       "audio": "book4/U4_S22.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "1. 你好，我是张先生。"
+      },
+      {
+       "id": "U4_S23",
+       "text": "I go to Beijing by train.",
+       "cn": "我坐火车去北京。",
+       "audio": "book4/U4_S23.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "我坐火车去北京。"
+      },
+      {
+       "id": "U4_S24",
+       "text": "Hello, I'm Miss Wang.",
+       "cn": "2. 你好，我是王小姐。",
+       "audio": "book4/U4_S24.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "2. 你好，我是王小姐。"
+      },
+      {
+       "id": "U4_S25",
+       "text": "I go to Hainan by plane.",
+       "cn": "我坐飞机去海南。",
+       "audio": "book4/U4_S25.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "我坐飞机去海南。"
+      },
+      {
+       "id": "U4_S26",
+       "text": "Hi, I'm Meimei.",
+       "cn": "3. 你好，我是梅梅。",
+       "audio": "book4/U4_S26.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "3. 你好，我是梅梅。"
+      },
+      {
+       "id": "U4_S27",
+       "text": "I go to Dalian by taxi.",
+       "cn": "我坐出租车去大连。",
+       "audio": "book4/U4_S27.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "我坐出租车去大连。"
+      },
+      {
+       "id": "U4_S28",
+       "text": "I'm Lele.",
+       "cn": "4. 我是乐乐。",
+       "audio": "book4/U4_S28.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "4. 我是乐乐。"
+      },
+      {
+       "id": "U4_S29",
+       "text": "I go to school by bus.",
+       "cn": "我坐公交车上学。",
+       "audio": "book4/U4_S29.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "我坐公交车上学。"
+      },
+      {
+       "id": "U4_S30",
+       "text": "My name is Xinxin.",
+       "cn": "5. 我的名字是欣欣。",
+       "audio": "book4/U4_S30.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "5. 我的名字是欣欣。"
+      },
+      {
+       "id": "U4_S31",
+       "text": "I go to school by bike.",
+       "cn": "我坐骑自行车上学。",
+       "audio": "book4/U4_S31.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "我坐骑自行车上学。"
+      },
+      {
+       "id": "U4_S32",
+       "text": "But how?",
+       "cn": "但是怎么去呢？",
+       "audio": "book4/U4_S32.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "但是怎么去呢？"
+      },
+      {
+       "id": "U4_S33",
+       "text": "Good!",
+       "cn": "—很好！",
+       "audio": "book4/U4_S33.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "—很好！"
+      },
+      {
+       "id": "U4_S34",
+       "text": "Xinjiang is beautiful.",
+       "cn": "—新疆很美丽。",
+       "audio": "book4/U4_S34.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "—新疆很美丽。"
+      },
+      {
+       "id": "U4_S35",
+       "text": "Look, so many grapes.",
+       "cn": "—看，这么多葡萄。",
+       "audio": "book4/U4_S35.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "—看，这么多葡萄。"
+      },
+      {
+       "id": "U4_S36",
+       "text": "I like grapes.",
+       "cn": "—我喜欢葡萄。",
+       "audio": "book4/U4_S36.mp3",
+       "image": "book4/U4_cover.png",
+       "image_desc": "—我喜欢葡萄。"
       }
      ],
      "words": [
       {
-       "id": "U4_W1",
-       "text": "taxi",
+       "text": "By ...",
        "audio": "book4/U4_W1.mp3",
-       "image": "book4/U4_W1.png",
-       "image_desc": "taxi 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "出租车"
+       "image": "book4/U4_cover.png",
+       "image_desc": "乘坐⋯⋯",
+       "meaning": "乘坐⋯⋯"
       },
       {
-       "id": "U4_W2",
-       "text": "bus",
+       "text": "I ...",
        "audio": "book4/U4_W2.mp3",
-       "image": "book4/U4_W2.png",
-       "image_desc": "bus 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "公共汽车"
-      },
-      {
-       "id": "U4_W3",
-       "text": "plane",
-       "audio": "book4/U4_W3.mp3",
-       "image": "book4/U4_W3.png",
-       "image_desc": "plane 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "飞机"
-      },
-      {
-       "id": "U4_W4",
-       "text": "bike",
-       "audio": "book4/U4_W4.mp3",
-       "image": "book4/U4_W4.png",
-       "image_desc": "bike 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "自行车"
-      },
-      {
-       "id": "U4_W5",
-       "text": "ship",
-       "audio": "book4/U4_W5.mp3",
-       "image": "book4/U4_W5.png",
-       "image_desc": "ship 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "轮船"
+       "image": "book4/U4_cover.png",
+       "image_desc": "我乘船去海南。",
+       "meaning": "我乘船去海南。"
       }
      ]
     },
@@ -2329,120 +5730,376 @@
       {
        "id": "U5_S1",
        "text": "This is my bedroom.",
+       "cn": "这是我的卧室。",
        "audio": "book4/U5_S1.mp3",
-       "image": "book4/U5_S1.png",
-       "image_desc": "This is my bedroom. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U5_cover.png",
+       "image_desc": "这是我的卧室。"
       },
       {
        "id": "U5_S2",
        "text": "Welcome to my home!",
+       "cn": "欢迎来我家！",
        "audio": "book4/U5_S2.mp3",
-       "image": "book4/U5_S2.png",
-       "image_desc": "Welcome to my home! 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U5_cover.png",
+       "image_desc": "欢迎来我家！"
       },
       {
        "id": "U5_S3",
-       "text": "This is the living room.",
+       "text": "Thank you, thank you.",
+       "cn": "谢谢你，谢谢你。",
        "audio": "book4/U5_S3.mp3",
-       "image": "book4/U5_S3.png",
-       "image_desc": "This is the living room. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U5_cover.png",
+       "image_desc": "谢谢你，谢谢你。"
       },
       {
        "id": "U5_S4",
-       "text": "This is the dining room.",
+       "text": "This is the living room.",
+       "cn": "这里是客厅。",
        "audio": "book4/U5_S4.mp3",
-       "image": "book4/U5_S4.png",
-       "image_desc": "This is the dining room. 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U5_cover.png",
+       "image_desc": "这里是客厅。"
+      },
+      {
+       "id": "U5_S5",
+       "text": "Wow, nice!",
+       "cn": "哇哦，很好！",
+       "audio": "book4/U5_S5.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "哇哦，很好！"
+      },
+      {
+       "id": "U5_S6",
+       "text": "This is the dining room.",
+       "cn": "这里是餐厅。",
+       "audio": "book4/U5_S6.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "这里是餐厅。"
+      },
+      {
+       "id": "U5_S7",
+       "text": "Oh, clean!",
+       "cn": "哦，很干净！",
+       "audio": "book4/U5_S7.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "哦，很干净！"
+      },
+      {
+       "id": "U5_S8",
+       "text": "Bathroom, bedroom, study and kitchen.",
+       "cn": "浴室、卧室、书房和厨房。",
+       "audio": "book4/U5_S8.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "浴室、卧室、书房和厨房。"
+      },
+      {
+       "id": "U5_S9",
+       "text": "They are all nice rooms.",
+       "cn": "这些房间都很不错。",
+       "audio": "book4/U5_S9.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "这些房间都很不错。"
+      },
+      {
+       "id": "U5_S10",
+       "text": "Look at my home.",
+       "cn": "看我的家。",
+       "audio": "book4/U5_S10.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "看我的家。"
+      },
+      {
+       "id": "U5_S11",
+       "text": "A very nice home.",
+       "cn": "一个非常漂亮的家。",
+       "audio": "book4/U5_S11.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "一个非常漂亮的家。"
+      },
+      {
+       "id": "U5_S12",
+       "text": "Here's the living room, living room.",
+       "cn": "这里是客厅，客厅。",
+       "audio": "book4/U5_S12.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "这里是客厅，客厅。"
+      },
+      {
+       "id": "U5_S13",
+       "text": "Here's my bedroom, my bedroom.",
+       "cn": "这里是我的卧室，我的卧室。",
+       "audio": "book4/U5_S13.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "这里是我的卧室，我的卧室。"
+      },
+      {
+       "id": "U5_S14",
+       "text": "Come to the dining room, and come to the kitchen.",
+       "cn": "跟我来餐厅和厨房。",
+       "audio": "book4/U5_S14.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "跟我来餐厅和厨房。"
+      },
+      {
+       "id": "U5_S15",
+       "text": "This is my study, and this is the bathroom.",
+       "cn": "这里是我的书房，这里是浴室。",
+       "audio": "book4/U5_S15.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "这里是我的书房，这里是浴室。"
+      },
+      {
+       "id": "U5_S16",
+       "text": "I like my home, my nice home.",
+       "cn": "我喜欢我的家，我漂亮的家。",
+       "audio": "book4/U5_S16.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "我喜欢我的家，我漂亮的家。"
+      },
+      {
+       "id": "U5_S17",
+       "text": "Hello, I'm Tiantian.",
+       "cn": "1. 你好，我是天天。",
+       "audio": "book4/U5_S17.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "1. 你好，我是天天。"
+      },
+      {
+       "id": "U5_S18",
+       "text": "Look, this is my bedroom.",
+       "cn": "看，这是我的卧室。",
+       "audio": "book4/U5_S18.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "看，这是我的卧室。"
       }
      ],
      "words": [
       {
-       "id": "U5_W1",
-       "text": "living room",
+       "text": "a living room",
        "audio": "book4/U5_W1.mp3",
-       "image": "book4/U5_W1.png",
-       "image_desc": "living room 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "客厅"
+       "image": "book4/U5_cover.png",
+       "image_desc": "一间客厅",
+       "meaning": "一间客厅"
       },
       {
-       "id": "U5_W2",
-       "text": "dining room",
+       "text": "a dining room",
        "audio": "book4/U5_W2.mp3",
-       "image": "book4/U5_W2.png",
-       "image_desc": "dining room 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "餐厅"
+       "image": "book4/U5_cover.png",
+       "image_desc": "一个餐厅",
+       "meaning": "一个餐厅"
       },
       {
-       "id": "U5_W3",
-       "text": "bathroom",
+       "text": "a bathroom",
        "audio": "book4/U5_W3.mp3",
-       "image": "book4/U5_W3.png",
-       "image_desc": "bathroom 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "卫生间"
+       "image": "book4/U5_cover.png",
+       "image_desc": "一间浴室",
+       "meaning": "一间浴室"
       },
       {
-       "id": "U5_W4",
-       "text": "study",
+       "text": "a study",
        "audio": "book4/U5_W4.mp3",
-       "image": "book4/U5_W4.png",
-       "image_desc": "study 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "书房"
+       "image": "book4/U5_cover.png",
+       "image_desc": "一间书房",
+       "meaning": "一间书房"
       },
       {
-       "id": "U5_W5",
-       "text": "kitchen",
+       "text": "a kitchen",
        "audio": "book4/U5_W5.mp3",
-       "image": "book4/U5_W5.png",
-       "image_desc": "kitchen 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "厨房"
+       "image": "book4/U5_cover.png",
+       "image_desc": "一个厨房",
+       "meaning": "一个厨房"
+      },
+      {
+       "text": "a bedroom",
+       "audio": "book4/U5_W6.mp3",
+       "image": "book4/U5_cover.png",
+       "image_desc": "6. 一间卧室",
+       "meaning": "6. 一间卧室"
       }
      ]
     },
     {
      "unit_id": 6,
-     "title": "Unit 6 Happy Time（复习单元，5 条待用户对照纸质教材补充）",
+     "title": "Unit 6 Happy Time",
      "title_en": "Happy Time",
      "sentences": [
       {
        "id": "U6_S1",
-       "text": "Happy time!",
+       "text": "Welcome to our school.",
+       "cn": "欢迎来到我们学校。",
        "audio": "book4/U6_S1.mp3",
-       "image": "book4/U6_S1.png",
-       "image_desc": "Happy time! 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U6_cover.png",
+       "image_desc": "欢迎来到我们学校。"
       },
       {
        "id": "U6_S2",
-       "text": "Welcome to my home!",
+       "text": "Look, this is our classroom.",
+       "cn": "看，这是我们的教室。",
        "audio": "book4/U6_S2.mp3",
-       "image": "book4/U6_S2.png",
-       "image_desc": "Welcome to my home! 相关卡通主题配图（简约2D、白底、无文字）"
+       "image": "book4/U6_cover.png",
+       "image_desc": "看，这是我们的教室。"
       },
       {
        "id": "U6_S3",
-       "text": "It's sunny.",
+       "text": "We have a maths class here on Monday.",
+       "cn": "我们星期一在这里上数学课。",
        "audio": "book4/U6_S3.mp3",
-       "image": "book4/U6_S3.png",
-       "image_desc": "It's sunny. 相关卡通主题配图（简约2D、白底、无文字）"
-      }
-     ],
-     "words": [
-      {
-       "id": "U6_W1",
-       "text": "happy",
-       "audio": "book4/U6_W1.mp3",
-       "image": "book4/U6_W1.png",
-       "image_desc": "happy 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "高兴的"
+       "image": "book4/U6_cover.png",
+       "image_desc": "我们星期一在这里上数学课。"
       },
       {
-       "id": "U6_W2",
-       "text": "time",
-       "audio": "book4/U6_W2.mp3",
-       "image": "book4/U6_W2.png",
-       "image_desc": "time 相关卡通主题配图（简约2D、白底、无文字）",
-       "meaning": "时间"
+       "id": "U6_S4",
+       "text": "Look, this is our gym.",
+       "cn": "看，这是我们的健身房。",
+       "audio": "book4/U6_S4.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "看，这是我们的健身房。"
+      },
+      {
+       "id": "U6_S5",
+       "text": "We are here on Friday.",
+       "cn": "我们星期五在这里。",
+       "audio": "book4/U6_S5.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "我们星期五在这里。"
+      },
+      {
+       "id": "U6_S6",
+       "text": "Look, this is our music class.",
+       "cn": "看，这是我们的音乐课。",
+       "audio": "book4/U6_S6.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "看，这是我们的音乐课。"
+      },
+      {
+       "id": "U6_S7",
+       "text": "We have a music class on Wednesday.",
+       "cn": "我们星期三有音乐课。",
+       "audio": "book4/U6_S7.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "我们星期三有音乐课。"
+      },
+      {
+       "id": "U6_S8",
+       "text": "Look, this is our library.",
+       "cn": "看，这是我们的图书馆。",
+       "audio": "book4/U6_S8.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "看，这是我们的图书馆。"
+      },
+      {
+       "id": "U6_S9",
+       "text": "We are here on Sunday.",
+       "cn": "我们星期天在这里。",
+       "audio": "book4/U6_S9.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "我们星期天在这里。"
+      },
+      {
+       "id": "U6_S10",
+       "text": "Welcome to my home.",
+       "cn": "—欢迎来到我家。",
+       "audio": "book4/U6_S10.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "—欢迎来到我家。"
+      },
+      {
+       "id": "U6_S11",
+       "text": "Look, this is the living room.",
+       "cn": "看，这是客厅。",
+       "audio": "book4/U6_S11.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "看，这是客厅。"
+      },
+      {
+       "id": "U6_S12",
+       "text": "A sweater is in the living room.",
+       "cn": "一件毛衣在客厅里。",
+       "audio": "book4/U6_S12.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "一件毛衣在客厅里。"
+      },
+      {
+       "id": "U6_S13",
+       "text": "This is the dining room.",
+       "cn": "这是餐厅。",
+       "audio": "book4/U6_S13.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "这是餐厅。"
+      },
+      {
+       "id": "U6_S14",
+       "text": "A big window is in the dining room.",
+       "cn": "一扇大窗户在餐厅里。",
+       "audio": "book4/U6_S14.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "一扇大窗户在餐厅里。"
+      },
+      {
+       "id": "U6_S15",
+       "text": "This is the kitchen.",
+       "cn": "这是厨房。",
+       "audio": "book4/U6_S15.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "这是厨房。"
+      },
+      {
+       "id": "U6_S16",
+       "text": "A chair is in the kitchen.",
+       "cn": "一把椅子在厨房里。",
+       "audio": "book4/U6_S16.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "一把椅子在厨房里。"
+      },
+      {
+       "id": "U6_S17",
+       "text": "This is the study.",
+       "cn": "这是书房。",
+       "audio": "book4/U6_S17.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "这是书房。"
+      },
+      {
+       "id": "U6_S18",
+       "text": "A book and a desk are in the study.",
+       "cn": "一本书和一张课桌在书房里。",
+       "audio": "book4/U6_S18.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "一本书和一张课桌在书房里。"
+      },
+      {
+       "id": "U6_S19",
+       "text": "This is the bathroom.",
+       "cn": "这是浴室。",
+       "audio": "book4/U6_S19.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "这是浴室。"
+      },
+      {
+       "id": "U6_S20",
+       "text": "How nice!",
+       "cn": "—真棒！",
+       "audio": "book4/U6_S20.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "—真棒！"
+      },
+      {
+       "id": "U6_S21",
+       "text": "Thank you.",
+       "cn": "—谢谢你。",
+       "audio": "book4/U6_S21.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "—谢谢你。"
+      },
+      {
+       "id": "U6_S22",
+       "text": "How's the weather?",
+       "cn": "天气怎么样？",
+       "audio": "book4/U6_S22.mp3",
+       "image": "book4/U6_cover.png",
+       "image_desc": "天气怎么样？"
       }
-     ]
+     ],
+     "words": []
     }
    ]
   },

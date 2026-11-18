@@ -1,0 +1,917 @@
+﻿序号,册,条目ID,类型,文本,建议文件名
+1,1,U1_S1,句子,Hello.,book1_U1_S1.mp3
+2,1,U1_S2,句子,Hi!,book1_U1_S2.mp3
+3,1,U1_S3,句子,Goodbye.,book1_U1_S3.mp3
+4,1,U1_W1,单词,hello,book1_U1_W1.mp3
+5,1,U1_W2,单词,hi,book1_U1_W2.mp3
+6,1,U1_W3,单词,goodbye,book1_U1_W3.mp3
+7,1,U2_S1,句子,I’m Tom.,book1_U2_S1.mp3
+8,1,U2_S2,句子,I’m Amy.,book1_U2_S2.mp3
+9,1,U2_S3,句子,Nice to see you.,book1_U2_S3.mp3
+10,1,U2_W1,单词,I,book1_U2_W1.mp3
+11,1,U2_W2,单词,Tom,book1_U2_W2.mp3
+12,1,U2_W3,单词,Amy,book1_U2_W3.mp3
+13,1,U3_S1,句子,How are you?,book1_U3_S1.mp3
+14,1,U3_S2,句子,I’m fine.,book1_U3_S2.mp3
+15,1,U3_S3,句子,Thank you.,book1_U3_S3.mp3
+16,1,U3_W1,单词,how,book1_U3_W1.mp3
+17,1,U3_W2,单词,fine,book1_U3_W2.mp3
+18,1,U3_W3,单词,thank you,book1_U3_W3.mp3
+19,1,U4_S1,句子,This is a book.,book1_U4_S1.mp3
+20,1,U4_S2,句子,This is a pencil.,book1_U4_S2.mp3
+21,1,U4_S3,句子,Show me your pencil.,book1_U4_S3.mp3
+22,1,U4_W1,单词,book,book1_U4_W1.mp3
+23,1,U4_W2,单词,pencil,book1_U4_W2.mp3
+24,1,U4_W3,单词,show,book1_U4_W3.mp3
+25,1,U5_S1,句子,This is a bag.,book1_U5_S1.mp3
+26,1,U5_S2,句子,Open your bag.,book1_U5_S2.mp3
+27,1,U5_S3,句子,Close your bag.,book1_U5_S3.mp3
+28,1,U5_W1,单词,bag,book1_U5_W1.mp3
+29,1,U5_W2,单词,open,book1_U5_W2.mp3
+30,1,U5_W3,单词,close,book1_U5_W3.mp3
+31,1,U6_S1,句子,One.,book1_U6_S1.mp3
+32,1,U6_S2,句子,Two.,book1_U6_S2.mp3
+33,1,U6_S3,句子,Three.,book1_U6_S3.mp3
+34,1,U6_S4,句子,Four.,book1_U6_S4.mp3
+35,1,U6_S5,句子,Five.,book1_U6_S5.mp3
+36,1,U6_W1,单词,one,book1_U6_W1.mp3
+37,1,U6_W2,单词,two,book1_U6_W2.mp3
+38,1,U6_W3,单词,three,book1_U6_W3.mp3
+39,1,U6_W4,单词,four,book1_U6_W4.mp3
+40,1,U6_W5,单词,five,book1_U6_W5.mp3
+41,2,U1_S1,句子,Red.,book2_U1_S1.mp3
+42,2,U1_S2,句子,Blue.,book2_U1_S2.mp3
+43,2,U1_S3,句子,Yellow.,book2_U1_S3.mp3
+44,2,U1_S4,句子,Green.,book2_U1_S4.mp3
+45,2,U1_W1,单词,red,book2_U1_W1.mp3
+46,2,U1_W2,单词,blue,book2_U1_W2.mp3
+47,2,U1_W3,单词,yellow,book2_U1_W3.mp3
+48,2,U1_W4,单词,green,book2_U1_W4.mp3
+49,2,U2_S1,句子,Eye.,book2_U2_S1.mp3
+50,2,U2_S2,句子,Ear.,book2_U2_S2.mp3
+51,2,U2_S3,句子,Nose.,book2_U2_S3.mp3
+52,2,U2_S4,句子,Mouth.,book2_U2_S4.mp3
+53,2,U2_W1,单词,eye,book2_U2_W1.mp3
+54,2,U2_W2,单词,ear,book2_U2_W2.mp3
+55,2,U2_W3,单词,nose,book2_U2_W3.mp3
+56,2,U2_W4,单词,mouth,book2_U2_W4.mp3
+57,2,U3_S1,句子,It’s a cat.,book2_U3_S1.mp3
+58,2,U3_S2,句子,It’s a dog.,book2_U3_S2.mp3
+59,2,U3_S3,句子,It’s a bird.,book2_U3_S3.mp3
+60,2,U3_W1,单词,cat,book2_U3_W1.mp3
+61,2,U3_W2,单词,dog,book2_U3_W2.mp3
+62,2,U3_W3,单词,bird,book2_U3_W3.mp3
+63,2,U4_S1,句子,Apple.,book2_U4_S1.mp3
+64,2,U4_S2,句子,Banana.,book2_U4_S2.mp3
+65,2,U4_S3,句子,Orange.,book2_U4_S3.mp3
+66,2,U4_W1,单词,apple,book2_U4_W1.mp3
+67,2,U4_W2,单词,banana,book2_U4_W2.mp3
+68,2,U4_W3,单词,orange,book2_U4_W3.mp3
+69,2,U5_S1,句子,Hand.,book2_U5_S1.mp3
+70,2,U5_S2,句子,Foot.,book2_U5_S2.mp3
+71,2,U5_S3,句子,Arm.,book2_U5_S3.mp3
+72,2,U5_W1,单词,hand,book2_U5_W1.mp3
+73,2,U5_W2,单词,foot,book2_U5_W2.mp3
+74,2,U5_W3,单词,arm,book2_U5_W3.mp3
+75,2,U6_S1,句子,Six.,book2_U6_S1.mp3
+76,2,U6_S2,句子,Seven.,book2_U6_S2.mp3
+77,2,U6_S3,句子,Eight.,book2_U6_S3.mp3
+78,2,U6_S4,句子,Nine.,book2_U6_S4.mp3
+79,2,U6_S5,句子,Ten.,book2_U6_S5.mp3
+80,2,U6_W1,单词,six,book2_U6_W1.mp3
+81,2,U6_W2,单词,seven,book2_U6_W2.mp3
+82,2,U6_W3,单词,eight,book2_U6_W3.mp3
+83,2,U6_W4,单词,nine,book2_U6_W4.mp3
+84,2,U6_W5,单词,ten,book2_U6_W5.mp3
+85,3,U1_S1,句子,Look at my robot.,book3_U1_S1.mp3
+86,3,U1_S2,句子,Look at my toy truck. Wow! Good!,book3_U1_S2.mp3
+87,3,U1_S3,句子,Let's play together.,book3_U1_S3.mp3
+88,3,U1_S4,句子,"I have a toy truck. Beep, beep...",book3_U1_S4.mp3
+89,3,U1_S5,句子,Do you have a robot?,book3_U1_S5.mp3
+90,3,U1_W1,单词,toy truck,book3_U1_W1.mp3
+91,3,U1_W2,单词,toy jeep,book3_U1_W2.mp3
+92,3,U1_W3,单词,toy digger,book3_U1_W3.mp3
+93,3,U1_W4,单词,robot,book3_U1_W4.mp3
+94,3,U1_W5,单词,building blocks,book3_U1_W5.mp3
+95,3,U2_S1,句子,It's a square.,book3_U2_S1.mp3
+96,3,U2_S2,句子,What shape is it?,book3_U2_S2.mp3
+97,3,U2_S3,句子,It's a diamond.,book3_U2_S3.mp3
+98,3,U2_S4,句子,It's a triangle.,book3_U2_S4.mp3
+99,3,U2_S5,句子,I can draw a triangle.,book3_U2_S5.mp3
+100,3,U2_W1,单词,square,book3_U2_W1.mp3
+101,3,U2_W2,单词,triangle,book3_U2_W2.mp3
+102,3,U2_W3,单词,rectangle,book3_U2_W3.mp3
+103,3,U2_W4,单词,heart,book3_U2_W4.mp3
+104,3,U2_W5,单词,diamond,book3_U2_W5.mp3
+105,3,U3_S1,句子,This is our school.,book3_U3_S1.mp3
+106,3,U3_S2,句子,Welcome to our school!,book3_U3_S2.mp3
+107,3,U3_S3,句子,This is our classroom.,book3_U3_S3.mp3
+108,3,U3_S4,句子,This is our gym.,book3_U3_S4.mp3
+109,3,U3_S5,句子,"This way, please.",book3_U3_S5.mp3
+110,3,U3_W1,单词,school,book3_U3_W1.mp3
+111,3,U3_W2,单词,classroom,book3_U3_W2.mp3
+112,3,U3_W3,单词,library,book3_U3_W3.mp3
+113,3,U3_W4,单词,music room,book3_U3_W4.mp3
+114,3,U3_W5,单词,gym,book3_U3_W5.mp3
+115,3,U4_S1,句子,"Come to the blackboard, please.",book3_U4_S1.mp3
+116,3,U4_S2,句子,OK. We are coming.,book3_U4_S2.mp3
+117,3,U4_S3,句子,"Come to the desk, please.",book3_U4_S3.mp3
+118,3,U4_S4,句子,OK. I'm coming.,book3_U4_S4.mp3
+119,3,U4_S5,句子,What's this?,book3_U4_S5.mp3
+120,3,U4_W1,单词,blackboard,book3_U4_W1.mp3
+121,3,U4_W2,单词,door,book3_U4_W2.mp3
+122,3,U4_W3,单词,window,book3_U4_W3.mp3
+123,3,U4_W4,单词,desk,book3_U4_W4.mp3
+124,3,U4_W5,单词,chair,book3_U4_W5.mp3
+125,3,U5_S1,句子,English is my favourite subject.,book3_U5_S1.mp3
+126,3,U5_S2,句子,What's your favourite subject?,book3_U5_S2.mp3
+127,3,U5_S3,句子,"It's English, of course.",book3_U5_S3.mp3
+128,3,U5_S4,句子,I think it's maths.,book3_U5_S4.mp3
+129,3,U5_S5,句子,I like them all.,book3_U5_S5.mp3
+130,3,U5_W1,单词,Chinese,book3_U5_W1.mp3
+131,3,U5_W2,单词,maths,book3_U5_W2.mp3
+132,3,U5_W3,单词,English,book3_U5_W3.mp3
+133,3,U5_W4,单词,music,book3_U5_W4.mp3
+134,3,U5_W5,单词,art,book3_U5_W5.mp3
+135,3,U6_S1,句子,It's Monday today.,book3_U6_S1.mp3
+136,3,U6_S2,句子,What day is it today?,book3_U6_S2.mp3
+137,3,U6_S3,句子,Sunday!,book3_U6_S3.mp3
+138,3,U6_W1,单词,Sunday,book3_U6_W1.mp3
+139,3,U6_W2,单词,Monday,book3_U6_W2.mp3
+140,3,U6_W3,单词,Tuesday,book3_U6_W3.mp3
+141,3,U6_W4,单词,Wednesday,book3_U6_W4.mp3
+142,3,U6_W5,单词,Thursday,book3_U6_W5.mp3
+143,3,U6_W6,单词,Friday,book3_U6_W6.mp3
+144,3,U6_W7,单词,Saturday,book3_U6_W7.mp3
+145,4,U1_S1,句子,I'm tall.,book4_U1_S1.mp3
+146,4,U1_S2,句子,Is he strong?,book4_U1_S2.mp3
+147,4,U1_S3,句子,"Yes, he's strong.",book4_U1_S3.mp3
+148,4,U1_S4,句子,Is she old?,book4_U1_S4.mp3
+149,4,U1_S5,句子,No. She's young.,book4_U1_S5.mp3
+150,4,U1_W1,单词,tall,book4_U1_W1.mp3
+151,4,U1_W2,单词,short,book4_U1_W2.mp3
+152,4,U1_W3,单词,young,book4_U1_W3.mp3
+153,4,U1_W4,单词,old,book4_U1_W4.mp3
+154,4,U1_W5,单词,strong,book4_U1_W5.mp3
+155,4,U2_S1,句子,Do you like my new dress?,book4_U2_S1.mp3
+156,4,U2_S2,句子,"Yes, I do.",book4_U2_S2.mp3
+157,4,U2_S3,句子,Do you like her skirt?,book4_U2_S3.mp3
+158,4,U2_S4,句子,"No, I don't.",book4_U2_S4.mp3
+159,4,U2_W1,单词,shirt,book4_U2_W1.mp3
+160,4,U2_W2,单词,jacket,book4_U2_W2.mp3
+161,4,U2_W3,单词,skirt,book4_U2_W3.mp3
+162,4,U2_W4,单词,sweater,book4_U2_W4.mp3
+163,4,U2_W5,单词,coat,book4_U2_W5.mp3
+164,4,U3_S1,句子,It's sunny.,book4_U3_S1.mp3
+165,4,U3_S2,句子,How's the weather?,book4_U3_S2.mp3
+166,4,U3_S3,句子,It's windy.,book4_U3_S3.mp3
+167,4,U3_S4,句子,Is it rainy?,book4_U3_S4.mp3
+168,4,U3_S5,句子,"Yes, it is.",book4_U3_S5.mp3
+169,4,U3_W1,单词,sunny,book4_U3_W1.mp3
+170,4,U3_W2,单词,cloudy,book4_U3_W2.mp3
+171,4,U3_W3,单词,windy,book4_U3_W3.mp3
+172,4,U3_W4,单词,rainy,book4_U3_W4.mp3
+173,4,U3_W5,单词,snowy,book4_U3_W5.mp3
+174,4,U4_S1,句子,Let's go by plane.,book4_U4_S1.mp3
+175,4,U4_S2,句子,How do you go to school?,book4_U4_S2.mp3
+176,4,U4_S3,句子,I go to school by bike.,book4_U4_S3.mp3
+177,4,U4_S4,句子,I go to school by bus.,book4_U4_S4.mp3
+178,4,U4_W1,单词,taxi,book4_U4_W1.mp3
+179,4,U4_W2,单词,bus,book4_U4_W2.mp3
+180,4,U4_W3,单词,plane,book4_U4_W3.mp3
+181,4,U4_W4,单词,bike,book4_U4_W4.mp3
+182,4,U4_W5,单词,ship,book4_U4_W5.mp3
+183,4,U5_S1,句子,This is my bedroom.,book4_U5_S1.mp3
+184,4,U5_S2,句子,Welcome to my home!,book4_U5_S2.mp3
+185,4,U5_S3,句子,This is the living room.,book4_U5_S3.mp3
+186,4,U5_S4,句子,This is the dining room.,book4_U5_S4.mp3
+187,4,U5_W1,单词,living room,book4_U5_W1.mp3
+188,4,U5_W2,单词,dining room,book4_U5_W2.mp3
+189,4,U5_W3,单词,bathroom,book4_U5_W3.mp3
+190,4,U5_W4,单词,study,book4_U5_W4.mp3
+191,4,U5_W5,单词,kitchen,book4_U5_W5.mp3
+192,4,U6_S1,句子,Happy time!,book4_U6_S1.mp3
+193,4,U6_S2,句子,Welcome to my home!,book4_U6_S2.mp3
+194,4,U6_S3,句子,It's sunny.,book4_U6_S3.mp3
+195,4,U6_W1,单词,happy,book4_U6_W1.mp3
+196,4,U6_W2,单词,time,book4_U6_W2.mp3
+197,5,U1_S1,句子,Hello! I'm Miss Wu. What's your name?,book5_U1_S1.mp3
+198,5,U1_S2,句子,"Hi, Miss Wu. I'm Li Yaoyao.",book5_U1_S2.mp3
+199,5,U1_S3,句子,"Good morning, boys and girls!",book5_U1_S3.mp3
+200,5,U1_S4,句子,"Good morning, Miss Wu!",book5_U1_S4.mp3
+201,5,U1_S5,句子,"Good afternoon, Sofia!",book5_U1_S5.mp3
+202,5,U1_S6,句子,"Good evening, Xinxin!",book5_U1_S6.mp3
+203,5,U1_W1,单词,hello,book5_U1_W1.mp3
+204,5,U1_W2,单词,hi,book5_U1_W2.mp3
+205,5,U1_W3,单词,name,book5_U1_W3.mp3
+206,5,U1_W4,单词,boy,book5_U1_W4.mp3
+207,5,U1_W5,单词,girl,book5_U1_W5.mp3
+208,5,U1_W6,单词,dad,book5_U1_W6.mp3
+209,5,U1_W7,单词,goodbye,book5_U1_W7.mp3
+210,5,U1_W8,单词,what,book5_U1_W8.mp3
+211,5,U1_W9,单词,I,book5_U1_W9.mp3
+212,5,U1_W10,单词,and,book5_U1_W10.mp3
+213,5,U2_S1,句子,"Xinxin, look! I have a new schoolbag.",book5_U2_S1.mp3
+214,5,U2_S2,句子,It's nice!,book5_U2_S2.mp3
+215,5,U2_S3,句子,"Can I use your ruler, Xinxin?",book5_U2_S3.mp3
+216,5,U2_S4,句子,"Sure, here you are.",book5_U2_S4.mp3
+217,5,U2_S5,句子,Thank you!,book5_U2_S5.mp3
+218,5,U2_S6,句子,You're welcome.,book5_U2_S6.mp3
+219,5,U2_W1,单词,pencil,book5_U2_W1.mp3
+220,5,U2_W2,单词,sharpener,book5_U2_W2.mp3
+221,5,U2_W3,单词,pencil box,book5_U2_W3.mp3
+222,5,U2_W4,单词,schoolbag,book5_U2_W4.mp3
+223,5,U2_W5,单词,eraser,book5_U2_W5.mp3
+224,5,U2_W6,单词,crayon,book5_U2_W6.mp3
+225,5,U2_W7,单词,pen,book5_U2_W7.mp3
+226,5,U2_W8,单词,ruler,book5_U2_W8.mp3
+227,5,U2_W9,单词,new,book5_U2_W9.mp3
+228,5,U2_W10,单词,nice,book5_U2_W10.mp3
+229,5,U3_S1,句子,"What's this, Mum?",book5_U3_S1.mp3
+230,5,U3_S2,句子,It's a gift for you. Happy birthday!,book5_U3_S2.mp3
+231,5,U3_S3,句子,"Wow, it's a doll! Thank you, Mum!",book5_U3_S3.mp3
+232,5,U3_S4,句子,"Look, Lisa. I have a new doll.",book5_U3_S4.mp3
+233,5,U3_S5,句子,"Sure, here you are.",book5_U3_S5.mp3
+234,5,U3_S6,句子,Wow! It's so cute. Can I play with it?,book5_U3_S6.mp3
+235,5,U3_W1,单词,ball,book5_U3_W1.mp3
+236,5,U3_W2,单词,doll,book5_U3_W2.mp3
+237,5,U3_W3,单词,kite,book5_U3_W3.mp3
+238,5,U3_W4,单词,jigsaw,book5_U3_W4.mp3
+239,5,U3_W5,单词,toy cat,book5_U3_W5.mp3
+240,5,U3_W6,单词,toy dog,book5_U3_W6.mp3
+241,5,U3_W7,单词,toy bike,book5_U3_W7.mp3
+242,5,U3_W8,单词,toy bus,book5_U3_W8.mp3
+243,5,U3_W9,单词,gift,book5_U3_W9.mp3
+244,5,U3_W10,单词,cute,book5_U3_W10.mp3
+245,5,U4_S1,句子,This is my hair.,book5_U4_S1.mp3
+246,5,U4_S2,句子,This is my mouth.,book5_U4_S2.mp3
+247,5,U4_S3,句子,"Mum, I have a new friend.",book5_U4_S3.mp3
+248,5,U4_S4,句子,What's her name?,book5_U4_S4.mp3
+249,5,U4_S5,句子,Her name is Lisa. She's tall.,book5_U4_S5.mp3
+250,5,U4_S6,句子,She has big eyes and long hair.,book5_U4_S6.mp3
+251,5,U4_W1,单词,face,book5_U4_W1.mp3
+252,5,U4_W2,单词,hair,book5_U4_W2.mp3
+253,5,U4_W3,单词,eye,book5_U4_W3.mp3
+254,5,U4_W4,单词,ear,book5_U4_W4.mp3
+255,5,U4_W5,单词,nose,book5_U4_W5.mp3
+256,5,U4_W6,单词,mouth,book5_U4_W6.mp3
+257,5,U4_W7,单词,long,book5_U4_W7.mp3
+258,5,U4_W8,单词,short,book5_U4_W8.mp3
+259,5,U4_W9,单词,big,book5_U4_W9.mp3
+260,5,U4_W10,单词,small,book5_U4_W10.mp3
+261,5,U5_S1,句子,Let's buy some water and juice.,book5_U5_S1.mp3
+262,5,U5_S2,句子,"Mum, let's buy some milk too.",book5_U5_S2.mp3
+263,5,U5_S3,句子,Do you like oranges?,book5_U5_S3.mp3
+264,5,U5_S4,句子,"Yes, I do.",book5_U5_S4.mp3
+265,5,U5_S5,句子,Do you like lemons?,book5_U5_S5.mp3
+266,5,U5_S6,句子,"No, I don't.",book5_U5_S6.mp3
+267,5,U5_W1,单词,milk,book5_U5_W1.mp3
+268,5,U5_W2,单词,water,book5_U5_W2.mp3
+269,5,U5_W3,单词,tea,book5_U5_W3.mp3
+270,5,U5_W4,单词,juice,book5_U5_W4.mp3
+271,5,U5_W5,单词,cola,book5_U5_W5.mp3
+272,5,U5_W6,单词,apple,book5_U5_W6.mp3
+273,5,U5_W7,单词,banana,book5_U5_W7.mp3
+274,5,U5_W8,单词,orange,book5_U5_W8.mp3
+275,5,U5_W9,单词,grape,book5_U5_W9.mp3
+276,5,U5_W10,单词,lemon,book5_U5_W10.mp3
+277,5,U6_S1,句子,"Xinxin, have some noodles.",book5_U6_S1.mp3
+278,5,U6_S2,句子,"Thank you, Mum. I like noodles.",book5_U6_S2.mp3
+279,5,U6_S3,句子,Have an egg too.,book5_U6_S3.mp3
+280,5,U6_S4,句子,Eggs are good for you.,book5_U6_S4.mp3
+281,5,U6_S5,句子,"Dad, I'm hungry.",book5_U6_S5.mp3
+282,5,U6_S6,句子,I want some fish and rice.,book5_U6_S6.mp3
+283,5,U6_W1,单词,cake,book5_U6_W1.mp3
+284,5,U6_W2,单词,bread,book5_U6_W2.mp3
+285,5,U6_W3,单词,rice,book5_U6_W3.mp3
+286,5,U6_W4,单词,noodle,book5_U6_W4.mp3
+287,5,U6_W5,单词,soup,book5_U6_W5.mp3
+288,5,U6_W6,单词,egg,book5_U6_W6.mp3
+289,5,U6_W7,单词,chicken,book5_U6_W7.mp3
+290,5,U6_W8,单词,fish,book5_U6_W8.mp3
+291,5,U6_W9,单词,tomato,book5_U6_W9.mp3
+292,5,U6_W10,单词,potato,book5_U6_W10.mp3
+293,6,U1_S1,句子,What's on the desk?,book6_U1_S1.mp3
+294,6,U1_S2,句子,A computer?,book6_U1_S2.mp3
+295,6,U1_S3,句子,Yes. And what's under the desk?,book6_U1_S3.mp3
+296,6,U1_S4,句子,No. A box. And many books in it.,book6_U1_S4.mp3
+297,6,U1_S5,句子,Our classroom is dirty. Let's clean it.,book6_U1_S5.mp3
+298,6,U1_S6,句子,Let me clean the windows.,book6_U1_S6.mp3
+299,6,U1_W1,单词,desk,book6_U1_W1.mp3
+300,6,U1_W2,单词,chair,book6_U1_W2.mp3
+301,6,U1_W3,单词,computer,book6_U1_W3.mp3
+302,6,U1_W4,单词,box,book6_U1_W4.mp3
+303,6,U1_W5,单词,blackboard,book6_U1_W5.mp3
+304,6,U1_W6,单词,window,book6_U1_W6.mp3
+305,6,U1_W7,单词,door,book6_U1_W7.mp3
+306,6,U1_W8,单词,classroom,book6_U1_W8.mp3
+307,6,U1_W9,单词,book,book6_U1_W9.mp3
+308,6,U1_W10,单词,wall,book6_U1_W10.mp3
+309,6,U2_S1,句子,What's your name?,book6_U2_S1.mp3
+310,6,U2_S2,句子,"I'm in Class Six, Grade Three.",book6_U2_S2.mp3
+311,6,U2_S3,句子,"Which class are you in, Li Jun?",book6_U2_S3.mp3
+312,6,U2_S4,句子,How old are you?,book6_U2_S4.mp3
+313,6,U2_S5,句子,I'm eight years old.,book6_U2_S5.mp3
+314,6,U2_S6,句子,Which class are you in?,book6_U2_S6.mp3
+315,6,U2_W1,单词,one,book6_U2_W1.mp3
+316,6,U2_W2,单词,two,book6_U2_W2.mp3
+317,6,U2_W3,单词,three,book6_U2_W3.mp3
+318,6,U2_W4,单词,four,book6_U2_W4.mp3
+319,6,U2_W5,单词,five,book6_U2_W5.mp3
+320,6,U2_W6,单词,six,book6_U2_W6.mp3
+321,6,U2_W7,单词,seven,book6_U2_W7.mp3
+322,6,U2_W8,单词,eight,book6_U2_W8.mp3
+323,6,U2_W9,单词,nine,book6_U2_W9.mp3
+324,6,U2_W10,单词,ten,book6_U2_W10.mp3
+325,6,U3_S1,句子,"This is my son, Jiaming.",book6_U3_S1.mp3
+326,6,U3_S2,句子,Glad to meet you.,book6_U3_S2.mp3
+327,6,U3_S3,句子,"That's my daughter, Keke.",book6_U3_S3.mp3
+328,6,U3_S4,句子,Who's this?,book6_U3_S4.mp3
+329,6,U3_S5,句子,It's my uncle.,book6_U3_S5.mp3
+330,6,U3_S6,句子,She's beautiful.,book6_U3_S6.mp3
+331,6,U3_W1,单词,father,book6_U3_W1.mp3
+332,6,U3_W2,单词,mother,book6_U3_W2.mp3
+333,6,U3_W3,单词,brother,book6_U3_W3.mp3
+334,6,U3_W4,单词,sister,book6_U3_W4.mp3
+335,6,U3_W5,单词,uncle,book6_U3_W5.mp3
+336,6,U3_W6,单词,aunt,book6_U3_W6.mp3
+337,6,U3_W7,单词,grandfather,book6_U3_W7.mp3
+338,6,U3_W8,单词,grandmother,book6_U3_W8.mp3
+339,6,U3_W9,单词,baby,book6_U3_W9.mp3
+340,6,U3_W10,单词,family,book6_U3_W10.mp3
+341,6,U4_S1,句子,"Is this your coat, Andy?",book6_U4_S1.mp3
+342,6,U4_S2,句子,"No, it isn't.",book6_U4_S2.mp3
+343,6,U4_S3,句子,Is that your cap?,book6_U4_S3.mp3
+344,6,U4_S4,句子,"Yes, it is.",book6_U4_S4.mp3
+345,6,U4_S5,句子,I can wash my socks by myself.,book6_U4_S5.mp3
+346,6,U4_S6,句子,Good girl!,book6_U4_S6.mp3
+347,6,U4_W1,单词,cap,book6_U4_W1.mp3
+348,6,U4_W2,单词,coat,book6_U4_W2.mp3
+349,6,U4_W3,单词,shirt,book6_U4_W3.mp3
+350,6,U4_W4,单词,sweater,book6_U4_W4.mp3
+351,6,U4_W5,单词,T-shirt,book6_U4_W5.mp3
+352,6,U4_W6,单词,dress,book6_U4_W6.mp3
+353,6,U4_W7,单词,shorts,book6_U4_W7.mp3
+354,6,U4_W8,单词,skirt,book6_U4_W8.mp3
+355,6,U4_W9,单词,sock,book6_U4_W9.mp3
+356,6,U4_W10,单词,trousers,book6_U4_W10.mp3
+357,6,U5_S1,句子,What's this?,book6_U5_S1.mp3
+358,6,U5_S2,句子,A duck?,book6_U5_S2.mp3
+359,6,U5_S3,句子,It's a chicken.,book6_U5_S3.mp3
+360,6,U5_S4,句子,What's that?,book6_U5_S4.mp3
+361,6,U5_S5,句子,"Ah, it's a bird.",book6_U5_S5.mp3
+362,6,U5_S6,句子,It's beautiful! I love birds.,book6_U5_S6.mp3
+363,6,U5_W1,单词,chicken,book6_U5_W1.mp3
+364,6,U5_W2,单词,cow,book6_U5_W2.mp3
+365,6,U5_W3,单词,duck,book6_U5_W3.mp3
+366,6,U5_W4,单词,horse,book6_U5_W4.mp3
+367,6,U5_W5,单词,sheep,book6_U5_W5.mp3
+368,6,U5_W6,单词,bee,book6_U5_W6.mp3
+369,6,U5_W7,单词,bird,book6_U5_W7.mp3
+370,6,U5_W8,单词,fish,book6_U5_W8.mp3
+371,6,U5_W9,单词,mouse,book6_U5_W9.mp3
+372,6,U5_W10,单词,pig,book6_U5_W10.mp3
+373,6,U6_S1,句子,I have a new pencil.,book6_U6_S1.mp3
+374,6,U6_S2,句子,What colour is it?,book6_U6_S2.mp3
+375,6,U6_S3,句子,Look! Red and blue.,book6_U6_S3.mp3
+376,6,U6_S4,句子,Let's draw a monkey.,book6_U6_S4.mp3
+377,6,U6_S5,句子,Let's colour it yellow.,book6_U6_S5.mp3
+378,6,U6_S6,句子,Colour it green.,book6_U6_S6.mp3
+379,6,U6_W1,单词,red,book6_U6_W1.mp3
+380,6,U6_W2,单词,blue,book6_U6_W2.mp3
+381,6,U6_W3,单词,green,book6_U6_W3.mp3
+382,6,U6_W4,单词,pink,book6_U6_W4.mp3
+383,6,U6_W5,单词,brown,book6_U6_W5.mp3
+384,6,U6_W6,单词,black,book6_U6_W6.mp3
+385,6,U6_W7,单词,white,book6_U6_W7.mp3
+386,6,U6_W8,单词,yellow,book6_U6_W8.mp3
+387,6,U6_W9,单词,orange,book6_U6_W9.mp3
+388,6,U6_W10,单词,colour,book6_U6_W10.mp3
+389,7,U1_S1,句子,Do you like sports?,book7_U1_S1.mp3
+390,7,U1_S2,句子,What sports are you good at?,book7_U1_S2.mp3
+391,7,U1_S3,句子,I'm good at jumping rope.,book7_U1_S3.mp3
+392,7,U1_S4,句子,How often do you play basketball?,book7_U1_S4.mp3
+393,7,U1_S5,句子,Three times a week.,book7_U1_S5.mp3
+394,7,U1_S6,句子,That's great!,book7_U1_S6.mp3
+395,7,U1_W1,单词,swimming,book7_U1_W1.mp3
+396,7,U1_W2,单词,running,book7_U1_W2.mp3
+397,7,U1_W3,单词,jumping rope,book7_U1_W3.mp3
+398,7,U1_W4,单词,ping-pong,book7_U1_W4.mp3
+399,7,U1_W5,单词,basketball,book7_U1_W5.mp3
+400,7,U1_W6,单词,football,book7_U1_W6.mp3
+401,7,U1_W7,单词,sport,book7_U1_W7.mp3
+402,7,U1_W8,单词,once a week,book7_U1_W8.mp3
+403,7,U1_W9,单词,twice a week,book7_U1_W9.mp3
+404,7,U1_W10,单词,every day,book7_U1_W10.mp3
+405,7,U2_S1,句子,Do you have any hobbies?,book7_U2_S1.mp3
+406,7,U2_S2,句子,"Yes, I like painting.",book7_U2_S2.mp3
+407,7,U2_S3,句子,I like dancing.,book7_U2_S3.mp3
+408,7,U2_S4,句子,What are your hobbies?,book7_U2_S4.mp3
+409,7,U2_S5,句子,I like practising kung fu.,book7_U2_S5.mp3
+410,7,U2_S6,句子,Really? We can play together.,book7_U2_S6.mp3
+411,7,U2_W1,单词,dancing,book7_U2_W1.mp3
+412,7,U2_W2,单词,guitar,book7_U2_W2.mp3
+413,7,U2_W3,单词,painting,book7_U2_W3.mp3
+414,7,U2_W4,单词,music,book7_U2_W4.mp3
+415,7,U2_W5,单词,stamp,book7_U2_W5.mp3
+416,7,U2_W6,单词,weiqi,book7_U2_W6.mp3
+417,7,U2_W7,单词,reading,book7_U2_W7.mp3
+418,7,U2_W8,单词,kung fu,book7_U2_W8.mp3
+419,7,U2_W9,单词,drums,book7_U2_W9.mp3
+420,7,U2_W10,单词,hobby,book7_U2_W10.mp3
+421,7,U3_S1,句子,How is the weather in Harbin?,book7_U3_S1.mp3
+422,7,U3_S2,句子,It's cold there.,book7_U3_S2.mp3
+423,7,U3_S3,句子,You should take your coat.,book7_U3_S3.mp3
+424,7,U3_S4,句子,I'm going to Sanya.,book7_U3_S4.mp3
+425,7,U3_S5,句子,It's hot there.,book7_U3_S5.mp3
+426,7,U3_S6,句子,You should take an umbrella.,book7_U3_S6.mp3
+427,7,U3_W1,单词,hot,book7_U3_W1.mp3
+428,7,U3_W2,单词,warm,book7_U3_W2.mp3
+429,7,U3_W3,单词,cool,book7_U3_W3.mp3
+430,7,U3_W4,单词,cold,book7_U3_W4.mp3
+431,7,U3_W5,单词,sunny,book7_U3_W5.mp3
+432,7,U3_W6,单词,rainy,book7_U3_W6.mp3
+433,7,U3_W7,单词,cloudy,book7_U3_W7.mp3
+434,7,U3_W8,单词,snowy,book7_U3_W8.mp3
+435,7,U3_W9,单词,windy,book7_U3_W9.mp3
+436,7,U3_W10,单词,weather,book7_U3_W10.mp3
+437,7,U4_S1,句子,Let's go boating.,book7_U4_S1.mp3
+438,7,U4_S2,句子,How is the weather today?,book7_U4_S2.mp3
+439,7,U4_S3,句子,It's cool.,book7_U4_S3.mp3
+440,7,U4_S4,句子,Let's go running.,book7_U4_S4.mp3
+441,7,U4_S5,句子,How about going swimming?,book7_U4_S5.mp3
+442,7,U4_S6,句子,Great!,book7_U4_S6.mp3
+443,7,U4_W1,单词,swimming,book7_U4_W1.mp3
+444,7,U4_W2,单词,boating,book7_U4_W2.mp3
+445,7,U4_W3,单词,kite,book7_U4_W3.mp3
+446,7,U4_W4,单词,snowman,book7_U4_W4.mp3
+447,7,U4_W5,单词,bookshop,book7_U4_W5.mp3
+448,7,U4_W6,单词,library,book7_U4_W6.mp3
+449,7,U4_W7,单词,cinema,book7_U4_W7.mp3
+450,7,U4_W8,单词,museum,book7_U4_W8.mp3
+451,7,U4_W9,单词,sports centre,book7_U4_W9.mp3
+452,7,U4_W10,单词,running,book7_U4_W10.mp3
+453,7,U5_S1,句子,Look at the panda. It's so cute!,book7_U5_S1.mp3
+454,7,U5_S2,句子,What's your favourite animal?,book7_U5_S2.mp3
+455,7,U5_S3,句子,My favourite animal is the monkey.,book7_U5_S3.mp3
+456,7,U5_S4,句子,The elephant has a long nose.,book7_U5_S4.mp3
+457,7,U5_S5,句子,It has a long tail.,book7_U5_S5.mp3
+458,7,U5_S6,句子,And its body is brown.,book7_U5_S6.mp3
+459,7,U5_W1,单词,bear,book7_U5_W1.mp3
+460,7,U5_W2,单词,tiger,book7_U5_W2.mp3
+461,7,U5_W3,单词,panda,book7_U5_W3.mp3
+462,7,U5_W4,单词,monkey,book7_U5_W4.mp3
+463,7,U5_W5,单词,lion,book7_U5_W5.mp3
+464,7,U5_W6,单词,elephant,book7_U5_W6.mp3
+465,7,U5_W7,单词,arm,book7_U5_W7.mp3
+466,7,U5_W8,单词,foot,book7_U5_W8.mp3
+467,7,U5_W9,单词,leg,book7_U5_W9.mp3
+468,7,U5_W10,单词,tail,book7_U5_W10.mp3
+469,7,U6_S1,句子,What is six and eight?,book7_U6_S1.mp3
+470,7,U6_S2,句子,Fourteen.,book7_U6_S2.mp3
+471,7,U6_S3,句子,What time is it?,book7_U6_S3.mp3
+472,7,U6_S4,句子,It's seven twenty-three.,book7_U6_S4.mp3
+473,7,U6_S5,句子,Hurry up!,book7_U6_S5.mp3
+474,7,U6_S6,句子,I have to get to school before eight twenty.,book7_U6_S6.mp3
+475,7,U6_W1,单词,thirteen,book7_U6_W1.mp3
+476,7,U6_W2,单词,fourteen,book7_U6_W2.mp3
+477,7,U6_W3,单词,fifteen,book7_U6_W3.mp3
+478,7,U6_W4,单词,sixteen,book7_U6_W4.mp3
+479,7,U6_W5,单词,seventeen,book7_U6_W5.mp3
+480,7,U6_W6,单词,eighteen,book7_U6_W6.mp3
+481,7,U6_W7,单词,nineteen,book7_U6_W7.mp3
+482,7,U6_W8,单词,twenty,book7_U6_W8.mp3
+483,7,U6_W9,单词,thirty,book7_U6_W9.mp3
+484,7,U6_W10,单词,clock,book7_U6_W10.mp3
+485,8,U1_S1,句子,How do you usually come to school?,book8_U1_S1.mp3
+486,8,U1_S2,句子,I usually come to school by bus.,book8_U1_S2.mp3
+487,8,U1_S3,句子,I usually come to school on foot.,book8_U1_S3.mp3
+488,8,U1_S4,句子,How are you going there?,book8_U1_S4.mp3
+489,8,U1_S5,句子,I'm going there by train.,book8_U1_S5.mp3
+490,8,U1_S6,句子,We are going there by ship.,book8_U1_S6.mp3
+491,8,U1_W1,单词,bus,book8_U1_W1.mp3
+492,8,U1_W2,单词,car,book8_U1_W2.mp3
+493,8,U1_W3,单词,subway,book8_U1_W3.mp3
+494,8,U1_W4,单词,foot,book8_U1_W4.mp3
+495,8,U1_W5,单词,taxi,book8_U1_W5.mp3
+496,8,U1_W6,单词,train,book8_U1_W6.mp3
+497,8,U1_W7,单词,ship,book8_U1_W7.mp3
+498,8,U1_W8,单词,plane,book8_U1_W8.mp3
+499,8,U1_W9,单词,bike,book8_U1_W9.mp3
+500,8,U1_W10,单词,transport,book8_U1_W10.mp3
+501,8,U2_S1,句子,What subjects do you have tomorrow?,book8_U2_S1.mp3
+502,8,U2_S2,句子,"I have Chinese, English, maths and art.",book8_U2_S2.mp3
+503,8,U2_S3,句子,Do you have all the books in your schoolbag?,book8_U2_S3.mp3
+504,8,U2_S4,句子,What's your favourite subject?,book8_U2_S4.mp3
+505,8,U2_S5,句子,My favourite subject is Chinese.,book8_U2_S5.mp3
+506,8,U2_S6,句子,I like reading Chinese poems.,book8_U2_S6.mp3
+507,8,U2_W1,单词,Chinese,book8_U2_W1.mp3
+508,8,U2_W2,单词,maths,book8_U2_W2.mp3
+509,8,U2_W3,单词,art,book8_U2_W3.mp3
+510,8,U2_W4,单词,music,book8_U2_W4.mp3
+511,8,U2_W5,单词,English,book8_U2_W5.mp3
+512,8,U2_W6,单词,science,book8_U2_W6.mp3
+513,8,U2_W7,单词,PE,book8_U2_W7.mp3
+514,8,U2_W8,单词,IT,book8_U2_W8.mp3
+515,8,U2_W9,单词,model,book8_U2_W9.mp3
+516,8,U2_W10,单词,flute,book8_U2_W10.mp3
+517,8,U3_S1,句子,What day is it today?,book8_U3_S1.mp3
+518,8,U3_S2,句子,It's Thursday.,book8_U3_S2.mp3
+519,8,U3_S3,句子,We can share my books.,book8_U3_S3.mp3
+520,8,U3_S4,句子,What do you usually do after school?,book8_U3_S4.mp3
+521,8,U3_S5,句子,I usually learn tennis on Thursdays.,book8_U3_S5.mp3
+522,8,U3_S6,句子,I learn the guzheng on Fridays.,book8_U3_S6.mp3
+523,8,U3_W1,单词,Monday,book8_U3_W1.mp3
+524,8,U3_W2,单词,Tuesday,book8_U3_W2.mp3
+525,8,U3_W3,单词,Wednesday,book8_U3_W3.mp3
+526,8,U3_W4,单词,Thursday,book8_U3_W4.mp3
+527,8,U3_W5,单词,Friday,book8_U3_W5.mp3
+528,8,U3_W6,单词,Saturday,book8_U3_W6.mp3
+529,8,U3_W7,单词,Sunday,book8_U3_W7.mp3
+530,8,U3_W8,单词,badminton,book8_U3_W8.mp3
+531,8,U3_W9,单词,tennis,book8_U3_W9.mp3
+532,8,U3_W10,单词,piano,book8_U3_W10.mp3
+533,8,U4_S1,句子,Do you want to do some exercise?,book8_U4_S1.mp3
+534,8,U4_S2,句子,Let's go running.,book8_U4_S2.mp3
+535,8,U4_S3,句子,What do you usually do at the weekend?,book8_U4_S3.mp3
+536,8,U4_S4,句子,I usually help my mum cook.,book8_U4_S4.mp3
+537,8,U4_S5,句子,I usually go to the cinema with my parents.,book8_U4_S5.mp3
+538,8,U4_S6,句子,We can have a picnic in the park.,book8_U4_S6.mp3
+539,8,U4_W1,单词,chores,book8_U4_W1.mp3
+540,8,U4_W2,单词,homework,book8_U4_W2.mp3
+541,8,U4_W3,单词,exercise,book8_U4_W3.mp3
+542,8,U4_W4,单词,cook,book8_U4_W4.mp3
+543,8,U4_W5,单词,grandparents,book8_U4_W5.mp3
+544,8,U4_W6,单词,cinema,book8_U4_W6.mp3
+545,8,U4_W7,单词,fishing,book8_U4_W7.mp3
+546,8,U4_W8,单词,picnic,book8_U4_W8.mp3
+547,8,U4_W9,单词,park,book8_U4_W9.mp3
+548,8,U4_W10,单词,weekend,book8_U4_W10.mp3
+549,8,U5_S1,句子,Do you know this Sunday is Mother's Day?,book8_U5_S1.mp3
+550,8,U5_S2,句子,I'm going to make a card for my mum.,book8_U5_S2.mp3
+551,8,U5_S3,句子,I'm going to write a thank-you letter.,book8_U5_S3.mp3
+552,8,U5_S4,句子,What are you going to do for the party?,book8_U5_S4.mp3
+553,8,U5_S5,句子,I'm going to sing a song.,book8_U5_S5.mp3
+554,8,U5_S6,句子,I'm going to act in a play.,book8_U5_S6.mp3
+555,8,U5_W1,单词,flowers,book8_U5_W1.mp3
+556,8,U5_W2,单词,card,book8_U5_W2.mp3
+557,8,U5_W3,单词,cup,book8_U5_W3.mp3
+558,8,U5_W4,单词,letter,book8_U5_W4.mp3
+559,8,U5_W5,单词,song,book8_U5_W5.mp3
+560,8,U5_W6,单词,story,book8_U5_W6.mp3
+561,8,U5_W7,单词,kung fu,book8_U5_W7.mp3
+562,8,U5_W8,单词,paper cutting,book8_U5_W8.mp3
+563,8,U5_W9,单词,play,book8_U5_W9.mp3
+564,8,U5_W10,单词,gift,book8_U5_W10.mp3
+565,8,U6_S1,句子,Is there a supermarket around here?,book8_U6_S1.mp3
+566,8,U6_S2,句子,Is it far?,book8_U6_S2.mp3
+567,8,U6_S3,句子,It's not very far.,book8_U6_S3.mp3
+568,8,U6_S4,句子,Could you please tell us the way?,book8_U6_S4.mp3
+569,8,U6_S5,句子,"Go straight, walk two blocks and turn right.",book8_U6_S5.mp3
+570,8,U6_S6,句子,Thank you so much!,book8_U6_S6.mp3
+571,8,U6_W1,单词,post office,book8_U6_W1.mp3
+572,8,U6_W2,单词,restaurant,book8_U6_W2.mp3
+573,8,U6_W3,单词,supermarket,book8_U6_W3.mp3
+574,8,U6_W4,单词,zoo,book8_U6_W4.mp3
+575,8,U6_W5,单词,straight,book8_U6_W5.mp3
+576,8,U6_W6,单词,left,book8_U6_W6.mp3
+577,8,U6_W7,单词,right,book8_U6_W7.mp3
+578,8,U6_W8,单词,map,book8_U6_W8.mp3
+579,8,U6_W9,单词,bookshop,book8_U6_W9.mp3
+580,8,U6_W10,单词,park,book8_U6_W10.mp3
+581,9,U1_S1,句子,"Good morning, Miss Wu. This is your new classmate.",book9_U1_S1.mp3
+582,9,U1_S2,句子,"Hi, Lisa. My name is Jim. I'm from France.",book9_U1_S2.mp3
+583,9,U1_S3,句子,You can visit the Eiffel Tower in my country.,book9_U1_S3.mp3
+584,9,U1_S4,句子,Are you from the USA?,book9_U1_S4.mp3
+585,9,U1_S5,句子,"No, I'm from the UK.",book9_U1_S5.mp3
+586,9,U1_S6,句子,You can visit Big Ben in my country.,book9_U1_S6.mp3
+587,9,U1_W1,单词,world,book9_U1_W1.mp3
+588,9,U1_W2,单词,France,book9_U1_W2.mp3
+589,9,U1_W3,单词,the UK,book9_U1_W3.mp3
+590,9,U1_W4,单词,classmate,book9_U1_W4.mp3
+591,9,U1_W5,单词,country,book9_U1_W5.mp3
+592,9,U1_W6,单词,China,book9_U1_W6.mp3
+593,9,U1_W7,单词,the Great Wall,book9_U1_W7.mp3
+594,9,U1_W8,单词,Eiffel Tower,book9_U1_W8.mp3
+595,9,U1_W9,单词,Big Ben,book9_U1_W9.mp3
+596,9,U1_W10,单词,Japan,book9_U1_W10.mp3
+597,9,U2_S1,句子,Is she a reporter?,book9_U2_S1.mp3
+598,9,U2_S2,句子,"Yes, she is.",book9_U2_S2.mp3
+599,9,U2_S3,句子,What's your father's job?,book9_U2_S3.mp3
+600,9,U2_S4,句子,He's a writer.,book9_U2_S4.mp3
+601,9,U2_S5,句子,He writes children's stories.,book9_U2_S5.mp3
+602,9,U2_S6,句子,What's your mother's job?,book9_U2_S6.mp3
+603,9,U2_W1,单词,job,book9_U2_W1.mp3
+604,9,U2_W2,单词,farmer,book9_U2_W2.mp3
+605,9,U2_W3,单词,teacher,book9_U2_W3.mp3
+606,9,U2_W4,单词,reporter,book9_U2_W4.mp3
+607,9,U2_W5,单词,worker,book9_U2_W5.mp3
+608,9,U2_W6,单词,writer,book9_U2_W6.mp3
+609,9,U2_W7,单词,doctor,book9_U2_W7.mp3
+610,9,U2_W8,单词,nurse,book9_U2_W8.mp3
+611,9,U2_W9,单词,driver,book9_U2_W9.mp3
+612,9,U2_W10,单词,cook,book9_U2_W10.mp3
+613,9,U3_S1,句子,Where do you work?,book9_U3_S1.mp3
+614,9,U3_S2,句子,I work at a bank.,book9_U3_S2.mp3
+615,9,U3_S3,句子,Where do you work now?,book9_U3_S3.mp3
+616,9,U3_S4,句子,I work at a TV station.,book9_U3_S4.mp3
+617,9,U3_S5,句子,Where do you study?,book9_U3_S5.mp3
+618,9,U3_S6,句子,I study at No. 1 Primary School.,book9_U3_S6.mp3
+619,9,U3_W1,单词,bank,book9_U3_W1.mp3
+620,9,U3_W2,单词,hotel,book9_U3_W2.mp3
+621,9,U3_W3,单词,police station,book9_U3_W3.mp3
+622,9,U3_W4,单词,TV station,book9_U3_W4.mp3
+623,9,U3_W5,单词,school,book9_U3_W5.mp3
+624,9,U3_W6,单词,hospital,book9_U3_W6.mp3
+625,9,U3_W7,单词,shop,book9_U3_W7.mp3
+626,9,U3_W8,单词,farm,book9_U3_W8.mp3
+627,9,U3_W9,单词,office,book9_U3_W9.mp3
+628,9,U3_W10,单词,factory,book9_U3_W10.mp3
+629,9,U4_S1,句子,Is this your pen?,book9_U4_S1.mp3
+630,9,U4_S2,句子,"Yes, it is.",book9_U4_S2.mp3
+631,9,U4_S3,句子,"No, it is his pencil.",book9_U4_S3.mp3
+632,9,U4_S4,句子,Is this your pencil box?,book9_U4_S4.mp3
+633,9,U4_S5,句子,It's my pen.,book9_U4_S5.mp3
+634,9,U4_S6,句子,You should take care of your things.,book9_U4_S6.mp3
+635,9,U4_W1,单词,pen,book9_U4_W1.mp3
+636,9,U4_W2,单词,pencil,book9_U4_W2.mp3
+637,9,U4_W3,单词,pencil box,book9_U4_W3.mp3
+638,9,U4_W4,单词,book,book9_U4_W4.mp3
+639,9,U4_W5,单词,bag,book9_U4_W5.mp3
+640,9,U4_W6,单词,ruler,book9_U4_W6.mp3
+641,9,U4_W7,单词,eraser,book9_U4_W7.mp3
+642,9,U4_W8,单词,crayon,book9_U4_W8.mp3
+643,9,U4_W9,单词,schoolbag,book9_U4_W9.mp3
+644,9,U4_W10,单词,desk,book9_U4_W10.mp3
+645,9,U5_S1,句子,"Can you help me tidy the study, please?",book9_U5_S1.mp3
+646,9,U5_S2,句子,Sure.,book9_U5_S2.mp3
+647,9,U5_S3,句子,"Sorry, I'm busy now.",book9_U5_S3.mp3
+648,9,U5_S4,句子,What a mess!,book9_U5_S4.mp3
+649,9,U5_S5,句子,Let's put the books and paper away.,book9_U5_S5.mp3
+650,9,U5_S6,句子,Your study is clean and tidy now.,book9_U5_S6.mp3
+651,9,U5_W1,单词,bedroom,book9_U5_W1.mp3
+652,9,U5_W2,单词,kitchen,book9_U5_W2.mp3
+653,9,U5_W3,单词,living room,book9_U5_W3.mp3
+654,9,U5_W4,单词,study,book9_U5_W4.mp3
+655,9,U5_W5,单词,toilet,book9_U5_W5.mp3
+656,9,U5_W6,单词,tidy,book9_U5_W6.mp3
+657,9,U5_W7,单词,mess,book9_U5_W7.mp3
+658,9,U5_W8,单词,paper,book9_U5_W8.mp3
+659,9,U5_W9,单词,book,book9_U5_W9.mp3
+660,9,U5_W10,单词,desk,book9_U5_W10.mp3
+661,9,U6_S1,句子,What's he like?,book9_U6_S1.mp3
+662,9,U6_S2,句子,He is active and strong.,book9_U6_S2.mp3
+663,9,U6_S3,句子,Is he good at sports?,book9_U6_S3.mp3
+664,9,U6_S4,句子,"Yes, he likes basketball.",book9_U6_S4.mp3
+665,9,U6_S5,句子,He plays it very well.,book9_U6_S5.mp3
+666,9,U6_S6,句子,She is kind and lovely.,book9_U6_S6.mp3
+667,9,U6_W1,单词,kind,book9_U6_W1.mp3
+668,9,U6_W2,单词,lovely,book9_U6_W2.mp3
+669,9,U6_W3,单词,quiet,book9_U6_W3.mp3
+670,9,U6_W4,单词,thin,book9_U6_W4.mp3
+671,9,U6_W5,单词,active,book9_U6_W5.mp3
+672,9,U6_W6,单词,strong,book9_U6_W6.mp3
+673,9,U6_W7,单词,friend,book9_U6_W7.mp3
+674,9,U6_W8,单词,basketball,book9_U6_W8.mp3
+675,9,U6_W9,单词,sport,book9_U6_W9.mp3
+676,9,U6_W10,单词,student,book9_U6_W10.mp3
+677,10,U1_S1,句子,Welcome to our school!,book10_U1_S1.mp3
+678,10,U1_S2,句子,We often borrow books from the library.,book10_U1_S2.mp3
+679,10,U1_S3,句子,This is our science lab.,book10_U1_S3.mp3
+680,10,U1_S4,句子,How many English lessons do you have in a week?,book10_U1_S4.mp3
+681,10,U1_S5,句子,This is our art club.,book10_U1_S5.mp3
+682,10,U1_S6,句子,We often sing and dance here.,book10_U1_S6.mp3
+683,10,U1_W1,单词,library,book10_U1_W1.mp3
+684,10,U1_W2,单词,meeting room,book10_U1_W2.mp3
+685,10,U1_W3,单词,science lab,book10_U1_W3.mp3
+686,10,U1_W4,单词,language lab,book10_U1_W4.mp3
+687,10,U1_W5,单词,art club,book10_U1_W5.mp3
+688,10,U1_W6,单词,music club,book10_U1_W6.mp3
+689,10,U1_W7,单词,welcome,book10_U1_W7.mp3
+690,10,U1_W8,单词,borrow,book10_U1_W8.mp3
+691,10,U1_W9,单词,lesson,book10_U1_W9.mp3
+692,10,U1_W10,单词,school,book10_U1_W10.mp3
+693,10,U2_S1,句子,Can I help you?,book10_U2_S1.mp3
+694,10,U2_S2,句子,I want a toy train.,book10_U2_S2.mp3
+695,10,U2_S3,句子,How much is it?,book10_U2_S3.mp3
+696,10,U2_S4,句子,It's fifty-six yuan.,book10_U2_S4.mp3
+697,10,U2_S5,句子,Can I try them on?,book10_U2_S5.mp3
+698,10,U2_S6,句子,We'll take it.,book10_U2_S6.mp3
+699,10,U2_W1,单词,toy,book10_U2_W1.mp3
+700,10,U2_W2,单词,train,book10_U2_W2.mp3
+701,10,U2_W3,单词,plane,book10_U2_W3.mp3
+702,10,U2_W4,单词,bike,book10_U2_W4.mp3
+703,10,U2_W5,单词,bus,book10_U2_W5.mp3
+704,10,U2_W6,单词,taxi,book10_U2_W6.mp3
+705,10,U2_W7,单词,coat,book10_U2_W7.mp3
+706,10,U2_W8,单词,short pants,book10_U2_W8.mp3
+707,10,U2_W9,单词,buy,book10_U2_W9.mp3
+708,10,U2_W10,单词,shop,book10_U2_W10.mp3
+709,10,U3_S1,句子,Don't be late for school.,book10_U3_S1.mp3
+710,10,U3_S2,句子,Listen to the teacher carefully.,book10_U3_S2.mp3
+711,10,U3_S3,句子,Don't make noise in class.,book10_U3_S3.mp3
+712,10,U3_S4,句子,You should go to bed early.,book10_U3_S4.mp3
+713,10,U3_S5,句子,You must wait for the green light.,book10_U3_S5.mp3
+714,10,U3_S6,句子,You mustn't pick the flowers.,book10_U3_S6.mp3
+715,10,U3_W1,单词,class,book10_U3_W1.mp3
+716,10,U3_W2,单词,ask,book10_U3_W2.mp3
+717,10,U3_W3,单词,answer,book10_U3_W3.mp3
+718,10,U3_W4,单词,eat,book10_U3_W4.mp3
+719,10,U3_W5,单词,wait,book10_U3_W5.mp3
+720,10,U3_W6,单词,people,book10_U3_W6.mp3
+721,10,U3_W7,单词,homework,book10_U3_W7.mp3
+722,10,U3_W8,单词,rule,book10_U3_W8.mp3
+723,10,U3_W9,单词,green light,book10_U3_W9.mp3
+724,10,U3_W10,单词,flower,book10_U3_W10.mp3
+725,10,U4_S1,句子,I'm ill today. I have a headache.,book10_U4_S1.mp3
+726,10,U4_S2,句子,Do you have a cold?,book10_U4_S2.mp3
+727,10,U4_S3,句子,I have a bad cold.,book10_U4_S3.mp3
+728,10,U4_S4,句子,You should take some medicine.,book10_U4_S4.mp3
+729,10,U4_S5,句子,You should drink more water.,book10_U4_S5.mp3
+730,10,U4_S6,句子,Take good care of yourself.,book10_U4_S6.mp3
+731,10,U4_W1,单词,headache,book10_U4_W1.mp3
+732,10,U4_W2,单词,cold,book10_U4_W2.mp3
+733,10,U4_W3,单词,fever,book10_U4_W3.mp3
+734,10,U4_W4,单词,cough,book10_U4_W4.mp3
+735,10,U4_W5,单词,medicine,book10_U4_W5.mp3
+736,10,U4_W6,单词,doctor,book10_U4_W6.mp3
+737,10,U4_W7,单词,ill,book10_U4_W7.mp3
+738,10,U4_W8,单词,head,book10_U4_W8.mp3
+739,10,U4_W9,单词,ear,book10_U4_W9.mp3
+740,10,U4_W10,单词,arm,book10_U4_W10.mp3
+741,10,U5_S1,句子,I'm cleaning the room.,book10_U5_S1.mp3
+742,10,U5_S2,句子,Dad is writing an email.,book10_U5_S2.mp3
+743,10,U5_S3,句子,Mum is washing the clothes.,book10_U5_S3.mp3
+744,10,U5_S4,句子,What's he doing?,book10_U5_S4.mp3
+745,10,U5_S5,句子,He's telling a story.,book10_U5_S5.mp3
+746,10,U5_S6,句子,She's singing a song.,book10_U5_S6.mp3
+747,10,U5_W1,单词,call,book10_U5_W1.mp3
+748,10,U5_W2,单词,email,book10_U5_W2.mp3
+749,10,U5_W3,单词,clothes,book10_U5_W3.mp3
+750,10,U5_W4,单词,room,book10_U5_W4.mp3
+751,10,U5_W5,单词,story,book10_U5_W5.mp3
+752,10,U5_W6,单词,song,book10_U5_W6.mp3
+753,10,U5_W7,单词,guitar,book10_U5_W7.mp3
+754,10,U5_W8,单词,violin,book10_U5_W8.mp3
+755,10,U5_W9,单词,picture,book10_U5_W9.mp3
+756,10,U5_W10,单词,cousin,book10_U5_W10.mp3
+757,10,U6_S1,句子,Let's go and watch the games!,book10_U6_S1.mp3
+758,10,U6_S2,句子,The boys are playing football.,book10_U6_S2.mp3
+759,10,U6_S3,句子,The girls are playing volleyball.,book10_U6_S3.mp3
+760,10,U6_S4,句子,What are they doing?,book10_U6_S4.mp3
+761,10,U6_S5,句子,They're playing tennis.,book10_U6_S5.mp3
+762,10,U6_S6,句子,Are you watching the high jump?,book10_U6_S6.mp3
+763,10,U6_W1,单词,football,book10_U6_W1.mp3
+764,10,U6_W2,单词,basketball,book10_U6_W2.mp3
+765,10,U6_W3,单词,volleyball,book10_U6_W3.mp3
+766,10,U6_W4,单词,tennis,book10_U6_W4.mp3
+767,10,U6_W5,单词,ping-pong,book10_U6_W5.mp3
+768,10,U6_W6,单词,playground,book10_U6_W6.mp3
+769,10,U6_W7,单词,game,book10_U6_W7.mp3
+770,10,U6_W8,单词,foot,book10_U6_W8.mp3
+771,10,U6_W9,单词,run,book10_U6_W9.mp3
+772,10,U6_W10,单词,sport,book10_U6_W10.mp3
+773,11,U1_S1,句子,Where did you go during the holiday?,book11_U1_S1.mp3
+774,11,U1_S2,句子,I went to Paris with my parents.,book11_U1_S2.mp3
+775,11,U1_S3,句子,It's in the north of France.,book11_U1_S3.mp3
+776,11,U1_S4,句子,It's a beautiful city.,book11_U1_S4.mp3
+777,11,U1_S5,句子,We had a wonderful time there.,book11_U1_S5.mp3
+778,11,U1_S6,句子,I went to Sanya. It's my hometown.,book11_U1_S6.mp3
+779,11,U1_W1,单词,beach,book11_U1_W1.mp3
+780,11,U1_W2,单词,mountain,book11_U1_W2.mp3
+781,11,U1_W3,单词,city,book11_U1_W3.mp3
+782,11,U1_W4,单词,hometown,book11_U1_W4.mp3
+783,11,U1_W5,单词,sunrise,book11_U1_W5.mp3
+784,11,U1_W6,单词,wonderful,book11_U1_W6.mp3
+785,11,U1_W7,单词,north,book11_U1_W7.mp3
+786,11,U1_W8,单词,south,book11_U1_W8.mp3
+787,11,U1_W9,单词,climb,book11_U1_W9.mp3
+788,11,U1_W10,单词,ride,book11_U1_W10.mp3
+789,11,U2_S1,句子,Why are you so excited?,book11_U2_S1.mp3
+790,11,U2_S2,句子,Because our volleyball team won an important game.,book11_U2_S2.mp3
+791,11,U2_S3,句子,You look a little sad.,book11_U2_S3.mp3
+792,11,U2_S4,句子,I lost my favourite storybook.,book11_U2_S4.mp3
+793,11,U2_S5,句子,Don't worry. Let's go to the Lost and Found.,book11_U2_S5.mp3
+794,11,U2_S6,句子,What's up? I just got a bad grade in the math test.,book11_U2_S6.mp3
+795,11,U2_W1,单词,excited,book11_U2_W1.mp3
+796,11,U2_W2,单词,angry,book11_U2_W2.mp3
+797,11,U2_W3,单词,volleyball,book11_U2_W3.mp3
+798,11,U2_W4,单词,win,book11_U2_W4.mp3
+799,11,U2_W5,单词,break,book11_U2_W5.mp3
+800,11,U2_W6,单词,cry,book11_U2_W6.mp3
+801,11,U2_W7,单词,call,book11_U2_W7.mp3
+802,11,U2_W8,单词,Internet,book11_U2_W8.mp3
+803,11,U2_W9,单词,sad,book11_U2_W9.mp3
+804,11,U2_W10,单词,happy,book11_U2_W10.mp3
+805,11,U3_S1,句子,"Let's plant some radishes, OK?",book11_U3_S1.mp3
+806,11,U3_S2,句子,How do we plant them?,book11_U3_S2.mp3
+807,11,U3_S3,句子,"First, get some seeds, soil and a pot.",book11_U3_S3.mp3
+808,11,U3_S4,句子,"Second, put the seeds in the soil.",book11_U3_S4.mp3
+809,11,U3_S5,句子,"Third, water the soil.",book11_U3_S5.mp3
+810,11,U3_S6,句子,"Last, harvest the radishes in about 30 days.",book11_U3_S6.mp3
+811,11,U3_W1,单词,seed,book11_U3_W1.mp3
+812,11,U3_W2,单词,soil,book11_U3_W2.mp3
+813,11,U3_W3,单词,pot,book11_U3_W3.mp3
+814,11,U3_W4,单词,sun,book11_U3_W4.mp3
+815,11,U3_W5,单词,harvest,book11_U3_W5.mp3
+816,11,U3_W6,单词,leaf,book11_U3_W6.mp3
+817,11,U3_W7,单词,grow,book11_U3_W7.mp3
+818,11,U3_W8,单词,radish,book11_U3_W8.mp3
+819,11,U3_W9,单词,pull,book11_U3_W9.mp3
+820,11,U3_W10,单词,tiny,book11_U3_W10.mp3
+821,11,U4_S1,句子,The leaves are turning yellow. Autumn is coming!,book11_U4_S1.mp3
+822,11,U4_S2,句子,I like autumn. It is neither too cold nor too hot.,book11_U4_S2.mp3
+823,11,U4_S3,句子,It is a season of harvest.,book11_U4_S3.mp3
+824,11,U4_S4,句子,What is your favourite season?,book11_U4_S4.mp3
+825,11,U4_S5,句子,My favourite season is spring.,book11_U4_S5.mp3
+826,11,U4_S6,句子,Flowers come out. Everything comes to life.,book11_U4_S6.mp3
+827,11,U4_W1,单词,spring,book11_U4_W1.mp3
+828,11,U4_W2,单词,summer,book11_U4_W2.mp3
+829,11,U4_W3,单词,autumn,book11_U4_W3.mp3
+830,11,U4_W4,单词,winter,book11_U4_W4.mp3
+831,11,U4_W5,单词,season,book11_U4_W5.mp3
+832,11,U4_W6,单词,sky,book11_U4_W6.mp3
+833,11,U4_W7,单词,moon,book11_U4_W7.mp3
+834,11,U4_W8,单词,rain,book11_U4_W8.mp3
+835,11,U4_W9,单词,snow,book11_U4_W9.mp3
+836,11,U4_W10,单词,star,book11_U4_W10.mp3
+837,11,U5_S1,句子,When is the Spring Festival?,book11_U5_S1.mp3
+838,11,U5_S2,句子,It's in January or February.,book11_U5_S2.mp3
+839,11,U5_S3,句子,When is Women's Day?,book11_U5_S3.mp3
+840,11,U5_S4,句子,It's on the eighth of March.,book11_U5_S4.mp3
+841,11,U5_S5,句子,When is Labour Day in China?,book11_U5_S5.mp3
+842,11,U5_S6,句子,It's on the first of May.,book11_U5_S6.mp3
+843,11,U5_W1,单词,January,book11_U5_W1.mp3
+844,11,U5_W2,单词,March,book11_U5_W2.mp3
+845,11,U5_W3,单词,May,book11_U5_W3.mp3
+846,11,U5_W4,单词,October,book11_U5_W4.mp3
+847,11,U5_W5,单词,December,book11_U5_W5.mp3
+848,11,U5_W6,单词,festival,book11_U5_W6.mp3
+849,11,U5_W7,单词,mooncake,book11_U5_W7.mp3
+850,11,U5_W8,单词,candle,book11_U5_W8.mp3
+851,11,U5_W9,单词,month,book11_U5_W9.mp3
+852,11,U5_W10,单词,wish,book11_U5_W10.mp3
+853,11,U6_S1,句子,Who is the lady in the picture?,book11_U6_S1.mp3
+854,11,U6_S2,句子,She is Tu Youyou. A famous scientist.,book11_U6_S2.mp3
+855,11,U6_S3,句子,She is my hero.,book11_U6_S3.mp3
+856,11,U6_S4,句子,Who is your hero?,book11_U6_S4.mp3
+857,11,U6_S5,句子,My hero is Marie Curie.,book11_U6_S5.mp3
+858,11,U6_S6,句子,I am a big fan of hers.,book11_U6_S6.mp3
+859,11,U6_W1,单词,astronaut,book11_U6_W1.mp3
+860,11,U6_W2,单词,engineer,book11_U6_W2.mp3
+861,11,U6_W3,单词,poet,book11_U6_W3.mp3
+862,11,U6_W4,单词,scientist,book11_U6_W4.mp3
+863,11,U6_W5,单词,space,book11_U6_W5.mp3
+864,11,U6_W6,单词,hero,book11_U6_W6.mp3
+865,11,U6_W7,单词,fan,book11_U6_W7.mp3
+866,11,U6_W8,单词,railway,book11_U6_W8.mp3
+867,11,U6_W9,单词,design,book11_U6_W9.mp3
+868,11,U6_W10,单词,hybrid,book11_U6_W10.mp3
+869,12,U1_S1,句子,What did you do during your holidays?,book12_U1_S1.mp3
+870,12,U1_S2,句子,I went to Sanya with my parents.,book12_U1_S2.mp3
+871,12,U1_S3,句子,We went there by plane.,book12_U1_S3.mp3
+872,12,U1_S4,句子,We stayed in a hotel by the sea.,book12_U1_S4.mp3
+873,12,U1_S5,句子,That sounds wonderful!,book12_U1_S5.mp3
+874,12,U1_S6,句子,I stayed at home and enjoyed Spring Festival.,book12_U1_S6.mp3
+875,12,U1_W1,单词,sun,book12_U1_W1.mp3
+876,12,U1_W2,单词,moon,book12_U1_W2.mp3
+877,12,U1_W3,单词,star,book12_U1_W3.mp3
+878,12,U1_W4,单词,beach,book12_U1_W4.mp3
+879,12,U1_W5,单词,hotel,book12_U1_W5.mp3
+880,12,U1_W6,单词,plane,book12_U1_W6.mp3
+881,12,U1_W7,单词,holiday,book12_U1_W7.mp3
+882,12,U1_W8,单词,Spring Festival,book12_U1_W8.mp3
+883,12,U1_W9,单词,party,book12_U1_W9.mp3
+884,12,U1_W10,单词,sea,book12_U1_W10.mp3
+885,12,U2_S1,句子,There is a park near my home.,book12_U2_S1.mp3
+886,12,U2_S2,句子,There are a lot of trees and flowers in the park.,book12_U2_S2.mp3
+887,12,U2_S3,句子,I want to go to the bookshop.,book12_U2_S3.mp3
+888,12,U2_S4,句子,Go down this street and turn right at the traffic lights.,book12_U2_S4.mp3
+889,12,U2_S5,句子,How can I get to the City Library?,book12_U2_S5.mp3
+890,12,U2_S6,句子,You can go there by No.6 bus.,book12_U2_S6.mp3
+891,12,U2_W1,单词,park,book12_U2_W1.mp3
+892,12,U2_W2,单词,river,book12_U2_W2.mp3
+893,12,U2_W3,单词,bank,book12_U2_W3.mp3
+894,12,U2_W4,单词,hospital,book12_U2_W4.mp3
+895,12,U2_W5,单词,supermarket,book12_U2_W5.mp3
+896,12,U2_W6,单词,bookshop,book12_U2_W6.mp3
+897,12,U2_W7,单词,hotel,book12_U2_W7.mp3
+898,12,U2_W8,单词,street,book12_U2_W8.mp3
+899,12,U2_W9,单词,vegetable,book12_U2_W9.mp3
+900,12,U2_W10,单词,bus,book12_U2_W10.mp3
+901,12,U3_S1,句子,We are going to travel around China.,book12_U3_S1.mp3
+902,12,U3_S2,句子,I know the Great Wall is in Beijing.,book12_U3_S2.mp3
+903,12,U3_S3,句子,It is the longest wall in the world.,book12_U3_S3.mp3
+904,12,U3_S4,句子,We're going to visit the Great Wall this morning.,book12_U3_S4.mp3
+905,12,U3_S5,句子,When are we going to the Summer Palace?,book12_U3_S5.mp3
+906,12,U3_S6,句子,We can learn a lot about the history of China.,book12_U3_S6.mp3
+907,12,U3_W1,单词,travel,book12_U3_W1.mp3
+908,12,U3_W2,单词,lake,book12_U3_W2.mp3
+909,12,U3_W3,单词,Great Wall,book12_U3_W3.mp3
+910,12,U3_W4,单词,plane,book12_U3_W4.mp3
+911,12,U3_W5,单词,train,book12_U3_W5.mp3
+912,12,U3_W6,单词,Beijing,book12_U3_W6.mp3
+913,12,U3_W7,单词,tomorrow,book12_U3_W7.mp3
+914,12,U3_W8,单词,week,book12_U3_W8.mp3
+915,12,U3_W9,单词,trip,book12_U3_W9.mp3
+916,12,U3_W10,单词,map,book12_U3_W10.mp3

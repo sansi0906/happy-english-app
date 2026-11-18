@@ -175,9 +175,42 @@ class SpeakDetailPage extends StatefulWidget {
 
 enum _RecState { idle, recording, scoring }
 
+/// 示范音速度切换按钮（正常 / 慢速）
+class _SpeedChip extends StatelessWidget {
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _SpeedChip(
+      {required this.label, required this.selected, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 9),
+        decoration: BoxDecoration(
+          color: selected ? kGreen : kWhite,
+          borderRadius: BorderRadius.circular(22),
+          border: Border.all(color: kGreen, width: 2),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: selected ? kWhite : kGreen),
+        ),
+      ),
+    );
+  }
+}
+
 class _SpeakDetailPageState extends State<SpeakDetailPage> {
   _RecState _state = _RecState.idle;
   bool _preparing = false; // 首次加载语音引擎中
+  bool _slow = AudioService.slowMode; // 示范音速度：正常 / 慢速
   SpeakResult? _result;
   Duration _elapsed = Duration.zero;
   Timer? _timer;
@@ -366,6 +399,29 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                                 ],
                               ),
                             ),
+                          ),
+                          const SizedBox(height: 12),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              _SpeedChip(
+                                label: '正常',
+                                selected: !_slow,
+                                onTap: () {
+                                  setState(() => _slow = false);
+                                  AudioService.setSlowMode(false);
+                                },
+                              ),
+                              const SizedBox(width: 12),
+                              _SpeedChip(
+                                label: '慢速',
+                                selected: _slow,
+                                onTap: () {
+                                  setState(() => _slow = true);
+                                  AudioService.setSlowMode(true);
+                                },
+                              ),
+                            ],
                           ),
                         ],
                       ),
