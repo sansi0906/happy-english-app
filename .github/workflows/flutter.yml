@@ -115,12 +115,14 @@ jobs:
 
       - run: flutter pub get
 
-      # jni 插件走 CMake，需要 NDK；显式装一次，装不上让 AGP 自己拉
-      - name: 准备 NDK
+      # jni 插件走 CMake，需要 NDK 和对应版本的 CMake。
+      # runner 不保证预装 CMake 3.22.1，本地能跑通是因为 SDK 里正好有这个版本。
+      - name: 准备 NDK 与 CMake
         run: |
           SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
-          yes | "$SDK/cmdline-tools/latest/bin/sdkmanager" "ndk;28.2.13676358" > /dev/null 2>&1 || true
-          ls "$SDK/ndk" || true
+          yes | "$SDK/cmdline-tools/latest/bin/sdkmanager" "ndk;28.2.13676358" "cmake;3.22.1" > /dev/null 2>&1 || true
+          echo "== ndk ==" && ls "$SDK/ndk" || true
+          echo "== cmake ==" && ls "$SDK/cmake" || true
 
       # 插件需要在 pub get 之后打两个兼容补丁：注入阿里云镜像、给 AGP 9
       # 补出插件漏设的 namespace。少了这步，构建会挂在 "Namespace not specified"。
@@ -130,7 +132,18 @@ jobs:
       # 工程在 ndk.abiFilters 里显式锁定 arm64-v8a，因此必须用 --target-platform，
       # 不能用 --split-per-abi（splits.abi 与 abiFilters 互斥，会直接构建失败）。
       - name: 构建
-        run: flutter build apk --release --target-platform android-arm64
+        shell: bash
+        run: |
+          set -o pipefail
+          flutter build apk --release --target-platform android-arm64 2>&1 | tee build.log
+
+      # 失败时把关键行转成 annotation，这样不下载日志也能直接看到根因
+      - name: 失败时输出关键日志
+        if: failure()
+        shell: bash
+        run: |
+          grep -E "What went wrong|Caused by|> A problem|> [A-Z]|error:|FAILURE:`$|not installed|not found" -A 2 build.log \
+            | tail -n 40 | while IFS= read -r line; do echo "::error::$line"; done
 
       - uses: actions/upload-artifact@v4
         with:
