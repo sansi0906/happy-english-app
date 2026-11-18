@@ -26,7 +26,11 @@ $env:PATH = "C:\Windows\System32;C:\Windows;C:\Program Files\Git\cmd;D:\dev\flut
 Set-Location $link
 
 if ($release) {
-    & $flutter build apk --release
+    # 工程显式只打 arm64-v8a（android/app/build.gradle.kts 的 ndk.abiFilters）。
+    # 不能用 --split-per-abi：那会设置 splits.abi，与 abiFilters 冲突，报
+    # "Conflicting configuration : 'arm64-v8a' in ndk abiFilters cannot be present
+    #  when splits abi filters are set"。用 --target-platform 表达同一意图。
+    & $flutter build apk --release --target-platform android-arm64
     $apk = Join-Path $link "build\app\outputs\flutter-apk\app-release.apk"
 } else {
     & $flutter build apk --debug

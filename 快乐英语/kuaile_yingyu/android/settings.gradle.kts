@@ -33,7 +33,20 @@ dependencyResolutionManagement {
         maven { url = uri("https://maven.aliyun.com/repository/google") }
         maven { url = uri("https://maven.aliyun.com/repository/public") }
         maven { url = uri("https://dl.google.com/dl/android/maven2/") }
-        // Flutter engine 的 embedding 构件只发布在这里，各 Maven 镜像都没有
+        // Flutter engine 的 embedding 构件只发布在这里，各 Maven 镜像都没有。
+        // 国内直连 storage.googleapis.com 会被重置连接，优先用官方中国镜像。
+        maven {
+            url = uri("https://storage.flutter-io.cn/download.flutter.io")
+            content {
+                includeGroup("io.flutter")
+                includeGroup("io.flutter.arm64_v8a_debug")
+                includeGroup("io.flutter.armeabi_v7a_debug")
+                includeGroup("io.flutter.x86_64_debug")
+                includeGroup("io.flutter.arm64_v8a_release")
+                includeGroup("io.flutter.armeabi_v7a_release")
+                includeGroup("io.flutter.x86_64_release")
+            }
+        }
         maven {
             url = uri("https://storage.googleapis.com/download.flutter.io")
             content {
@@ -41,6 +54,9 @@ dependencyResolutionManagement {
                 includeGroup("io.flutter.arm64_v8a_debug")
                 includeGroup("io.flutter.armeabi_v7a_debug")
                 includeGroup("io.flutter.x86_64_debug")
+                includeGroup("io.flutter.arm64_v8a_release")
+                includeGroup("io.flutter.armeabi_v7a_release")
+                includeGroup("io.flutter.x86_64_release")
             }
         }
         mavenCentral()

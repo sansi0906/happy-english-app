@@ -122,9 +122,15 @@ jobs:
           yes | "$SDK/cmdline-tools/latest/bin/sdkmanager" "ndk;28.2.13676358" > /dev/null 2>&1 || true
           ls "$SDK/ndk" || true
 
-      # 注意：runner 是英文路径，不会出现本地那种 NDK 中文路径链接失败
-      - name: 构建（按 ABI 拆分以控制体积）
-        run: flutter build apk --release --split-per-abi
+      # 插件需要在 pub get 之后打两个兼容补丁：注入阿里云镜像、给 AGP 9
+      # 补出插件漏设的 namespace。少了这步，构建会挂在 "Namespace not specified"。
+      - name: 修补 pub 缓存插件
+        run: python3 tool/patch_pub_cache.py
+
+      # 工程在 ndk.abiFilters 里显式锁定 arm64-v8a，因此必须用 --target-platform，
+      # 不能用 --split-per-abi（splits.abi 与 abiFilters 互斥，会直接构建失败）。
+      - name: 构建
+        run: flutter build apk --release --target-platform android-arm64
 
       - uses: actions/upload-artifact@v4
         with:
