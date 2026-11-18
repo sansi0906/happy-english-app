@@ -261,9 +261,19 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
       _timer = Timer.periodic(const Duration(seconds: 1), (_) {
         if (!mounted) return;
         setState(() => _elapsed += const Duration(seconds: 1));
-        if (_elapsed.inSeconds >= 10) _toggleRecord();
+        // V1.4.0：录音上限按句子长度自适应，避免长句/慢读被 10 秒硬截断丢后半句
+        if (_elapsed.inSeconds >= _maxRecordSeconds) _toggleRecord();
       });
     }
+  }
+
+  int get _maxRecordSeconds {
+    final words = widget.item.text
+        .split(RegExp(r'[^A-Za-z]+'))
+        .where((w) => w.isNotEmpty)
+        .length;
+    final v = 6 + words * 1.6; // 一年级语速约 1.6 秒/词，另留 6 秒起音余量
+    return v.round().clamp(8, 16);
   }
 
   void _stopTimer() {

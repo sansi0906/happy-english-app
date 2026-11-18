@@ -18,6 +18,13 @@ class SpeechService {
   static String? _modelRoot;
   static Model? _loadedModel;
 
+  /// V1.4.0：当前语音模型词表里根本不存在的词（已逐条用 grammar 构造验证）。
+  /// 这些词即使孩子读得完全标准，grammar 识别器也会直接丢掉，
+  /// 若计入分母，含人名的句子/单词会被无端扣分，所以打分时剔除。
+  static const Set<String> _asrOOV = {
+    'xinxin', 'yaoyao', 'jiaming', 'youyou', 'weiqi', 'schoolbag', 'mooncake',
+  };
+
   /// 懒加载模型（只解压一次，ModelLoader 自带缓存）
   static Future<Model> _ensureModel() async {
     if (_loadedModel != null) return _loadedModel!;
@@ -120,8 +127,8 @@ class SpeechService {
 
     SpeakResult result;
     try {
-      final pcm = await _readPcm16FromWav(path);
-      if (pcm.length < 1600) {
+      final pcmRaw = await _readPcm16FromWav(path);
+      if (pcmRaw.length < 1600) {
         // 太短（<0.1s）视为未说话
         result = SpeakResult(
           score: 0, star: 1, displayStars: 1,
@@ -141,25 +148,48 @@ class SpeechService {
           sampleRate: 16000,
         );
         try {
-          // 同一段 PCM 依次喂两个识别器
-          final grammarText = await _feedAndGetFinal(recGrammar, pcm);
-          final freeText = await _feedAndGetFinal(recFree, pcm);
+          // V1.4.0 童声增强：开口占比用原始录音算（归一化会改变能量，
+          // 不能再用于"有没有说话"的判断）；喂识别器的是裁剪静音 + 增益归一化后的 PCM。
+          final voiceRatio = _voiceRatio(pcmRaw);
+          final pcm = _preprocessPcm(pcmRaw);
+          // 同一段 PCM 依次喂两个识别器；同时取自由识别器的平均置信度
+          final (grammarText, _) = await _feedAndGetFinal(recGrammar, pcm);
+          final (freeText, freeConf) = await _feedAndGetFinal(recFree, pcm);
 
-          final g = coverageScore(ref, grammarText); // 覆盖率主分（修复重复词误判）
-          final f = scoreText(ref, freeText).score; // 自由识别参考（童声不可靠，仅兜底）
+          final g = coverageScore(ref, grammarText, ignore: _asrOOV); // 覆盖率主分
+          final f = scoreText(ref, freeText, ignore: _asrOOV).score; // 自由识别兜底
           // V1.2.1 鼓励式保底：检测到孩子开口（有语音）但两个识别器都没认出来时，
           // 不再给 0 分，给 40 分 + 鼓励语，避免"读了却 0 分"打击学习积极性；
           // 只有确实没听到声音（VAD 判定无语音）才给 0 分。
-          final hasVoice = _voiceRatio(pcm) > 0.15;
           double mixed;
+          String? note;
           if (g > 0) {
             mixed = g;
           } else if (f > 0) {
             mixed = f;
-          } else if (hasVoice) {
+          } else if (voiceRatio > 0.15) {
             mixed = 40.0;
           } else {
             mixed = 0.0;
+          }
+          // V1.4.0 能量门槛：几乎没有声音时，即使识别器"凑"出词也不能给分。
+          //   <6%   基本没开口 → 0 分并提示重读（不记进度）
+          //   6-15% 开口很少   → 最多 40 分（一星鼓励）
+          if (voiceRatio < 0.06) {
+            mixed = 0.0;
+            note = '没听到声音，请靠近一点、大声读一遍';
+          } else if (voiceRatio < 0.15) {
+            mixed = mixed > 40.0 ? 40.0 : mixed;
+          }
+          // V1.4.0 置信度轻惩罚：环境声/含糊乱读会被识别成目标词，
+          // 用自由识别器平均置信度做轻微压制（阈值刻意放宽，避免误伤童声）。
+          //   >=0.55 不计罚；0.30-0.55 轻微 ×0.92；<0.30 明显不可信 ×0.8
+          if (freeConf >= 0) {
+            if (freeConf < 0.30) {
+              mixed = mixed * 0.8;
+            } else if (freeConf < 0.55) {
+              mixed = mixed * 0.92;
+            }
           }
           final star = starsFromScore(mixed);
           final display = starsForDisplay(mixed);
@@ -169,7 +199,7 @@ class SpeechService {
             displayStars: display,
             grammarText: grammarText,
             freeText: freeText,
-            error: null,
+            error: note,
           );
         } finally {
           await recGrammar.dispose();
@@ -224,20 +254,71 @@ class SpeechService {
   static String _sanitize(String s) =>
       s.replaceAll(RegExp(r'[\\/:*?"<>|\s]'), '_');
 
-  static Future<String> _feedAndGetFinal(Recognizer rec, Uint8List pcm) async {
+  /// 喂完整段 PCM 并取最终结果；返回 (识别文本, 平均置信度)。
+  /// 平均置信度：解析 result 数组各词 conf 的均值；无 conf 字段返回 -1（未知）。
+  static Future<(String, double)> _feedAndGetFinal(
+      Recognizer rec, Uint8List pcm) async {
     const chunk = 8192;
     for (var pos = 0; pos < pcm.length; pos += chunk) {
       final end = (pos + chunk) < pcm.length ? pos + chunk : pcm.length;
       await rec.acceptWaveformBytes(Uint8List.fromList(pcm.sublist(pos, end)));
     }
     final resultJson = await rec.getFinalResult();
-    return _extractText(resultJson);
+    return _extractTextAndConf(resultJson);
   }
 
-  static String _extractText(String json) {
-    // {"text": "hello world", ...}
+  /// 解析 Vosk 结果 JSON：(text, 平均置信度)
+  static (String, double) _extractTextAndConf(String json) {
     final m = RegExp(r'"text"\s*:\s*"([^"]*)"').firstMatch(json);
-    return m?.group(1) ?? '';
+    final text = m?.group(1) ?? '';
+    var sum = 0.0;
+    var n = 0;
+    final confRe = RegExp(r'"conf"\s*:\s*([0-9.]+)');
+    for (final cm in confRe.allMatches(json)) {
+      sum += double.parse(cm.group(1)!);
+      n++;
+    }
+    return (text, n == 0 ? -1 : sum / n);
+  }
+
+  /// 童声增强前处理（V1.4.0）：裁剪首尾静音 + 峰值增益归一化。
+  /// 孩子离手机远、声音小是本 App 打分偏低的主因之一：
+  /// Vosk 模型对低幅值输入识别率明显下降，归一化后识别率显著提升。
+  static Uint8List _preprocessPcm(Uint8List pcm) {
+    if (pcm.length < 640) return pcm;
+    final n = pcm.length ~/ 2;
+    final samples = Int16List.view(pcm.buffer, pcm.offsetInBytes, n);
+    const win = 320; // 20ms @16kHz
+    var first = -1;
+    var last = -1;
+    for (var pos = 0; pos + win <= n; pos += win) {
+      var sum = 0.0;
+      for (var i = 0; i < win; i++) {
+        final s = samples[pos + i] / 32768.0;
+        sum += s * s;
+      }
+      if (sum / win > 0.0004) { // ≈0.02 幅值，比 VAD 门槛略高，只保留真实开口段
+        if (first < 0) first = pos;
+        last = pos + win;
+      }
+    }
+    if (first < 0) return pcm; // 全程静音，交给上层判 0 分
+    final from = (first - 1280) < 0 ? 0 : (first - 1280); // 前留 80ms
+    final to = (last + 1280) > n ? n : (last + 1280); // 后留 80ms
+    var peak = 0;
+    for (var i = from; i < to; i++) {
+      final a = samples[i].abs();
+      if (a > peak) peak = a;
+    }
+    // 峰值太小（<2000，约 -24dBFS）说明确实没怎么开口，不放大，避免把底噪放大成"人声"
+    if (peak < 2000) return Uint8List.fromList(pcm.sublist(from * 2, to * 2));
+    final gain = (0.7 * 32767 / peak).clamp(1.0, 8.0);
+    final out = Int16List(to - from);
+    for (var i = from; i < to; i++) {
+      final v = (samples[i] * gain).round();
+      out[i - from] = v > 32767 ? 32767 : (v < -32768 ? -32768 : v);
+    }
+    return out.buffer.asUint8List(0, out.length * 2);
   }
 
   /// 解析 WAV（PCM16 mono 16kHz）→ 字节流

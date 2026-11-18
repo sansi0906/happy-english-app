@@ -109,8 +109,14 @@ List<String> norm(String s) {
   s = s.toLowerCase();
   // 弯引号（教材文本常用 ’ ‘）归一为 ASCII 撇号
   s = s.replaceAll('’', "'").replaceAll('‘', "'");
+  // V1.4.0：grammar 识别器的 [unk] 是"没识别出目标词"的占位符，
+  // 不是孩子读出的词，必须剔除，否则会被当成无关词扣分。
+  s = s.replaceAll('[unk]', ' ');
   s = s.replaceAll(RegExp(r"[^a-z0-9' ]"), ' ');
-  return s.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).toList();
+  return s
+      .split(RegExp(r'\s+'))
+      .where((w) => w.isNotEmpty && w != 'unk')
+      .toList();
 }
 
 /// 词级编辑距离（DP）
@@ -173,13 +179,19 @@ List<bool> levAlign(List<String> ref, List<String> hyp) {
 }
 
 /// 返回 (分数, 星级, WER, 编辑距离, 目标词数, 识别词数)
+/// [ignore]：ASR 词表里根本不存在的词（人名/合成词），不参与评测（V1.4.0）
 ({double score, int star, double wer, int dist, int refLen, int hypLen})
-    scoreText(String ref, String hyp) {
-  final r = norm(ref);
-  final h = norm(hyp);
-  if (r.isEmpty) {
-    return (score: 100.0, star: 5, wer: 0.0, dist: 0, refLen: 0, hypLen: h.length);
+    scoreText(String ref, String hyp, {Set<String> ignore = const {}}) {
+  final raw = norm(ref);
+  if (raw.isEmpty) {
+    return (score: 100.0, star: 5, wer: 0.0, dist: 0, refLen: 0, hypLen: norm(hyp).length);
   }
+  final r = ignore.isEmpty ? raw : raw.where((w) => !ignore.contains(w)).toList();
+  if (r.isEmpty) {
+    // 目标词全部是模型词表外的词，无法按文本评测，交给上层走保底分
+    return (score: -1.0, star: 1, wer: 0.0, dist: 0, refLen: 0, hypLen: norm(hyp).length);
+  }
+  final h = norm(hyp);
   final dist = levenshtein(r, h);
   final wer = dist / r.length;
   final score = (1.0 - wer) * 100.0 < 0 ? 0.0 : (1.0 - wer) * 100.0;
@@ -202,10 +214,13 @@ List<bool> levAlign(List<String> ref, List<String> hyp) {
 /// V1.3.7（测试审计修复）：多读/乱读的无关词不再白送，每个无关词扣 10 分，
 ///   消除"目标词全读对后乱读一堆词仍 100 分"的漏洞。
 /// 完全乱读（[unk] 占位）覆盖率为 0 → 0 分；目标词全部命中且无乱读 → 100 分。
-double coverageScore(String ref, String hyp) {
-  final r = norm(ref);
+/// [ignore]：Vosk 词表外的词（人名/合成词）不计入分母，否则孩子读对也永远少一个词（V1.4.0）。
+double coverageScore(String ref, String hyp, {Set<String> ignore = const {}}) {
+  final raw = norm(ref);
+  if (raw.isEmpty) return 100.0;
+  final r = ignore.isEmpty ? raw : raw.where((w) => !ignore.contains(w)).toList();
+  if (r.isEmpty) return -1.0; // 目标词全在词表外，无法按文本评测
   final h = norm(hyp);
-  if (r.isEmpty) return 100.0;
   final uniq = <String>[];
   for (final w in h) {
     if (!uniq.any((u) => sameGroup(u, w))) uniq.add(w);
@@ -258,6 +273,18 @@ double coverageScore(String ref, String hyp) {
       }
     }
     if (!found) {
+      // 2.5) 合并读（V1.4.0）：识别器把合成词拆成两段（class room → classroom、
+      // good bye → goodbye、snow man → snowman、black board → blackboard 等），
+      // 孩子读的是完整的合成词，应算命中，而不是扣 20 分。
+      if (wp + 1 < uniq.length) {
+        final merged = wh + uniq[wp + 1];
+        if (sameGroup(r[rp], merged) || sameGroup(r[rp], uniq[wp + 1] + wh)) {
+          matched++;
+          rp++;
+          wp += 2;
+          continue;
+        }
+      }
       // 3) 多读/错词：wh 无法匹配，记为无关词（去重后计数），跳过该 hyp 词
       bad++;
       wp++;
