@@ -2,7 +2,8 @@ import json, os, sys, wave, statistics
 import numpy as np
 import miniaudio
 
-APP = r'E:\happy-english-app\快乐英语\kuaile_yingyu'
+# 以脚本自身位置推导工程根，便于在 CI（Linux）与本地复用
+APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 A = os.path.join(APP, 'assets')
 DATA = json.load(open(os.path.join(A, 'data', 'content.json'), encoding='utf-8'))
 

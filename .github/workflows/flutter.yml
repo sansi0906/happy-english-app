@@ -1,0 +1,133 @@
+name: 快乐英语 CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '快乐英语/kuaile_yingyu/**'
+      - '.github/workflows/flutter.yml'
+  pull_request:
+    paths:
+      - '快乐英语/kuaile_yingyu/**'
+  workflow_dispatch:
+
+env:
+  APP_DIR: 快乐英语/kuaile_yingyu
+
+jobs:
+  # 门禁一：内容与音频资源。任何缺图缺音、时长异常、慢速不全都会拦下来。
+  asset-gate:
+    name: 资源与音频门禁
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: 快乐英语/kuaile_yingyu
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: python -m pip install --quiet numpy miniaudio imageio-ffmpeg
+
+      - name: 跑资源检查
+        run: |
+          python tool/check_assets.py > check.json
+          tail -n 12 check.json
+
+      - name: 解析结果并卡阈值
+        run: |
+          python - <<'PY'
+          import json, sys
+          d = json.load(open('check.json', encoding='utf-8'))
+          fails = []
+          if d['problems_total'] != 0:
+              fails.append(f"资源问题 {d['problems_total']} 个")
+          if d['extra_by_book']:
+              fails.append(f"存在未引用资源: {d['extra_by_book']}")
+          # 890 条慢速是全量句子的基线，掉下来说明慢速批量生成被破坏
+          if d['slow_files'] < 890:
+              fails.append(f"慢速文件只有 {d['slow_files']} 条，低于基线 890")
+          mb = d['sizes_MB']
+          if mb['images'] > 200:
+              fails.append(f"图片体积 {mb['images']}MB 超过 200MB 上限")
+          if fails:
+              print('\n'.join(fails)); sys.exit(1)
+          print(f"OK items={d['items']} slow={d['slow_files']} "
+                f"images={mb['images']}MB audio={mb['audio']}MB")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-gate-report
+          path: 快乐英语/kuaile_yingyu/check.json
+
+  # 门禁二：静态分析 + 单测。注意本机 flutter analyze 会崩，统一用 dart analyze。
+  dart-test:
+    name: 静态分析与单测
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: 快乐英语/kuaile_yingyu
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter --version
+      - run: flutter pub get
+
+      - name: 静态分析
+        run: dart analyze lib test
+
+      - name: 单测
+        run: flutter test --reporter expanded
+
+  # 门禁三：出包。只在门禁一、二都通过后跑，产物可直接下载安装。
+  build-apk:
+    name: 构建 Release APK
+    needs: [asset-gate, dart-test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: 快乐英语/kuaile_yingyu
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      # jni 插件走 CMake，需要 NDK；显式装一次，装不上让 AGP 自己拉
+      - name: 准备 NDK
+        run: |
+          SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          yes | "$SDK/cmdline-tools/latest/bin/sdkmanager" "ndk;28.2.13676358" > /dev/null 2>&1 || true
+          ls "$SDK/ndk" || true
+
+      # 注意：runner 是英文路径，不会出现本地那种 NDK 中文路径链接失败
+      - name: 构建（按 ABI 拆分以控制体积）
+        run: flutter build apk --release --split-per-abi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apk-release
+          path: 快乐英语/kuaile_yingyu/build/app/outputs/flutter-apk/*.apk
+          if-no-files-found: error
