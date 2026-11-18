@@ -44,5 +44,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# Gradle 构建输出（CI 与本机构建都不入库）
+/android/build/
+/android/.gradle/
+/android/.kotlin/
+
 # Widget Preview related
 .widget_preview/
