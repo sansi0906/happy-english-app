@@ -9,10 +9,13 @@ void main() {
       expect(r.star, 5);
     });
 
-    test('缩写展开', () {
-      final r = scoreText("It's a cat.", 'it is a cat');
-      expect(r.score, 100.0);
-      expect(r.star, 5);
+    test('缩写等价（走覆盖率打分）', () {
+      // 实现自 V1.3.5 起不再展开缩写：scoreText 是严格词级编辑距离，
+      // "it's a cat"(3 词) 对 "it is a cat"(4 词) 必然扣 1 个词；
+      // 缩写/同音的宽容匹配由 coverageScore 的"吞词"逻辑负责，这里断言它。
+      final strict = scoreText("It's a cat.", 'it is a cat');
+      expect(strict.score, closeTo(66.67, 0.01));
+      expect(coverageScore("It's a cat.", 'it is a cat'), 100.0);
     });
 
     test('一半词对', () {
@@ -52,9 +55,13 @@ void main() {
     });
 
     test('APP 三档', () {
+      // 展示阈值：>=85 三星，>=65 二星，其余一星
       expect(starsForDisplay(90), 3);
-      expect(starsForDisplay(75), 3);
-      expect(starsForDisplay(60), 2);
+      expect(starsForDisplay(85), 3);
+      expect(starsForDisplay(84.9), 2);
+      expect(starsForDisplay(75), 2);
+      expect(starsForDisplay(65), 2);
+      expect(starsForDisplay(64.9), 1);
       expect(starsForDisplay(59.9), 1);
     });
   });

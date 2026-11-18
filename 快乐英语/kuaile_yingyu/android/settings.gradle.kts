@@ -1,3 +1,5 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
 pluginManagement {
     val flutterSdkPath =
         run {
@@ -19,6 +21,19 @@ pluginManagement {
         maven { url = uri("https://dl.google.com/dl/android/maven2/") }
         mavenCentral()
         gradlePluginPortal()
+    }
+}
+
+// Gradle 9 / Flutter 3.47 起，插件子构建（includeBuild flutter_tools/gradle）
+// 使用 FAIL_ON_PROJECT_REPOS，禁止在 project 里声明仓库。
+// 因此依赖仓库统一在 settings 中声明（PREFER_SETTINGS），build.gradle.kts 里不再有 allprojects.repositories。
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        maven { url = uri("https://dl.google.com/dl/android/maven2/") }
+        mavenCentral()
     }
 }
 

@@ -1,5 +1,10 @@
+import 'dart:async';
+import 'dart:io';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'pages/home_page.dart';
 import 'services/audio_service.dart';
@@ -12,9 +17,44 @@ const kYellow = Color(0xFFFFD166); // 黄
 const kDark = Color(0xFF4A4A4A); // 深灰文字
 const kWhite = Color(0xFFFFFFFF);
 
+/// 异常落盘：真机没有连接 ide 时，靠这个文件定位闪退/异常
+Future<void> _logFatal(Object error, StackTrace stack) async {
+  final line = '${DateTime.now().toIso8601String()}  $error\n$stack\n\n';
+  debugPrint('[APP-ERROR] $line');
+  try {
+    final dir = await getApplicationSupportDirectory();
+    await File('${dir.path}/app_error.log')
+        .writeAsString(line, mode: FileMode.append, flush: true);
+  } catch (_) {
+    // 日志本身失败不能影响主流程
+  }
+}
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const KuaileApp());
+  FlutterError.onError = (details) {
+    FlutterError.presentError(details);
+    _logFatal(details.exception, details.stack ?? StackTrace.current);
+  };
+  // 引擎层未捕获异常（平台通道、异步任务等）
+  PlatformDispatcher.instance.onError = (error, stack) {
+    _logFatal(error, stack);
+    return true;
+  };
+  // release 下 build 异常不再整屏红，给一个可读的兜底提示
+  ErrorWidget.builder = (details) => const Material(
+        color: kBgColor,
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(24),
+            child: Text('这里出了点小问题，返回上一页再试一次吧',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 22, color: kDark)),
+          ),
+        ),
+      );
+  runZonedGuarded(() => runApp(const KuaileApp()),
+      (error, stack) => _logFatal(error, stack));
 }
 
 class KuaileApp extends StatelessWidget {

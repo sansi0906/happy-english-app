@@ -54,6 +54,10 @@ class _WordPageState extends State<WordPage> {
                               width: double.infinity,
                               height: double.infinity,
                               fit: BoxFit.cover,
+                              errorBuilder: (c, e, s) => const Center(
+                                child: Icon(Icons.image_not_supported_outlined,
+                                    size: 48, color: kDark),
+                              ),
                             ),
                           ),
                         ),
@@ -67,8 +71,9 @@ class _WordPageState extends State<WordPage> {
                           style: const TextStyle(fontSize: 24, color: kDark)),
                       const SizedBox(height: 14),
                       // 喇叭发音 + 戳一戳提示
+                      // 单词卡固定正常语速，不受跟读页慢速开关影响
                       _SpeakerWithHint(
-                        onTap: () => AudioService.play(w.audioAsset),
+                        onTap: () => AudioService.play(w.audioAsset, slow: false),
                       ),
                       const SizedBox(height: 12),
                     ],

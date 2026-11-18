@@ -96,6 +96,12 @@ class _SpeakPageState extends State<SpeakPage> {
                       width: imgSize,
                       height: imgSize,
                       fit: BoxFit.cover,
+                      errorBuilder: (c, e, s) => SizedBox(
+                        width: imgSize,
+                        height: imgSize,
+                        child: const Icon(Icons.image_not_supported_outlined,
+                            size: 26, color: kDark),
+                      ),
                     ),
                   ),
                   SizedBox(width: lower ? 12 : 12),
@@ -362,6 +368,14 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                                 width: double.infinity,
                                 height: 180,
                                 fit: BoxFit.contain,
+                                errorBuilder: (c, e, s) => const SizedBox(
+                                  height: 180,
+                                  child: Center(
+                                    child: Icon(
+                                        Icons.image_not_supported_outlined,
+                                        size: 48, color: kDark),
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -373,7 +387,18 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                           const SizedBox(height: 22),
                           // 听示范（实心绿，与麦克风风格统一）
                           GestureDetector(
-                            onTap: () => AudioService.play(it.audioAsset),
+                            onTap: () async {
+                              // 先取 messenger，避免 await 之后再使用 context
+                              final messenger = ScaffoldMessenger.of(context);
+                              final ok = await AudioService.play(it.audioAsset,
+                                  slow: _slow);
+                              if (!ok) {
+                                messenger.showSnackBar(
+                                  const SnackBar(
+                                      content: Text('示范发音播放失败，请重试')),
+                                );
+                              }
+                            },
                             child: Container(
                               width: double.infinity,
                               padding: const EdgeInsets.symmetric(vertical: 11),

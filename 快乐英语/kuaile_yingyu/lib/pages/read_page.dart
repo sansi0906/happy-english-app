@@ -56,7 +56,8 @@ class _ReadPageState extends State<ReadPage> {
       if (mounted) setState(() => _playingId = null);
       return;
     }
-    await AudioService.play(item.audioAsset);
+    // 点读页固定正常语速：跟读页的"慢速"开关不应串到这里
+    await AudioService.play(item.audioAsset, slow: false);
     if (mounted) setState(() => _playingId = item.id);
   }
 
@@ -96,6 +97,14 @@ class _ReadPageState extends State<ReadPage> {
                         width: double.infinity,
                         height: 180,
                         fit: BoxFit.contain,
+                        // 缺图时占位，不要让整页抛异常
+                        errorBuilder: (c, e, s) => const SizedBox(
+                          height: 180,
+                          child: Center(
+                            child: Icon(Icons.image_not_supported_outlined,
+                                size: 48, color: kDark),
+                          ),
+                        ),
                       ),
                     ),
                   ),

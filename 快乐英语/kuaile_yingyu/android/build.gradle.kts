@@ -1,13 +1,5 @@
-allprojects {
-    repositories {
-        // 阿里云镜像优先（国内网络下官方仓库不稳定），官方仓库兜底
-        maven { url = uri("https://maven.aliyun.com/repository/google") }
-        maven { url = uri("https://maven.aliyun.com/repository/public") }
-        // 显式用 dl.google.com 替代 google()：maven.google.com 在当前网络下 SSL 握手超时
-        maven { url = uri("https://dl.google.com/dl/android/maven2/") }
-        mavenCentral()
-    }
-}
+// 仓库统一在 settings.gradle.kts 的 dependencyResolutionManagement 声明，
+// 这里不再给 project 添加 repositories（Gradle 9 下会与 Flutter 插件子构建冲突）。
 
 val newBuildDir: Directory =
     rootProject.layout.buildDirectory
