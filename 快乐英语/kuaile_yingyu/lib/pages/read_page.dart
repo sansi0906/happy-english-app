@@ -4,7 +4,7 @@ import '../data/models.dart';
 import '../main.dart';
 import '../services/audio_service.dart';
 
-/// 课文点读：句子列表，点击播放（配图 + 0.8 倍慢速）
+/// 课文点读：句子列表，点击播放（配图 + 正常语速）
 
 List<Widget> _splitSentence(String text, double fontSize,
     {TextAlign align = TextAlign.start}) {

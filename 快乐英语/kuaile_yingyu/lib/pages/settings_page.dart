@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../data/progress_db.dart';
 import '../main.dart';
-import '../services/audio_service.dart';
 import '../services/recordings_store.dart';
 import 'recordings_page.dart';
 
-/// 设置页：孩子昵称、慢速播放、清空进度、录音管理、关于
+/// 设置页：孩子昵称、清空进度、录音管理、关于
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
 
@@ -15,7 +14,6 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  bool _slow = AudioService.slowMode;
   final _nameCtrl = TextEditingController();
   bool _nameLoaded = false;
   ({int count, int bytes}) _recStats = (count: 0, bytes: 0);
@@ -169,31 +167,6 @@ class _SettingsPageState extends State<SettingsPage> {
                       ),
                     ),
                   ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 16),
-          _SettingCard(
-            child: Row(
-              children: [
-                const Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('慢速播放', style: TextStyle(fontSize: 26, color: kDark)),
-                      SizedBox(height: 4),
-                      Text('0.8 倍速度，适合初学', style: TextStyle(fontSize: 18, color: kDark)),
-                    ],
-                  ),
-                ),
-                Switch(
-                  value: _slow,
-                  activeThumbColor: kGreen,
-                  onChanged: (v) {
-                    setState(() => _slow = v);
-                    AudioService.setSlowMode(v);
-                  },
                 ),
               ],
             ),
