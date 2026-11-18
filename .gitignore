@@ -46,3 +46,6 @@ desktop.ini
 工具/
 需求文档/
 plan_edit_work/
+
+# 本地备份
+_backup/
