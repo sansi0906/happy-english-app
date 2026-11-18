@@ -137,15 +137,14 @@ jobs:
           set -o pipefail
           flutter build apk --release --target-platform android-arm64 2>&1 | tee build.log
 
-      # 失败时把日志尾部整体带出来，这样不下载日志也能看到根因
+      # 失败时把根因段落合并成一条 annotation（逐行发会被折叠掉关键信息）
       - name: 失败时输出关键日志
         if: failure()
         shell: bash
         run: |
-          echo "===== build.log 尾部 ====="
-          tail -n 60 build.log | while IFS= read -r line; do echo "::error::${line}"; done
-          echo "===== pubspec/gradle 版本 ====="
-          echo "::error::flutter=$(flutter --version | head -n 1)"
+          W=$(grep -A 14 "What went wrong" build.log 2>/dev/null | head -n 16)
+          if [ -z "$W" ]; then W=$(tail -n 25 build.log); fi
+          echo "::error::$(echo "$W" | tr '\n' '|' | tr -s ' ')"
           exit 0
 
       - uses: actions/upload-artifact@v4
