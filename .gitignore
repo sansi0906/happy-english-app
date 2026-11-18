@@ -40,3 +40,9 @@ fix_github_hosts*.ps1
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ===== 非 App 内容（仅本地保留，不入库） =====
+学生习题/
+工具/
+需求文档/
+plan_edit_work/
