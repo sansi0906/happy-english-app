@@ -192,13 +192,6 @@
        "image_desc": "看，这是我奶奶。"
       },
       {
-       "id": "U1_S25",
-       "text": "This is ...",
-       "audio": "book1/U1_S25.mp3",
-       "image": "book1/U1_cover.webp",
-       "image_desc": "这是⋯⋯"
-      },
-      {
        "id": "U1_S26",
        "text": "Look, this is me.",
        "audio": "book1/U1_S26.mp3",
@@ -293,17 +286,10 @@
       },
       {
        "id": "U2_S4",
-       "text": "Watermelon, watermelon,",
+       "text": "Watermelon, watermelon, yummy yummy!",
        "audio": "book1/U2_S4.mp3",
        "image": "book1/U2_cover.webp",
        "image_desc": "西瓜，西瓜，"
-      },
-      {
-       "id": "U2_S5",
-       "text": "yummy yummy!",
-       "audio": "book1/U2_S5.mp3",
-       "image": "book1/U2_cover.webp",
-       "image_desc": "好吃极了！"
       },
       {
        "id": "U2_S6",
@@ -342,7 +328,7 @@
       },
       {
        "id": "U2_S11",
-       "text": "Look. an orange.",
+       "text": "Look, an orange.",
        "audio": "book1/U2_S11.mp3",
        "image": "book1/U2_cover.webp",
        "image_desc": "你看。 一个橘子。"
@@ -381,13 +367,6 @@
        "audio": "book1/U2_S16.mp3",
        "image": "book1/U2_cover.webp",
        "image_desc": "我的水果沙拉"
-      },
-      {
-       "id": "U2_S17",
-       "text": "I need an apple and a/an ...",
-       "audio": "book1/U2_S17.mp3",
-       "image": "book1/U2_cover.webp",
-       "image_desc": "我需要一个苹果和一个⋯⋯"
       }
      ],
      "words": [
@@ -570,20 +549,6 @@
        "audio": "book1/U3_S19.mp3",
        "image": "book1/U3_cover.webp",
        "image_desc": "我的迷你手册"
-      },
-      {
-       "id": "U3_S20",
-       "text": "This is my ...",
-       "audio": "book1/U3_S20.mp3",
-       "image": "book1/U3_cover.webp",
-       "image_desc": "这是我的⋯⋯"
-      },
-      {
-       "id": "U3_S21",
-       "text": "Wow! A nice ...",
-       "audio": "book1/U3_S21.mp3",
-       "image": "book1/U3_cover.webp",
-       "image_desc": "哇！好漂亮的⋯⋯"
       }
      ],
      "words": [
@@ -643,14 +608,14 @@
       },
       {
        "id": "U4_S2",
-       "text": "What colour is it now?",
+       "text": "What color is it now?",
        "audio": "book1/U4_S2.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "它现在是什么颜色的？"
       },
       {
        "id": "U4_S3",
-       "text": "What colour?",
+       "text": "What color?",
        "audio": "book1/U4_S3.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "什么颜色？"
@@ -699,70 +664,70 @@
       },
       {
        "id": "U4_S10",
-       "text": "—It's red.",
+       "text": "It's red.",
        "audio": "book1/U4_S10.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "—它是红色的。"
       },
       {
        "id": "U4_S11",
-       "text": "—What color?",
+       "text": "What color?",
        "audio": "book1/U4_S11.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "—什么颜色？"
       },
       {
        "id": "U4_S12",
-       "text": "—It's brown.",
+       "text": "It's brown.",
        "audio": "book1/U4_S12.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "—它是棕色的。"
       },
       {
        "id": "U4_S13",
-       "text": "—It's green.",
+       "text": "It's green.",
        "audio": "book1/U4_S13.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "—它是绿色的。"
       },
       {
        "id": "U4_S14",
-       "text": "—It's yellow.",
+       "text": "It's yellow.",
        "audio": "book1/U4_S14.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "—它是黄色的。"
       },
       {
        "id": "U4_S15",
-       "text": "—It's black.",
+       "text": "It's black.",
        "audio": "book1/U4_S15.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "—它是黑色的。"
       },
       {
        "id": "U4_S16",
-       "text": "—It's blue.",
+       "text": "It's blue.",
        "audio": "book1/U4_S16.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "—它是蓝色的。"
       },
       {
        "id": "U4_S17",
-       "text": "Magic colours",
+       "text": "Magic colors",
        "audio": "book1/U4_S17.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "神奇的颜色"
       },
       {
        "id": "U4_S18",
-       "text": "Look! What colour is it?",
+       "text": "Look! What color is it?",
        "audio": "book1/U4_S18.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "看！它是什么颜色的？"
       },
       {
        "id": "U4_S19",
-       "text": "Look! What colour is it now?",
+       "text": "Look! What color is it now?",
        "audio": "book1/U4_S19.mp3",
        "image": "book1/U4_cover.webp",
        "image_desc": "看！它现在是什么颜色的？"
@@ -2205,19 +2170,11 @@
       },
       {
        "id": "U4_S7",
-       "text": "Hands and face,",
+       "text": "Hands and face, clean, clean, clean.",
        "cn": "手和脸，",
        "audio": "book2/U4_S7.mp3",
        "image": "book2/U4_cover.webp",
        "image_desc": "手和脸，"
-      },
-      {
-       "id": "U4_S8",
-       "text": "clean, clean, clean.",
-       "cn": "干净、干净、干净。",
-       "audio": "book2/U4_S8.mp3",
-       "image": "book2/U4_cover.webp",
-       "image_desc": "干净、干净、干净。"
       },
       {
        "id": "U4_S9",
@@ -2381,7 +2338,7 @@
       },
       {
        "id": "U4_S29",
-       "text": "Colour the eyes blue and red.",
+       "text": "Color the eyes blue and red.",
        "cn": "1. 把眼睛涂成蓝色和红色。",
        "audio": "book2/U4_S29.mp3",
        "image": "book2/U4_cover.webp",
@@ -2389,7 +2346,7 @@
       },
       {
        "id": "U4_S30",
-       "text": "Colour the mouth red and yellow.",
+       "text": "Color the mouth red and yellow.",
        "cn": "2. 把嘴涂成红色和黄色。",
        "audio": "book2/U4_S30.mp3",
        "image": "book2/U4_cover.webp",
@@ -2397,7 +2354,7 @@
       },
       {
        "id": "U4_S31",
-       "text": "Colour the nose purple.",
+       "text": "Color the nose purple.",
        "cn": "3. 把鼻子涂成紫色。",
        "audio": "book2/U4_S31.mp3",
        "image": "book2/U4_cover.webp",
@@ -2405,7 +2362,7 @@
       },
       {
        "id": "U4_S32",
-       "text": "Colour the ears green and pink.",
+       "text": "Color the ears green and pink.",
        "cn": "4. 把耳朵涂成绿色和粉色。",
        "audio": "book2/U4_S32.mp3",
        "image": "book2/U4_cover.webp",
@@ -2413,7 +2370,7 @@
       },
       {
        "id": "U4_S33",
-       "text": "Colour the face grey.",
+       "text": "Color the face gray.",
        "cn": "5. 把脸涂成灰色。",
        "audio": "book2/U4_S33.mp3",
        "image": "book2/U4_cover.webp",
@@ -2421,7 +2378,7 @@
       },
       {
        "id": "U4_S34",
-       "text": "Colour the hands orange and black.",
+       "text": "Color the hands orange and black.",
        "cn": "6. 把手涂成橙色和黑色。",
        "audio": "book2/U4_S34.mp3",
        "image": "book2/U4_cover.webp",
@@ -2429,19 +2386,11 @@
       },
       {
        "id": "U4_S35",
-       "text": "It has a small mouth, a small nose,",
+       "text": "It has a small mouth, a small nose, red eyes and long ears.",
        "cn": "它有一个小嘴、一个小鼻子、",
        "audio": "book2/U4_S35.mp3",
        "image": "book2/U4_cover.webp",
        "image_desc": "它有一个小嘴、一个小鼻子、"
-      },
-      {
-       "id": "U4_S36",
-       "text": "red eyes and long ears.",
-       "cn": "红色的眼睛和长耳朵。",
-       "audio": "book2/U4_S36.mp3",
-       "image": "book2/U4_cover.webp",
-       "image_desc": "红色的眼睛和长耳朵。"
       },
       {
        "id": "U4_S37",
@@ -3808,7 +3757,7 @@
       },
       {
        "id": "U4_S19",
-       "text": "Colour the door green.",
+       "text": "Color the door green.",
        "cn": "1. 把门涂成绿色。",
        "audio": "book3/U4_S19.mp3",
        "image": "book3/U4_cover.webp",
@@ -3816,7 +3765,7 @@
       },
       {
        "id": "U4_S20",
-       "text": "Colour the desk brown.",
+       "text": "Color the desk brown.",
        "cn": "2. 把桌子涂成棕色。",
        "audio": "book3/U4_S20.mp3",
        "image": "book3/U4_cover.webp",
@@ -3824,7 +3773,7 @@
       },
       {
        "id": "U4_S21",
-       "text": "Colour the chair blue.",
+       "text": "Color the chair blue.",
        "cn": "3. 把椅子涂成蓝色。",
        "audio": "book3/U4_S21.mp3",
        "image": "book3/U4_cover.webp",
@@ -3832,7 +3781,7 @@
       },
       {
        "id": "U4_S22",
-       "text": "Colour the window yellow.",
+       "text": "Color the window yellow.",
        "cn": "4. 把窗户涂成黄色。",
        "audio": "book3/U4_S22.mp3",
        "image": "book3/U4_cover.webp",
@@ -3840,7 +3789,7 @@
       },
       {
        "id": "U4_S23",
-       "text": "Colour the blackboard black.",
+       "text": "Color the blackboard black.",
        "cn": "5. 把黑板涂成黑色。",
        "audio": "book3/U4_S23.mp3",
        "image": "book3/U4_cover.webp",
@@ -7572,7 +7521,7 @@
       },
       {
        "id": "U6_S2",
-       "text": "What colour is it?",
+       "text": "What color is it?",
        "audio": "book6/U6_S2.mp3",
        "image": "book6/U6_S2.webp",
        "image_desc": "小女孩好奇地问铅笔颜色"
@@ -7593,14 +7542,14 @@
       },
       {
        "id": "U6_S5",
-       "text": "Let's colour it yellow.",
+       "text": "Let's color it yellow.",
        "audio": "book6/U6_S5.mp3",
        "image": "book6/U6_S5.webp",
        "image_desc": "小男孩用黄色蜡笔涂色"
       },
       {
        "id": "U6_S6",
-       "text": "Colour it green.",
+       "text": "Color it green.",
        "audio": "book6/U6_S6.mp3",
        "image": "book6/U6_S6.webp",
        "image_desc": "小女孩用绿色蜡笔涂苹果"
