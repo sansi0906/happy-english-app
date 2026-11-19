@@ -327,33 +327,31 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                       // ---- 学习区：图 + 词句 + 听示范 ----
                       Column(
                         children: [
-                          const SizedBox(height: 6),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Container(
-                              color: const Color(0xFFFFF9EE),
-                              child: Image.asset(
-                                it.imageAsset,
-                                width: double.infinity,
-                                height: 180,
-                                fit: BoxFit.contain,
-                                errorBuilder: (c, e, s) => const SizedBox(
-                                  height: 180,
-                                  child: Center(
-                                    child: Icon(
-                                        Icons.image_not_supported_outlined,
-                                        size: 48, color: kDark),
-                                  ),
-                                ),
+                          const SizedBox(height: 4),
+                          Container(
+                            width: double.infinity,
+                            height: 210,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFAF5EC),
+                              borderRadius: BorderRadius.circular(18),
+                              border: Border.all(color: kLine),
+                            ),
+                            clipBehavior: Clip.antiAlias,
+                            child: Image.asset(
+                              it.imageAsset,
+                              fit: BoxFit.contain,
+                              errorBuilder: (c, e, s) => const Center(
+                                child: Icon(Icons.image_not_supported_outlined,
+                                    size: 40, color: kMuted),
                               ),
                             ),
                           ),
-                          const SizedBox(height: 16),
-                          ..._splitSentence(it.text, 38, align: TextAlign.center),
+                          const SizedBox(height: 14),
+                          ..._splitSentence(it.text, 30, align: TextAlign.center),
                           const SizedBox(height: 4),
                           Text(it.isWord ? '单词' : '句子',
-                              style: const TextStyle(fontSize: 18, color: kDark)),
-                          const SizedBox(height: 22),
+                              style: const TextStyle(fontSize: 15, color: kMuted)),
+                          const SizedBox(height: 18),
                           // 听示范（实心绿，与麦克风风格统一）
                           GestureDetector(
                             onTap: () async {
@@ -370,26 +368,29 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                             },
                             child: Container(
                               width: double.infinity,
-                              padding: const EdgeInsets.symmetric(vertical: 11),
+                              padding: const EdgeInsets.symmetric(vertical: 12),
                               decoration: BoxDecoration(
                                 color: kGreen,
-                                borderRadius: BorderRadius.circular(30),
+                                borderRadius: BorderRadius.circular(26),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: kGreen.withValues(alpha: 0.35),
-                                    blurRadius: 8,
-                                    offset: const Offset(0, 3),
+                                    color: kGreen.withValues(alpha: 0.28),
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 4),
                                   ),
                                 ],
                               ),
                               child: const Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.volume_up, color: Colors.white, size: 26),
+                                  Icon(Icons.volume_up_rounded,
+                                      color: Colors.white, size: 22),
                                   SizedBox(width: 8),
                                   Text('听示范发音',
                                       style: TextStyle(
-                                          fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold)),
+                                          fontSize: 19,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w700)),
                                 ],
                               ),
                             ),
@@ -449,15 +450,17 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                                     _RecState.scoring => '正在打分，请稍候…',
                                   },
                             textAlign: TextAlign.center,
-                            style: const TextStyle(fontSize: 21, color: kDark),
+                            style: const TextStyle(
+                                fontSize: 18, color: kMuted, height: 1.4),
                           ),
-                          const SizedBox(height: 14),
+                          const SizedBox(height: 12),
                           // 结果展示
                           if (_result != null && _result!.error == null)
                             _ResultCard(result: _result!)
                           else if (_result?.error != null)
                             Text(_result!.error!,
-                                style: const TextStyle(fontSize: 20, color: Colors.redAccent)),
+                                style: const TextStyle(
+                                    fontSize: 16, color: Colors.redAccent)),
                           const SizedBox(height: 6),
                         ],
                       ),
@@ -510,23 +513,30 @@ class _RiddleDialogState extends State<_RiddleDialog> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.celebration, color: kOrange, size: 34),
+                const Icon(Icons.celebration, color: kOrange, size: 28),
                 const SizedBox(width: 8),
                 Text('满分奖励 · ${widget.category}',
-                    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: kDark)),
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: kDark)),
               ],
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 16),
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               decoration: BoxDecoration(
-                color: kGreen.withValues(alpha: 0.14),
+                color: kGreenSoft,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Text(widget.question,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w600, color: kDark)),
+                  style: const TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
+                      color: kDark,
+                      height: 1.4)),
             ),
             const SizedBox(height: 14),
             AnimatedSwitcher(
@@ -542,7 +552,10 @@ class _RiddleDialogState extends State<_RiddleDialog> {
                       ),
                       child: Text('答案：${widget.answer}',
                           textAlign: TextAlign.center,
-                          style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: kDark)),
+                          style: const TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.w700,
+                              color: kDark)),
                     )
                   : const SizedBox(key: ValueKey('none'), height: 4),
             ),
@@ -563,7 +576,8 @@ class _RiddleDialogState extends State<_RiddleDialog> {
                 },
                 child: Text(
                   !_showAnswer ? '看答案' : (widget.isLast ? '完成' : '下一题'),
-                  style: const TextStyle(fontSize: 24, color: kWhite, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 18, color: kWhite, fontWeight: FontWeight.w700),
                 ),
               ),
             ),
@@ -582,11 +596,12 @@ class _ResultCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
       decoration: BoxDecoration(
         color: kWhite,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: kYellow, width: 3),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: kLine),
+        boxShadow: kShadow,
       ),
       child: Column(
         children: [
@@ -595,24 +610,28 @@ class _ResultCard extends StatelessWidget {
             children: List.generate(
               3,
               (i) => Icon(
-                i < result.displayStars ? Icons.star : Icons.star_border,
-                color: kYellow,
-                size: 56,
+                i < result.displayStars ? Icons.star_rounded : Icons.star_border_rounded,
+                color: i < result.displayStars ? kOrange : kLine,
+                size: 44,
               ),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 6),
           // V1.2.1：没听到声音（0 分且无错误）时给明确提示，其余按星级给鼓励语
           Text(result.score <= 0 ? '没听到声音，靠近一点再试试！' : encouragement(result.displayStars),
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: kDark)),
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                  fontSize: 19, fontWeight: FontWeight.w700, color: kDark)),
           const SizedBox(height: 4),
           Text('${result.score.toStringAsFixed(0)} 分',
-              style: const TextStyle(fontSize: 20, color: kDark)),
+              style: const TextStyle(
+                  fontSize: 17, fontWeight: FontWeight.w600, color: kMuted)),
           if (result.score >= 35 && result.score <= 45)
             const Padding(
               padding: EdgeInsets.only(top: 6),
               child: Text('读慢一点、声音大一点，靠近手机再试一次',
-                  style: TextStyle(fontSize: 18, color: Color(0xFF8A8070))),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 14, color: kMuted)),
             ),
         ],
       ),
