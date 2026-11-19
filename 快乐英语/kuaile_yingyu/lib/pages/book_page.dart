@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/models.dart';
 import '../data/progress_db.dart';
 import '../main.dart';
+import '../widgets/safe_tap.dart';
 import 'unit_page.dart';
 
 /// 单元列表页：显示 6 个单元卡片 + 完成进度
@@ -88,7 +89,7 @@ class _UnitCard extends StatelessWidget {
     final total = itemIds.length;
     final pct = total == 0 ? 0.0 : done / total;
 
-    return InkWell(
+    return SafeTap(
       onTap: onTap,
       borderRadius: BorderRadius.circular(22),
       child: Container(

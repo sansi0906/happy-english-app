@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/models.dart';
 import '../main.dart';
 import '../services/audio_service.dart';
+import '../widgets/safe_tap.dart';
 
 /// 课文点读：句子列表，点击播放（配图 + 正常语速）
 
@@ -72,7 +73,7 @@ class _ReadPageState extends State<ReadPage> {
         final playing = _playingId == it.id;
         return Padding(
           padding: const EdgeInsets.only(bottom: 18),
-          child: InkWell(
+          child: SafeTap(
             onTap: () => _toggle(it),
             borderRadius: BorderRadius.circular(22),
             child: Container(

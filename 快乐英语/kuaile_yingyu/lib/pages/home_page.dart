@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/content_loader.dart';
 import '../data/models.dart';
 import '../main.dart';
+import '../widgets/safe_tap.dart';
 import 'book_page.dart';
 import 'settings_page.dart';
 
@@ -316,7 +317,7 @@ class _GradeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return SafeTap(
       onTap: onTap,
       borderRadius: BorderRadius.circular(24),
       child: Container(
@@ -360,7 +361,7 @@ class _BookCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return SafeTap(
       onTap: onTap,
       borderRadius: BorderRadius.circular(24),
       child: Container(
