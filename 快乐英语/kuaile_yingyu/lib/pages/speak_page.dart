@@ -9,6 +9,7 @@ import '../services/audio_service.dart';
 import '../services/riddles.dart';
 import '../services/scoring.dart';
 import '../services/speech_service.dart';
+import '../widgets/safe_tap.dart';
 /// 跟读打分：句子/单词列表，点击进入跟读页
 
 List<Widget> _splitSentence(String text, double fontSize,
@@ -371,7 +372,8 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                               style: const TextStyle(fontSize: 15, color: kMuted)),
                           const SizedBox(height: 18),
                           // 听示范（实心绿，与麦克风风格统一）
-                          GestureDetector(
+                          SafeTap(
+                            borderRadius: BorderRadius.circular(26),
                             onTap: () async {
                               // 先取 messenger，避免 await 之后再使用 context
                               final messenger = ScaffoldMessenger.of(context);
@@ -419,7 +421,8 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                       // ---- 操作区：麦克风 + 状态 + 结果 ----
                       Column(
                         children: [
-                          GestureDetector(
+                          SafeTap(
+                            borderRadius: BorderRadius.circular(62),
                             onTap: _toggleRecord,
                             child: AnimatedContainer(
                               duration: const Duration(milliseconds: 200),

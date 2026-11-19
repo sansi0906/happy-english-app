@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../data/models.dart';
 import '../main.dart';
 import '../services/audio_service.dart';
+import '../widgets/safe_tap.dart';
 
 /// 单词学习 V2：
 /// 顶部一条可点的单词索引（点哪个跳到哪个，当前页高亮），
@@ -32,19 +33,24 @@ class _WordPageState extends State<WordPage> {
     return Column(
       children: [
         // ---- 单词索引条 ----
+        // V1.5.3：62 高会让芯片下半部溢出到 PageView 之上，
+        // 溢出部分画得出来但点不到，改成 78 让芯片完整落在可点区域内
         SizedBox(
-          height: 62,
+          height: 78,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.fromLTRB(16, 10, 56, 8),
+            padding: const EdgeInsets.fromLTRB(16, 10, 56, 10),
             itemCount: words.length,
             separatorBuilder: (_, _) => const SizedBox(width: 8),
             itemBuilder: (context, i) {
               final active = i == _index;
-              return GestureDetector(
-                onTap: () => _controller.animateToPage(i,
-                    duration: const Duration(milliseconds: 220),
-                    curve: Curves.easeOut),
+              return SafeTap(
+                borderRadius: BorderRadius.circular(14),
+                onTap: () {
+                  // V1.5.3：animateToPage 依赖动画调度，在部分机型上无效果，
+                  // 改用 jumpToPage 立即切换（索引条本来就是"跳转"语义）
+                  if (_controller.hasClients) _controller.jumpToPage(i);
+                },
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 180),
                   padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
@@ -120,7 +126,8 @@ class _WordPageState extends State<WordPage> {
                           style: const TextStyle(fontSize: 21, color: kMuted)),
                       const SizedBox(height: 40),
                       // 发音按钮
-                      GestureDetector(
+                      SafeTap(
+                        borderRadius: BorderRadius.circular(30),
                         onTap: () => AudioService.play(w.audioAsset, slow: false),
                         child: Container(
                           width: 128,
@@ -210,8 +217,9 @@ class _NavButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: enabled ? onTap : null,
+    return SafeTap(
+      borderRadius: BorderRadius.circular(23),
+      onTap: enabled ? onTap : () {},
       child: Container(
         width: 46,
         height: 46,
