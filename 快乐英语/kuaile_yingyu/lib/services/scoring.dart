@@ -412,7 +412,9 @@ bool nearSound(String a, String b) {
 /// 返回 -1 表示"不适用"（长句交给 coverageScore）。
 double shortItemScore(String ref, String hyp, {Set<String> ignore = const {}}) {
   final r = norm(ref).where((w) => !ignore.contains(w)).toList();
-  if (r.isEmpty || r.length > 2) return -1;
+  // V1.5.1：教材三词短句（I am Mia. / This is me. / Come here, please.）
+  // 同样会被小模型识别错，兜底范围从 2 词扩到 3 词。
+  if (r.isEmpty || r.length > 3) return -1;
   final h = norm(hyp).where((w) => !ignore.contains(w)).toList();
   // 识别为空：上层按"有声音但没识别"的规则给分
   if (h.isEmpty) return -1;
@@ -422,6 +424,8 @@ double shortItemScore(String ref, String hyp, {Set<String> ignore = const {}}) {
   }
   if (hit == r.length) return 100.0;
   if (hit == 0) return 30.0;
-  return hit / r.length * 100.0;
+  final raw = hit / r.length * 100.0;
+  // 三词句部分命中封顶 90，避免"读对一半也满分"的观感
+  return r.length >= 3 ? (raw > 90 ? 90.0 : raw) : raw;
 }
 

@@ -186,6 +186,8 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
   bool _preparing = false; // 首次加载语音引擎中
   SpeakResult? _result;
   Duration _elapsed = Duration.zero;
+  /// 上一次点击麦克风的时间，用于连点防抖（V1.5.1）
+  DateTime? _lastToggleAt;
   Timer? _timer;
 
   /// 满分奖励：每个跟读项绑定固定一道知识卡，第一次 ≥85 分弹出，
@@ -218,6 +220,14 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
   Future<void> _toggleRecord() async {
     // 打分中 / 准备中屏蔽连点，避免打断进行中的流程（V1.3.7）
     if (_state == _RecState.scoring || _preparing) return;
+    // 停止后 600ms 内忽略再次点击：录音结束会立刻回到 idle，
+    // 孩子手抖连点两下会变成"停→马上又开录"（V1.5.1）
+    final now = DateTime.now();
+    if (_lastToggleAt != null &&
+        now.difference(_lastToggleAt!).inMilliseconds < 600) {
+      return;
+    }
+    _lastToggleAt = now;
     if (_state == _RecState.recording) {
       _stopTimer();
       setState(() => _state = _RecState.scoring);
@@ -322,7 +332,7 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(24, 8, 24, 20),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       // ---- 学习区：图 + 词句 + 听示范 ----
                       Column(
@@ -397,6 +407,7 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                           ),
                         ],
                       ),
+                      const SizedBox(height: 26),
                       // ---- 操作区：麦克风 + 状态 + 结果 ----
                       Column(
                         children: [
@@ -461,7 +472,7 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                             Text(_result!.error!,
                                 style: const TextStyle(
                                     fontSize: 16, color: Colors.redAccent)),
-                          const SizedBox(height: 6),
+                          const SizedBox(height: 28),
                         ],
                       ),
                     ],

@@ -9,9 +9,8 @@ import 'unit_page.dart';
 /// 单元列表页：显示 6 个单元卡片 + 完成进度
 class BookPage extends StatefulWidget {
   final Book book;
-  final VoidCallback onBackHome;
 
-  const BookPage({super.key, required this.book, required this.onBackHome});
+  const BookPage({super.key, required this.book});
 
   @override
   State<BookPage> createState() => _BookPageState();
@@ -38,15 +37,7 @@ class _BookPageState extends State<BookPage> {
     return Scaffold(
       backgroundColor: kBgColor,
       appBar: AppBar(
-        backgroundColor: kBgColor,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: kDark, size: 30),
-          onPressed: widget.onBackHome,
-        ),
-        title: Text(widget.book.bookName,
-            style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: kDark)),
-        centerTitle: true,
+        title: Text(widget.book.bookName),
       ),
       body: ListView(
         padding: const EdgeInsets.all(20),

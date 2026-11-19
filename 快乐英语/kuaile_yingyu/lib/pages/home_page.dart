@@ -320,14 +320,43 @@ class BookSelectorPage extends StatelessWidget {
                   unitCount: b.units.length,
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => BookPage(
-                        book: b,
-                        onBackHome: () => Navigator.of(context).pop(),
-                      ),
+                      builder: (_) => BookPage(book: b),
                     ),
                   ),
                 ),
               ),
+            const SizedBox(height: 18),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: kWhite,
+                borderRadius: BorderRadius.circular(kRadius),
+                border: Border.all(color: kLine),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 36,
+                    height: 36,
+                    decoration: BoxDecoration(
+                      color: kGreenSoft,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Icon(Icons.schedule_rounded,
+                        color: kGreen, size: 20),
+                  ),
+                  const SizedBox(width: 12),
+                  const Expanded(
+                    child: Text(
+                      '一册 6 个单元，一个单元大约 10 分钟。\n建议每天一个单元，跟着课本顺序走。',
+                      style: TextStyle(
+                          fontSize: 15, color: kMuted, height: 1.5),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
