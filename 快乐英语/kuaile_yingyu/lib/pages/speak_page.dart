@@ -225,7 +225,9 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
   /// 之后再满分不再重复弹（已读过就跳过）
   Future<void> _showRiddleReward() async {
     await loadRiddles(); // 确保题库已加载
-    final riddle = await riddleForItem(widget.item.id);
+    // 注意：映射表的 key 是 progressKey（b{bookId}_{itemId}），
+    // 必须用同一个 key 查询，否则永远查不到 → 知识卡永不弹出。
+    final riddle = await riddleForItem(widget.unit.progressKey(widget.item));
     if (riddle == null) return;
     final seen = await ProgressDb.getSeenRiddleIds();
     if (seen.contains(riddle['id'])) return; // 已读过，不再弹

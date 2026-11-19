@@ -163,6 +163,7 @@ def dirsize(d):
 rep = {
     'books': len(DATA['books']),
     'items': sum(len(u['sentences']) + len(u['words']) for b in DATA['books'] for u in b['units']),
+    'sentences': sum(len(u['sentences']) for b in DATA['books'] for u in b['units']),
     'audio_ref': len(ref_audio),
     'slow_files': sum(1 for r, _, fs in os.walk(os.path.join(A, 'audio')) for f in fs if f.endswith('_slow.mp3')),
     'extra_by_book': {},

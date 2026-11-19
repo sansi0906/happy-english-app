@@ -48,16 +48,17 @@ jobs:
               fails.append(f"资源问题 {d['problems_total']} 个")
           if d['extra_by_book']:
               fails.append(f"存在未引用资源: {d['extra_by_book']}")
-          # 890 条慢速是全量句子的基线，掉下来说明慢速批量生成被破坏
-          if d['slow_files'] < 890:
-              fails.append(f"慢速文件只有 {d['slow_files']} 条，低于基线 890")
+          # 每句都必须有慢速版：慢速文件数与句子数必须相等。
+          # 这里用相等判断而不是写死条数，避免新增/删减句子后门禁假红。
+          if d['slow_files'] != d['sentences']:
+              fails.append(f"慢速文件 {d['slow_files']} 条 ≠ 句子 {d['sentences']} 条")
           mb = d['sizes_MB']
           if mb['images'] > 200:
               fails.append(f"图片体积 {mb['images']}MB 超过 200MB 上限")
           if fails:
               print('\n'.join(fails)); sys.exit(1)
-          print(f"OK items={d['items']} slow={d['slow_files']} "
-                f"images={mb['images']}MB audio={mb['audio']}MB")
+          print(f"OK items={d['items']} sentences={d['sentences']} "
+                f"slow={d['slow_files']} images={mb['images']}MB audio={mb['audio']}MB")
           PY
 
       - uses: actions/upload-artifact@v4
