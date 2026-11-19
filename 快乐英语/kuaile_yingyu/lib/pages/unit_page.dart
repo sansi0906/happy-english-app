@@ -34,10 +34,14 @@ class _UnitPageState extends State<UnitPage> {
           centerTitle: true,
           bottom: const TabBar(
             labelColor: kGreen,
-            unselectedLabelColor: kDark,
+            unselectedLabelColor: kMuted,
             indicatorColor: kGreen,
-            indicatorWeight: 4,
-            labelStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 3,
+            labelPadding: EdgeInsets.symmetric(horizontal: 6),
+            labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+            unselectedLabelStyle:
+                TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             tabs: [
               Tab(text: '课文点读'),
               Tab(text: '单词学习'),

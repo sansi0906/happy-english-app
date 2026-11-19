@@ -5,24 +5,11 @@ import '../main.dart';
 import '../services/audio_service.dart';
 import '../widgets/safe_tap.dart';
 
-/// 课文点读：句子列表，点击播放（配图 + 正常语速）
-
-List<Widget> _splitSentence(String text, double fontSize,
-    {TextAlign align = TextAlign.start}) {
-  // 按句号/问号/感叹号 + 空格断句，每段单独成行，避免单词被拆成单行
-  final parts = text.split(RegExp(r'(?<=[.?!])\s+'));
-  return List.generate(parts.length, (i) {
-    final isLast = i == parts.length - 1;
-    return Padding(
-      padding: EdgeInsets.only(bottom: isLast ? 0 : 10),
-      child: Text(parts[i],
-          textAlign: align,
-          style: TextStyle(
-              fontSize: fontSize, fontWeight: FontWeight.bold, color: kDark)),
-    );
-  });
-}
-
+/// 课文点读 V2：改成"左图 + 右句"的紧凑行式列表。
+///
+/// 原来每条是一张半屏大卡（180 高配图 + 胶囊按钮），一屏只看得到一句，
+/// 家长要滑十几下才读完一个单元。现在一行约 96 高，一屏 5-6 句，
+/// 点击整行即播放，播放中行内高亮并显示停止图标。
 class ReadPage extends StatefulWidget {
   final Unit unit;
 
@@ -66,78 +53,88 @@ class _ReadPageState extends State<ReadPage> {
   Widget build(BuildContext context) {
     final items = widget.unit.sentences;
     return ListView.builder(
-      padding: const EdgeInsets.all(18),
-      itemCount: items.length,
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 24),
+      itemCount: items.length + 1,
       itemBuilder: (context, i) {
-        final it = items[i];
+        // 首行提示
+        if (i == 0) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 12, left: 4),
+            child: Row(
+              children: [
+                const Icon(Icons.touch_app_outlined, size: 18, color: kMuted),
+                const SizedBox(width: 6),
+                Text('点任意一行听发音 · 共 ${items.length} 句',
+                    style: const TextStyle(fontSize: 15, color: kMuted)),
+              ],
+            ),
+          );
+        }
+        final it = items[i - 1];
         final playing = _playingId == it.id;
         return Padding(
-          padding: const EdgeInsets.only(bottom: 18),
+          padding: const EdgeInsets.only(bottom: 10),
           child: SafeTap(
             onTap: () => _toggle(it),
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(18),
             child: Container(
-              padding: const EdgeInsets.all(18),
+              padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: playing ? kYellow.withValues(alpha: 0.5) : kWhite,
-                borderRadius: BorderRadius.circular(22),
+                color: playing ? kGreenSoft : kWhite,
+                borderRadius: BorderRadius.circular(18),
                 border: Border.all(
-                    color: playing ? kOrange : const Color(0xFFE8DFCF),
-                    width: playing ? 3 : 2),
+                    color: playing ? kGreen : kLine,
+                    width: playing ? 1.6 : 1),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // 顶部大图：孩子看图学句子
+                  // 左侧缩略图
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(18),
-                    child: Container(
-                      color: const Color(0xFFFFF9EE),
-                      child: Image.asset(
-                        it.imageAsset,
-                        width: double.infinity,
-                        height: 180,
-                        fit: BoxFit.contain,
-                        // 缺图时占位，不要让整页抛异常
-                        errorBuilder: (c, e, s) => const SizedBox(
-                          height: 180,
-                          child: Center(
-                            child: Icon(Icons.image_not_supported_outlined,
-                                size: 48, color: kDark),
-                          ),
-                        ),
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.asset(
+                      it.imageAsset,
+                      width: 64,
+                      height: 64,
+                      fit: BoxFit.cover,
+                      errorBuilder: (c, e, s) => Container(
+                        width: 64,
+                        height: 64,
+                        color: kGreenSoft,
+                        child: const Icon(Icons.image_not_supported_outlined,
+                            size: 26, color: kMuted),
                       ),
                     ),
                   ),
-                  const SizedBox(height: 14),
-                  // 句子：按句号/问号/感叹号分段，每段单独成行
-                  ..._splitSentence(it.text, 22),
-                  const SizedBox(height: 14),
-                  // 整行胶囊播放按钮：大而明显，点卡片任意位置都能播
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.symmetric(vertical: 10),
-                    decoration: BoxDecoration(
-                      color: playing ? kOrange : kGreen,
-                      borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
-                        BoxShadow(
-                          color: (playing ? kOrange : kGreen).withValues(alpha: 0.3),
-                          blurRadius: 8,
-                          offset: const Offset(0, 3),
-                        ),
-                      ],
+                  const SizedBox(width: 14),
+                  // 中间句子
+                  Expanded(
+                    child: Text(
+                      it.text,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                          fontSize: 20,
+                          height: 1.35,
+                          fontWeight: FontWeight.w600,
+                          color: kDark),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(playing ? Icons.stop_circle : Icons.volume_up,
-                            color: kWhite, size: 28),
-                        const SizedBox(width: 8),
-                        Text(playing ? '正在播放 · 点我停止' : '点我听一听',
-                            style: const TextStyle(
-                                fontSize: 22, color: kWhite, fontWeight: FontWeight.bold)),
-                      ],
+                  ),
+                  const SizedBox(width: 8),
+                  // 右侧播放/停止圆钮
+                  SizedBox(
+                    width: 46,
+                    height: 46,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: playing ? kOrange : kGreen,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        playing ? Icons.stop_rounded : Icons.play_arrow_rounded,
+                        color: kWhite,
+                        size: 28,
+                      ),
                     ),
                   ),
                 ],

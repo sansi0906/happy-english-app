@@ -22,7 +22,13 @@ class SpeechService {
   /// 这些词即使孩子读得完全标准，grammar 识别器也会直接丢掉，
   /// 若计入分母，含人名的句子/单词会被无端扣分，所以打分时剔除。
   static const Set<String> _asrOOV = {
-    'xinxin', 'yaoyao', 'jiaming', 'youyou', 'weiqi', 'schoolbag', 'mooncake',
+    // 中文人名（Vosk en-us-small-0.15 词表外，逐个用 grammar 识别器实测确认）
+    'mia', 'jinjin', 'lele', 'xinxin', 'duoduo', 'mingming', 'junjun',
+    'yaoyao', 'jiaming', 'youyou', 'weiqi',
+    // 合成词（识别器会拆成两段）
+    'schoolbag', 'mooncake',
+    // 教材专用表达（No Feeding 提示语），词表外
+    'feeding',
   };
 
   /// 懒加载模型（只解压一次，ModelLoader 自带缓存）
@@ -171,6 +177,20 @@ class SpeechService {
             mixed = 40.0;
           } else {
             mixed = 0.0;
+          }
+          // V1.5.0 短题宽松兜底：教材里大量单词题（Three. / Five. / Apple.），
+          // Vosk 小模型对童声单字常常识别成空或近音，孩子读对也会 0 分。
+          // 这里对 ≤2 词的短题用近音匹配重新判一次，取更高分。
+          final shortS = shortItemScore(ref, '$grammarText $freeText',
+              ignore: _asrOOV);
+          if (shortS > mixed) mixed = shortS;
+          // 读出声音但一个词都没识别出来（单字题最常见）：给鼓励分而非 0 分
+          if (shortS < 0 &&
+              norm(ref).length <= 2 &&
+              mixed == 0 &&
+              voiceRatio > 0.12) {
+            mixed = 70.0;
+            note = null;
           }
           // V1.4.0 能量门槛：几乎没有声音时，即使识别器"凑"出词也不能给分。
           //   <6%   基本没开口 → 0 分并提示重读（不记进度）

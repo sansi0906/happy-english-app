@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../main.dart';
 import '../services/audio_service.dart';
@@ -27,6 +28,30 @@ class _RecordingsPageState extends State<RecordingsPage> {
   void initState() {
     super.initState();
     _load();
+  }
+
+  bool _exporting = false;
+
+  /// 导出全部录音为 zip（原生打包到 Download 根目录），并复制路径到剪贴板
+  Future<void> _export() async {
+    setState(() => _exporting = true);
+    final path = await RecordingsStore.exportAll();
+    if (!mounted) return;
+    setState(() => _exporting = false);
+    if (path == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('没有可导出的录音，或导出失败')),
+      );
+      return;
+    }
+    await Clipboard.setData(ClipboardData(text: path));
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('已导出：$path\n路径已复制，可用文件管理器或聊天软件发送'),
+        duration: const Duration(seconds: 6),
+      ),
+    );
   }
 
   Future<void> _load() async {
@@ -107,6 +132,24 @@ class _RecordingsPageState extends State<RecordingsPage> {
         title: const Text('录音回听',
             style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: kDark)),
         centerTitle: true,
+        actions: [
+          if (_entries.isNotEmpty)
+            TextButton(
+              onPressed: _exporting ? null : _export,
+              child: _exporting
+                  ? const SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(strokeWidth: 2, color: kGreen),
+                    )
+                  : const Text('导出',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: kGreen)),
+            ),
+          const SizedBox(width: 6),
+        ],
       ),
       body: _loading
           ? const Center(child: CircularProgressIndicator(color: kGreen))

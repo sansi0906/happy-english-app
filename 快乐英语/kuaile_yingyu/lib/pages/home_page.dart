@@ -7,8 +7,7 @@ import '../widgets/safe_tap.dart';
 import 'book_page.dart';
 import 'settings_page.dart';
 
-/// 首页：年级选择 →（push）册选择 →（push）单元列表
-/// 全部用独立路由，Cupertino 边缘滑动返回天然生效。
+/// 首页 V2：年级选择改成两列网格，一屏看全，不再让家长滚半天。
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -63,20 +62,19 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.error_outline, color: kOrange, size: 64),
+                const Icon(Icons.error_outline, color: kOrange, size: 60),
                 const SizedBox(height: 16),
                 const Text('内容加载失败',
                     style: TextStyle(
-                        fontSize: 26,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: kDark)),
                 const SizedBox(height: 8),
                 Text(_error!,
-                    style: TextStyle(fontSize: 16, color: kDark),
+                    style: const TextStyle(fontSize: 16, color: kMuted),
                     textAlign: TextAlign.center),
-                const SizedBox(height: 16),
+                const SizedBox(height: 20),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: kGreen),
                   onPressed: () {
                     setState(() {
                       _loading = true;
@@ -84,8 +82,7 @@ class _HomePageState extends State<HomePage> {
                     });
                     _load();
                   },
-                  child: const Text('重试',
-                      style: TextStyle(fontSize: 22, color: kWhite)),
+                  child: const Text('重新加载'),
                 ),
               ],
             ),
@@ -97,74 +94,115 @@ class _HomePageState extends State<HomePage> {
     final data = _data!;
     final grades = [
       for (final g in data.gradeSupport)
-        (g, _gradeName(g), '第 ${_booksLabel(data, g)} 册', _gradeColor(g)),
+        (g, _gradeName(g), _booksLabel(data, g), _gradeColor(g), _gradeIcon(g)),
     ];
 
     return Scaffold(
       backgroundColor: kBgColor,
-      appBar: AppBar(
-        backgroundColor: kBgColor,
-        elevation: 0,
-        centerTitle: true,
-        title: Text(data.appName,
-            style: const TextStyle(
-                fontSize: 30, fontWeight: FontWeight.bold, color: kDark)),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.settings, color: kDark, size: 30),
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const SettingsPage()),
-            ),
-          ),
-        ],
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 8),
+              // 顶部：标题 + 设置
+              Row(
+                children: [
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                    decoration: BoxDecoration(
+                      color: kGreenSoft,
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: const Text('快乐英语',
+                        style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w700,
+                            color: kGreen)),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    tooltip: '设置',
+                    icon: const Icon(Icons.settings_outlined,
+                        color: kDark, size: 28),
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const SettingsPage()),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 18),
+              const Text('今天学哪一册？',
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
+                      color: kDark,
+                      height: 1.2)),
+              const SizedBox(height: 6),
+              const Text('点年级，再选上册或下册',
+                  style: TextStyle(fontSize: 17, color: kMuted)),
+              const SizedBox(height: 22),
+
+              // 年级网格：两列
+              LayoutBuilder(
+                builder: (context, c) {
+                  final w = (c.maxWidth - 14) / 2;
+                  return Wrap(
+                    spacing: 14,
+                    runSpacing: 14,
+                    children: [
+                      for (final g in grades)
+                        SizedBox(
+                          width: w,
+                          child: _GradeTile(
+                            label: g.$2,
+                            sub: g.$3,
+                            color: g.$4,
+                            icon: g.$5,
+                            onTap: () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (_) =>
+                                    BookSelectorPage(grade: g.$1, data: data),
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
+                  );
+                },
+              ),
+
+              const SizedBox(height: 26),
               Container(
-                width: 100,
-                height: 100,
+                padding: const EdgeInsets.all(18),
                 decoration: BoxDecoration(
-                  color: kYellow.withValues(alpha: 0.45),
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: kYellow.withValues(alpha: 0.4),
-                      blurRadius: 18,
-                      offset: const Offset(0, 6),
+                  color: kWhite,
+                  borderRadius: BorderRadius.circular(kRadius),
+                  border: Border.all(color: kLine),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: kOrangeSoft,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Icon(Icons.lightbulb_outline,
+                          color: kOrange, size: 22),
+                    ),
+                    const SizedBox(width: 14),
+                    const Expanded(
+                      child: Text(
+                        '每单元三步：先听读课文，再学单词，最后跟读打分。',
+                        style: TextStyle(fontSize: 17, color: kDark, height: 1.45),
+                      ),
                     ),
                   ],
                 ),
-                child: const Icon(Icons.emoji_emotions,
-                    color: kOrange, size: 64),
               ),
-              const SizedBox(height: 18),
-              const Text('选择年级',
-                  style: TextStyle(
-                      fontSize: 32, fontWeight: FontWeight.bold, color: kDark)),
-              const SizedBox(height: 8),
-              const Text('小朋友，今天学几年级呀？',
-                  style: TextStyle(fontSize: 22, color: kDark)),
-              const SizedBox(height: 28),
-              for (final g in grades)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 16),
-                  child: _GradeCard(
-                    label: g.$2,
-                    sub: g.$3,
-                    color: g.$4,
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) =>
-                            BookSelectorPage(grade: g.$1, data: data),
-                      ),
-                    ),
-                  ),
-                ),
-              const SizedBox(height: 8),
             ],
           ),
         ),
@@ -181,12 +219,18 @@ class _HomePageState extends State<HomePage> {
       '5': '五年级',
       '6': '六年级',
     };
-    return names[g] ?? '$g年级';
+    return names[g] ?? '$g 年级';
   }
 
   static String _booksLabel(ContentData data, String g) {
     final ids = data.booksOfGrade(g).map((b) => b.bookId).toList();
-    return ids.isEmpty ? '暂无' : ids.join('、');
+    if (ids.isEmpty) return '暂无内容';
+    const cn = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'];
+    final labels = ids.map((id) {
+      final n = int.tryParse(id);
+      return (n != null && n >= 1 && n <= 12) ? cn[n - 1] : id;
+    }).join('、');
+    return '第 $labels 册';
   }
 
   static Color _gradeColor(String g) {
@@ -196,13 +240,30 @@ class _HomePageState extends State<HomePage> {
       case '2':
         return kOrange;
       case '3':
-        return const Color(0xFF8FB8E8);
+        return kBlue;
       case '4':
-        return const Color(0xFFB39DDB);
+        return const Color(0xFF9B8BD9);
       case '5':
-        return const Color(0xFFF2A6B8);
+        return const Color(0xFFE08FB0);
       default:
-        return const Color(0xFF7FD1C0);
+        return const Color(0xFF4FBFC0);
+    }
+  }
+
+  static IconData _gradeIcon(String g) {
+    switch (g) {
+      case '1':
+        return Icons.looks_one_outlined;
+      case '2':
+        return Icons.looks_two_outlined;
+      case '3':
+        return Icons.looks_3_outlined;
+      case '4':
+        return Icons.looks_4_outlined;
+      case '5':
+        return Icons.looks_5_outlined;
+      default:
+        return Icons.looks_6_outlined;
     }
   }
 }
@@ -236,82 +297,57 @@ class BookSelectorPage extends StatelessWidget {
           '5': '五年级',
           '6': '六年级',
         }[grade] ??
-        '$grade年级';
+        '$grade 年级';
 
     return Scaffold(
       backgroundColor: kBgColor,
       appBar: AppBar(
-        backgroundColor: kBgColor,
-        elevation: 0,
-        centerTitle: true,
-        title: Text('$gradeName · 选择课本',
-            style: const TextStyle(
-                fontSize: 26, fontWeight: FontWeight.bold, color: kDark)),
+        title: Text(gradeName),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 8),
-              for (final b in books)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 24),
-                  child: _BookCard(
-                    title: _cnBookLabel(b.bookId),
-                    sub: '${b.units.length} 个单元 · ${b.bookNameEn}',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => BookPage(
-                          book: b,
-                          onBackHome: () => Navigator.of(context).pop(),
-                        ),
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
+          children: [
+            const Text('选择一册开始学习',
+                style: TextStyle(fontSize: 18, color: kMuted)),
+            const SizedBox(height: 16),
+            for (final b in books)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 14),
+                child: _BookCard(
+                  title: _cnBookLabel(b.bookId),
+                  sub: '${b.units.length} 个单元 · ${b.bookNameEn}',
+                  unitCount: b.units.length,
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => BookPage(
+                        book: b,
+                        onBackHome: () => Navigator.of(context).pop(),
                       ),
                     ),
                   ),
                 ),
-              const SizedBox(height: 40),
-              Center(
-                child: TextButton.icon(
-                  onPressed: () => Navigator.of(context).pop(),
-                  icon: const Icon(Icons.arrow_circle_left_outlined,
-                      color: kGreen, size: 34),
-                  label: const Text('返回选择年级',
-                      style: TextStyle(
-                          fontSize: 24,
-                          color: kDark,
-                          fontWeight: FontWeight.w600)),
-                  style: TextButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 14),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(28),
-                      side: const BorderSide(color: kGreen, width: 2),
-                    ),
-                    backgroundColor: kWhite,
-                  ),
-                ),
               ),
-              const SizedBox(height: 24),
-            ],
-          ),
+          ],
         ),
       ),
     );
   }
 }
 
-class _GradeCard extends StatelessWidget {
+/// 年级瓦片：两列网格中的一块
+class _GradeTile extends StatelessWidget {
   final String label;
   final String sub;
   final Color color;
+  final IconData icon;
   final VoidCallback onTap;
 
-  const _GradeCard({
+  const _GradeTile({
     required this.label,
     required this.sub,
     required this.color,
+    required this.icon,
     required this.onTap,
   });
 
@@ -319,28 +355,35 @@ class _GradeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeTap(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(24),
+      borderRadius: BorderRadius.circular(kRadius),
       child: Container(
-        width: double.infinity,
-        height: 130,
+        padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(24),
-          boxShadow: const [
-            BoxShadow(color: Color(0x22000000), blurRadius: 8, offset: Offset(0, 4)),
-          ],
+          color: kWhite,
+          borderRadius: BorderRadius.circular(kRadius),
+          border: Border.all(color: kLine),
+          boxShadow: kShadow,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Container(
+              width: 46,
+              height: 46,
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.14),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: Icon(icon, color: color, size: 26),
+            ),
+            const SizedBox(height: 14),
             Text(label,
-                style: const TextStyle(
-                    fontSize: 36,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
-            const SizedBox(height: 6),
-            Text(sub,
-                style: const TextStyle(fontSize: 22, color: Colors.white)),
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                    color: kDark)),
+            const SizedBox(height: 4),
+            Text(sub, style: const TextStyle(fontSize: 15, color: kMuted)),
           ],
         ),
       ),
@@ -351,11 +394,13 @@ class _GradeCard extends StatelessWidget {
 class _BookCard extends StatelessWidget {
   final String title;
   final String sub;
+  final int unitCount;
   final VoidCallback onTap;
 
   const _BookCard({
     required this.title,
     required this.sub,
+    required this.unitCount,
     required this.onTap,
   });
 
@@ -363,46 +408,43 @@ class _BookCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeTap(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(24),
+      borderRadius: BorderRadius.circular(kRadius),
       child: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
         decoration: BoxDecoration(
           color: kWhite,
-          borderRadius: BorderRadius.circular(24),
-          border: Border.all(color: kGreen, width: 3),
-          boxShadow: const [
-            BoxShadow(color: Color(0x14000000), blurRadius: 10, offset: Offset(0, 4)),
-          ],
+          borderRadius: BorderRadius.circular(kRadius),
+          border: Border.all(color: kLine),
+          boxShadow: kShadow,
         ),
         child: Row(
           children: [
             Container(
-              width: 88,
-              height: 88,
+              width: 62,
+              height: 62,
               decoration: BoxDecoration(
-                color: kGreen.withValues(alpha: 0.16),
-                shape: BoxShape.circle,
+                color: kGreenSoft,
+                borderRadius: BorderRadius.circular(18),
               ),
-              child: const Icon(Icons.menu_book, color: kGreen, size: 54),
+              child: const Icon(Icons.menu_book_rounded,
+                  color: kGreen, size: 32),
             ),
-            const SizedBox(width: 18),
+            const SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(title,
                       style: const TextStyle(
-                          fontSize: 34,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
                           color: kDark)),
-                  const SizedBox(height: 6),
-                  Text(sub,
-                      style: const TextStyle(fontSize: 22, color: kDark)),
+                  const SizedBox(height: 4),
+                  Text(sub, style: const TextStyle(fontSize: 15, color: kMuted)),
                 ],
               ),
             ),
-            const Icon(Icons.chevron_right, color: kOrange, size: 48),
+            const Icon(Icons.chevron_right_rounded, color: kMuted, size: 30),
           ],
         ),
       ),

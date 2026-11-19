@@ -96,8 +96,9 @@ class _UnitCard extends StatelessWidget {
         padding: const EdgeInsets.all(22),
         decoration: BoxDecoration(
           color: kWhite,
-          borderRadius: BorderRadius.circular(22),
-          border: Border.all(color: kOrange, width: 2),
+          borderRadius: BorderRadius.circular(kRadius),
+          border: Border.all(color: kLine),
+          boxShadow: kShadow,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

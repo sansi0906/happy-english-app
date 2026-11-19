@@ -115,6 +115,8 @@ List<String> norm(String s) {
   s = s.replaceAll(RegExp(r"[^a-z0-9' ]"), ' ');
   return s
       .split(RegExp(r'\s+'))
+      // V1.4.1：去掉词首尾残留的引号（教材里的 'No Feeding' 会被拆成 'no / feeding'）
+      .map((w) => w.replaceAll(RegExp(r"^'+|'+$"), ''))
       .where((w) => w.isNotEmpty && w != 'unk')
       .toList();
 }
@@ -218,13 +220,27 @@ List<bool> levAlign(List<String> ref, List<String> hyp) {
 double coverageScore(String ref, String hyp, {Set<String> ignore = const {}}) {
   final raw = norm(ref);
   if (raw.isEmpty) return 100.0;
-  final r = ignore.isEmpty ? raw : raw.where((w) => !ignore.contains(w)).toList();
-  if (r.isEmpty) return -1.0; // 目标词全在词表外，无法按文本评测
-  final h = norm(hyp);
-  final uniq = <String>[];
-  for (final w in h) {
-    if (!uniq.any((u) => sameGroup(u, w))) uniq.add(w);
+  final r0 = ignore.isEmpty ? raw : raw.where((w) => !ignore.contains(w)).toList();
+  if (r0.isEmpty) return -1.0; // 目标词全在词表外，无法按文本评测
+  // V1.4.1：连续重复词合并（ha ha ha ha 这类拟声/叠词，识别器常并成一个，
+  // 合并后不再因"模型少认一个"扣分）
+  final r = <String>[];
+  for (final w in r0) {
+    if (r.isNotEmpty && r.last == w) continue;
+    r.add(w);
   }
+  // V1.4.1：hyp 里的 OOV 词（人名等）直接忽略，不能再被当成"多读"扣 10 分
+  final h0 = norm(hyp);
+  final h = ignore.isEmpty ? h0 : h0.where((w) => !ignore.contains(w)).toList();
+  final uniq = <String>[];
+  // V1.4.1：去重时按 ref 中的出现次数放宽（"for you, for you" 这类重复短语
+  // 不能被并成一次，否则后半段永远匹配不上）
+  for (final w in h) {
+    final refCount = r.where((x) => sameGroup(x, w)).length;
+    final used = uniq.where((u) => sameGroup(u, w)).length;
+    if (used < refCount) uniq.add(w);
+  }
+  final hit = List<bool>.filled(r.length, false); // 记录 ref 哪些位置命中
   var matched = 0;
   var bad = 0; // 无关词（多读/乱读）数量，每个扣 10 分
   var rp = 0;
@@ -237,9 +253,10 @@ double coverageScore(String ref, String hyp, {Set<String> ignore = const {}}) {
       wp++;
       continue;
     }
-    // 1) 优先吞词：wh 与 ref 连续 1-3 个词全部同组
+    // 1) 先试单字匹配（V1.4.1：原实现从 k=3 贪心吞词，is/it 同组时
+    //    一个 is 会吃掉 "is it" 两个目标词，多出的 it 反被判多读）；单字不成再吞词
     var consumed = 0;
-    for (var k = 3; k >= 1; k--) {
+    for (final k in const [1, 2, 3]) {
       if (rp + k <= r.length) {
         var allSame = true;
         for (var t = 0; t < k; t++) {
@@ -255,6 +272,9 @@ double coverageScore(String ref, String hyp, {Set<String> ignore = const {}}) {
       }
     }
     if (consumed > 0) {
+      for (var t = 0; t < consumed; t++) {
+        hit[rp + t] = true;
+      }
       matched += consumed;
       rp += consumed;
       wp++;
@@ -265,6 +285,7 @@ double coverageScore(String ref, String hyp, {Set<String> ignore = const {}}) {
     for (var skip = 1; skip <= 2 && rp + skip < r.length; skip++) {
       if (sameGroup(r[rp + skip], wh)) {
         rp += skip; // 跳过的 ref 词视为漏读，不计分
+        hit[rp] = true;
         matched++;
         rp++;
         wp++;
@@ -279,6 +300,7 @@ double coverageScore(String ref, String hyp, {Set<String> ignore = const {}}) {
       if (wp + 1 < uniq.length) {
         final merged = wh + uniq[wp + 1];
         if (sameGroup(r[rp], merged) || sameGroup(r[rp], uniq[wp + 1] + wh)) {
+          hit[rp] = true;
           matched++;
           rp++;
           wp += 2;
@@ -290,7 +312,15 @@ double coverageScore(String ref, String hyp, {Set<String> ignore = const {}}) {
       wp++;
     }
   }
-  var base = matched / r.length * 100.0;
+  // V1.4.1：虚词漏读不计入分母。正常语速下 a/an/the/and/of 会弱读，
+  // 识别器常直接漏掉，不能让孩子为模型的能力边界买单。
+  const weak = {'a', 'an', 'the', 'and', 'of'};
+  var denom = r.length;
+  for (var i = 0; i < r.length; i++) {
+    if (!hit[i] && weak.contains(r[i])) denom--;
+  }
+  if (denom <= 0) denom = r.length;
+  var base = matched / denom * 100.0;
   var score = base - bad * 10.0;
   return score < 0 ? 0.0 : score;
 }
@@ -322,3 +352,76 @@ String encouragement(int displayStars) {
       return '没关系，听一听再试试！';
   }
 }
+
+/// 字符级编辑距离
+int _charDistance(String a, String b) {
+  final m = a.length, n = b.length;
+  if (m == 0) return n;
+  if (n == 0) return m;
+  var prev = List<int>.generate(n + 1, (j) => j);
+  var cur = List<int>.filled(n + 1, 0);
+  for (var i = 1; i <= m; i++) {
+    cur[0] = i;
+    for (var j = 1; j <= n; j++) {
+      final cost = a[i - 1] == b[j - 1] ? 0 : 1;
+      final del = prev[j] + 1;
+      final ins = cur[j - 1] + 1;
+      final sub = prev[j - 1] + cost;
+      cur[j] = del < ins ? (del < sub ? del : sub) : (ins < sub ? ins : sub);
+    }
+    final t = prev;
+    prev = cur;
+    cur = t;
+  }
+  return prev[n];
+}
+
+/// 拼音化的子音归并：孩子把 th 读成 t/d/f、把 ph 读成 f、把 ck 读成 k 很常见
+String _soundCanon(String s) {
+  var w = s;
+  w = w.replaceAll('th', 't');
+  w = w.replaceAll('ph', 'f');
+  w = w.replaceAll('ck', 'k');
+  w = w.replaceAll('wh', 'w');
+  w = w.replaceAll('sh', 's');
+  w = w.replaceAll('ch', 'c');
+  w = w.replaceAll('ou', 'u');
+  w = w.replaceAll('ee', 'i');
+  w = w.replaceAll('oo', 'u');
+  return w;
+}
+
+/// 近音判定：完全相同、1 个字符差、或归并后相同/1 个字符差
+bool nearSound(String a, String b) {
+  if (a == b) return true;
+  if (_charDistance(a, b) <= 1) return true;
+  final ca = _soundCanon(a);
+  final cb = _soundCanon(b);
+  if (ca == cb) return true;
+  return _charDistance(ca, cb) <= 1;
+}
+
+/// 短题宽松分（V1.5.0）
+///
+/// 教材里大量"单词题"（Three. / Five. / Apple. / Thank you.），Vosk 小模型对
+/// 童声单字识别经常直接吐空或吐近音词，导致孩子读对也 0 分。
+/// 这里对 ≤2 词的短题改用字符级近音匹配：
+///   - 全部近音命中 → 100
+///   - 命中一部分     → 按命中比例给分
+///   - 一个都没命中   → 30（说明听见了但不像，给鼓励分）
+/// 返回 -1 表示"不适用"（长句交给 coverageScore）。
+double shortItemScore(String ref, String hyp, {Set<String> ignore = const {}}) {
+  final r = norm(ref).where((w) => !ignore.contains(w)).toList();
+  if (r.isEmpty || r.length > 2) return -1;
+  final h = norm(hyp).where((w) => !ignore.contains(w)).toList();
+  // 识别为空：上层按"有声音但没识别"的规则给分
+  if (h.isEmpty) return -1;
+  var hit = 0;
+  for (final rw in r) {
+    if (h.any((hw) => nearSound(rw, hw))) hit++;
+  }
+  if (hit == r.length) return 100.0;
+  if (hit == 0) return 30.0;
+  return hit / r.length * 100.0;
+}
+

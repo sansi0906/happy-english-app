@@ -1,6 +1,8 @@
 package com.example.kuaile_yingyu
 
+import android.content.ContentUris
 import android.content.ContentValues
+import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
@@ -8,6 +10,11 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import java.io.File
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
 
 /// 快乐英语：跟读录音本地归档通道
 /// 录音保存在公共下载目录 Download/快乐英语录音/（无需权限，adb 可直接读取，
@@ -45,18 +52,58 @@ class MainActivity : FlutterActivity() {
                         result.success(true)
                     }
                     "stats" -> result.success(stats())
+                    "exportAll" -> result.success(exportAll())
                     else -> result.notImplemented()
                 }
             }
     }
 
+    /// 录音目录：应用专属外部目录（Android 10+ 分区存储下无需任何权限即可读写，
+    /// 且 adb / 电脑可直接访问）。公共 Download 目录在高版本下只能看到本应用新建的文件，
+    /// 历史录音会"消失"，因此统一改到专属目录。
     private fun downloadDir(): File {
-        val dir = File(
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
-            folderName
-        )
+        val dir = File(getExternalFilesDir(null) ?: filesDir, folderName)
         if (!dir.exists()) dir.mkdirs()
         return dir
+    }
+
+    /// 查询本应用录音目录下的文件（Android 10+ 分区存储下必须走 MediaStore，
+    /// 否则 File API 只能看到本应用刚刚写入的那几个，历史录音全部不可见）。
+    /// [nameLike]：文件名 LIKE 条件，如 "%.wav"、"index.json"
+    private fun queryDownloads(nameLike: String? = null): List<Triple<String, Long, Uri>> {
+        if (Build.VERSION.SDK_INT < 29) return emptyList()
+        val out = mutableListOf<Triple<String, Long, Uri>>()
+        val projection = arrayOf(
+            MediaStore.MediaColumns._ID,
+            MediaStore.MediaColumns.DISPLAY_NAME,
+            MediaStore.MediaColumns.SIZE
+        )
+        val selection = buildString {
+            append("${MediaStore.MediaColumns.RELATIVE_PATH} LIKE ?")
+            if (nameLike != null) append(" AND ${MediaStore.MediaColumns.DISPLAY_NAME} LIKE ?")
+        }
+        val args = if (nameLike != null) {
+            arrayOf("%$folderName%", nameLike)
+        } else {
+            arrayOf("%$folderName%")
+        }
+        contentResolver.query(
+            MediaStore.Downloads.EXTERNAL_CONTENT_URI, projection, selection, args, null
+        )?.use { c ->
+            while (c.moveToNext()) {
+                val id = c.getLong(0)
+                val name = c.getString(1) ?: continue
+                val size = c.getLong(2)
+                out.add(
+                    Triple(
+                        name,
+                        size,
+                        ContentUris.withAppendedId(MediaStore.Downloads.EXTERNAL_CONTENT_URI, id)
+                    )
+                )
+            }
+        }
+        return out
     }
 
     private fun saveWav(srcPath: String, fileName: String, indexJson: String): Boolean = try {
@@ -88,7 +135,7 @@ class MainActivity : FlutterActivity() {
             src.copyTo(dest, overwrite = true)
         }
         // 索引随录音一并更新
-        File(downloadDir(), "index.json").writeText(indexJson)
+        writeIndex(indexJson)
         // 清理同 item 的旧录音：只保留刚写的这条最高分
         cleanupOldRecordings(fileName)
         true
@@ -120,6 +167,14 @@ class MainActivity : FlutterActivity() {
                 }
             }
         } catch (_: Exception) {}
+    }
+
+    /// 写索引（专属目录，直接 File 写即可）
+    private fun writeIndex(json: String): Boolean = try {
+        File(downloadDir(), "index.json").writeText(json)
+        true
+    } catch (_: Exception) {
+        false
     }
 
     private fun readIndex(): String? {
@@ -155,5 +210,58 @@ class MainActivity : FlutterActivity() {
             }
         }
         return "{\"count\":$count,\"bytes\":$bytes}"
+    }
+
+    /// 把全部录音 + index.json 打成一个 zip 放到公共 Download 根目录。
+    /// 返回给 Dart 的可读路径（如 "Download/快乐英语录音_20261119_143000.zip"）。
+    /// 没有录音时返回 null。
+    private fun exportAll(): String? = try {
+        val wavs = downloadDir().listFiles()
+            ?.filter { it.isFile && it.name.endsWith(".wav") } ?: emptyList()
+        if (wavs.isEmpty()) return null
+        val stamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val zipName = "快乐英语录音_$stamp.zip"
+        val tmp = File(cacheDir, zipName)
+        ZipOutputStream(tmp.outputStream().buffered()).use { zos ->
+            wavs.forEach { f ->
+                zos.putNextEntry(ZipEntry(f.name))
+                f.inputStream().use { input ->
+                    input.copyTo(zos)
+                }
+                zos.closeEntry()
+            }
+            readIndex()?.let { idx ->
+                zos.putNextEntry(ZipEntry("index.json"))
+                zos.write(idx.toByteArray(Charsets.UTF_8))
+                zos.closeEntry()
+            }
+        }
+        if (Build.VERSION.SDK_INT >= 29) {
+            val values = ContentValues().apply {
+                put(MediaStore.MediaColumns.DISPLAY_NAME, zipName)
+                put(MediaStore.MediaColumns.MIME_TYPE, "application/zip")
+                put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS)
+                put(MediaStore.MediaColumns.IS_PENDING, 1)
+            }
+            val uri = contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values)
+                ?: return null
+            contentResolver.openOutputStream(uri)?.use { out ->
+                tmp.inputStream().use { it.copyTo(out) }
+            } ?: return null
+            values.clear()
+            values.put(MediaStore.MediaColumns.IS_PENDING, 0)
+            contentResolver.update(uri, values, null, null)
+            tmp.delete()
+        } else {
+            val dest = File(
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
+                zipName
+            )
+            tmp.copyTo(dest, overwrite = true)
+            tmp.delete()
+        }
+        "Download/$zipName"
+    } catch (e: Exception) {
+        null
     }
 }

@@ -94,6 +94,17 @@ class RecordingsStore {
     } catch (_) {}
   }
 
+  /// 导出全部录音为 zip，放到公共下载目录根目录。
+  /// 返回可读路径（如 "Download/快乐英语录音_20261119_143000.zip"）；
+  /// 没有录音或失败时返回 null。
+  static Future<String?> exportAll() async {
+    try {
+      return await _channel.invokeMethod<String>('exportAll');
+    } catch (_) {
+      return null;
+    }
+  }
+
   /// 录音统计：条数 + 占用字节
   static Future<({int count, int bytes})> stats() async {
     try {
