@@ -4,7 +4,9 @@ import '../data/models.dart';
 import '../main.dart';
 import '../services/audio_service.dart';
 
-/// 单词学习：单词卡（大图 + 英文 + 中文 + 发音），左右滑动切换
+/// 单词学习 V2：
+/// 顶部一条可点的单词索引（点哪个跳到哪个，当前页高亮），
+/// 中部一张大卡（图 + 英文 + 中文 + 喇叭），底部保留左右翻页与进度。
 class WordPage extends StatefulWidget {
   final Unit unit;
 
@@ -17,16 +19,57 @@ class WordPage extends StatefulWidget {
 class _WordPageState extends State<WordPage> {
   final PageController _controller = PageController();
   int _index = 0;
+
   @override
   Widget build(BuildContext context) {
     final words = widget.unit.words;
     if (words.isEmpty) {
       return const Center(
-        child: Text('本单元还没有单词', style: TextStyle(fontSize: 24, color: kDark)),
+        child: Text('本单元还没有单词', style: TextStyle(fontSize: 22, color: kMuted)),
       );
     }
+
     return Column(
       children: [
+        // ---- 单词索引条 ----
+        SizedBox(
+          height: 62,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.fromLTRB(16, 10, 16, 8),
+            itemCount: words.length,
+            separatorBuilder: (_, _) => const SizedBox(width: 8),
+            itemBuilder: (context, i) {
+              final active = i == _index;
+              return GestureDetector(
+                onTap: () => _controller.animateToPage(i,
+                    duration: const Duration(milliseconds: 220),
+                    curve: Curves.easeOut),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 180),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: active ? kGreen : kWhite,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: active ? kGreen : kLine),
+                  ),
+                  child: Center(
+                    child: Text(
+                      words[i].text,
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: active ? FontWeight.w700 : FontWeight.w500,
+                        color: active ? kWhite : kDark,
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+
+        // ---- 单词大卡 ----
         Expanded(
           child: PageView.builder(
             controller: _controller,
@@ -35,48 +78,80 @@ class _WordPageState extends State<WordPage> {
             itemBuilder: (context, i) {
               final w = words[i];
               return Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(18, 6, 18, 0),
                 child: Container(
                   decoration: BoxDecoration(
                     color: kWhite,
-                    borderRadius: BorderRadius.circular(24),
-                    border: Border.all(color: kGreen, width: 3),
+                    borderRadius: BorderRadius.circular(kRadius),
+                    border: Border.all(color: kLine),
+                    boxShadow: kShadow,
                   ),
                   child: Column(
                     children: [
-                      // 图片区自适应剩余高度，小屏不溢出
+                      // 图片区
                       Expanded(
-                        child: Center(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                              w.imageAsset,
-                              width: double.infinity,
-                              height: double.infinity,
-                              fit: BoxFit.cover,
-                              errorBuilder: (c, e, s) => const Center(
-                                child: Icon(Icons.image_not_supported_outlined,
-                                    size: 48, color: kDark),
-                              ),
+                        child: Container(
+                          margin: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFFAF5EC),
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            w.imageAsset,
+                            width: double.infinity,
+                            height: double.infinity,
+                            fit: BoxFit.contain,
+                            errorBuilder: (c, e, s) => const Center(
+                              child: Icon(Icons.image_not_supported_outlined,
+                                  size: 40, color: kMuted),
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16),
                       Text(w.text,
                           style: const TextStyle(
-                              fontSize: 40, fontWeight: FontWeight.bold, color: kDark)),
-                      const SizedBox(height: 6),
+                              fontSize: 38,
+                              fontWeight: FontWeight.w800,
+                              color: kDark,
+                              height: 1.2)),
+                      const SizedBox(height: 4),
                       Text(w.meaning ?? '',
-                          style: const TextStyle(fontSize: 24, color: kDark)),
-                      // 留出提示气泡向上溢出的空间，避免压住中文释义
-                      const SizedBox(height: 34),
-                      // 喇叭发音 + 戳一戳提示
-                      // 单词卡固定正常语速，不受跟读页慢速开关影响
-                      _SpeakerWithHint(
+                          style: const TextStyle(fontSize: 21, color: kMuted)),
+                      const SizedBox(height: 40),
+                      // 发音按钮
+                      GestureDetector(
                         onTap: () => AudioService.play(w.audioAsset, slow: false),
+                        child: Container(
+                          width: 128,
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          decoration: BoxDecoration(
+                            color: kGreen,
+                            borderRadius: BorderRadius.circular(30),
+                            boxShadow: [
+                              BoxShadow(
+                                color: kGreen.withValues(alpha: 0.28),
+                                blurRadius: 10,
+                                offset: const Offset(0, 4),
+                              ),
+                            ],
+                          ),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.volume_up_rounded,
+                                  color: kWhite, size: 24),
+                              SizedBox(width: 6),
+                              Text('听发音',
+                                  style: TextStyle(
+                                      fontSize: 19,
+                                      fontWeight: FontWeight.w700,
+                                      color: kWhite)),
+                            ],
+                          ),
+                        ),
                       ),
-                      const SizedBox(height: 12),
+                      const SizedBox(height: 18),
                     ],
                   ),
                 ),
@@ -84,28 +159,31 @@ class _WordPageState extends State<WordPage> {
             },
           ),
         ),
+
+        // ---- 底部翻页 ----
         Padding(
-          padding: const EdgeInsets.only(bottom: 20),
+          padding: const EdgeInsets.fromLTRB(18, 8, 18, 16),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconButton(
-                icon: const Icon(Icons.chevron_left, size: 44, color: kDark),
-                onPressed: _index > 0
-                    ? () => _controller.previousPage(
-                        duration: const Duration(milliseconds: 200),
-                        curve: Curves.easeOut)
-                    : null,
+              _NavButton(
+                icon: Icons.chevron_left_rounded,
+                enabled: _index > 0,
+                onTap: () => _controller.previousPage(
+                    duration: const Duration(milliseconds: 220),
+                    curve: Curves.easeOut),
               ),
+              const SizedBox(width: 18),
               Text('${_index + 1} / ${words.length}',
-                  style: const TextStyle(fontSize: 24, color: kDark)),
-              IconButton(
-                icon: const Icon(Icons.chevron_right, size: 44, color: kDark),
-                onPressed: _index < words.length - 1
-                    ? () => _controller.nextPage(
-                        duration: const Duration(milliseconds: 200),
-                        curve: Curves.easeOut)
-                    : null,
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.w600, color: kMuted)),
+              const SizedBox(width: 18),
+              _NavButton(
+                icon: Icons.chevron_right_rounded,
+                enabled: _index < words.length - 1,
+                onTap: () => _controller.nextPage(
+                    duration: const Duration(milliseconds: 220),
+                    curve: Curves.easeOut),
               ),
             ],
           ),
@@ -122,75 +200,28 @@ class _WordPageState extends State<WordPage> {
   }
 }
 
-/// 喇叭发音按钮 + 浮动"戳一戳"提示气泡（吸引孩子点击）
-class _SpeakerWithHint extends StatefulWidget {
+class _NavButton extends StatelessWidget {
+  final IconData icon;
+  final bool enabled;
   final VoidCallback onTap;
-  const _SpeakerWithHint({required this.onTap});
 
-  @override
-  State<_SpeakerWithHint> createState() => _SpeakerWithHintState();
-}
-
-class _SpeakerWithHintState extends State<_SpeakerWithHint>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _c = AnimationController(
-    vsync: this,
-    duration: const Duration(milliseconds: 1100),
-  )..repeat(reverse: true);
-  late final Animation<double> _dy = Tween(begin: -4.0, end: 4.0).animate(
-    CurvedAnimation(parent: _c, curve: Curves.easeInOut),
-  );
-
-  @override
-  void dispose() {
-    _c.dispose();
-    super.dispose();
-  }
+  const _NavButton(
+      {required this.icon, required this.enabled, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: widget.onTap,
-      behavior: HitTestBehavior.opaque,
-      child: Stack(
-        clipBehavior: Clip.none,
-        alignment: Alignment.center,
-        children: [
-          const Icon(Icons.volume_up, color: kGreen, size: 72),
-          // 浮动提示气泡（右上角）
-          Positioned(
-            top: -22,
-            right: -78,
-            child: AnimatedBuilder(
-              animation: _dy,
-              builder: (_, child) =>
-                  Transform.translate(offset: Offset(0, _dy.value), child: child),
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                decoration: BoxDecoration(
-                  color: kOrange,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: const [
-                    BoxShadow(color: Color(0x33000000), blurRadius: 6, offset: Offset(0, 2)),
-                  ],
-                ),
-                child: const Text('戳一戳，听发音',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
-              ),
-            ),
-          ),
-          // 气泡小尾巴
-          Positioned(
-            top: 6,
-            right: 22,
-            child: IgnorePointer(
-              child: Transform.rotate(
-                angle: 0.78,
-                child: Container(width: 12, height: 12, color: kOrange),
-              ),
-            ),
-          ),
-        ],
+      onTap: enabled ? onTap : null,
+      child: Container(
+        width: 46,
+        height: 46,
+        decoration: BoxDecoration(
+          color: enabled ? kWhite : kWhite.withValues(alpha: 0.5),
+          shape: BoxShape.circle,
+          border: Border.all(color: enabled ? kLine : kLine.withValues(alpha: 0.4)),
+        ),
+        child: Icon(icon,
+            size: 26, color: enabled ? kDark : kMuted.withValues(alpha: 0.45)),
       ),
     );
   }

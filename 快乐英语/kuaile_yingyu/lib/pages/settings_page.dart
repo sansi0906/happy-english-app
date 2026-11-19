@@ -8,12 +8,10 @@ import 'recordings_page.dart';
 
 /// 危险操作色（比主题橙更红，一眼能分辨"会删东西"）
 const _kDanger = Color(0xFFE05B4B);
-/// 辅助说明文字
-const _kMuted = Color(0xFF8C8272);
-const _kLine = Color(0xFFE8DFCF);
 const _kFieldBg = Color(0xFFF7F2E8);
 
-/// 设置页：孩子档案 / 学习设置 / 学习记录 / 跟读录音 / 关于
+/// 设置页 V2：孩子档案 → 学习记录 → 跟读录音 → 关于。
+/// 字号收敛到 19/14，行高统一，卡片用主题的细边框与阴影。
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
 
@@ -99,20 +97,24 @@ class _SettingsPageState extends State<SettingsPage> {
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: kBgColor,
-        title: Text(title, style: const TextStyle(fontSize: 26, color: kDark)),
+        title: Text(title,
+            style: const TextStyle(
+                fontSize: 21, fontWeight: FontWeight.w700, color: kDark)),
         content: Text(body,
-            style: const TextStyle(fontSize: 20, color: kDark, height: 1.4)),
+            style: const TextStyle(fontSize: 16, color: kDark, height: 1.5)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
             child: const Text('取消',
-                style: TextStyle(fontSize: 22, color: _kMuted)),
+                style: TextStyle(fontSize: 17, color: kMuted)),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
             child: Text(okText,
                 style: const TextStyle(
-                    fontSize: 22, color: _kDanger, fontWeight: FontWeight.w600)),
+                    fontSize: 17,
+                    color: _kDanger,
+                    fontWeight: FontWeight.w600)),
           ),
         ],
       ),
@@ -123,22 +125,18 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     final nameText = _nameCtrl.text.trim();
     final avatarChar = nameText.isEmpty ? '宝' : nameText.substring(0, 1);
+    final recMb = (_recStats.bytes / 1024 / 1024).toStringAsFixed(1);
 
     return Scaffold(
       backgroundColor: kBgColor,
       appBar: AppBar(
-        backgroundColor: kBgColor,
-        elevation: 0,
-        title: const Text('设置',
-            style: TextStyle(
-                fontSize: 26, fontWeight: FontWeight.bold, color: kDark)),
-        centerTitle: true,
+        title: const Text('设置'),
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
+        padding: const EdgeInsets.fromLTRB(18, 6, 18, 32),
         children: [
           // ---------- 孩子档案 ----------
-          const _SectionTitle('孩子档案'),
+          const _SectionLabel('孩子档案'),
           _Card(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,35 +144,41 @@ class _SettingsPageState extends State<SettingsPage> {
                 Row(
                   children: [
                     Container(
-                      width: 64,
-                      height: 64,
+                      width: 58,
+                      height: 58,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: kGreen.withValues(alpha: 0.18),
-                        shape: BoxShape.circle,
+                        color: kGreenSoft,
+                        borderRadius: BorderRadius.circular(18),
                       ),
                       child: Text(avatarChar,
                           style: const TextStyle(
-                              fontSize: 30, color: Color(0xFF5A9E55))),
+                              fontSize: 26,
+                              fontWeight: FontWeight.w700,
+                              color: kGreen)),
                     ),
                     const SizedBox(width: 14),
                     Expanded(
                       child: TextField(
                         controller: _nameCtrl,
                         enabled: _nameLoaded,
-                        style: const TextStyle(fontSize: 24, color: kDark),
+                        style: const TextStyle(fontSize: 20, color: kDark),
                         decoration: InputDecoration(
                           hintText: '孩子叫什么？',
                           hintStyle:
-                              const TextStyle(fontSize: 20, color: _kMuted),
+                              const TextStyle(fontSize: 18, color: kMuted),
                           isDense: true,
                           contentPadding: const EdgeInsets.symmetric(
-                              horizontal: 14, vertical: 12),
+                              horizontal: 14, vertical: 13),
                           filled: true,
                           fillColor: _kFieldBg,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(14),
-                            borderSide: const BorderSide(color: _kLine),
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: const BorderSide(color: kLine),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: const BorderSide(color: kLine),
                           ),
                         ),
                         onSubmitted: (_) => _saveName(),
@@ -185,26 +189,13 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
                 const SizedBox(height: 10),
                 const Text('录音会按这个名字分开保存，方便区分两个孩子',
-                    style: TextStyle(fontSize: 17, color: _kMuted)),
+                    style: TextStyle(fontSize: 14, color: kMuted)),
                 const SizedBox(height: 14),
                 SizedBox(
                   width: double.infinity,
-                  child: SafeTap(
-                    onTap: _saveName,
-                    borderRadius: BorderRadius.circular(14),
-                    child: Container(
-                      height: 50,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: kGreen,
-                        borderRadius: BorderRadius.circular(14),
-                      ),
-                      child: const Text('保存昵称',
-                          style: TextStyle(
-                              fontSize: 22,
-                              color: kWhite,
-                              fontWeight: FontWeight.w600)),
-                    ),
+                  child: ElevatedButton(
+                    onPressed: _saveName,
+                    child: const Text('保存昵称'),
                   ),
                 ),
               ],
@@ -212,114 +203,64 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
 
           // ---------- 学习记录 ----------
-          const _SectionTitle('学习记录'),
+          const _SectionLabel('学习记录'),
           _Card(
+            padding: EdgeInsets.zero,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    _IconBadge(icon: Icons.insights, color: kOrange),
-                    const SizedBox(width: 12),
-                    const Expanded(
-                      child: Text('已学内容',
-                          style: TextStyle(fontSize: 24, color: kDark)),
-                    ),
-                    Text('$_learned 项',
-                        style: TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.bold,
-                            color: kOrange)),
-                  ],
+                _StatRow(
+                  icon: Icons.insights_rounded,
+                  color: kOrange,
+                  title: '已学内容',
+                  sub: '课文点读、单词和跟读的合计',
+                  value: '$_learned 项',
                 ),
-                const SizedBox(height: 6),
-                const Padding(
-                  padding: EdgeInsets.only(left: 52),
-                  child: Text('课文点读、单词学习和跟读完成的合计',
-                      style: TextStyle(fontSize: 17, color: _kMuted)),
+                const Divider(height: 1, color: kLine),
+                _ActionRow(
+                  icon: Icons.delete_sweep_rounded,
+                  color: _kDanger,
+                  title: '清空学习进度',
+                  sub: '删除全部星级和分数记录',
+                  onTap: _confirmClearProgress,
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 12),
-          _Card(
-            child: SafeTap(
-              onTap: _confirmClearProgress,
-              borderRadius: BorderRadius.circular(20),
-              child: Row(
-                children: [
-                  _IconBadge(icon: Icons.delete_sweep, color: _kDanger),
-                  const SizedBox(width: 12),
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('清空学习进度',
-                            style: TextStyle(fontSize: 24, color: _kDanger)),
-                        SizedBox(height: 2),
-                        Text('删除全部星级和分数记录',
-                            style: TextStyle(fontSize: 17, color: _kMuted)),
-                      ],
-                    ),
-                  ),
-                  const Icon(Icons.chevron_right, color: _kMuted, size: 28),
-                ],
-              ),
-            ),
-          ),
 
           // ---------- 跟读录音 ----------
-          const _SectionTitle('跟读录音'),
+          const _SectionLabel('跟读录音'),
           _Card(
+            padding: EdgeInsets.zero,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    _IconBadge(icon: Icons.mic, color: kGreen),
-                    const SizedBox(width: 12),
-                    const Expanded(
-                      child: Text('本机录音',
-                          style: TextStyle(fontSize: 24, color: kDark)),
-                    ),
-                    Text(
-                        '${_recStats.count} 条 · ${(_recStats.bytes / 1024 / 1024).toStringAsFixed(1)} MB',
-                        style: const TextStyle(fontSize: 18, color: _kMuted)),
-                  ],
-                ),
-                const SizedBox(height: 6),
-                const Padding(
-                  padding: EdgeInsets.only(left: 52),
-                  child: Text('只存在这台手机上，不会上传',
-                      style: TextStyle(fontSize: 17, color: _kMuted)),
+                _StatRow(
+                  icon: Icons.mic_rounded,
+                  color: kGreen,
+                  title: '本机录音',
+                  sub: '只存在这台手机上，不会上传',
+                  value: '${_recStats.count} 条 · $recMb MB',
                 ),
                 if (_recStats.count > 0) ...[
-                  const SizedBox(height: 14),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: _OutlineButton(
-                          label: '回听录音',
-                          icon: Icons.play_circle_outline,
-                          color: kGreen,
-                          onTap: () async {
-                            await Navigator.of(context).push(MaterialPageRoute(
-                              builder: (_) => const RecordingsPage(),
-                            ));
-                            await _loadAll();
-                          },
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _OutlineButton(
-                          label: '清空录音',
-                          icon: Icons.delete_outline,
-                          color: _kDanger,
-                          onTap: _confirmClearRecordings,
-                        ),
-                      ),
-                    ],
+                  const Divider(height: 1, color: kLine),
+                  _ActionRow(
+                    icon: Icons.play_circle_outline,
+                    color: kGreen,
+                    title: '回听录音',
+                    sub: '按孩子、按单元查看，也能导出',
+                    onTap: () async {
+                      await Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const RecordingsPage(),
+                      ));
+                      await _loadAll();
+                    },
+                  ),
+                  const Divider(height: 1, color: kLine),
+                  _ActionRow(
+                    icon: Icons.delete_outline_rounded,
+                    color: _kDanger,
+                    title: '清空录音',
+                    sub: '删除全部已录制的音频',
+                    onTap: _confirmClearRecordings,
                   ),
                 ],
               ],
@@ -327,20 +268,26 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
 
           // ---------- 关于 ----------
-          const _SectionTitle('关于'),
+          const _SectionLabel('关于'),
           _Card(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('快乐英语 · 一年级上下册',
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                        color: kDark)),
-                const SizedBox(height: 4),
-                const Text('版本 1.0.0',
-                    style: TextStyle(fontSize: 18, color: _kMuted)),
-                const SizedBox(height: 12),
+                const Row(
+                  children: [
+                    Icon(Icons.menu_book_rounded, color: kGreen, size: 22),
+                    SizedBox(width: 8),
+                    Text('快乐英语',
+                        style: TextStyle(
+                            fontSize: 19,
+                            fontWeight: FontWeight.w700,
+                            color: kDark)),
+                    SizedBox(width: 8),
+                    Text('v1.0.0',
+                        style: TextStyle(fontSize: 14, color: kMuted)),
+                  ],
+                ),
+                const SizedBox(height: 10),
                 const _AboutLine('新蕾《快乐英语》第 1–4 册 · 一、二年级'),
                 const _AboutLine('人教精通版第 5–12 册 · 三至六年级'),
                 const _AboutLine('纯离线 · 无账号 · 无广告 · 数据只在本机'),
@@ -355,68 +302,117 @@ class _SettingsPageState extends State<SettingsPage> {
 
 // ---------------------------------------------------------------------------
 
-class _SectionTitle extends StatelessWidget {
+class _SectionLabel extends StatelessWidget {
   final String text;
-  const _SectionTitle(this.text);
+  const _SectionLabel(this.text);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(4, 22, 4, 10),
+      padding: const EdgeInsets.fromLTRB(4, 20, 4, 8),
       child: Text(text,
           style: const TextStyle(
-              fontSize: 20, fontWeight: FontWeight.w600, color: _kMuted)),
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              color: kMuted,
+              letterSpacing: 1.2)),
     );
   }
 }
 
 class _Card extends StatelessWidget {
   final Widget child;
-  const _Card({required this.child});
+  final EdgeInsets padding;
+  const _Card({required this.child, this.padding = const EdgeInsets.all(16)});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
+      padding: padding,
       decoration: BoxDecoration(
         color: kWhite,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: _kLine, width: 2),
+        borderRadius: BorderRadius.circular(kRadius),
+        border: Border.all(color: kLine),
+        boxShadow: kShadow,
       ),
       child: child,
     );
   }
 }
 
-class _IconBadge extends StatelessWidget {
+/// 统计行：图标 + 标题 + 副标题 + 右侧数值
+class _StatRow extends StatelessWidget {
   final IconData icon;
   final Color color;
-  const _IconBadge({required this.icon, required this.color});
+  final String title;
+  final String sub;
+  final String value;
+
+  const _StatRow({
+    required this.icon,
+    required this.color,
+    required this.title,
+    required this.sub,
+    required this.value,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 40,
-      height: 40,
-      decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.14),
-        borderRadius: BorderRadius.circular(12),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: color.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Icon(icon, color: color, size: 22),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(title,
+                    style: const TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.w600,
+                        color: kDark)),
+              ),
+              const SizedBox(width: 8),
+              Text(value,
+                  style: TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w700, color: color)),
+            ],
+          ),
+          const SizedBox(height: 4),
+          Padding(
+            padding: const EdgeInsets.only(left: 52),
+            child: Text(sub,
+                style: const TextStyle(fontSize: 14, color: kMuted, height: 1.4)),
+          ),
+        ],
       ),
-      child: Icon(icon, color: color, size: 24),
     );
   }
 }
 
-class _OutlineButton extends StatelessWidget {
-  final String label;
+/// 操作行：整行可点，右侧箭头
+class _ActionRow extends StatelessWidget {
   final IconData icon;
   final Color color;
+  final String title;
+  final String sub;
   final VoidCallback onTap;
-  const _OutlineButton({
-    required this.label,
+
+  const _ActionRow({
     required this.icon,
     required this.color,
+    required this.title,
+    required this.sub,
     required this.onTap,
   });
 
@@ -424,23 +420,37 @@ class _OutlineButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeTap(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(14),
-      child: Container(
-        height: 48,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: kWhite,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: color, width: 2),
-        ),
+      borderRadius: BorderRadius.circular(6),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: color, size: 22),
-            const SizedBox(width: 6),
-            Text(label,
-                style: TextStyle(
-                    fontSize: 19, color: color, fontWeight: FontWeight.w600)),
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(icon, color: color, size: 22),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(title,
+                      style: TextStyle(
+                          fontSize: 19,
+                          fontWeight: FontWeight.w600,
+                          color: color == _kDanger ? _kDanger : kDark)),
+                  const SizedBox(height: 3),
+                  Text(sub,
+                      style: const TextStyle(fontSize: 14, color: kMuted)),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: kMuted, size: 22),
           ],
         ),
       ),
@@ -455,8 +465,17 @@ class _AboutLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 4),
-      child: Text(text, style: const TextStyle(fontSize: 17, color: kDark)),
+      padding: const EdgeInsets.only(bottom: 5),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('·  ', style: TextStyle(fontSize: 14, color: kMuted)),
+          Expanded(
+            child: Text(text,
+                style: const TextStyle(fontSize: 14, color: kMuted, height: 1.45)),
+          ),
+        ],
+      ),
     );
   }
 }
