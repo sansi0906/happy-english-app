@@ -267,105 +267,105 @@
        "id": "U2_S1",
        "text": "Thank you, Tiantian.",
        "audio": "book1/U2_S1.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S1.webp",
        "image_desc": "谢谢你，天天。"
       },
       {
        "id": "U2_S2",
        "text": "Apple and orange, yummy yummy!",
        "audio": "book1/U2_S2.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S2.webp",
        "image_desc": "苹果和橘子，好吃好吃！"
       },
       {
        "id": "U2_S3",
        "text": "Peach and banana, yummy yummy!",
        "audio": "book1/U2_S3.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S3.webp",
        "image_desc": "桃子和香蕉，好吃极了！"
       },
       {
        "id": "U2_S4",
        "text": "Watermelon, watermelon, yummy yummy!",
        "audio": "book1/U2_S4.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S4.webp",
        "image_desc": "西瓜，西瓜，"
       },
       {
        "id": "U2_S6",
        "text": "Fruits for you, for you and me!",
        "audio": "book1/U2_S6.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S6.webp",
        "image_desc": "水果给你，给你和我！"
       },
       {
        "id": "U2_S7",
        "text": "An apple for you, Leo.",
        "audio": "book1/U2_S7.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S7.webp",
        "image_desc": "利奥，给你一个苹果。"
       },
       {
        "id": "U2_S8",
        "text": "Look, a banana.",
        "audio": "book1/U2_S8.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S8.webp",
        "image_desc": "看，一根香蕉。"
       },
       {
        "id": "U2_S9",
        "text": "Look, an apple.",
        "audio": "book1/U2_S9.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S9.webp",
        "image_desc": "看，一个苹果。"
       },
       {
        "id": "U2_S10",
        "text": "Look, a peach.",
        "audio": "book1/U2_S10.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S10.webp",
        "image_desc": "看，一个桃子。"
       },
       {
        "id": "U2_S11",
        "text": "Look, an orange.",
        "audio": "book1/U2_S11.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S11.webp",
        "image_desc": "你看。 一个橘子。"
       },
       {
        "id": "U2_S12",
        "text": "Look, a watermelon.",
        "audio": "book1/U2_S12.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S12.webp",
        "image_desc": "看，一个西瓜。"
       },
       {
        "id": "U2_S13",
        "text": "An apple for you, Grandma.",
        "audio": "book1/U2_S13.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S13.webp",
        "image_desc": "奶奶，给你一个苹果。"
       },
       {
        "id": "U2_S14",
        "text": "An orange for you, grandpa.",
        "audio": "book1/U2_S14.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S14.webp",
        "image_desc": "爷爷，给你一个橘子。"
       },
       {
        "id": "U2_S15",
        "text": "Some watermelon for you, Tiantian.",
        "audio": "book1/U2_S15.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S15.webp",
        "image_desc": "天天，给你一些西瓜。"
       },
       {
        "id": "U2_S16",
        "text": "My fruit salad",
        "audio": "book1/U2_S16.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_S16.webp",
        "image_desc": "我的水果沙拉"
       }
      ],
@@ -374,7 +374,7 @@
        "id": "U2_W1",
        "text": "orange",
        "audio": "book1/U2_W1.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_W1.webp",
        "image_desc": "橙子",
        "meaning": "橙子"
       },
@@ -382,7 +382,7 @@
        "id": "U2_W2",
        "text": "peach",
        "audio": "book1/U2_W2.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_W2.webp",
        "image_desc": "桃子",
        "meaning": "桃子"
       },
@@ -390,7 +390,7 @@
        "id": "U2_W3",
        "text": "apple",
        "audio": "book1/U2_W3.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_W3.webp",
        "image_desc": "苹果",
        "meaning": "苹果"
       },
@@ -398,7 +398,7 @@
        "id": "U2_W4",
        "text": "banana",
        "audio": "book1/U2_W4.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_W4.webp",
        "image_desc": "香蕉",
        "meaning": "香蕉"
       },
@@ -406,7 +406,7 @@
        "id": "U2_W5",
        "text": "watermelon",
        "audio": "book1/U2_W5.mp3",
-       "image": "book1/U2_cover.webp",
+       "image": "book1/U2_W5.webp",
        "image_desc": "西瓜",
        "meaning": "西瓜"
       }
@@ -421,133 +421,133 @@
        "id": "U3_S1",
        "text": "You can use my pencil, Mia.",
        "audio": "book1/U3_S1.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S1.webp",
        "image_desc": "米娅，你可以用我的铅笔。"
       },
       {
        "id": "U3_S2",
        "text": "Thank you, Tiantian!",
        "audio": "book1/U3_S2.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S2.webp",
        "image_desc": "谢谢你，天天！"
       },
       {
        "id": "U3_S3",
        "text": "You can use my ruler, ruler.",
        "audio": "book1/U3_S3.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S3.webp",
        "image_desc": "你可以用我的尺子，尺子。"
       },
       {
        "id": "U3_S4",
        "text": "You can use my pencil, pencil.",
        "audio": "book1/U3_S4.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S4.webp",
        "image_desc": "你可以用我的铅笔，铅笔。"
       },
       {
        "id": "U3_S5",
        "text": "Ruler, pencil, eraser, marker.",
        "audio": "book1/U3_S5.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S5.webp",
        "image_desc": "尺子、铅笔、橡皮擦、马克笔。"
       },
       {
        "id": "U3_S6",
        "text": "All in my pencil case.",
        "audio": "book1/U3_S6.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S6.webp",
        "image_desc": "都在我的铅笔盒里。"
       },
       {
        "id": "U3_S7",
        "text": "I love them so much.",
        "audio": "book1/U3_S7.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S7.webp",
        "image_desc": "我非常爱它们。"
       },
       {
        "id": "U3_S8",
        "text": "I love them all.",
        "audio": "book1/U3_S8.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S8.webp",
        "image_desc": "我爱它们所有。"
       },
       {
        "id": "U3_S9",
        "text": "You can use my ruler, Leo.",
        "audio": "book1/U3_S9.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S9.webp",
        "image_desc": "利奥，你可以用我的尺子。"
       },
       {
        "id": "U3_S10",
        "text": "Thank you, Jinjin.",
        "audio": "book1/U3_S10.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S10.webp",
        "image_desc": "金金，谢谢你。"
       },
       {
        "id": "U3_S11",
        "text": "Look, a ruler.",
        "audio": "book1/U3_S11.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S11.webp",
        "image_desc": "看，一把尺子。"
       },
       {
        "id": "U3_S12",
        "text": "Look, a marker.",
        "audio": "book1/U3_S12.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S12.webp",
        "image_desc": "看，一个记号笔。"
       },
       {
        "id": "U3_S13",
        "text": "Look, an eraser.",
        "audio": "book1/U3_S13.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S13.webp",
        "image_desc": "看，一块橡皮擦。"
       },
       {
        "id": "U3_S14",
        "text": "Look, a school bag.",
        "audio": "book1/U3_S14.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S14.webp",
        "image_desc": "看，一个书包。"
       },
       {
        "id": "U3_S15",
        "text": "Look, a pencil.",
        "audio": "book1/U3_S15.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S15.webp",
        "image_desc": "看，一支铅笔。"
       },
       {
        "id": "U3_S16",
        "text": "You can use my ruler, Tiantian.",
        "audio": "book1/U3_S16.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S16.webp",
        "image_desc": "天天，你可以用我的尺子。"
       },
       {
        "id": "U3_S17",
        "text": "You can use my marker, Leo.",
        "audio": "book1/U3_S17.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S17.webp",
        "image_desc": "你可以用我的记号笔，利奥。"
       },
       {
        "id": "U3_S18",
        "text": "You can use my eraser, Jinjin.",
        "audio": "book1/U3_S18.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S18.webp",
        "image_desc": "你可以用我的橡皮，金金。"
       },
       {
        "id": "U3_S19",
        "text": "My mini book",
        "audio": "book1/U3_S19.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_S19.webp",
        "image_desc": "我的迷你手册"
       }
      ],
@@ -556,7 +556,7 @@
        "id": "U3_W1",
        "text": "pencil",
        "audio": "book1/U3_W1.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_W1.webp",
        "image_desc": "铅笔",
        "meaning": "铅笔"
       },
@@ -564,7 +564,7 @@
        "id": "U3_W2",
        "text": "ruler",
        "audio": "book1/U3_W2.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_W2.webp",
        "image_desc": "尺子",
        "meaning": "尺子"
       },
@@ -572,7 +572,7 @@
        "id": "U3_W3",
        "text": "eraser",
        "audio": "book1/U3_W3.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_W3.webp",
        "image_desc": "橡皮",
        "meaning": "橡皮"
       },
@@ -580,7 +580,7 @@
        "id": "U3_W4",
        "text": "schoolbag",
        "audio": "book1/U3_W4.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_W4.webp",
        "image_desc": "书包",
        "meaning": "书包"
       },
@@ -588,7 +588,7 @@
        "id": "U3_W5",
        "text": "marker",
        "audio": "book1/U3_W5.mp3",
-       "image": "book1/U3_cover.webp",
+       "image": "book1/U3_W5.webp",
        "image_desc": "马克笔",
        "meaning": "马克笔"
       }
@@ -603,133 +603,133 @@
        "id": "U4_S1",
        "text": "Look! It's yellow!",
        "audio": "book1/U4_S1.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S1.webp",
        "image_desc": "看！它是黄色的！"
       },
       {
        "id": "U4_S2",
        "text": "What color is it now?",
        "audio": "book1/U4_S2.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S2.webp",
        "image_desc": "它现在是什么颜色的？"
       },
       {
        "id": "U4_S3",
        "text": "What color?",
        "audio": "book1/U4_S3.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S3.webp",
        "image_desc": "什么颜色？"
       },
       {
        "id": "U4_S4",
        "text": "Red, red.",
        "audio": "book1/U4_S4.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S4.webp",
        "image_desc": "红色，红色。"
       },
       {
        "id": "U4_S5",
        "text": "Yellow, yellow.",
        "audio": "book1/U4_S5.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S5.webp",
        "image_desc": "黄色，黄色。"
       },
       {
        "id": "U4_S6",
        "text": "Blue, blue.",
        "audio": "book1/U4_S6.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S6.webp",
        "image_desc": "蓝色，蓝色。"
       },
       {
        "id": "U4_S7",
        "text": "Black, black.",
        "audio": "book1/U4_S7.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S7.webp",
        "image_desc": "黑色，黑色。"
       },
       {
        "id": "U4_S8",
        "text": "Red and yellow, blue and green.",
        "audio": "book1/U4_S8.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S8.webp",
        "image_desc": "红色和黄色，蓝色和绿色。"
       },
       {
        "id": "U4_S9",
        "text": "Red and yellow, black and white. Hey!",
        "audio": "book1/U4_S9.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S9.webp",
        "image_desc": "红与黄，黑与白。嘿！"
       },
       {
        "id": "U4_S10",
        "text": "It's red.",
        "audio": "book1/U4_S10.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S10.webp",
        "image_desc": "—它是红色的。"
       },
       {
        "id": "U4_S11",
        "text": "What color?",
        "audio": "book1/U4_S11.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S11.webp",
        "image_desc": "—什么颜色？"
       },
       {
        "id": "U4_S12",
        "text": "It's brown.",
        "audio": "book1/U4_S12.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S12.webp",
        "image_desc": "—它是棕色的。"
       },
       {
        "id": "U4_S13",
        "text": "It's green.",
        "audio": "book1/U4_S13.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S13.webp",
        "image_desc": "—它是绿色的。"
       },
       {
        "id": "U4_S14",
        "text": "It's yellow.",
        "audio": "book1/U4_S14.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S14.webp",
        "image_desc": "—它是黄色的。"
       },
       {
        "id": "U4_S15",
        "text": "It's black.",
        "audio": "book1/U4_S15.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S15.webp",
        "image_desc": "—它是黑色的。"
       },
       {
        "id": "U4_S16",
        "text": "It's blue.",
        "audio": "book1/U4_S16.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S16.webp",
        "image_desc": "—它是蓝色的。"
       },
       {
        "id": "U4_S17",
        "text": "Magic colors",
        "audio": "book1/U4_S17.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S17.webp",
        "image_desc": "神奇的颜色"
       },
       {
        "id": "U4_S18",
        "text": "Look! What color is it?",
        "audio": "book1/U4_S18.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S18.webp",
        "image_desc": "看！它是什么颜色的？"
       },
       {
        "id": "U4_S19",
        "text": "Look! What color is it now?",
        "audio": "book1/U4_S19.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_S19.webp",
        "image_desc": "看！它现在是什么颜色的？"
       }
      ],
@@ -738,7 +738,7 @@
        "id": "U4_W1",
        "text": "red",
        "audio": "book1/U4_W1.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W1.webp",
        "image_desc": "红色的",
        "meaning": "红色的"
       },
@@ -746,7 +746,7 @@
        "id": "U4_W2",
        "text": "brown",
        "audio": "book1/U4_W2.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W2.webp",
        "image_desc": "棕色的",
        "meaning": "棕色的"
       },
@@ -754,7 +754,7 @@
        "id": "U4_W3",
        "text": "blue",
        "audio": "book1/U4_W3.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W3.webp",
        "image_desc": "蓝色的",
        "meaning": "蓝色的"
       },
@@ -762,7 +762,7 @@
        "id": "U4_W4",
        "text": "yellow",
        "audio": "book1/U4_W4.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W4.webp",
        "image_desc": "黄色的",
        "meaning": "黄色的"
       },
@@ -770,7 +770,7 @@
        "id": "U4_W5",
        "text": "green",
        "audio": "book1/U4_W5.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W5.webp",
        "image_desc": "绿色",
        "meaning": "绿色"
       },
@@ -778,7 +778,7 @@
        "id": "U4_W6",
        "text": "Paints",
        "audio": "book1/U4_W6.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W6.webp",
        "image_desc": "颜料",
        "meaning": "颜料"
       },
@@ -786,7 +786,7 @@
        "id": "U4_W7",
        "text": "Water",
        "audio": "book1/U4_W7.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W7.webp",
        "image_desc": "水",
        "meaning": "水"
       },
@@ -794,7 +794,7 @@
        "id": "U4_W8",
        "text": "It's ...",
        "audio": "book1/U4_W8.mp3",
-       "image": "book1/U4_cover.webp",
+       "image": "book1/U4_W8.webp",
        "image_desc": "它是⋯⋯",
        "meaning": "它是⋯⋯"
       }
@@ -809,98 +809,98 @@
        "id": "U5_S1",
        "text": "I see a baby bear.",
        "audio": "book1/U5_S1.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S1.webp",
        "image_desc": "我看见一只熊宝宝。"
       },
       {
        "id": "U5_S2",
        "text": "Hello, Bear!",
        "audio": "book1/U5_S2.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S2.webp",
        "image_desc": "你好，小熊！"
       },
       {
        "id": "U5_S3",
        "text": "I see a panda.",
        "audio": "book1/U5_S3.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S3.webp",
        "image_desc": "我看到一只熊猫。"
       },
       {
        "id": "U5_S4",
        "text": "I see a tiger.",
        "audio": "book1/U5_S4.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S4.webp",
        "image_desc": "我看到一只老虎。"
       },
       {
        "id": "U5_S5",
        "text": "I see a monkey.",
        "audio": "book1/U5_S5.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S5.webp",
        "image_desc": "我看到一只猴子。"
       },
       {
        "id": "U5_S6",
        "text": "Ha-ha, ha-ha!",
        "audio": "book1/U5_S6.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S6.webp",
        "image_desc": "哈哈，哈哈！"
       },
       {
        "id": "U5_S7",
        "text": "Lovely, lovely animals!",
        "audio": "book1/U5_S7.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S7.webp",
        "image_desc": "可爱，可爱的动物！"
       },
       {
        "id": "U5_S8",
        "text": "Hello, Tiger.",
        "audio": "book1/U5_S8.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S8.webp",
        "image_desc": "你好，老虎。"
       },
       {
        "id": "U5_S9",
        "text": "Hello, monkey.",
        "audio": "book1/U5_S9.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S9.webp",
        "image_desc": "你好，猴子。"
       },
       {
        "id": "U5_S10",
        "text": "Look, a lion.",
        "audio": "book1/U5_S10.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S10.webp",
        "image_desc": "看，一头狮子。"
       },
       {
        "id": "U5_S11",
        "text": "Hi, baby panda.",
        "audio": "book1/U5_S11.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S11.webp",
        "image_desc": "嗨，熊猫宝宝。"
       },
       {
        "id": "U5_S12",
        "text": "Look, a brown bear.",
        "audio": "book1/U5_S12.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S12.webp",
        "image_desc": "看，一只棕熊。"
       },
       {
        "id": "U5_S13",
        "text": "I see a lion.",
        "audio": "book1/U5_S13.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S13.webp",
        "image_desc": "我看到一头狮子。"
       },
       {
        "id": "U5_S14",
        "text": "My animal wheel",
        "audio": "book1/U5_S14.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_S14.webp",
        "image_desc": "我的动物转盘"
       }
      ],
@@ -909,7 +909,7 @@
        "id": "U5_W1",
        "text": "tiger",
        "audio": "book1/U5_W1.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_W1.webp",
        "image_desc": "老虎",
        "meaning": "老虎"
       },
@@ -917,7 +917,7 @@
        "id": "U5_W2",
        "text": "lion",
        "audio": "book1/U5_W2.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_W2.webp",
        "image_desc": "狮子",
        "meaning": "狮子"
       },
@@ -925,7 +925,7 @@
        "id": "U5_W3",
        "text": "bear",
        "audio": "book1/U5_W3.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_W3.webp",
        "image_desc": "熊",
        "meaning": "熊"
       },
@@ -933,7 +933,7 @@
        "id": "U5_W4",
        "text": "monkey",
        "audio": "book1/U5_W4.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_W4.webp",
        "image_desc": "猴子",
        "meaning": "猴子"
       },
@@ -941,7 +941,7 @@
        "id": "U5_W5",
        "text": "panda",
        "audio": "book1/U5_W5.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_W5.webp",
        "image_desc": "大熊猫",
        "meaning": "大熊猫"
       },
@@ -949,7 +949,7 @@
        "id": "U5_W6",
        "text": "Guess!",
        "audio": "book1/U5_W6.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_W6.webp",
        "image_desc": "猜猜看！",
        "meaning": "猜猜看！"
       },
@@ -957,7 +957,7 @@
        "id": "U5_W7",
        "text": "Bingo!",
        "audio": "book1/U5_W7.mp3",
-       "image": "book1/U5_cover.webp",
+       "image": "book1/U5_W7.webp",
        "image_desc": "答对了！",
        "meaning": "答对了！"
       }
@@ -972,70 +972,70 @@
        "id": "U6_S1",
        "text": "Fun story",
        "audio": "book1/U6_S1.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S1.webp",
        "image_desc": "有趣的故事"
       },
       {
        "id": "U6_S2",
        "text": "Let's read and think.",
        "audio": "book1/U6_S2.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S2.webp",
        "image_desc": "我们来读一读，想一想。"
       },
       {
        "id": "U6_S3",
        "text": "What is 'No Feeding'?",
        "audio": "book1/U6_S3.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S3.webp",
        "image_desc": "“禁止投喂”是什么意思？"
       },
       {
        "id": "U6_S4",
        "text": "Look, I have new markers.",
        "audio": "book1/U6_S4.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S4.webp",
        "image_desc": "看，我有新的马克笔。"
       },
       {
        "id": "U6_S5",
        "text": "Red, green, blue ...",
        "audio": "book1/U6_S5.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S5.webp",
        "image_desc": "红色、绿色、蓝色⋯⋯"
       },
       {
        "id": "U6_S6",
        "text": "Let's draw animals.",
        "audio": "book1/U6_S6.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S6.webp",
        "image_desc": "我们来画动物吧。"
       },
       {
        "id": "U6_S7",
        "text": "Look! A panda.",
        "audio": "book1/U6_S7.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S7.webp",
        "image_desc": "看！一只熊猫。"
       },
       {
        "id": "U6_S8",
        "text": "Good job!",
        "audio": "book1/U6_S8.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S8.webp",
        "image_desc": "做得好！"
       },
       {
        "id": "U6_S9",
        "text": "Look! A tiger.",
        "audio": "book1/U6_S9.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S9.webp",
        "image_desc": "看！一只老虎。"
       },
       {
        "id": "U6_S10",
        "text": "How nice!",
        "audio": "book1/U6_S10.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_S10.webp",
        "image_desc": "太棒了！"
       }
      ],
@@ -1044,7 +1044,7 @@
        "id": "U6_W1",
        "text": "OK.",
        "audio": "book1/U6_W1.mp3",
-       "image": "book1/U6_cover.webp",
+       "image": "book1/U6_W1.webp",
        "image_desc": "好的。",
        "meaning": "好的。"
       }
