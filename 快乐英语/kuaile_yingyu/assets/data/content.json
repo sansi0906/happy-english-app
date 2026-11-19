@@ -27,175 +27,175 @@
        "id": "U1_S1",
        "text": "Good morning!",
        "audio": "book1/U1_S1.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S1.webp",
        "image_desc": "早上好！"
       },
       {
        "id": "U1_S2",
        "text": "Hi, Mia!",
        "audio": "book1/U1_S2.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S2.webp",
        "image_desc": "嗨，米娅！"
       },
       {
        "id": "U1_S3",
        "text": "Mia, this is my dad.",
        "audio": "book1/U1_S3.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S3.webp",
        "image_desc": "米娅，这是我爸爸。"
       },
       {
        "id": "U1_S4",
        "text": "Hello! I'm Mia.",
        "audio": "book1/U1_S4.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S4.webp",
        "image_desc": "你好！我是米娅。"
       },
       {
        "id": "U1_S5",
        "text": "This is my grandpa.",
        "audio": "book1/U1_S5.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S5.webp",
        "image_desc": "这是我爷爷。"
       },
       {
        "id": "U1_S6",
        "text": "This is my grandma.",
        "audio": "book1/U1_S6.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S6.webp",
        "image_desc": "这是我奶奶。"
       },
       {
        "id": "U1_S7",
        "text": "This is my brother.",
        "audio": "book1/U1_S7.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S7.webp",
        "image_desc": "这是我弟弟。"
       },
       {
        "id": "U1_S8",
        "text": "This is my sister.",
        "audio": "book1/U1_S8.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S8.webp",
        "image_desc": "这是我妹妹。"
       },
       {
        "id": "U1_S9",
        "text": "Morning! Morning!",
        "audio": "book1/U1_S9.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S9.webp",
        "image_desc": "早上好！早上好！"
       },
       {
        "id": "U1_S10",
        "text": "Good morning, Miss Liu!",
        "audio": "book1/U1_S10.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S10.webp",
        "image_desc": "早上好，刘老师！"
       },
       {
        "id": "U1_S11",
        "text": "Good morning, kids!",
        "audio": "book1/U1_S11.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S11.webp",
        "image_desc": "早上好，孩子们！"
       },
       {
        "id": "U1_S12",
        "text": "Morning, Mum.",
        "audio": "book1/U1_S12.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S12.webp",
        "image_desc": "早上好，妈妈。"
       },
       {
        "id": "U1_S13",
        "text": "Hi Tiantian.",
        "audio": "book1/U1_S13.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S13.webp",
        "image_desc": "嗨，甜甜。"
       },
       {
        "id": "U1_S14",
        "text": "Morning, Grandma.",
        "audio": "book1/U1_S14.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S14.webp",
        "image_desc": "早上好，奶奶。"
       },
       {
        "id": "U1_S15",
        "text": "Hello, Dad.",
        "audio": "book1/U1_S15.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S15.webp",
        "image_desc": "你好，爸爸。"
       },
       {
        "id": "U1_S16",
        "text": "Good morning, Grandpa.",
        "audio": "book1/U1_S16.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S16.webp",
        "image_desc": "早上好，爷爷。"
       },
       {
        "id": "U1_S17",
        "text": "Hi, Jinjin.",
        "audio": "book1/U1_S17.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S17.webp",
        "image_desc": "你好，金金。"
       },
       {
        "id": "U1_S18",
        "text": "Hello, I'm Li Tiantian.",
        "audio": "book1/U1_S18.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S18.webp",
        "image_desc": "你好，我叫李天天。"
       },
       {
        "id": "U1_S19",
        "text": "Look, this is my family.",
        "audio": "book1/U1_S19.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S19.webp",
        "image_desc": "看，这是我的家人。"
       },
       {
        "id": "U1_S20",
        "text": "This is my sister Jin jin.",
        "audio": "book1/U1_S20.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S20.webp",
        "image_desc": "这是我妹妹金金。"
       },
       {
        "id": "U1_S21",
        "text": "And this is me.",
        "audio": "book1/U1_S21.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S21.webp",
        "image_desc": "这就是我。"
       },
       {
        "id": "U1_S22",
        "text": "I love my family.",
        "audio": "book1/U1_S22.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S22.webp",
        "image_desc": "我爱我的家人。"
       },
       {
        "id": "U1_S23",
        "text": "This is my sister Jinjin.",
        "audio": "book1/U1_S23.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S23.webp",
        "image_desc": "这是我妹妹金金。"
       },
       {
        "id": "U1_S24",
        "text": "Look, this is my grandma.",
        "audio": "book1/U1_S24.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S24.webp",
        "image_desc": "看，这是我奶奶。"
       },
       {
        "id": "U1_S26",
        "text": "Look, this is me.",
        "audio": "book1/U1_S26.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_S26.webp",
        "image_desc": "看，这就是我。"
       }
      ],
@@ -204,7 +204,7 @@
        "id": "U1_W1",
        "text": "Morning!",
        "audio": "book1/U1_W1.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_W1.webp",
        "image_desc": "早！",
        "meaning": "早！"
       },
@@ -212,7 +212,7 @@
        "id": "U1_W2",
        "text": "dad",
        "audio": "book1/U1_W2.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_W2.webp",
        "image_desc": "爸爸",
        "meaning": "爸爸"
       },
@@ -220,7 +220,7 @@
        "id": "U1_W3",
        "text": "brother",
        "audio": "book1/U1_W3.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_W3.webp",
        "image_desc": "兄弟",
        "meaning": "兄弟"
       },
@@ -228,7 +228,7 @@
        "id": "U1_W4",
        "text": "mum",
        "audio": "book1/U1_W4.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_W4.webp",
        "image_desc": "妈妈",
        "meaning": "妈妈"
       },
@@ -236,7 +236,7 @@
        "id": "U1_W5",
        "text": "grandma",
        "audio": "book1/U1_W5.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_W5.webp",
        "image_desc": "奶奶；外婆",
        "meaning": "奶奶；外婆"
       },
@@ -244,7 +244,7 @@
        "id": "U1_W6",
        "text": "grandpa",
        "audio": "book1/U1_W6.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_W6.webp",
        "image_desc": "爷爷；外公",
        "meaning": "爷爷；外公"
       },
@@ -252,7 +252,7 @@
        "id": "U1_W7",
        "text": "sister",
        "audio": "book1/U1_W7.mp3",
-       "image": "book1/U1_cover.webp",
+       "image": "book1/U1_W7.webp",
        "image_desc": "姐妹",
        "meaning": "姐妹"
       }
