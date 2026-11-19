@@ -69,7 +69,8 @@ class _WordPageState extends State<WordPage> {
                       const SizedBox(height: 6),
                       Text(w.meaning ?? '',
                           style: const TextStyle(fontSize: 24, color: kDark)),
-                      const SizedBox(height: 14),
+                      // 留出提示气泡向上溢出的空间，避免压住中文释义
+                      const SizedBox(height: 34),
                       // 喇叭发音 + 戳一戳提示
                       // 单词卡固定正常语速，不受跟读页慢速开关影响
                       _SpeakerWithHint(
