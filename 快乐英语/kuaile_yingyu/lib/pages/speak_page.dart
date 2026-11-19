@@ -110,26 +110,34 @@ class _SpeakPageState extends State<SpeakPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(it.text,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                             style: TextStyle(
                                 fontSize: txtSize, fontWeight: FontWeight.bold, color: kDark)),
-                        SizedBox(height: lower ? 3 : 3),
-                        Text(it.isWord ? '单词' : '句子',
-                            style: TextStyle(
-                                fontSize: tagSize, color: const Color(0xFF8A8070))),
+                        const SizedBox(height: 4),
+                        // V1.5.2：星级与分数移到第二行，
+                        // 避免挤占正文宽度导致 "Good morning!" 在单词中间硬折行
+                        Row(
+                          children: [
+                            Text(it.isWord ? '单词' : '句子',
+                                style: TextStyle(
+                                    fontSize: tagSize, color: const Color(0xFF8A8070))),
+                            const SizedBox(width: 10),
+                            _StarRow(star5: stars, size: starSize * 0.8),
+                            if (score >= 0) ...[
+                              const SizedBox(width: 4),
+                              Text('${score.round()}分',
+                                  style: TextStyle(
+                                      fontSize: tagSize,
+                                      fontWeight: FontWeight.w600,
+                                      color: kDark)),
+                            ],
+                          ],
+                        ),
                       ],
                     ),
                   ),
-                  _StarRow(star5: stars, size: starSize),
-                  if (score >= 0)
-                    Padding(
-                      padding: const EdgeInsets.only(left: 6),
-                      child: Text('${score.round()}分',
-                          style: TextStyle(
-                              fontSize: lower ? 16 : 14,
-                              fontWeight: FontWeight.w600,
-                              color: kDark)),
-                    ),
-                  SizedBox(width: lower ? 2 : 2),
+                  const SizedBox(width: 4),
                   Icon(Icons.chevron_right, color: kOrange, size: arrowSize),
                 ],
               ),
