@@ -1068,7 +1068,7 @@
        "text": "I have a toy car.",
        "cn": "我有一辆玩具车。",
        "audio": "book2/U1_S1.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S1.webp",
        "image_desc": "我有一辆玩具车。"
       },
       {
@@ -1076,7 +1076,7 @@
        "text": "You have a balloon.",
        "cn": "你有一个气球。",
        "audio": "book2/U1_S2.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S2.webp",
        "image_desc": "你有一个气球。"
       },
       {
@@ -1084,7 +1084,7 @@
        "text": "A big yellow balloon.",
        "cn": "一个大的黄色气球。",
        "audio": "book2/U1_S3.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S3.webp",
        "image_desc": "一个大的黄色气球。"
       },
       {
@@ -1092,7 +1092,7 @@
        "text": "I have a ball.",
        "cn": "我有一个球。",
        "audio": "book2/U1_S4.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S4.webp",
        "image_desc": "我有一个球。"
       },
       {
@@ -1100,7 +1100,7 @@
        "text": "A small brown ball.",
        "cn": "一个小的棕色的球。",
        "audio": "book2/U1_S5.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S5.webp",
        "image_desc": "一个小的棕色的球。"
       },
       {
@@ -1108,7 +1108,7 @@
        "text": "Purple balls, brown balls.",
        "cn": "紫色的球、棕色的球。",
        "audio": "book2/U1_S6.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S6.webp",
        "image_desc": "紫色的球、棕色的球。"
       },
       {
@@ -1116,7 +1116,7 @@
        "text": "Bounce, bounce, bounce.",
        "cn": "拍、拍、拍。",
        "audio": "book2/U1_S7.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S7.webp",
        "image_desc": "拍、拍、拍。"
       },
       {
@@ -1124,7 +1124,7 @@
        "text": "Bounce the ball.",
        "cn": "拍球。",
        "audio": "book2/U1_S8.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S8.webp",
        "image_desc": "拍球。"
       },
       {
@@ -1132,7 +1132,7 @@
        "text": "Great!",
        "cn": "太棒了！",
        "audio": "book2/U1_S9.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S9.webp",
        "image_desc": "太棒了！"
       },
       {
@@ -1140,7 +1140,7 @@
        "text": "I have a train.",
        "cn": "我有一辆火车。",
        "audio": "book2/U1_S10.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S10.webp",
        "image_desc": "我有一辆火车。"
       },
       {
@@ -1148,7 +1148,7 @@
        "text": "I have a car.",
        "cn": "我有一辆汽车。",
        "audio": "book2/U1_S11.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S11.webp",
        "image_desc": "我有一辆汽车。"
       },
       {
@@ -1156,7 +1156,7 @@
        "text": "My train is coming.",
        "cn": "我的火车来了。",
        "audio": "book2/U1_S12.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S12.webp",
        "image_desc": "我的火车来了。"
       },
       {
@@ -1164,7 +1164,7 @@
        "text": "My car is coming.",
        "cn": "我的汽车来了。",
        "audio": "book2/U1_S13.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S13.webp",
        "image_desc": "我的汽车来了。"
       },
       {
@@ -1172,7 +1172,7 @@
        "text": "Oh, yeah!",
        "cn": "噢，耶！",
        "audio": "book2/U1_S14.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S14.webp",
        "image_desc": "噢，耶！"
       },
       {
@@ -1180,7 +1180,7 @@
        "text": "a teddy bear a teddy bear",
        "cn": "1. 一只泰迪熊一只泰迪熊",
        "audio": "book2/U1_S15.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S15.webp",
        "image_desc": "1. 一只泰迪熊一只泰迪熊"
       },
       {
@@ -1188,7 +1188,7 @@
        "text": "a toy car a toy car",
        "cn": "3. 一辆玩具车一辆玩具车",
        "audio": "book2/U1_S16.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S16.webp",
        "image_desc": "3. 一辆玩具车一辆玩具车"
       },
       {
@@ -1196,7 +1196,7 @@
        "text": "a balloon a balloon",
        "cn": "4. 一个气球一个气球",
        "audio": "book2/U1_S17.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S17.webp",
        "image_desc": "4. 一个气球一个气球"
       },
       {
@@ -1204,7 +1204,7 @@
        "text": "a doll a doll",
        "cn": "6. 一个洋娃娃一个洋娃娃",
        "audio": "book2/U1_S18.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S18.webp",
        "image_desc": "6. 一个洋娃娃一个洋娃娃"
       },
       {
@@ -1212,7 +1212,7 @@
        "text": "Hello, I'm Tiantian.",
        "cn": "1. 你好，我是天天。",
        "audio": "book2/U1_S19.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S19.webp",
        "image_desc": "1. 你好，我是天天。"
       },
       {
@@ -1220,7 +1220,7 @@
        "text": "Hello, I'm Jinjin.",
        "cn": "2. 你好，我是金金。",
        "audio": "book2/U1_S20.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S20.webp",
        "image_desc": "2. 你好，我是金金。"
       },
       {
@@ -1228,7 +1228,7 @@
        "text": "I have a doll.",
        "cn": "我有一个洋娃娃。",
        "audio": "book2/U1_S21.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S21.webp",
        "image_desc": "我有一个洋娃娃。"
       },
       {
@@ -1236,7 +1236,7 @@
        "text": "Hello, I'm Lele.",
        "cn": "3. 你好，我是乐乐。",
        "audio": "book2/U1_S22.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S22.webp",
        "image_desc": "3. 你好，我是乐乐。"
       },
       {
@@ -1244,7 +1244,7 @@
        "text": "I have a balloon.",
        "cn": "我有一个气球。",
        "audio": "book2/U1_S23.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S23.webp",
        "image_desc": "我有一个气球。"
       },
       {
@@ -1252,7 +1252,7 @@
        "text": "Hello, I'm Meimei.",
        "cn": "4. 你好，我是梅梅。",
        "audio": "book2/U1_S24.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S24.webp",
        "image_desc": "4. 你好，我是梅梅。"
       },
       {
@@ -1260,7 +1260,7 @@
        "text": "I have a teddy bear.",
        "cn": "我有一只泰迪熊。",
        "audio": "book2/U1_S25.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S25.webp",
        "image_desc": "我有一只泰迪熊。"
       },
       {
@@ -1268,7 +1268,7 @@
        "text": "Draw a toy train.",
        "cn": "1. 画一列玩具火车。",
        "audio": "book2/U1_S26.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S26.webp",
        "image_desc": "1. 画一列玩具火车。"
       },
       {
@@ -1276,7 +1276,7 @@
        "text": "Draw a toy car.",
        "cn": "2. 画一辆玩具车",
        "audio": "book2/U1_S27.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S27.webp",
        "image_desc": "2. 画一辆玩具车"
       },
       {
@@ -1284,7 +1284,7 @@
        "text": "Draw two teddy bears.",
        "cn": "3. 画两只泰迪熊。",
        "audio": "book2/U1_S28.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S28.webp",
        "image_desc": "3. 画两只泰迪熊。"
       },
       {
@@ -1292,7 +1292,7 @@
        "text": "Draw three balloons.",
        "cn": "4. 画三个气球。",
        "audio": "book2/U1_S29.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S29.webp",
        "image_desc": "4. 画三个气球。"
       },
       {
@@ -1300,7 +1300,7 @@
        "text": "Goodbye, kids.",
        "cn": "再见，孩子们。",
        "audio": "book2/U1_S30.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S30.webp",
        "image_desc": "再见，孩子们。"
       },
       {
@@ -1308,7 +1308,7 @@
        "text": "Look, I have a toy car.",
        "cn": "—看，我有一辆玩具车。",
        "audio": "book2/U1_S31.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S31.webp",
        "image_desc": "—看，我有一辆玩具车。"
       },
       {
@@ -1316,7 +1316,7 @@
        "text": "How nice.",
        "cn": "—真棒啊。",
        "audio": "book2/U1_S32.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S32.webp",
        "image_desc": "—真棒啊。"
       },
       {
@@ -1324,7 +1324,7 @@
        "text": "I have a toy train.",
        "cn": "我有一列玩具火车。",
        "audio": "book2/U1_S33.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S33.webp",
        "image_desc": "我有一列玩具火车。"
       },
       {
@@ -1332,7 +1332,7 @@
        "text": "Ha ha.",
        "cn": "哈哈。",
        "audio": "book2/U1_S34.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S34.webp",
        "image_desc": "哈哈。"
       },
       {
@@ -1340,7 +1340,7 @@
        "text": "Super. I have a teddy bear.",
        "cn": "—非常棒。我有一只泰迪熊。",
        "audio": "book2/U1_S35.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S35.webp",
        "image_desc": "—非常棒。我有一只泰迪熊。"
       },
       {
@@ -1348,7 +1348,7 @@
        "text": "Wow, so cute!",
        "cn": "—哇，真可爱。",
        "audio": "book2/U1_S36.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S36.webp",
        "image_desc": "—哇，真可爱。"
       },
       {
@@ -1356,7 +1356,7 @@
        "text": "Look, I have a balloon.",
        "cn": "看，我有一个气球。",
        "audio": "book2/U1_S37.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S37.webp",
        "image_desc": "看，我有一个气球。"
       },
       {
@@ -1364,7 +1364,7 @@
        "text": "I have a toy plane.",
        "cn": "—我有一架玩具飞机。",
        "audio": "book2/U1_S38.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S38.webp",
        "image_desc": "—我有一架玩具飞机。"
       },
       {
@@ -1372,7 +1372,7 @@
        "text": "Cool.",
        "cn": "—酷啊。",
        "audio": "book2/U1_S39.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_S39.webp",
        "image_desc": "—酷啊。"
       }
      ],
@@ -1380,51 +1380,58 @@
       {
        "text": "a toy car",
        "audio": "book2/U1_W1.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_W1.webp",
        "image_desc": "一辆玩具车",
-       "meaning": "一辆玩具车"
+       "meaning": "一辆玩具车",
+       "id": "U1_W1"
       },
       {
        "text": "a toy train",
        "audio": "book2/U1_W2.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_W2.webp",
        "image_desc": "一列玩具火车",
-       "meaning": "一列玩具火车"
+       "meaning": "一列玩具火车",
+       "id": "U1_W2"
       },
       {
        "text": "a doll",
        "audio": "book2/U1_W3.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_W3.webp",
        "image_desc": "一个洋娃娃",
-       "meaning": "一个洋娃娃"
+       "meaning": "一个洋娃娃",
+       "id": "U1_W3"
       },
       {
        "text": "a balloon",
        "audio": "book2/U1_W4.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_W4.webp",
        "image_desc": "一个气球",
-       "meaning": "一个气球"
+       "meaning": "一个气球",
+       "id": "U1_W4"
       },
       {
        "text": "a teddy bear",
        "audio": "book2/U1_W5.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_W5.webp",
        "image_desc": "一只泰迪熊",
-       "meaning": "一只泰迪熊"
+       "meaning": "一只泰迪熊",
+       "id": "U1_W5"
       },
       {
        "text": "a ball",
        "audio": "book2/U1_W6.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_W6.webp",
        "image_desc": "2. 一个球",
-       "meaning": "2. 一个球"
+       "meaning": "2. 一个球",
+       "id": "U1_W6"
       },
       {
        "text": "Goodbye.",
        "audio": "book2/U1_W7.mp3",
-       "image": "book2/U1_cover.webp",
+       "image": "book2/U1_W7.webp",
        "image_desc": "—再见。",
-       "meaning": "—再见。"
+       "meaning": "—再见。",
+       "id": "U1_W7"
       }
      ]
     },
@@ -1438,7 +1445,7 @@
        "text": "I like hamburgers.",
        "cn": "我喜欢汉堡。",
        "audio": "book2/U2_S1.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S1.webp",
        "image_desc": "我喜欢汉堡。"
       },
       {
@@ -1446,7 +1453,7 @@
        "text": "What do you like?",
        "cn": "你喜欢什么？",
        "audio": "book2/U2_S2.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S2.webp",
        "image_desc": "你喜欢什么？"
       },
       {
@@ -1454,7 +1461,7 @@
        "text": "I like noodles.",
        "cn": "我喜欢面条。",
        "audio": "book2/U2_S3.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S3.webp",
        "image_desc": "我喜欢面条。"
       },
       {
@@ -1462,7 +1469,7 @@
        "text": "What about you?",
        "cn": "你呢？",
        "audio": "book2/U2_S4.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S4.webp",
        "image_desc": "你呢？"
       },
       {
@@ -1470,7 +1477,7 @@
        "text": "I like rice.",
        "cn": "我喜欢米饭。",
        "audio": "book2/U2_S5.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S5.webp",
        "image_desc": "我喜欢米饭。"
       },
       {
@@ -1478,7 +1485,7 @@
        "text": "And you?",
        "cn": "你呢？",
        "audio": "book2/U2_S6.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S6.webp",
        "image_desc": "你呢？"
       },
       {
@@ -1486,7 +1493,7 @@
        "text": "I like soup and vegetables.",
        "cn": "我喜欢喝汤，也喜欢吃蔬菜。",
        "audio": "book2/U2_S7.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S7.webp",
        "image_desc": "我喜欢喝汤，也喜欢吃蔬菜。"
       },
       {
@@ -1494,7 +1501,7 @@
        "text": "Me too.",
        "cn": "我也是。",
        "audio": "book2/U2_S8.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S8.webp",
        "image_desc": "我也是。"
       },
       {
@@ -1502,7 +1509,7 @@
        "text": "I like chicken.",
        "cn": "我喜欢鸡肉。",
        "audio": "book2/U2_S9.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S9.webp",
        "image_desc": "我喜欢鸡肉。"
       },
       {
@@ -1510,7 +1517,7 @@
        "text": "Me too. Yummy!",
        "cn": "我也是。真好吃！",
        "audio": "book2/U2_S10.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S10.webp",
        "image_desc": "我也是。真好吃！"
       },
       {
@@ -1518,7 +1525,7 @@
        "text": "Have a hamburger, Mum.",
        "cn": "吃个汉堡包，妈妈。",
        "audio": "book2/U2_S11.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S11.webp",
        "image_desc": "吃个汉堡包，妈妈。"
       },
       {
@@ -1526,7 +1533,7 @@
        "text": "OK, thanks.",
        "cn": "好的，谢谢。",
        "audio": "book2/U2_S12.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S12.webp",
        "image_desc": "好的，谢谢。"
       },
       {
@@ -1534,7 +1541,7 @@
        "text": "Have some vegetables, Dad.",
        "cn": "吃些蔬菜，爸爸。",
        "audio": "book2/U2_S13.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S13.webp",
        "image_desc": "吃些蔬菜，爸爸。"
       },
       {
@@ -1542,7 +1549,7 @@
        "text": "Have some noodles, Grandma.",
        "cn": "吃些面条，奶奶。",
        "audio": "book2/U2_S14.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S14.webp",
        "image_desc": "吃些面条，奶奶。"
       },
       {
@@ -1550,7 +1557,7 @@
        "text": "Have some chicken, Grandpa.",
        "cn": "吃些鸡肉，爷爷。",
        "audio": "book2/U2_S15.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S15.webp",
        "image_desc": "吃些鸡肉，爷爷。"
       },
       {
@@ -1558,7 +1565,7 @@
        "text": "Have a hamburger, Tiantian.",
        "cn": "吃个汉堡包，天天。",
        "audio": "book2/U2_S16.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S16.webp",
        "image_desc": "吃个汉堡包，天天。"
       },
       {
@@ -1566,7 +1573,7 @@
        "text": "Have some vegetables, Tiantian.",
        "cn": "吃些蔬菜，天天。",
        "audio": "book2/U2_S17.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S17.webp",
        "image_desc": "吃些蔬菜，天天。"
       },
       {
@@ -1574,7 +1581,7 @@
        "text": "Have some noodles, Tiantian.",
        "cn": "吃些面条，天天。",
        "audio": "book2/U2_S18.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S18.webp",
        "image_desc": "吃些面条，天天。"
       },
       {
@@ -1582,7 +1589,7 @@
        "text": "Have some chicken and soup, Tiantian.",
        "cn": "吃些鸡肉和汤，天天。",
        "audio": "book2/U2_S19.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S19.webp",
        "image_desc": "吃些鸡肉和汤，天天。"
       },
       {
@@ -1590,7 +1597,7 @@
        "text": "Oh, no. I'm full.",
        "cn": "哦，不，我吃饱了。",
        "audio": "book2/U2_S20.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S20.webp",
        "image_desc": "哦，不，我吃饱了。"
       },
       {
@@ -1598,7 +1605,7 @@
        "text": "Hello, I like noodles.",
        "cn": "1. 你好，我喜欢面条。",
        "audio": "book2/U2_S21.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S21.webp",
        "image_desc": "1. 你好，我喜欢面条。"
       },
       {
@@ -1606,7 +1613,7 @@
        "text": "I have a hamburger.",
        "cn": "2. 我有一个汉堡包。",
        "audio": "book2/U2_S22.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S22.webp",
        "image_desc": "2. 我有一个汉堡包。"
       },
       {
@@ -1614,7 +1621,7 @@
        "text": "Thank you, Mum.",
        "cn": "谢谢你，妈妈。",
        "audio": "book2/U2_S23.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S23.webp",
        "image_desc": "谢谢你，妈妈。"
       },
       {
@@ -1622,7 +1629,7 @@
        "text": "I like vegetables.",
        "cn": "4. 我喜欢蔬菜。",
        "audio": "book2/U2_S24.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S24.webp",
        "image_desc": "4. 我喜欢蔬菜。"
       },
       {
@@ -1630,7 +1637,7 @@
        "text": "Hi, I'm Big Ben.",
        "cn": "5.嗨，我是大本。",
        "audio": "book2/U2_S25.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S25.webp",
        "image_desc": "5.嗨，我是大本。"
       },
       {
@@ -1638,7 +1645,7 @@
        "text": "I want three hamburgers.",
        "cn": "1. 我想要三个汉堡包。",
        "audio": "book2/U2_S26.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S26.webp",
        "image_desc": "1. 我想要三个汉堡包。"
       },
       {
@@ -1646,7 +1653,7 @@
        "text": "Hello, I like rice.",
        "cn": "4. 你好，我喜欢米饭。",
        "audio": "book2/U2_S27.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S27.webp",
        "image_desc": "4. 你好，我喜欢米饭。"
       },
       {
@@ -1654,7 +1661,7 @@
        "text": "Mum, what do you have for supper, Mum?",
        "cn": "1. —妈妈，晚饭你准备了什么？",
        "audio": "book2/U2_S28.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S28.webp",
        "image_desc": "1. —妈妈，晚饭你准备了什么？"
       },
       {
@@ -1662,7 +1669,7 @@
        "text": "Tomorrow is your birthday.",
        "cn": "—明天是你的生日。",
        "audio": "book2/U2_S29.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S29.webp",
        "image_desc": "—明天是你的生日。"
       },
       {
@@ -1670,7 +1677,7 @@
        "text": "Today we have jiaozi.",
        "cn": "今天我们吃饺子。",
        "audio": "book2/U2_S30.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S30.webp",
        "image_desc": "今天我们吃饺子。"
       },
       {
@@ -1678,7 +1685,7 @@
        "text": "Great. I like jiaozi.",
        "cn": "—太棒了。 我喜欢饺子。",
        "audio": "book2/U2_S31.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S31.webp",
        "image_desc": "—太棒了。 我喜欢饺子。"
       },
       {
@@ -1686,7 +1693,7 @@
        "text": "Yummy! Thank you.",
        "cn": "好吃！ 谢谢。",
        "audio": "book2/U2_S32.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S32.webp",
        "image_desc": "好吃！ 谢谢。"
       },
       {
@@ -1694,7 +1701,7 @@
        "text": "Good morning, Mum.",
        "cn": "2. —早上好，妈妈。",
        "audio": "book2/U2_S33.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S33.webp",
        "image_desc": "2. —早上好，妈妈。"
       },
       {
@@ -1702,7 +1709,7 @@
        "text": "Good morning, Dad.",
        "cn": "早上好，爸爸。",
        "audio": "book2/U2_S34.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S34.webp",
        "image_desc": "早上好，爸爸。"
       },
       {
@@ -1710,7 +1717,7 @@
        "text": "Morning, Tiantian.",
        "cn": "—早上好，天天。",
        "audio": "book2/U2_S35.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S35.webp",
        "image_desc": "—早上好，天天。"
       },
       {
@@ -1718,7 +1725,7 @@
        "text": "Today is your birthday.",
        "cn": "今天是你的生日。",
        "audio": "book2/U2_S36.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S36.webp",
        "image_desc": "今天是你的生日。"
       },
       {
@@ -1726,7 +1733,7 @@
        "text": "We have noodles.",
        "cn": "我们吃面条。",
        "audio": "book2/U2_S37.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S37.webp",
        "image_desc": "我们吃面条。"
       },
       {
@@ -1734,7 +1741,7 @@
        "text": "Oh, great.",
        "cn": "—哦，太好了。",
        "audio": "book2/U2_S38.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S38.webp",
        "image_desc": "—哦，太好了。"
       },
       {
@@ -1742,7 +1749,7 @@
        "text": "Happy birthday, Tiantian.",
        "cn": "3.—生日快乐，天天。",
        "audio": "book2/U2_S39.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S39.webp",
        "image_desc": "3.—生日快乐，天天。"
       },
       {
@@ -1750,7 +1757,7 @@
        "text": "Thank you.",
        "cn": "—谢谢。",
        "audio": "book2/U2_S40.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S40.webp",
        "image_desc": "—谢谢。"
       },
       {
@@ -1758,7 +1765,7 @@
        "text": "Super yummy.",
        "cn": "—超级好吃。",
        "audio": "book2/U2_S41.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_S41.webp",
        "image_desc": "—超级好吃。"
       }
      ],
@@ -1766,44 +1773,50 @@
       {
        "text": "a hamburger",
        "audio": "book2/U2_W1.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_W1.webp",
        "image_desc": "一个汉堡",
-       "meaning": "一个汉堡"
+       "meaning": "一个汉堡",
+       "id": "U2_W1"
       },
       {
        "text": "noodles",
        "audio": "book2/U2_W2.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_W2.webp",
        "image_desc": "面条",
-       "meaning": "面条"
+       "meaning": "面条",
+       "id": "U2_W2"
       },
       {
        "text": "rice",
        "audio": "book2/U2_W3.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_W3.webp",
        "image_desc": "米饭",
-       "meaning": "米饭"
+       "meaning": "米饭",
+       "id": "U2_W3"
       },
       {
        "text": "vegetables",
        "audio": "book2/U2_W4.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_W4.webp",
        "image_desc": "蔬菜",
-       "meaning": "蔬菜"
+       "meaning": "蔬菜",
+       "id": "U2_W4"
       },
       {
        "text": "chicken",
        "audio": "book2/U2_W5.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_W5.webp",
        "image_desc": "鸡肉",
-       "meaning": "鸡肉"
+       "meaning": "鸡肉",
+       "id": "U2_W5"
       },
       {
        "text": "Yummy!",
        "audio": "book2/U2_W6.mp3",
-       "image": "book2/U2_cover.webp",
+       "image": "book2/U2_W6.webp",
        "image_desc": "真好吃！",
-       "meaning": "真好吃！"
+       "meaning": "真好吃！",
+       "id": "U2_W6"
       }
      ]
     },
@@ -1817,7 +1830,7 @@
        "text": "Have some water, please.",
        "cn": "请喝些水。",
        "audio": "book2/U3_S1.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S1.webp",
        "image_desc": "请喝些水。"
       },
       {
@@ -1825,7 +1838,7 @@
        "text": "Would you like some water?",
        "cn": "你想要水吗？",
        "audio": "book2/U3_S2.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S2.webp",
        "image_desc": "你想要水吗？"
       },
       {
@@ -1833,7 +1846,7 @@
        "text": "Yes, please, please.",
        "cn": "是的，请给我来水。",
        "audio": "book2/U3_S3.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S3.webp",
        "image_desc": "是的，请给我来水。"
       },
       {
@@ -1841,7 +1854,7 @@
        "text": "Would you like some tea?",
        "cn": "你想要来杯茶吗？",
        "audio": "book2/U3_S4.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S4.webp",
        "image_desc": "你想要来杯茶吗？"
       },
       {
@@ -1849,7 +1862,7 @@
        "text": "Would you like some Coke?",
        "cn": "你想要可乐吗？",
        "audio": "book2/U3_S5.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S5.webp",
        "image_desc": "你想要可乐吗？"
       },
       {
@@ -1857,7 +1870,7 @@
        "text": "Would you like some juice?",
        "cn": "你想要果汁吗？",
        "audio": "book2/U3_S6.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S6.webp",
        "image_desc": "你想要果汁吗？"
       },
       {
@@ -1865,7 +1878,7 @@
        "text": "Would you like some coffee?",
        "cn": "你想要杯咖啡吗？",
        "audio": "book2/U3_S7.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S7.webp",
        "image_desc": "你想要杯咖啡吗？"
       },
       {
@@ -1873,7 +1886,7 @@
        "text": "Oh, no, thanks.",
        "cn": "哦，不，谢谢。",
        "audio": "book2/U3_S8.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S8.webp",
        "image_desc": "哦，不，谢谢。"
       },
       {
@@ -1881,7 +1894,7 @@
        "text": "What would you like?",
        "cn": "你想要点什么？",
        "audio": "book2/U3_S9.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S9.webp",
        "image_desc": "你想要点什么？"
       },
       {
@@ -1889,7 +1902,7 @@
        "text": "Tea, please.",
        "cn": "给我一杯茶，谢谢。",
        "audio": "book2/U3_S10.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S10.webp",
        "image_desc": "给我一杯茶，谢谢。"
       },
       {
@@ -1897,7 +1910,7 @@
        "text": "Have some milk, please.",
        "cn": "请喝些牛奶吧。",
        "audio": "book2/U3_S11.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S11.webp",
        "image_desc": "请喝些牛奶吧。"
       },
       {
@@ -1905,7 +1918,7 @@
        "text": "Thank you, I like milk.",
        "cn": "谢谢，我喜欢牛奶。",
        "audio": "book2/U3_S12.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S12.webp",
        "image_desc": "谢谢，我喜欢牛奶。"
       },
       {
@@ -1913,7 +1926,7 @@
        "text": "Have some juice, please.",
        "cn": "请喝些果汁吧。",
        "audio": "book2/U3_S13.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S13.webp",
        "image_desc": "请喝些果汁吧。"
       },
       {
@@ -1921,7 +1934,7 @@
        "text": "Thank you, I like juice.",
        "cn": "谢谢，我喜欢果汁。",
        "audio": "book2/U3_S14.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S14.webp",
        "image_desc": "谢谢，我喜欢果汁。"
       },
       {
@@ -1929,7 +1942,7 @@
        "text": "Yes, please.",
        "cn": "是的，请给我可乐。",
        "audio": "book2/U3_S15.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S15.webp",
        "image_desc": "是的，请给我可乐。"
       },
       {
@@ -1937,7 +1950,7 @@
        "text": "What about some tea?",
        "cn": "你想要杯茶吗？",
        "audio": "book2/U3_S16.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S16.webp",
        "image_desc": "你想要杯茶吗？"
       },
       {
@@ -1945,7 +1958,7 @@
        "text": "No, thanks.",
        "cn": "不了，谢谢。",
        "audio": "book2/U3_S17.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S17.webp",
        "image_desc": "不了，谢谢。"
       },
       {
@@ -1953,7 +1966,7 @@
        "text": "music",
        "cn": "音乐",
        "audio": "book2/U3_S18.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S18.webp",
        "image_desc": "音乐"
       },
       {
@@ -1961,7 +1974,7 @@
        "text": "water water",
        "cn": "1. 水水",
        "audio": "book2/U3_S19.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S19.webp",
        "image_desc": "1. 水水"
       },
       {
@@ -1969,7 +1982,7 @@
        "text": "juice juice",
        "cn": "2. 果汁果汁",
        "audio": "book2/U3_S20.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S20.webp",
        "image_desc": "2. 果汁果汁"
       },
       {
@@ -1977,7 +1990,7 @@
        "text": "Coke Coke",
        "cn": "3. 可乐可乐",
        "audio": "book2/U3_S21.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S21.webp",
        "image_desc": "3. 可乐可乐"
       },
       {
@@ -1985,7 +1998,7 @@
        "text": "tea tea",
        "cn": "4. 茶茶",
        "audio": "book2/U3_S22.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S22.webp",
        "image_desc": "4. 茶茶"
       },
       {
@@ -1993,7 +2006,7 @@
        "text": "coffee coffee",
        "cn": "5. 咖啡咖啡",
        "audio": "book2/U3_S23.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S23.webp",
        "image_desc": "5. 咖啡咖啡"
       },
       {
@@ -2001,7 +2014,7 @@
        "text": "milk milk",
        "cn": "6. 牛奶牛奶",
        "audio": "book2/U3_S24.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S24.webp",
        "image_desc": "6. 牛奶牛奶"
       },
       {
@@ -2009,7 +2022,7 @@
        "text": "I like tea.",
        "cn": "1. 我喜欢茶。",
        "audio": "book2/U3_S25.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S25.webp",
        "image_desc": "1. 我喜欢茶。"
       },
       {
@@ -2017,7 +2030,7 @@
        "text": "I like water.",
        "cn": "2. 我喜欢水。",
        "audio": "book2/U3_S26.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S26.webp",
        "image_desc": "2. 我喜欢水。"
       },
       {
@@ -2025,7 +2038,7 @@
        "text": "I like juice.",
        "cn": "3. 我喜欢果汁。",
        "audio": "book2/U3_S27.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S27.webp",
        "image_desc": "3. 我喜欢果汁。"
       },
       {
@@ -2033,7 +2046,7 @@
        "text": "I like Coke.",
        "cn": "4. 我喜欢可乐。",
        "audio": "book2/U3_S28.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S28.webp",
        "image_desc": "4. 我喜欢可乐。"
       },
       {
@@ -2041,7 +2054,7 @@
        "text": "What about you, Tiantian?",
        "cn": "—你呢，天天？",
        "audio": "book2/U3_S29.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S29.webp",
        "image_desc": "—你呢，天天？"
       },
       {
@@ -2049,7 +2062,7 @@
        "text": "I like a glass of juice.",
        "cn": "—我想要一杯果汁。",
        "audio": "book2/U3_S30.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S30.webp",
        "image_desc": "—我想要一杯果汁。"
       },
       {
@@ -2057,7 +2070,7 @@
        "text": "I like juice very much.",
        "cn": "我非常喜欢果汁。",
        "audio": "book2/U3_S31.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S31.webp",
        "image_desc": "我非常喜欢果汁。"
       },
       {
@@ -2065,7 +2078,7 @@
        "text": "Here you are.",
        "cn": "—给你。",
        "audio": "book2/U3_S32.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S32.webp",
        "image_desc": "—给你。"
       },
       {
@@ -2073,7 +2086,7 @@
        "text": "Thank you.",
        "cn": "—谢谢。",
        "audio": "book2/U3_S33.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_S33.webp",
        "image_desc": "—谢谢。"
       }
      ],
@@ -2081,37 +2094,42 @@
       {
        "text": "water",
        "audio": "book2/U3_W1.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_W1.webp",
        "image_desc": "水",
-       "meaning": "水"
+       "meaning": "水",
+       "id": "U3_W1"
       },
       {
        "text": "tea",
        "audio": "book2/U3_W2.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_W2.webp",
        "image_desc": "茶",
-       "meaning": "茶"
+       "meaning": "茶",
+       "id": "U3_W2"
       },
       {
        "text": "milk",
        "audio": "book2/U3_W3.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_W3.webp",
        "image_desc": "牛奶",
-       "meaning": "牛奶"
+       "meaning": "牛奶",
+       "id": "U3_W3"
       },
       {
        "text": "juice",
        "audio": "book2/U3_W4.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_W4.webp",
        "image_desc": "果汁",
-       "meaning": "果汁"
+       "meaning": "果汁",
+       "id": "U3_W4"
       },
       {
        "text": "Coke",
        "audio": "book2/U3_W5.mp3",
-       "image": "book2/U3_cover.webp",
+       "image": "book2/U3_W5.webp",
        "image_desc": "可乐",
-       "meaning": "可乐"
+       "meaning": "可乐",
+       "id": "U3_W5"
       }
      ]
     },
@@ -2125,7 +2143,7 @@
        "text": "Touch your nose, please.",
        "cn": "请摸摸你的鼻子。",
        "audio": "book2/U4_S1.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S1.webp",
        "image_desc": "请摸摸你的鼻子。"
       },
       {
@@ -2133,7 +2151,7 @@
        "text": "Wash your hands.",
        "cn": "洗洗你的手。",
        "audio": "book2/U4_S2.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S2.webp",
        "image_desc": "洗洗你的手。"
       },
       {
@@ -2141,7 +2159,7 @@
        "text": "OK.",
        "cn": "好的。",
        "audio": "book2/U4_S3.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S3.webp",
        "image_desc": "好的。"
       },
       {
@@ -2149,7 +2167,7 @@
        "text": "Wash your face.",
        "cn": "洗洗你的脸。",
        "audio": "book2/U4_S4.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S4.webp",
        "image_desc": "洗洗你的脸。"
       },
       {
@@ -2157,7 +2175,7 @@
        "text": "Come on, come on.",
        "cn": "洗啊洗、洗啊洗。",
        "audio": "book2/U4_S5.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S5.webp",
        "image_desc": "洗啊洗、洗啊洗。"
       },
       {
@@ -2165,7 +2183,7 @@
        "text": "Come on and on.",
        "cn": "快快洗。",
        "audio": "book2/U4_S6.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S6.webp",
        "image_desc": "快快洗。"
       },
       {
@@ -2173,7 +2191,7 @@
        "text": "Hands and face, clean, clean, clean.",
        "cn": "手和脸，",
        "audio": "book2/U4_S7.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S7.webp",
        "image_desc": "手和脸，"
       },
       {
@@ -2181,7 +2199,7 @@
        "text": "Point to his ears.",
        "cn": "指出他的耳朵。",
        "audio": "book2/U4_S9.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S9.webp",
        "image_desc": "指出他的耳朵。"
       },
       {
@@ -2189,7 +2207,7 @@
        "text": "OK. Ears.",
        "cn": "好的。耳朵（在这里）。",
        "audio": "book2/U4_S10.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S10.webp",
        "image_desc": "好的。耳朵（在这里）。"
       },
       {
@@ -2197,7 +2215,7 @@
        "text": "Touch your nose.",
        "cn": "摸摸你的鼻子。",
        "audio": "book2/U4_S11.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S11.webp",
        "image_desc": "摸摸你的鼻子。"
       },
       {
@@ -2205,7 +2223,7 @@
        "text": "Touch your ears.",
        "cn": "摸摸你的耳朵。",
        "audio": "book2/U4_S12.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S12.webp",
        "image_desc": "摸摸你的耳朵。"
       },
       {
@@ -2213,7 +2231,7 @@
        "text": "Touch your eyes.",
        "cn": "摸摸你的眼睛。",
        "audio": "book2/U4_S13.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S13.webp",
        "image_desc": "摸摸你的眼睛。"
       },
       {
@@ -2221,7 +2239,7 @@
        "text": "Touch your mouth.",
        "cn": "摸摸你的嘴巴。",
        "audio": "book2/U4_S14.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S14.webp",
        "image_desc": "摸摸你的嘴巴。"
       },
       {
@@ -2229,7 +2247,7 @@
        "text": "Touch your face.",
        "cn": "摸摸你的脸。",
        "audio": "book2/U4_S15.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S15.webp",
        "image_desc": "摸摸你的脸。"
       },
       {
@@ -2237,7 +2255,7 @@
        "text": "Touch your head.",
        "cn": "摸摸你的头。",
        "audio": "book2/U4_S16.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S16.webp",
        "image_desc": "摸摸你的头。"
       },
       {
@@ -2245,7 +2263,7 @@
        "text": "Come on.",
        "cn": "快来呀。",
        "audio": "book2/U4_S17.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S17.webp",
        "image_desc": "快来呀。"
       },
       {
@@ -2253,7 +2271,7 @@
        "text": "My nose, my eyes, my mouth, my ears.",
        "cn": "我的鼻子、我的眼睛、我的嘴巴、我的耳朵。",
        "audio": "book2/U4_S18.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S18.webp",
        "image_desc": "我的鼻子、我的眼睛、我的嘴巴、我的耳朵。"
       },
       {
@@ -2261,7 +2279,7 @@
        "text": "eye eye",
        "cn": "1. 眼睛眼睛",
        "audio": "book2/U4_S19.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S19.webp",
        "image_desc": "1. 眼睛眼睛"
       },
       {
@@ -2269,7 +2287,7 @@
        "text": "ear ear",
        "cn": "2. 耳朵耳朵",
        "audio": "book2/U4_S20.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S20.webp",
        "image_desc": "2. 耳朵耳朵"
       },
       {
@@ -2277,7 +2295,7 @@
        "text": "face face",
        "cn": "3. 脸脸",
        "audio": "book2/U4_S21.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S21.webp",
        "image_desc": "3. 脸脸"
       },
       {
@@ -2285,7 +2303,7 @@
        "text": "nose nose",
        "cn": "4. 鼻子鼻子",
        "audio": "book2/U4_S22.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S22.webp",
        "image_desc": "4. 鼻子鼻子"
       },
       {
@@ -2293,7 +2311,7 @@
        "text": "mouth mouth",
        "cn": "5. 嘴巴嘴巴",
        "audio": "book2/U4_S23.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S23.webp",
        "image_desc": "5. 嘴巴嘴巴"
       },
       {
@@ -2301,7 +2319,7 @@
        "text": "hand hand",
        "cn": "6. 手手",
        "audio": "book2/U4_S24.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S24.webp",
        "image_desc": "6. 手手"
       },
       {
@@ -2309,7 +2327,7 @@
        "text": "Trace the eyes.",
        "cn": "1. 描一描眼睛。",
        "audio": "book2/U4_S25.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S25.webp",
        "image_desc": "1. 描一描眼睛。"
       },
       {
@@ -2317,7 +2335,7 @@
        "text": "Trace the nose.",
        "cn": "2. 描一描鼻子。",
        "audio": "book2/U4_S26.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S26.webp",
        "image_desc": "2. 描一描鼻子。"
       },
       {
@@ -2325,7 +2343,7 @@
        "text": "Trace the ears.",
        "cn": "3. 描一描耳朵。",
        "audio": "book2/U4_S27.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S27.webp",
        "image_desc": "3. 描一描耳朵。"
       },
       {
@@ -2333,7 +2351,7 @@
        "text": "Trace the mouth.",
        "cn": "4. 描一描嘴巴。",
        "audio": "book2/U4_S28.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S28.webp",
        "image_desc": "4. 描一描嘴巴。"
       },
       {
@@ -2341,7 +2359,7 @@
        "text": "Color the eyes blue and red.",
        "cn": "1. 把眼睛涂成蓝色和红色。",
        "audio": "book2/U4_S29.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S29.webp",
        "image_desc": "1. 把眼睛涂成蓝色和红色。"
       },
       {
@@ -2349,7 +2367,7 @@
        "text": "Color the mouth red and yellow.",
        "cn": "2. 把嘴涂成红色和黄色。",
        "audio": "book2/U4_S30.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S30.webp",
        "image_desc": "2. 把嘴涂成红色和黄色。"
       },
       {
@@ -2357,7 +2375,7 @@
        "text": "Color the nose purple.",
        "cn": "3. 把鼻子涂成紫色。",
        "audio": "book2/U4_S31.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S31.webp",
        "image_desc": "3. 把鼻子涂成紫色。"
       },
       {
@@ -2365,7 +2383,7 @@
        "text": "Color the ears green and pink.",
        "cn": "4. 把耳朵涂成绿色和粉色。",
        "audio": "book2/U4_S32.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S32.webp",
        "image_desc": "4. 把耳朵涂成绿色和粉色。"
       },
       {
@@ -2373,7 +2391,7 @@
        "text": "Color the face gray.",
        "cn": "5. 把脸涂成灰色。",
        "audio": "book2/U4_S33.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S33.webp",
        "image_desc": "5. 把脸涂成灰色。"
       },
       {
@@ -2381,7 +2399,7 @@
        "text": "Color the hands orange and black.",
        "cn": "6. 把手涂成橙色和黑色。",
        "audio": "book2/U4_S34.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S34.webp",
        "image_desc": "6. 把手涂成橙色和黑色。"
       },
       {
@@ -2389,7 +2407,7 @@
        "text": "It has a small mouth, a small nose, red eyes and long ears.",
        "cn": "它有一个小嘴、一个小鼻子、",
        "audio": "book2/U4_S35.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S35.webp",
        "image_desc": "它有一个小嘴、一个小鼻子、"
       },
       {
@@ -2397,7 +2415,7 @@
        "text": "What is it?",
        "cn": "它是什么？",
        "audio": "book2/U4_S37.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S37.webp",
        "image_desc": "它是什么？"
       },
       {
@@ -2405,7 +2423,7 @@
        "text": "Do you know?",
        "cn": "你知道吗？",
        "audio": "book2/U4_S38.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S38.webp",
        "image_desc": "你知道吗？"
       },
       {
@@ -2413,7 +2431,7 @@
        "text": "It's a rabbit.",
        "cn": "—它是一只兔子。",
        "audio": "book2/U4_S39.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_S39.webp",
        "image_desc": "—它是一只兔子。"
       }
      ],
@@ -2421,51 +2439,58 @@
       {
        "text": "eye",
        "audio": "book2/U4_W1.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_W1.webp",
        "image_desc": "眼睛",
-       "meaning": "眼睛"
+       "meaning": "眼睛",
+       "id": "U4_W1"
       },
       {
        "text": "ear",
        "audio": "book2/U4_W2.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_W2.webp",
        "image_desc": "耳朵",
-       "meaning": "耳朵"
+       "meaning": "耳朵",
+       "id": "U4_W2"
       },
       {
        "text": "face",
        "audio": "book2/U4_W3.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_W3.webp",
        "image_desc": "脸",
-       "meaning": "脸"
+       "meaning": "脸",
+       "id": "U4_W3"
       },
       {
        "text": "nose",
        "audio": "book2/U4_W4.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_W4.webp",
        "image_desc": "鼻子",
-       "meaning": "鼻子"
+       "meaning": "鼻子",
+       "id": "U4_W4"
       },
       {
        "text": "mouth",
        "audio": "book2/U4_W5.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_W5.webp",
        "image_desc": "嘴巴",
-       "meaning": "嘴巴"
+       "meaning": "嘴巴",
+       "id": "U4_W5"
       },
       {
        "text": "My hands.",
        "audio": "book2/U4_W6.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_W6.webp",
        "image_desc": "我的手。",
-       "meaning": "我的手。"
+       "meaning": "我的手。",
+       "id": "U4_W6"
       },
       {
        "text": "My face.",
        "audio": "book2/U4_W7.mp3",
-       "image": "book2/U4_cover.webp",
+       "image": "book2/U4_W7.webp",
        "image_desc": "我的脸。",
-       "meaning": "我的脸。"
+       "meaning": "我的脸。",
+       "id": "U4_W7"
       }
      ]
     },
@@ -2479,7 +2504,7 @@
        "text": "I can run.",
        "cn": "我会跑步。",
        "audio": "book2/U5_S1.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S1.webp",
        "image_desc": "我会跑步。"
       },
       {
@@ -2487,7 +2512,7 @@
        "text": "play football",
        "cn": "踢足球",
        "audio": "book2/U5_S2.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S2.webp",
        "image_desc": "踢足球"
       },
       {
@@ -2495,7 +2520,7 @@
        "text": "play table tennis",
        "cn": "打乒乓球",
        "audio": "book2/U5_S3.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S3.webp",
        "image_desc": "打乒乓球"
       },
       {
@@ -2503,7 +2528,7 @@
        "text": "You can ski, and I can ski, too.",
        "cn": "你会滑雪，我也会滑雪。",
        "audio": "book2/U5_S4.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S4.webp",
        "image_desc": "你会滑雪，我也会滑雪。"
       },
       {
@@ -2511,7 +2536,7 @@
        "text": "You can skate, and I can skate, too.",
        "cn": "你会溜冰，我也会溜冰。",
        "audio": "book2/U5_S5.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S5.webp",
        "image_desc": "你会溜冰，我也会溜冰。"
       },
       {
@@ -2519,7 +2544,7 @@
        "text": "You can swim, and I can swim, too.",
        "cn": "你会游泳，我也会游泳。",
        "audio": "book2/U5_S6.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S6.webp",
        "image_desc": "你会游泳，我也会游泳。"
       },
       {
@@ -2527,7 +2552,7 @@
        "text": "You can play football.",
        "cn": "你会踢足球。",
        "audio": "book2/U5_S7.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S7.webp",
        "image_desc": "你会踢足球。"
       },
       {
@@ -2535,7 +2560,7 @@
        "text": "Me too.",
        "cn": "我也会。",
        "audio": "book2/U5_S8.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S8.webp",
        "image_desc": "我也会。"
       },
       {
@@ -2543,7 +2568,7 @@
        "text": "What can you do?",
        "cn": "你会做什么？",
        "audio": "book2/U5_S9.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S9.webp",
        "image_desc": "你会做什么？"
       },
       {
@@ -2551,7 +2576,7 @@
        "text": "I can play table tennis.",
        "cn": "我会打乒乓球。",
        "audio": "book2/U5_S10.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S10.webp",
        "image_desc": "我会打乒乓球。"
       },
       {
@@ -2559,7 +2584,7 @@
        "text": "What a sunny day!",
        "cn": "多么晴朗的一天啊！",
        "audio": "book2/U5_S11.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S11.webp",
        "image_desc": "多么晴朗的一天啊！"
       },
       {
@@ -2567,7 +2592,7 @@
        "text": "Swim, swim, swim with me.",
        "cn": "游泳，游泳，和我一起游。",
        "audio": "book2/U5_S12.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S12.webp",
        "image_desc": "游泳，游泳，和我一起游。"
       },
       {
@@ -2575,7 +2600,7 @@
        "text": "Swim, swim, swim far away.",
        "cn": "游泳，游泳，越游越远。",
        "audio": "book2/U5_S13.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S13.webp",
        "image_desc": "游泳，游泳，越游越远。"
       },
       {
@@ -2583,7 +2608,7 @@
        "text": "Play, play, play with me.",
        "cn": "玩啊，玩啊，和我一起玩。",
        "audio": "book2/U5_S14.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S14.webp",
        "image_desc": "玩啊，玩啊，和我一起玩。"
       },
       {
@@ -2591,7 +2616,7 @@
        "text": "Football, football, kick this way!",
        "cn": "足球，足球，往这边踢！",
        "audio": "book2/U5_S15.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S15.webp",
        "image_desc": "足球，足球，往这边踢！"
       },
       {
@@ -2599,7 +2624,7 @@
        "text": "I'm a dog.",
        "cn": "1. 我是一只狗。",
        "audio": "book2/U5_S16.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S16.webp",
        "image_desc": "1. 我是一只狗。"
       },
       {
@@ -2607,7 +2632,7 @@
        "text": "I'm a rabbit.",
        "cn": "2. 我是一只兔子。",
        "audio": "book2/U5_S17.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S17.webp",
        "image_desc": "2. 我是一只兔子。"
       },
       {
@@ -2615,7 +2640,7 @@
        "text": "I can ski.",
        "cn": "我会滑雪。",
        "audio": "book2/U5_S18.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S18.webp",
        "image_desc": "我会滑雪。"
       },
       {
@@ -2623,7 +2648,7 @@
        "text": "I'm a cat.",
        "cn": "3. 我是一只猫。",
        "audio": "book2/U5_S19.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S19.webp",
        "image_desc": "3. 我是一只猫。"
       },
       {
@@ -2631,7 +2656,7 @@
        "text": "I can skate.",
        "cn": "我会滑冰。",
        "audio": "book2/U5_S20.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S20.webp",
        "image_desc": "我会滑冰。"
       },
       {
@@ -2639,7 +2664,7 @@
        "text": "I'm a fish.",
        "cn": "4. 我是一条鱼。",
        "audio": "book2/U5_S21.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S21.webp",
        "image_desc": "4. 我是一条鱼。"
       },
       {
@@ -2647,7 +2672,7 @@
        "text": "I can swim.",
        "cn": "我会游泳。",
        "audio": "book2/U5_S22.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S22.webp",
        "image_desc": "我会游泳。"
       },
       {
@@ -2655,7 +2680,7 @@
        "text": "I'm a puppy.",
        "cn": "5.我是一只小狗。",
        "audio": "book2/U5_S23.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S23.webp",
        "image_desc": "5.我是一只小狗。"
       },
       {
@@ -2663,7 +2688,7 @@
        "text": "I can play football.",
        "cn": "我会踢足球。",
        "audio": "book2/U5_S24.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S24.webp",
        "image_desc": "我会踢足球。"
       },
       {
@@ -2671,7 +2696,7 @@
        "text": "I'm a kitten.",
        "cn": "我是一只小猫。",
        "audio": "book2/U5_S25.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S25.webp",
        "image_desc": "我是一只小猫。"
       },
       {
@@ -2679,7 +2704,7 @@
        "text": "I can play football, too.",
        "cn": "我也会踢足球。",
        "audio": "book2/U5_S26.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_S26.webp",
        "image_desc": "我也会踢足球。"
       }
      ],
@@ -2687,23 +2712,26 @@
       {
        "text": "ski",
        "audio": "book2/U5_W1.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_W1.webp",
        "image_desc": "滑雪",
-       "meaning": "滑雪"
+       "meaning": "滑雪",
+       "id": "U5_W1"
       },
       {
        "text": "skate",
        "audio": "book2/U5_W2.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_W2.webp",
        "image_desc": "滑冰",
-       "meaning": "滑冰"
+       "meaning": "滑冰",
+       "id": "U5_W2"
       },
       {
        "text": "swim",
        "audio": "book2/U5_W3.mp3",
-       "image": "book2/U5_cover.webp",
+       "image": "book2/U5_W3.webp",
        "image_desc": "游泳",
-       "meaning": "游泳"
+       "meaning": "游泳",
+       "id": "U5_W3"
       }
      ]
     },
@@ -2717,7 +2745,7 @@
        "text": "Welcome to the picnic!",
        "cn": "欢迎来本次野餐！",
        "audio": "book2/U6_S1.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S1.webp",
        "image_desc": "欢迎来本次野餐！"
       },
       {
@@ -2725,7 +2753,7 @@
        "text": "Hi, I'm Tom.",
        "cn": "1. 嗨，我是汤姆。",
        "audio": "book2/U6_S2.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S2.webp",
        "image_desc": "1. 嗨，我是汤姆。"
       },
       {
@@ -2733,7 +2761,7 @@
        "text": "I like hamburgers, hot dogs, Coke.",
        "cn": "我喜欢汉堡、热狗、可乐。",
        "audio": "book2/U6_S3.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S3.webp",
        "image_desc": "我喜欢汉堡、热狗、可乐。"
       },
       {
@@ -2741,7 +2769,7 @@
        "text": "Tom, here's some chicken for you.",
        "cn": "2. —汤姆，这些鸡肉给你。",
        "audio": "book2/U6_S4.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S4.webp",
        "image_desc": "2. —汤姆，这些鸡肉给你。"
       },
       {
@@ -2749,7 +2777,7 @@
        "text": "Thank you.",
        "cn": "—谢谢你。",
        "audio": "book2/U6_S5.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S5.webp",
        "image_desc": "—谢谢你。"
       },
       {
@@ -2757,7 +2785,7 @@
        "text": "Here's some water for you.",
        "cn": "3. —这些水给你。",
        "audio": "book2/U6_S6.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S6.webp",
        "image_desc": "3. —这些水给你。"
       },
       {
@@ -2765,7 +2793,7 @@
        "text": "Thanks.",
        "cn": "—谢谢。",
        "audio": "book2/U6_S7.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S7.webp",
        "image_desc": "—谢谢。"
       },
       {
@@ -2773,7 +2801,7 @@
        "text": "Here's some juice for you.",
        "cn": "4. —这些果汁给你。",
        "audio": "book2/U6_S8.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S8.webp",
        "image_desc": "4. —这些果汁给你。"
       },
       {
@@ -2781,7 +2809,7 @@
        "text": "Here are some pears.",
        "cn": "5. —这里有一些梨。",
        "audio": "book2/U6_S9.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S9.webp",
        "image_desc": "5. —这里有一些梨。"
       },
       {
@@ -2789,7 +2817,7 @@
        "text": "Any more?",
        "cn": "6. —还要吗？",
        "audio": "book2/U6_S10.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S10.webp",
        "image_desc": "6. —还要吗？"
       },
       {
@@ -2797,7 +2825,7 @@
        "text": "No, no, no.",
        "cn": "—不，不，不。",
        "audio": "book2/U6_S11.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S11.webp",
        "image_desc": "—不，不，不。"
       },
       {
@@ -2805,7 +2833,7 @@
        "text": "I like dogs.",
        "cn": "我喜欢狗。",
        "audio": "book2/U6_S12.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S12.webp",
        "image_desc": "我喜欢狗。"
       },
       {
@@ -2813,7 +2841,7 @@
        "text": "Dogs, dogs, dogs.",
        "cn": "狗，狗，狗。",
        "audio": "book2/U6_S13.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S13.webp",
        "image_desc": "狗，狗，狗。"
       },
       {
@@ -2821,7 +2849,7 @@
        "text": "Dogs can run.",
        "cn": "狗会跑。",
        "audio": "book2/U6_S14.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S14.webp",
        "image_desc": "狗会跑。"
       },
       {
@@ -2829,7 +2857,7 @@
        "text": "Run, run, run.",
        "cn": "跑，跑，跑。",
        "audio": "book2/U6_S15.mp3",
-       "image": "book2/U6_cover.webp",
+       "image": "book2/U6_S15.webp",
        "image_desc": "跑，跑，跑。"
       }
      ],
@@ -3103,28 +3131,32 @@
        "audio": "book3/U1_W1.mp3",
        "image": "book3/U1_cover.webp",
        "image_desc": "一辆玩具卡车",
-       "meaning": "一辆玩具卡车"
+       "meaning": "一辆玩具卡车",
+       "id": "U1_W1"
       },
       {
        "text": "a toy jeep",
        "audio": "book3/U1_W2.mp3",
        "image": "book3/U1_cover.webp",
        "image_desc": "一辆玩具吉普车",
-       "meaning": "一辆玩具吉普车"
+       "meaning": "一辆玩具吉普车",
+       "id": "U1_W2"
       },
       {
        "text": "a toy digger",
        "audio": "book3/U1_W3.mp3",
        "image": "book3/U1_cover.webp",
        "image_desc": "一个玩具挖掘机",
-       "meaning": "一个玩具挖掘机"
+       "meaning": "一个玩具挖掘机",
+       "id": "U1_W3"
       },
       {
        "text": "a robot",
        "audio": "book3/U1_W4.mp3",
        "image": "book3/U1_cover.webp",
        "image_desc": "一个机器人",
-       "meaning": "一个机器人"
+       "meaning": "一个机器人",
+       "id": "U1_W4"
       }
      ]
     },
@@ -3332,49 +3364,56 @@
        "audio": "book3/U2_W1.mp3",
        "image": "book3/U2_cover.webp",
        "image_desc": "一个正方形",
-       "meaning": "一个正方形"
+       "meaning": "一个正方形",
+       "id": "U2_W1"
       },
       {
        "text": "a triangle",
        "audio": "book3/U2_W2.mp3",
        "image": "book3/U2_cover.webp",
        "image_desc": "一个三角形",
-       "meaning": "一个三角形"
+       "meaning": "一个三角形",
+       "id": "U2_W2"
       },
       {
        "text": "a rectangle",
        "audio": "book3/U2_W3.mp3",
        "image": "book3/U2_cover.webp",
        "image_desc": "一个长方形",
-       "meaning": "一个长方形"
+       "meaning": "一个长方形",
+       "id": "U2_W3"
       },
       {
        "text": "a heart",
        "audio": "book3/U2_W4.mp3",
        "image": "book3/U2_cover.webp",
        "image_desc": "一个心形",
-       "meaning": "一个心形"
+       "meaning": "一个心形",
+       "id": "U2_W4"
       },
       {
        "text": "a diamond",
        "audio": "book3/U2_W5.mp3",
        "image": "book3/U2_cover.webp",
        "image_desc": "一个菱形",
-       "meaning": "一个菱形"
+       "meaning": "一个菱形",
+       "id": "U2_W5"
       },
       {
        "text": "Hey.",
        "audio": "book3/U2_W6.mp3",
        "image": "book3/U2_cover.webp",
        "image_desc": "—嘿。",
-       "meaning": "—嘿。"
+       "meaning": "—嘿。",
+       "id": "U2_W6"
       },
       {
        "text": "'Hello!",
        "audio": "book3/U2_W7.mp3",
        "image": "book3/U2_cover.webp",
        "image_desc": "—“你好！",
-       "meaning": "—“你好！"
+       "meaning": "—“你好！",
+       "id": "U2_W7"
       }
      ]
     },
@@ -3574,35 +3613,40 @@
        "audio": "book3/U3_W1.mp3",
        "image": "book3/U3_cover.webp",
        "image_desc": "一所学校",
-       "meaning": "一所学校"
+       "meaning": "一所学校",
+       "id": "U3_W1"
       },
       {
        "text": "a classroom",
        "audio": "book3/U3_W2.mp3",
        "image": "book3/U3_cover.webp",
        "image_desc": "一间教室",
-       "meaning": "一间教室"
+       "meaning": "一间教室",
+       "id": "U3_W2"
       },
       {
        "text": "a library",
        "audio": "book3/U3_W3.mp3",
        "image": "book3/U3_cover.webp",
        "image_desc": "一个图书馆",
-       "meaning": "一个图书馆"
+       "meaning": "一个图书馆",
+       "id": "U3_W3"
       },
       {
        "text": "a music room",
        "audio": "book3/U3_W4.mp3",
        "image": "book3/U3_cover.webp",
        "image_desc": "一间音乐教室",
-       "meaning": "一间音乐教室"
+       "meaning": "一间音乐教室",
+       "id": "U3_W4"
       },
       {
        "text": "a gym",
        "audio": "book3/U3_W5.mp3",
        "image": "book3/U3_cover.webp",
        "image_desc": "一座体育馆",
-       "meaning": "一座体育馆"
+       "meaning": "一座体育馆",
+       "id": "U3_W5"
       }
      ]
     },
@@ -3890,77 +3934,88 @@
        "audio": "book3/U4_W1.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "一块黑板",
-       "meaning": "一块黑板"
+       "meaning": "一块黑板",
+       "id": "U4_W1"
       },
       {
        "text": "a door",
        "audio": "book3/U4_W2.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "一扇门",
-       "meaning": "一扇门"
+       "meaning": "一扇门",
+       "id": "U4_W2"
       },
       {
        "text": "a window",
        "audio": "book3/U4_W3.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "一扇窗",
-       "meaning": "一扇窗"
+       "meaning": "一扇窗",
+       "id": "U4_W3"
       },
       {
        "text": "a desk",
        "audio": "book3/U4_W4.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "一张桌子",
-       "meaning": "一张桌子"
+       "meaning": "一张桌子",
+       "id": "U4_W4"
       },
       {
        "text": "a chair",
        "audio": "book3/U4_W5.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "一把椅子",
-       "meaning": "一把椅子"
+       "meaning": "一把椅子",
+       "id": "U4_W5"
       },
       {
        "text": "A minute, please.",
        "audio": "book3/U4_W6.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "请给我一分钟，",
-       "meaning": "请给我一分钟，"
+       "meaning": "请给我一分钟，",
+       "id": "U4_W6"
       },
       {
        "text": "blackboard",
        "audio": "book3/U4_W7.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "1. 黑板",
-       "meaning": "1. 黑板"
+       "meaning": "1. 黑板",
+       "id": "U4_W7"
       },
       {
        "text": "door",
        "audio": "book3/U4_W8.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "2. 门",
-       "meaning": "2. 门"
+       "meaning": "2. 门",
+       "id": "U4_W8"
       },
       {
        "text": "window",
        "audio": "book3/U4_W9.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "3. 窗",
-       "meaning": "3. 窗"
+       "meaning": "3. 窗",
+       "id": "U4_W9"
       },
       {
        "text": "chair",
        "audio": "book3/U4_W10.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "4. 椅子",
-       "meaning": "4. 椅子"
+       "meaning": "4. 椅子",
+       "id": "U4_W10"
       },
       {
        "text": "desk",
        "audio": "book3/U4_W11.mp3",
        "image": "book3/U4_cover.webp",
        "image_desc": "5. 桌子",
-       "meaning": "5. 桌子"
+       "meaning": "5. 桌子",
+       "id": "U4_W11"
       }
      ]
     },
@@ -4080,70 +4135,80 @@
        "audio": "book3/U5_W1.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "语文",
-       "meaning": "语文"
+       "meaning": "语文",
+       "id": "U5_W1"
       },
       {
        "text": "maths",
        "audio": "book3/U5_W2.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "数学",
-       "meaning": "数学"
+       "meaning": "数学",
+       "id": "U5_W2"
       },
       {
        "text": "English",
        "audio": "book3/U5_W3.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "英语",
-       "meaning": "英语"
+       "meaning": "英语",
+       "id": "U5_W3"
       },
       {
        "text": "art",
        "audio": "book3/U5_W4.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "美术；艺术",
-       "meaning": "美术；艺术"
+       "meaning": "美术；艺术",
+       "id": "U5_W4"
       },
       {
        "text": "Timetable",
        "audio": "book3/U5_W5.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "时刻表",
-       "meaning": "时刻表"
+       "meaning": "时刻表",
+       "id": "U5_W5"
       },
       {
        "text": "Mon.",
        "audio": "book3/U5_W6.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "星期一",
-       "meaning": "星期一"
+       "meaning": "星期一",
+       "id": "U5_W6"
       },
       {
        "text": "Tue.",
        "audio": "book3/U5_W7.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "星期二",
-       "meaning": "星期二"
+       "meaning": "星期二",
+       "id": "U5_W7"
       },
       {
        "text": "Wed.",
        "audio": "book3/U5_W8.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "星期三",
-       "meaning": "星期三"
+       "meaning": "星期三",
+       "id": "U5_W8"
       },
       {
        "text": "Thu.",
        "audio": "book3/U5_W9.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "星期四",
-       "meaning": "星期四"
+       "meaning": "星期四",
+       "id": "U5_W9"
       },
       {
        "text": "Fri.",
        "audio": "book3/U5_W10.mp3",
        "image": "book3/U5_cover.webp",
        "image_desc": "星期五",
-       "meaning": "星期五"
+       "meaning": "星期五",
+       "id": "U5_W10"
       }
      ]
     },
@@ -4279,98 +4344,112 @@
        "audio": "book3/U6_W1.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期天",
-       "meaning": "星期天"
+       "meaning": "星期天",
+       "id": "U6_W1"
       },
       {
        "text": "Monday",
        "audio": "book3/U6_W2.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期一",
-       "meaning": "星期一"
+       "meaning": "星期一",
+       "id": "U6_W2"
       },
       {
        "text": "Tuesday",
        "audio": "book3/U6_W3.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期二",
-       "meaning": "星期二"
+       "meaning": "星期二",
+       "id": "U6_W3"
       },
       {
        "text": "Wednesday",
        "audio": "book3/U6_W4.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期三",
-       "meaning": "星期三"
+       "meaning": "星期三",
+       "id": "U6_W4"
       },
       {
        "text": "Thursday",
        "audio": "book3/U6_W5.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期四",
-       "meaning": "星期四"
+       "meaning": "星期四",
+       "id": "U6_W5"
       },
       {
        "text": "Friday",
        "audio": "book3/U6_W6.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期五",
-       "meaning": "星期五"
+       "meaning": "星期五",
+       "id": "U6_W6"
       },
       {
        "text": "Saturday",
        "audio": "book3/U6_W7.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期六",
-       "meaning": "星期六"
+       "meaning": "星期六",
+       "id": "U6_W7"
       },
       {
        "text": "Sun.",
        "audio": "book3/U6_W8.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期天",
-       "meaning": "星期天"
+       "meaning": "星期天",
+       "id": "U6_W8"
       },
       {
        "text": "Mon.",
        "audio": "book3/U6_W9.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期一",
-       "meaning": "星期一"
+       "meaning": "星期一",
+       "id": "U6_W9"
       },
       {
        "text": "Tue.",
        "audio": "book3/U6_W10.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期二",
-       "meaning": "星期二"
+       "meaning": "星期二",
+       "id": "U6_W10"
       },
       {
        "text": "Wed.",
        "audio": "book3/U6_W11.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期三",
-       "meaning": "星期三"
+       "meaning": "星期三",
+       "id": "U6_W11"
       },
       {
        "text": "Thu.",
        "audio": "book3/U6_W12.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期四",
-       "meaning": "星期四"
+       "meaning": "星期四",
+       "id": "U6_W12"
       },
       {
        "text": "Fri.",
        "audio": "book3/U6_W13.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期五",
-       "meaning": "星期五"
+       "meaning": "星期五",
+       "id": "U6_W13"
       },
       {
        "text": "Sat.",
        "audio": "book3/U6_W14.mp3",
        "image": "book3/U6_cover.webp",
        "image_desc": "星期六",
-       "meaning": "星期六"
+       "meaning": "星期六",
+       "id": "U6_W14"
       }
      ]
     }
@@ -4698,35 +4777,40 @@
        "audio": "book4/U1_W1.mp3",
        "image": "book4/U1_cover.webp",
        "image_desc": "高的",
-       "meaning": "高的"
+       "meaning": "高的",
+       "id": "U1_W1"
       },
       {
        "text": "short",
        "audio": "book4/U1_W2.mp3",
        "image": "book4/U1_cover.webp",
        "image_desc": "矮的",
-       "meaning": "矮的"
+       "meaning": "矮的",
+       "id": "U1_W2"
       },
       {
        "text": "young",
        "audio": "book4/U1_W3.mp3",
        "image": "book4/U1_cover.webp",
        "image_desc": "年轻的",
-       "meaning": "年轻的"
+       "meaning": "年轻的",
+       "id": "U1_W3"
       },
       {
        "text": "old",
        "audio": "book4/U1_W4.mp3",
        "image": "book4/U1_cover.webp",
        "image_desc": "年老的",
-       "meaning": "年老的"
+       "meaning": "年老的",
+       "id": "U1_W4"
       },
       {
        "text": "strong",
        "audio": "book4/U1_W5.mp3",
        "image": "book4/U1_cover.webp",
        "image_desc": "强壮的",
-       "meaning": "强壮的"
+       "meaning": "强壮的",
+       "id": "U1_W5"
       }
      ]
     },
@@ -5110,42 +5194,48 @@
        "audio": "book4/U2_W1.mp3",
        "image": "book4/U2_cover.webp",
        "image_desc": "一件衬衫",
-       "meaning": "一件衬衫"
+       "meaning": "一件衬衫",
+       "id": "U2_W1"
       },
       {
        "text": "a jacket",
        "audio": "book4/U2_W2.mp3",
        "image": "book4/U2_cover.webp",
        "image_desc": "一件夹克",
-       "meaning": "一件夹克"
+       "meaning": "一件夹克",
+       "id": "U2_W2"
       },
       {
        "text": "a skirt",
        "audio": "book4/U2_W3.mp3",
        "image": "book4/U2_cover.webp",
        "image_desc": "一条短裙",
-       "meaning": "一条短裙"
+       "meaning": "一条短裙",
+       "id": "U2_W3"
       },
       {
        "text": "a sweater",
        "audio": "book4/U2_W4.mp3",
        "image": "book4/U2_cover.webp",
        "image_desc": "一件毛衣",
-       "meaning": "一件毛衣"
+       "meaning": "一件毛衣",
+       "id": "U2_W4"
       },
       {
        "text": "a coat",
        "audio": "book4/U2_W5.mp3",
        "image": "book4/U2_cover.webp",
        "image_desc": "一件外套",
-       "meaning": "一件外套"
+       "meaning": "一件外套",
+       "id": "U2_W5"
       },
       {
        "text": "a dress",
        "audio": "book4/U2_W6.mp3",
        "image": "book4/U2_cover.webp",
        "image_desc": "5. 一条连衣裙",
-       "meaning": "5. 一条连衣裙"
+       "meaning": "5. 一条连衣裙",
+       "id": "U2_W6"
       }
      ]
     },
@@ -5321,42 +5411,48 @@
        "audio": "book4/U3_W1.mp3",
        "image": "book4/U3_cover.webp",
        "image_desc": "晴朗的",
-       "meaning": "晴朗的"
+       "meaning": "晴朗的",
+       "id": "U3_W1"
       },
       {
        "text": "cloudy",
        "audio": "book4/U3_W2.mp3",
        "image": "book4/U3_cover.webp",
        "image_desc": "多云的",
-       "meaning": "多云的"
+       "meaning": "多云的",
+       "id": "U3_W2"
       },
       {
        "text": "windy",
        "audio": "book4/U3_W3.mp3",
        "image": "book4/U3_cover.webp",
        "image_desc": "有风的",
-       "meaning": "有风的"
+       "meaning": "有风的",
+       "id": "U3_W3"
       },
       {
        "text": "rainy",
        "audio": "book4/U3_W4.mp3",
        "image": "book4/U3_cover.webp",
        "image_desc": "下雨的",
-       "meaning": "下雨的"
+       "meaning": "下雨的",
+       "id": "U3_W4"
       },
       {
        "text": "snowy",
        "audio": "book4/U3_W5.mp3",
        "image": "book4/U3_cover.webp",
        "image_desc": "下雪的",
-       "meaning": "下雪的"
+       "meaning": "下雪的",
+       "id": "U3_W5"
       },
       {
        "text": "Sure.",
        "audio": "book4/U3_W6.mp3",
        "image": "book4/U3_cover.webp",
        "image_desc": "—当然。",
-       "meaning": "—当然。"
+       "meaning": "—当然。",
+       "id": "U3_W6"
       }
      ]
     },
@@ -5660,14 +5756,16 @@
        "audio": "book4/U4_W1.mp3",
        "image": "book4/U4_cover.webp",
        "image_desc": "乘坐⋯⋯",
-       "meaning": "乘坐⋯⋯"
+       "meaning": "乘坐⋯⋯",
+       "id": "U4_W1"
       },
       {
        "text": "I ...",
        "audio": "book4/U4_W2.mp3",
        "image": "book4/U4_cover.webp",
        "image_desc": "我乘船去海南。",
-       "meaning": "我乘船去海南。"
+       "meaning": "我乘船去海南。",
+       "id": "U4_W2"
       }
      ]
     },
@@ -5827,42 +5925,48 @@
        "audio": "book4/U5_W1.mp3",
        "image": "book4/U5_cover.webp",
        "image_desc": "一间客厅",
-       "meaning": "一间客厅"
+       "meaning": "一间客厅",
+       "id": "U5_W1"
       },
       {
        "text": "a dining room",
        "audio": "book4/U5_W2.mp3",
        "image": "book4/U5_cover.webp",
        "image_desc": "一个餐厅",
-       "meaning": "一个餐厅"
+       "meaning": "一个餐厅",
+       "id": "U5_W2"
       },
       {
        "text": "a bathroom",
        "audio": "book4/U5_W3.mp3",
        "image": "book4/U5_cover.webp",
        "image_desc": "一间浴室",
-       "meaning": "一间浴室"
+       "meaning": "一间浴室",
+       "id": "U5_W3"
       },
       {
        "text": "a study",
        "audio": "book4/U5_W4.mp3",
        "image": "book4/U5_cover.webp",
        "image_desc": "一间书房",
-       "meaning": "一间书房"
+       "meaning": "一间书房",
+       "id": "U5_W4"
       },
       {
        "text": "a kitchen",
        "audio": "book4/U5_W5.mp3",
        "image": "book4/U5_cover.webp",
        "image_desc": "一个厨房",
-       "meaning": "一个厨房"
+       "meaning": "一个厨房",
+       "id": "U5_W5"
       },
       {
        "text": "a bedroom",
        "audio": "book4/U5_W6.mp3",
        "image": "book4/U5_cover.webp",
        "image_desc": "6. 一间卧室",
-       "meaning": "6. 一间卧室"
+       "meaning": "6. 一间卧室",
+       "id": "U5_W6"
       }
      ]
     },
