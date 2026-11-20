@@ -36,4 +36,17 @@ class BackupService {
     return '${n.year}${two(n.month)}${two(n.day)}_'
         '${two(n.hour)}${two(n.minute)}${two(n.second)}';
   }
+
+  /// 让用户从系统文件选择器挑一份备份 json 读回来。
+  /// 走 SAF，不需要存储权限；下载目录、微信、网盘收到的备份都能选。
+  /// 用户取消时返回 null。
+  static Future<String?> pickBackupFile() async {
+    try {
+      return await _channel.invokeMethod<String>('pickBackupText');
+    } catch (e, st) {
+      AppLog.append('backup', '从文件选择备份失败: $e');
+      unawaited(Future.microtask(() => AppLog.error(e, st)));
+      return null;
+    }
+  }
 }

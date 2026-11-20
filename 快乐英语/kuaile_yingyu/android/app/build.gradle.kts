@@ -1,7 +1,19 @@
+// 正式签名：android/key.properties 存在且指向有效 keystore 时用它，
+// 否则回退 debug 签名（保证 clone 下来没密钥的人也能构建）。
+// key.properties / *.jks 都在 .gitignore 里，永远不进仓库。
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+}
+
+val keystoreProperties = Properties()
+val keystorePropertiesFile = rootProject.file("key.properties")
+val hasReleaseKey = keystorePropertiesFile.exists().also { ok ->
+    if (ok) keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 
 android {
@@ -33,11 +45,25 @@ android {
         }
     }
 
+    signingConfigs {
+        if (hasReleaseKey) {
+            create("release") {
+                keyAlias = keystoreProperties["keyAlias"] as String
+                keyPassword = keystoreProperties["keyPassword"] as String
+                storeFile = file(keystoreProperties["storeFile"] as String)
+                storePassword = keystoreProperties["storePassword"] as String
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            // 有正式密钥就用它；没有则回退 debug（CI 上没配 secrets 时也能出包）
+            signingConfig = if (hasReleaseKey) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
+            }
             // Vosk 的 JNA 依赖依赖反射访问字段，R8 混淆会导致运行时 UnsatisfiedLinkError。
             // 自用 APK 不需要缩减/混淆，显式关闭。
             isMinifyEnabled = false

@@ -2,6 +2,7 @@ package com.example.kuaile_yingyu
 
 import android.content.ContentUris
 import android.content.ContentValues
+import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
@@ -23,6 +24,29 @@ class MainActivity : FlutterActivity() {
     private val channelName = "kuaile_recordings"
     private val folderName = "快乐英语录音"
     private val backupFolderName = "快乐英语备份"
+
+    private var pendingOpen: MethodChannel.Result? = null
+    private val pickRequestCode = 1001
+
+    /// 系统文件选择器回传：把选中的 json 读成字符串交回 Dart
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode != pickRequestCode) return
+        val r = pendingOpen
+        pendingOpen = null
+        val uri = if (resultCode == RESULT_OK) data?.data else null
+        if (uri == null) {
+            r?.success(null)
+            return
+        }
+        try {
+            val text = contentResolver.openInputStream(uri)
+                ?.use { it.readBytes().toString(Charsets.UTF_8) }
+            r?.success(text)
+        } catch (e: Exception) {
+            r?.error("READ_FAIL", e.message ?: "读取备份失败", null)
+        }
+    }
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -62,6 +86,25 @@ class MainActivity : FlutterActivity() {
                             result.error("BAD_ARG", "missing fileName/content", null)
                         } else {
                             result.success(saveText(fileName, content))
+                        }
+                    }
+                    // 让用户从系统文件选择器挑一份备份 json（无需存储权限，
+                    // 下载目录、微信、网盘里的都能选）
+                    "pickBackupText" -> {
+                        pendingOpen = result
+                        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                            addCategory(Intent.CATEGORY_OPENABLE)
+                            type = "*/*"
+                            putExtra(
+                                Intent.EXTRA_MIME_TYPES,
+                                arrayOf("application/json", "text/plain", "application/octet-stream")
+                            )
+                        }
+                        try {
+                            startActivityForResult(intent, pickRequestCode)
+                        } catch (e: Exception) {
+                            pendingOpen = null
+                            result.error("NO_PICKER", e.message ?: "没有可用的文件选择器", null)
                         }
                     }
                     else -> result.notImplemented()

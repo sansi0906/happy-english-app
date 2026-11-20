@@ -58,5 +58,11 @@ _教材录音/
 # ===== 跟读录音导出（孩子原声，仅本地保留） =====
 快乐英语/录音导出/
 
+# ===== 签名密钥（严禁入库：泄露即可被人冒名发布更新） =====
+快乐英语/kuaile_yingyu/android/key.properties
+快乐英语/kuaile_yingyu/android/app/*.jks
+*.jks
+*.keystore
+
 # 本地备份
 _backup/

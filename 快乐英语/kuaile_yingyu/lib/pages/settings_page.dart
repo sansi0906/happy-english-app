@@ -89,11 +89,13 @@ class _SettingsPageState extends State<SettingsPage> {
     }
   }
 
-  /// 从备份恢复：先选一份，再确认，恢复后重新加载
+  /// 从备份恢复：本机自动备份可选；
+  /// 换机/重装后本机备份会随 App 一起消失，只能靠之前导出的 json 文件，
+  /// 那条走系统文件选择器（不需要存储权限，微信/网盘收到的也行）。
   Future<void> _restoreFlow() async {
-    List<({String name, DateTime time, int count})> backups;
+    List<({String name, DateTime time, int count})> local;
     try {
-      backups = await ProgressDb.listBackups();
+      local = await ProgressDb.listBackups();
     } catch (e, st) {
       AppLog.error(e, st);
       if (!mounted) return;
@@ -103,12 +105,9 @@ class _SettingsPageState extends State<SettingsPage> {
       return;
     }
     if (!mounted) return;
-    if (backups.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('本机还没有备份，先点一次「备份学习记录」')),
-      );
-      return;
-    }
+    local.sort((a, b) => b.time.compareTo(a.time));
+
+    // 选中的结果：本机某份备份（name 非空），或要求从文件导入（name 为空）
     final picked = await showDialog<({String name, DateTime time, int count})>(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -121,19 +120,38 @@ class _SettingsPageState extends State<SettingsPage> {
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                for (final b in backups)
-                  ListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text('${b.time.year}/${b.time.month}/${b.time.day} '
-                        '${b.time.hour}:${b.time.minute.toString().padLeft(2, '0')}',
-                        style: const TextStyle(fontSize: 17, color: kDark)),
-                    subtitle: Text('${b.count} 条记录',
-                        style: const TextStyle(fontSize: 14, color: kMuted)),
-                    trailing: const Icon(Icons.chevron_right_rounded,
-                        color: kMuted),
-                    onTap: () => Navigator.pop(ctx, b),
-                  ),
+                if (local.isEmpty)
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 8),
+                    child: Text('本机还没有自动备份',
+                        style: TextStyle(fontSize: 15, color: kMuted)),
+                  )
+                else
+                  for (final b in local)
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: Text('${b.time.year}/${b.time.month}/${b.time.day} '
+                          '${b.time.hour}:${b.time.minute.toString().padLeft(2, '0')}',
+                          style: const TextStyle(fontSize: 17, color: kDark)),
+                      subtitle: Text('${b.count} 条记录',
+                          style: const TextStyle(fontSize: 14, color: kMuted)),
+                      trailing: const Icon(Icons.chevron_right_rounded,
+                          color: kMuted),
+                      onTap: () => Navigator.pop(ctx, b),
+                    ),
+                const Divider(height: 20),
+                ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.folder_open_rounded, color: kGreen),
+                  title: const Text('从手机文件里选…',
+                      style: TextStyle(fontSize: 17, color: kDark)),
+                  subtitle: const Text('之前导出的 json 备份（下载、微信里都行）',
+                      style: TextStyle(fontSize: 14, color: kMuted)),
+                  onTap: () => Navigator.pop(
+                      ctx, (name: '', time: DateTime.now(), count: -1)),
+                ),
               ],
             ),
           ),
@@ -149,16 +167,35 @@ class _SettingsPageState extends State<SettingsPage> {
     );
     if (picked == null || !mounted) return;
 
+    // 从文件导入：先选文件读到内容，再二次确认
+    String? fileText;
+    if (picked.name.isEmpty) {
+      fileText = await BackupService.pickBackupFile();
+      if (fileText == null) {
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('没有选到备份文件')),
+        );
+        return;
+      }
+    }
+    if (!mounted) return;
+
     final ok = await _confirm(
       title: '恢复到这份备份？',
-      body: '当前 $_learned 条学习记录会被替换成备份里的 ${picked.count} 条。'
+      body: '当前 $_learned 条学习记录会被替换成备份里的内容。'
           '恢复前会先把现在的状态自动存一份，后悔还能找回。',
       okText: '恢复',
     );
     if (ok != true) return;
 
     try {
-      final n = await ProgressDb.restoreFromBackup(picked.name);
+      final int n;
+      if (fileText != null) {
+        n = await ProgressDb.restoreFromJson(fileText);
+      } else {
+        n = await ProgressDb.restoreFromBackup(picked.name);
+      }
       await _loadAll();
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(

@@ -105,7 +105,9 @@ def probe(path):
 
 
 bad_audio = []
-slow_missing, slow_bad = [], []
+# 慢速版音频（*_slow.mp3）在 V1.5.4 已整体下线：跟读页不再提供慢速示范，
+# AudioService 也删掉了 slow 分支，884 条 slow 文件一并移除（省 20MB）。
+# 因此这里不再要求"每句都必须有慢速版"，改为反过来卡"不能有遗留 slow 文件"。
 for b in DATA['books']:
     for u in b['units']:
         for it in u['sentences'] + u['words']:
@@ -126,24 +128,8 @@ for b in DATA['books']:
                 bad_audio.append((it['audio'], '首尾静音过大 lead %.2f tail %.2f' % (r['lead'], r['tail'])))
             if r['peak'] < 2000:
                 bad_audio.append((it['audio'], '音量过低 peak=%d' % r['peak']))
-            sp = ap.replace('.mp3', '_slow.mp3')
-            if it in u['sentences']:
-                if not os.path.exists(sp):
-                    slow_missing.append(it['audio'])
-                else:
-                    r2 = probe(sp)
-                    if r2 is None:
-                        slow_bad.append((it['audio'], '慢速解码失败'))
-                    elif r2['dur'] < 0.2:
-                        slow_bad.append((it['audio'], '慢速时长异常'))
-                    elif r2['dur'] / r['dur'] < 1.05:
-                        slow_bad.append((it['audio'], '慢速比例 %.2f 未变慢' % (r2['dur'] / r['dur'])))
 for a, m in bad_audio:
     p('AUDIO', '%s %s' % (a, m))
-for a in slow_missing:
-    p('SLOW', '缺慢速版 %s' % a)
-for a, m in slow_bad:
-    p('SLOW', '%s %s' % (a, m))
 
 # ---------- 5. 图片 ----------
 big_img = []
