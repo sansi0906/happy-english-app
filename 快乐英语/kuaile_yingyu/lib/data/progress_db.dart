@@ -208,6 +208,37 @@ class ProgressDb {
     await db.delete('progress');
   }
 
+  // ---- 弱项复习（错题本）----
+
+  /// 默认合格线：跟读分数低于它就算"还没练熟"，会进复习队列。
+  /// 定在 70 是因为三档星级里 2 星大致对应这个区间，
+  /// 家长看到的「1 颗星」基本都是这里捞出来的。
+  static const double passScore = 70;
+
+  /// 取需要再练的项：练过（done=1）且有分数、但分数低于 [below]。
+  /// 返回按「分低的排前面、同分放得久的排前面」排好序。
+  static Future<List<Map<String, dynamic>>> weakItems(
+      {double below = passScore}) async {
+    final db = await _open();
+    return db.query(
+      'progress',
+      where: 'done = 1 AND score >= 0 AND score < ?',
+      whereArgs: [below],
+      orderBy: 'score ASC, updated ASC',
+    );
+  }
+
+  /// 复习队列条数（首页角标用，不必拉全表）
+  static Future<int> weakCount({double below = passScore}) async {
+    final db = await _open();
+    final rows = await db.rawQuery(
+      'SELECT COUNT(*) AS c FROM progress '
+      'WHERE done = 1 AND score >= 0 AND score < ?',
+      [below],
+    );
+    return (rows.first['c'] as int?) ?? 0;
+  }
+
   // ---- 知识卡去重 ----
 
   /// 记录一道已出过的知识卡

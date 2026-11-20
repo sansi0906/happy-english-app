@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../data/content_loader.dart';
 import '../data/models.dart';
+import '../data/progress_db.dart';
 import '../main.dart';
 import '../widgets/safe_tap.dart';
 import 'book_page.dart';
+import 'review_page.dart';
 import 'settings_page.dart';
 
 /// 首页 V2：年级选择改成两列网格，一屏看全，不再让家长滚半天。
@@ -19,6 +21,8 @@ class _HomePageState extends State<HomePage> {
   ContentData? _data;
   bool _loading = true;
   String? _error;
+  /// 待复习条数（右上角角标）；失败不影响首页，按 0 处理
+  int _weak = 0;
 
   @override
   void initState() {
@@ -29,9 +33,16 @@ class _HomePageState extends State<HomePage> {
   Future<void> _load() async {
     try {
       final d = await ContentLoader.load();
+      int weak = 0;
+      try {
+        weak = await ProgressDb.weakCount();
+      } catch (_) {
+        // 进度库读不出来时只需要没有角标，不必影响首页
+      }
       if (mounted) {
         setState(() {
           _data = d;
+          _weak = weak;
           _loading = false;
         });
       }
@@ -43,6 +54,16 @@ class _HomePageState extends State<HomePage> {
         });
       }
     }
+  }
+
+  /// 从复习页返回后刷新角标（练达标了数量会减少）
+  Future<void> _openReview() async {
+    await Navigator.of(context)
+        .push(MaterialPageRoute(builder: (_) => const ReviewPage()));
+    try {
+      final weak = await ProgressDb.weakCount();
+      if (mounted) setState(() => _weak = weak);
+    } catch (_) {}
   }
 
   @override
@@ -122,6 +143,19 @@ class _HomePageState extends State<HomePage> {
                             color: kGreen)),
                   ),
                   const Spacer(),
+                  // 再练一遍：有弱项时右上角带数量角标
+                  IconButton(
+                    tooltip: '再练一遍',
+                    icon: Badge(
+                      isLabelVisible: _weak > 0,
+                      label: Text('$_weak'),
+                      backgroundColor: kOrange,
+                      textColor: kWhite,
+                      child: const Icon(Icons.replay_rounded,
+                          color: kDark, size: 28),
+                    ),
+                    onPressed: _openReview,
+                  ),
                   IconButton(
                     tooltip: '设置',
                     icon: const Icon(Icons.settings_outlined,
