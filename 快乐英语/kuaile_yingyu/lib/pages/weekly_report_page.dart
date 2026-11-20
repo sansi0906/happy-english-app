@@ -325,7 +325,7 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
             color: kOrange,
             label: '平均分',
             value: _avgScore == null ? '—' : _avgScore!.round().toString(),
-            sub: _avgScore == null ? '还没有分数' : '合格线 70',
+            sub: _avgScore == null ? '还没有分数' : '满分 100 · 三星 85',
           ),
         ),
         const SizedBox(width: 10),

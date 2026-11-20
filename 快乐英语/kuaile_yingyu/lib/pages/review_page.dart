@@ -166,7 +166,7 @@ class _ReviewPageState extends State<ReviewPage> {
                       fontSize: 24, fontWeight: FontWeight.w700, color: kDark)),
               const SizedBox(height: 8),
               const Text(
-                '跟读分数低于 70 分的句子会自动收到这里，\n练到 70 分以上就会消失。',
+                '跟读没拿到三星的句子会自动收到这里，\n练到三星就会消失。',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, color: kMuted, height: 1.6),
               ),

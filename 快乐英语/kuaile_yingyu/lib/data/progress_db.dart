@@ -284,21 +284,23 @@ class ProgressDb {
 
   // ---- 弱项复习（错题本）----
 
-  /// 默认合格线：跟读分数低于它就算"还没练熟"，会进复习队列。
-  /// 定在 70 是因为三档星级里 2 星大致对应这个区间，
-  /// 家长看到的「1 颗星」基本都是这里捞出来的。
-  static const double passScore = 70;
+  /// 合格线 = 三星线。家长口径（2026-11-20 定）：
+  /// 「有一次三星就从错题本移除」，所以低于三档三星的 85 分才算没练熟。
+  static const double passScore = 85; // = starsForDisplay() 的三星门槛
 
-  /// 取需要再练的项：练过（done=1）且有分数、但分数低于 [below]。
+  /// 取需要再练的项：练过（done=1）、有分数、最新分数低于 [below]，
+  /// 且**从来没拿过三星**——只要流水里有一次三星，这条就永久出队。
   /// 返回按「分低的排前面、同分放得久的排前面」排好序。
   static Future<List<Map<String, dynamic>>> weakItems(
       {double below = passScore}) async {
     final db = await _open();
-    return db.query(
-      'progress',
-      where: 'done = 1 AND score >= 0 AND score < ?',
-      whereArgs: [below],
-      orderBy: 'score ASC, updated ASC',
+    return db.rawQuery(
+      'SELECT p.* FROM progress p '
+      'WHERE p.done = 1 AND p.score >= 0 AND p.score < ? '
+      'AND NOT EXISTS (SELECT 1 FROM attempts a '
+      '  WHERE a.item_id = p.item_id AND (a.stars >= 3 OR a.score >= ?)) '
+      'ORDER BY p.score ASC, p.updated ASC',
+      [below, below],
     );
   }
 
@@ -306,9 +308,11 @@ class ProgressDb {
   static Future<int> weakCount({double below = passScore}) async {
     final db = await _open();
     final rows = await db.rawQuery(
-      'SELECT COUNT(*) AS c FROM progress '
-      'WHERE done = 1 AND score >= 0 AND score < ?',
-      [below],
+      'SELECT COUNT(*) AS c FROM progress p '
+      'WHERE p.done = 1 AND p.score >= 0 AND p.score < ? '
+      'AND NOT EXISTS (SELECT 1 FROM attempts a '
+      '  WHERE a.item_id = p.item_id AND (a.stars >= 3 OR a.score >= ?))',
+      [below, below],
     );
     return (rows.first['c'] as int?) ?? 0;
   }
