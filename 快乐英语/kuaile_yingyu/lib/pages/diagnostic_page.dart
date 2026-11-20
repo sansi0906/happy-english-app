@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../main.dart';
 import '../services/app_log.dart';
+import '../widgets/safe_tap.dart';
 
 /// 诊断日志页（V1.5.5）
 /// 家长把这里的内容整段复制发过来，就能定位"录音没存上""音频没声音"这类问题。
@@ -116,30 +117,43 @@ class _DiagnosticPageState extends State<DiagnosticPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: OutlinedButton.icon(
-                    onPressed: _loading ? null : _copy,
-                    icon: const Icon(Icons.copy_rounded, size: 18),
-                    label: const Text('复制全部'),
-                    style: OutlinedButton.styleFrom(
-                      minimumSize: const Size.fromHeight(48),
-                      foregroundColor: kGreen,
-                      side: const BorderSide(color: kLine),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14)),
+                  child: SafeTap(
+                    borderRadius: BorderRadius.circular(14),
+                    onTap: _loading ? () {} : _copy,
+                    child: Container(
+                      height: 48,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(color: kLine),
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.copy_rounded, size: 18, color: kGreen),
+                          SizedBox(width: 6),
+                          Text('复制全部',
+                              style: TextStyle(fontSize: 15, color: kGreen)),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 const SizedBox(width: 10),
-                OutlinedButton(
-                  onPressed: _loading ? null : _clear,
-                  style: OutlinedButton.styleFrom(
-                    minimumSize: const Size(96, 48),
-                    foregroundColor: kMuted,
-                    side: const BorderSide(color: kLine),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(14)),
+                SafeTap(
+                  borderRadius: BorderRadius.circular(14),
+                  onTap: _loading ? () {} : _clear,
+                  child: Container(
+                    width: 96,
+                    height: 48,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: kLine),
+                    ),
+                    child: const Text('清空',
+                        style: TextStyle(fontSize: 15, color: kMuted)),
                   ),
-                  child: const Text('清空'),
                 ),
               ],
             ),

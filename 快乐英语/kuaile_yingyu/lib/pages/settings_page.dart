@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../data/progress_db.dart';
 import '../main.dart';
+import '../services/app_log.dart';
+import '../services/backup_service.dart';
 import '../services/recordings_store.dart';
 import '../widgets/safe_tap.dart';
 import 'diagnostic_page.dart';
@@ -26,6 +28,7 @@ class _SettingsPageState extends State<SettingsPage> {
   int _learned = 0;
   ({int count, int bytes, bool error}) _recStats =
       (count: 0, bytes: 0, error: false);
+  DateTime? _lastBackup;
 
   @override
   void initState() {
@@ -37,13 +40,137 @@ class _SettingsPageState extends State<SettingsPage> {
     final name = await ProgressDb.getSetting('child_name', def: '小朋友');
     final rec = await RecordingsStore.stats();
     final all = await ProgressDb.getAll();
+    final lb = await ProgressDb.lastBackupAt();
     if (!mounted) return;
     setState(() {
       _nameCtrl.text = name;
       _nameLoaded = true;
       _recStats = rec;
       _learned = all.length;
+      _lastBackup = lb;
     });
+  }
+
+  /// "3 天前" / "今天 09:12" 这类人话时间
+  String _agoText(DateTime? t) {
+    if (t == null) return '还没备份过';
+    final now = DateTime.now();
+    final days = now.difference(t).inDays;
+    if (days <= 0) {
+      final two = t.minute.toString().padLeft(2, '0');
+      return '今天 ${t.hour}:$two';
+    }
+    if (days == 1) return '昨天';
+    if (days < 30) return '$days 天前';
+    return '${t.year}/${t.month}/${t.day}';
+  }
+
+  /// 备份一次：本地留档 + 导出到下载目录（方便转发/换机）
+  Future<void> _backupNow() async {
+    try {
+      await ProgressDb.backupNow();
+      final path = await BackupService.exportToDownloads();
+      await _loadAll();
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(path == null
+              ? '已备份到本机（导出到下载目录失败，请看诊断日志）'
+              : '已备份，文件在 $path'),
+          duration: const Duration(seconds: 3),
+        ),
+      );
+    } catch (e, st) {
+      AppLog.error(e, st);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('备份失败：$e')),
+      );
+    }
+  }
+
+  /// 从备份恢复：先选一份，再确认，恢复后重新加载
+  Future<void> _restoreFlow() async {
+    List<({String name, DateTime time, int count})> backups;
+    try {
+      backups = await ProgressDb.listBackups();
+    } catch (e, st) {
+      AppLog.error(e, st);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('读取备份列表失败：$e')),
+      );
+      return;
+    }
+    if (!mounted) return;
+    if (backups.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('本机还没有备份，先点一次「备份学习记录」')),
+      );
+      return;
+    }
+    final picked = await showDialog<({String name, DateTime time, int count})>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: kBgColor,
+        title: const Text('选择要恢复的备份',
+            style: TextStyle(
+                fontSize: 21, fontWeight: FontWeight.w700, color: kDark)),
+        content: SizedBox(
+          width: double.infinity,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final b in backups)
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    title: Text('${b.time.year}/${b.time.month}/${b.time.day} '
+                        '${b.time.hour}:${b.time.minute.toString().padLeft(2, '0')}',
+                        style: const TextStyle(fontSize: 17, color: kDark)),
+                    subtitle: Text('${b.count} 条记录',
+                        style: const TextStyle(fontSize: 14, color: kMuted)),
+                    trailing: const Icon(Icons.chevron_right_rounded,
+                        color: kMuted),
+                    onTap: () => Navigator.pop(ctx, b),
+                  ),
+              ],
+            ),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('取消',
+                style: TextStyle(fontSize: 17, color: kMuted)),
+          ),
+        ],
+      ),
+    );
+    if (picked == null || !mounted) return;
+
+    final ok = await _confirm(
+      title: '恢复到这份备份？',
+      body: '当前 $_learned 条学习记录会被替换成备份里的 ${picked.count} 条。'
+          '恢复前会先把现在的状态自动存一份，后悔还能找回。',
+      okText: '恢复',
+    );
+    if (ok != true) return;
+
+    try {
+      final n = await ProgressDb.restoreFromBackup(picked.name);
+      await _loadAll();
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('已恢复 $n 条学习记录')),
+      );
+    } catch (e, st) {
+      AppLog.error(e, st);
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('恢复失败：$e')),
+      );
+    }
   }
 
   Future<void> _saveName() async {
@@ -216,6 +343,30 @@ class _SettingsPageState extends State<SettingsPage> {
                   title: '已学内容',
                   sub: '课文点读、单词和跟读的合计',
                   value: '$_learned 项',
+                ),
+                const Divider(height: 1, color: kLine),
+                _StatRow(
+                  icon: Icons.shield_outlined,
+                  color: kGreen,
+                  title: '上次备份',
+                  sub: '每 3 天自动备一次，换机前手动备一次',
+                  value: _agoText(_lastBackup),
+                ),
+                const Divider(height: 1, color: kLine),
+                _ActionRow(
+                  icon: Icons.backup_outlined,
+                  color: kGreen,
+                  title: '备份学习记录',
+                  sub: '存到本机和下载目录，换机、重装都能找回',
+                  onTap: _backupNow,
+                ),
+                const Divider(height: 1, color: kLine),
+                _ActionRow(
+                  icon: Icons.restore_rounded,
+                  color: kBlue,
+                  title: '从备份恢复',
+                  sub: '用之前存下的记录覆盖当前进度',
+                  onTap: _restoreFlow,
                 ),
                 const Divider(height: 1, color: kLine),
                 _ActionRow(

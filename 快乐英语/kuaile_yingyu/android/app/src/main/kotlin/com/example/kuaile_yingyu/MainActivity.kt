@@ -22,6 +22,7 @@ import java.util.zip.ZipOutputStream
 class MainActivity : FlutterActivity() {
     private val channelName = "kuaile_recordings"
     private val folderName = "快乐英语录音"
+    private val backupFolderName = "快乐英语备份"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -53,6 +54,16 @@ class MainActivity : FlutterActivity() {
                     }
                     "stats" -> result.success(stats())
                     "exportAll" -> result.success(exportAll())
+                    "saveText" -> {
+                        // 备份文件导出到 Download/快乐英语备份/，家长可自行转发或换机导入
+                        val fileName = call.argument<String>("fileName")
+                        val content = call.argument<String>("content")
+                        if (fileName == null || content == null) {
+                            result.error("BAD_ARG", "missing fileName/content", null)
+                        } else {
+                            result.success(saveText(fileName, content))
+                        }
+                    }
                     else -> result.notImplemented()
                 }
             }
@@ -210,6 +221,40 @@ class MainActivity : FlutterActivity() {
             }
         }
         return "{\"count\":$count,\"bytes\":$bytes}"
+    }
+
+    /// 把一段文本写成文件放到公共 Download/快乐英语备份/。
+    /// 返回给 Dart 的可读路径（如 "Download/快乐英语备份/xxx.json"），失败返回 null。
+    private fun saveText(fileName: String, content: String): String? = try {
+        if (Build.VERSION.SDK_INT >= 29) {
+            val values = ContentValues().apply {
+                put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
+                put(MediaStore.MediaColumns.MIME_TYPE, "application/json")
+                put(
+                    MediaStore.MediaColumns.RELATIVE_PATH,
+                    Environment.DIRECTORY_DOWNLOADS + "/" + backupFolderName
+                )
+                put(MediaStore.MediaColumns.IS_PENDING, 1)
+            }
+            val uri = contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values)
+                ?: return null
+            contentResolver.openOutputStream(uri)?.use { out ->
+                out.write(content.toByteArray(Charsets.UTF_8))
+            } ?: return null
+            values.clear()
+            values.put(MediaStore.MediaColumns.IS_PENDING, 0)
+            contentResolver.update(uri, values, null, null)
+        } else {
+            val dir = File(
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),
+                backupFolderName
+            )
+            if (!dir.exists()) dir.mkdirs()
+            File(dir, fileName).writeText(content, Charsets.UTF_8)
+        }
+        "Download/$backupFolderName/$fileName"
+    } catch (e: Exception) {
+        null
     }
 
     /// 把全部录音 + index.json 打成一个 zip 放到公共 Download 根目录。
