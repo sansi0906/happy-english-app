@@ -170,6 +170,13 @@ class _ReviewPageState extends State<ReviewPage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, color: kMuted, height: 1.6),
               ),
+              // 边界：队列为空但库里有找不到课文的旧记录时，也要说清楚
+              if (_missing > 0) ...[
+                const SizedBox(height: 12),
+                Text('另有 $_missing 条旧记录在当前内容里找不到对应课文，已跳过',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 14, color: kMuted)),
+              ],
             ],
           ),
         ),

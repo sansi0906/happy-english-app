@@ -512,10 +512,11 @@ class ProgressDb {
           }
         }
       }
-      // 练习流水：老备份里没有这一段，有才恢复
+      // 练习流水：备份里有就一起恢复；老备份没有这一段，
+      // 就把当前流水清掉——否则恢复完周报会混着"恢复前"的练习记录。
       final attempts = data['attempts'];
+      await txn.delete('attempts');
       if (attempts is List) {
-        await txn.delete('attempts');
         for (final row in attempts) {
           if (row is Map) {
             await txn.insert('attempts', Map<String, dynamic>.from(row),
@@ -525,8 +526,10 @@ class ProgressDb {
       }
     });
 
-    // 刚恢复完，把自动备份时钟重置，避免立刻又备份一份
-    await setSetting(_kLastBackupAt, DateTime.now().toIso8601String());
+    // 不把 last_backup_at 改写成"现在"：那会让设置页显示一个并不存在的
+    // "上次备份 14:37"，家长点「从备份恢复」时找不到这一份。
+    // 恢复回来的 settings 里带着备份当时的 last_backup_at；
+    // 若它已过期，下次启动 _autoBackup 会真的补一份，时间也是真的。
     return progress.length;
   }
 }

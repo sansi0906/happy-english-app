@@ -205,9 +205,18 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
         if (_needWork.isNotEmpty) ...[
           const Padding(
             padding: EdgeInsets.only(left: 4, bottom: 10),
-            child: Text('最需要补的几句',
-                style: TextStyle(
-                    fontSize: 19, fontWeight: FontWeight.w700, color: kDark)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('最需要补的几句',
+                    style: TextStyle(
+                        fontSize: 19, fontWeight: FontWeight.w700, color: kDark),
+                ),
+                SizedBox(height: 2),
+                Text('按已练过的分数排的，不限本周',
+                    style: TextStyle(fontSize: 13, color: kMuted)),
+              ],
+            ),
           ),
           for (final w in _needWork)
             Padding(
@@ -348,7 +357,7 @@ class _WeeklyReportPageState extends State<WeeklyReportPage> {
       padding: const EdgeInsets.only(top: 10, left: 4),
       child: Text(
         '统计只保存在这台手机上，不上传。\n'
-        '数据从 V1.5.8 开始逐次记录，之前的老记录按最后一次练习计入。',
+        '每次跟读都会记一次；更早之前的练习只按最后一次的成绩计入。',
         style: const TextStyle(fontSize: 13, color: kMuted, height: 1.6),
       ),
     );

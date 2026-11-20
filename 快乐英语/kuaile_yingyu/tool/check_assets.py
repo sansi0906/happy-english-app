@@ -14,6 +14,19 @@ def p(kind, msg):
     problems.append((kind, msg))
 
 
+# ---------- 0. 版本号一致性 ----------
+# 设置页「关于」里显示的版本来自 lib/data/app_meta.dart 的 kAppVersion，
+# 忘了改就会像 v1.6.0 的包还显示 v1.0.0 那样露馅，所以在这里卡住。
+import re
+_pubspec = open(os.path.join(APP, 'pubspec.yaml'), encoding='utf-8').read()
+_pv = re.search(r'^version:\s*([0-9.]+)\+?[0-9]*', _pubspec, re.M)
+_meta = open(os.path.join(APP, 'lib', 'data', 'app_meta.dart'), encoding='utf-8').read()
+_mv = re.search(r"kAppVersion\s*=\s*'([0-9.]+)'", _meta)
+if not _pv or not _mv:
+    p('VERSION', '读不到 pubspec 版本或 app_meta 的 kAppVersion')
+elif _pv.group(1) != _mv.group(1):
+    p('VERSION', 'pubspec %s 与 app_meta kAppVersion %s 不一致' % (_pv.group(1), _mv.group(1)))
+
 # ---------- 1. 结构 ----------
 colors = 0
 for i, b in enumerate(DATA['books']):
@@ -60,6 +73,10 @@ for f in ref_img:
 # ---------- 3. 冗余 ----------
 extra = []
 for root, _, files in os.walk(os.path.join(A, 'audio')):
+    # 以下划线开头的目录（如 _backup_greeting_swap）是人工备份/临时素材，
+    # 既不在 pubspec 的 assets 里、也不会打进 APK，不算"未引用"噪音。
+    if os.path.basename(root).startswith('_'):
+        continue
     for f in files:
         rel = os.path.join(os.path.relpath(root, os.path.join(A, 'audio')), f).replace('\\', '/')
         if rel.endswith('_slow.mp3'):

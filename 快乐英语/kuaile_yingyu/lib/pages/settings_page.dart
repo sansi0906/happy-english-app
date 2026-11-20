@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/app_meta.dart';
 import '../data/progress_db.dart';
 import '../main.dart';
 import '../services/app_log.dart';
@@ -477,13 +478,13 @@ class _SettingsPageState extends State<SettingsPage> {
                             fontWeight: FontWeight.w700,
                             color: kDark)),
                     SizedBox(width: 8),
-                    Text('v1.0.0',
+                    Text('v$kAppVersion',
                         style: TextStyle(fontSize: 14, color: kMuted)),
                   ],
                 ),
                 const SizedBox(height: 10),
                 const _AboutLine('新蕾《快乐英语》第 1–4 册 · 一、二年级'),
-                const _AboutLine('人教精通版第 5–12 册 · 三至六年级'),
+                const _AboutLine('人教精通版第 5–12 册 · 三至六年级（入口暂未开放）'),
                 const _AboutLine('纯离线 · 无账号 · 无广告 · 数据只在本机'),
               ],
             ),
