@@ -29,6 +29,13 @@ const kShadow = [
   BoxShadow(color: Color(0x0F000000), blurRadius: 16, offset: Offset(0, 6)),
 ];
 
+/// 首页当前对孩子开放的年级。
+///
+/// 3-6 年级的课文/单词还在按出版社教材逐册核对，教材本身也可能改版，
+/// 没核对完之前先不放进首页，免得孩子学到跟课本不一致的内容。
+/// 内容数据仍然打包在 APK 里（音频、图片都在），核对完把这里放开即可。
+const kVisibleGrades = {'1', '2'};
+
 /// 异常落盘：真机没有连接 ide 时，靠这个文件定位闪退/异常
 Future<void> _logFatal(Object error, StackTrace stack) async {
   debugPrint('[APP-ERROR] $error\n$stack');

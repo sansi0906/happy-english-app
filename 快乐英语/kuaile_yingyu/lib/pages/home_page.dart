@@ -142,8 +142,9 @@ class _HomePageState extends State<HomePage> {
     }
 
     final data = _data!;
+    // 只显示已核对过的年级（见 main.dart 的 kVisibleGrades）
     final grades = [
-      for (final g in data.gradeSupport)
+      for (final g in data.gradeSupport.where(kVisibleGrades.contains))
         (g, _gradeName(g), _booksLabel(data, g), _gradeColor(g), _gradeIcon(g)),
     ];
 
@@ -208,6 +209,11 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 6),
               const Text('点年级，再选上册或下册',
                   style: TextStyle(fontSize: 17, color: kMuted)),
+              if (grades.length < data.gradeSupport.length) ...[
+                const SizedBox(height: 4),
+                const Text('目前先开放一、二年级（3–6 年级课文还在核对中）',
+                    style: TextStyle(fontSize: 14, color: kMuted)),
+              ],
               const SizedBox(height: 22),
 
               // 年级网格：两列
