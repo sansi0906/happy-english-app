@@ -7,9 +7,11 @@ import '../data/progress_db.dart';
 import '../main.dart';
 import '../services/audio_service.dart';
 import '../services/riddles.dart';
-import '../services/scoring.dart';
 import '../services/speech_service.dart';
+import '../widgets/riddle_dialog.dart';
 import '../widgets/safe_tap.dart';
+import '../widgets/score_widgets.dart';
+
 /// 跟读打分：句子/单词列表，点击进入跟读页
 
 List<Widget> _splitSentence(String text, double fontSize,
@@ -124,7 +126,7 @@ class _SpeakPageState extends State<SpeakPage> {
                                 style: TextStyle(
                                     fontSize: tagSize, color: const Color(0xFF8A8070))),
                             const SizedBox(width: 10),
-                            _StarRow(star5: stars, size: starSize * 0.8),
+                            StarRow(star5: stars, size: starSize * 0.8),
                             if (score >= 0) ...[
                               const SizedBox(width: 4),
                               Text('${score.round()}分',
@@ -146,31 +148,6 @@ class _SpeakPageState extends State<SpeakPage> {
           ),
         );
       },
-    );
-  }
-}
-
-/// 五档星级显示（已学记录）
-class _StarRow extends StatelessWidget {
-  final int star5; // 0-5
-  final double size;
-  const _StarRow({required this.star5, required this.size});
-
-  @override
-  Widget build(BuildContext context) {
-    if (star5 <= 0) {
-      return Icon(Icons.star_border, color: const Color(0xFFD8CFC0), size: size);
-    }
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: List.generate(
-        3,
-        (i) => Icon(
-          i < star5 ? Icons.star : Icons.star_border,
-          color: kYellow,
-          size: size,
-        ),
-      ),
     );
   }
 }
@@ -215,7 +192,7 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
-      builder: (_) => _RiddleDialog(
+      builder: (_) => RiddleDialog(
         index: 1,
         total: 1,
         category: riddle['category']!,
@@ -478,7 +455,7 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                           const SizedBox(height: 12),
                           // 结果展示
                           if (_result != null && _result!.error == null)
-                            _ResultCard(result: _result!)
+                            ScoreResultCard(result: _result!)
                           else if (_result?.error != null)
                             Text(_result!.error!,
                                 style: const TextStyle(
@@ -493,169 +470,6 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
             ),
           );
         },
-      ),
-    );
-  }
-}
-
-class _RiddleDialog extends StatefulWidget {
-  final int index;
-  final int total;
-  final String category;
-  final String question;
-  final String answer;
-  final bool isLast;
-
-  const _RiddleDialog({
-    required this.index,
-    required this.total,
-    required this.category,
-    required this.question,
-    required this.answer,
-    required this.isLast,
-  });
-
-  @override
-  State<_RiddleDialog> createState() => _RiddleDialogState();
-}
-
-class _RiddleDialogState extends State<_RiddleDialog> {
-  bool _showAnswer = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(
-      backgroundColor: kWhite,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Icon(Icons.celebration, color: kOrange, size: 28),
-                const SizedBox(width: 8),
-                Text('满分奖励 · ${widget.category}',
-                    style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: kDark)),
-              ],
-            ),
-            const SizedBox(height: 16),
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-              decoration: BoxDecoration(
-                color: kGreenSoft,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Text(widget.question,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.w600,
-                      color: kDark,
-                      height: 1.4)),
-            ),
-            const SizedBox(height: 14),
-            AnimatedSwitcher(
-              duration: const Duration(milliseconds: 200),
-              child: _showAnswer
-                  ? Container(
-                      key: const ValueKey('ans'),
-                      width: double.infinity,
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                      decoration: BoxDecoration(
-                        color: kYellow.withValues(alpha: 0.35),
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Text('答案：${widget.answer}',
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w700,
-                              color: kDark)),
-                    )
-                  : const SizedBox(key: ValueKey('none'), height: 4),
-            ),
-            const SizedBox(height: 14),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: _showAnswer ? kGreen : kOrange,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                ),
-                onPressed: () {
-                  if (_showAnswer) {
-                    Navigator.of(context).pop();
-                  } else {
-                    setState(() => _showAnswer = true);
-                  }
-                },
-                child: Text(
-                  !_showAnswer ? '看答案' : (widget.isLast ? '完成' : '下一题'),
-                  style: const TextStyle(
-                      fontSize: 18, color: kWhite, fontWeight: FontWeight.w700),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _ResultCard extends StatelessWidget {
-  final SpeakResult result;
-  const _ResultCard({required this.result});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
-      decoration: BoxDecoration(
-        color: kWhite,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: kLine),
-        boxShadow: kShadow,
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              3,
-              (i) => Icon(
-                i < result.displayStars ? Icons.star_rounded : Icons.star_border_rounded,
-                color: i < result.displayStars ? kOrange : kLine,
-                size: 44,
-              ),
-            ),
-          ),
-          const SizedBox(height: 6),
-          // V1.2.1：没听到声音（0 分且无错误）时给明确提示，其余按星级给鼓励语
-          Text(result.score <= 0 ? '没听到声音，靠近一点再试试！' : encouragement(result.displayStars),
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                  fontSize: 19, fontWeight: FontWeight.w700, color: kDark)),
-          const SizedBox(height: 4),
-          Text('${result.score.toStringAsFixed(0)} 分',
-              style: const TextStyle(
-                  fontSize: 17, fontWeight: FontWeight.w600, color: kMuted)),
-          if (result.score >= 35 && result.score <= 45)
-            const Padding(
-              padding: EdgeInsets.only(top: 6),
-              child: Text('读慢一点、声音大一点，靠近手机再试一次',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 14, color: kMuted)),
-            ),
-        ],
       ),
     );
   }
