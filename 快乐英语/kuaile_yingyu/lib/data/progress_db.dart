@@ -29,7 +29,9 @@ class ProgressDb {
   /// v1：早期库，settings/riddles_seen/star_mode/score 全靠启动时手工补列
   /// v2：正式纳入 settings、riddles_seen，progress 增加 star_mode 列
   /// v3：progress 增加 score 列
-  static const int schemaVersion = 3;
+  /// v4：新增 attempts 表（每次跟读留一条流水；progress 只存"最后一次"，
+  ///    会把练习次数覆盖掉，家长周报需要真实次数）
+  static const int schemaVersion = 4;
 
   /// 备份文件放在应用文档目录下的子目录（随 App 卸载而消失，不落公共目录）
   static const String _backupFolder = 'backup';
@@ -89,12 +91,29 @@ class ProgressDb {
         seen_at TEXT
       )
     ''');
+    await _createAttemptsTable(db);
+  }
+
+  /// 每次跟读的流水表：谁、多少分、什么时候。只增不改。
+  static Future<void> _createAttemptsTable(Database db) async {
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS attempts(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        item_id TEXT NOT NULL,
+        stars INTEGER NOT NULL DEFAULT 0,
+        score REAL NOT NULL DEFAULT -1,
+        at TEXT NOT NULL
+      )
+    ''');
+    await db.execute(
+        'CREATE INDEX IF NOT EXISTS idx_attempts_at ON attempts(at)');
   }
 
   /// 分组迁移：每段都写成幂等的，老设备（v1）与新设备都能一次性升到 [schemaVersion]。
   static Future<void> _upgrade(Database db, int oldVersion, int newVersion) async {
     if (oldVersion < 2) await _upgradeToV2(db);
     if (oldVersion < 3) await _upgradeToV3(db);
+    if (oldVersion < 4) await _upgradeToV4(db);
     // 升级结果写进诊断日志，真机上可核对到底跑没跑
     AppLog.append('db', 'schema 升级 $oldVersion → $newVersion 完成');
   }
@@ -138,6 +157,30 @@ class ProgressDb {
     }
   }
 
+  /// v4：建 attempts 流水表，并把老库里"最后一次练习"回填成一条流水，
+  /// 这样升级后周报不会是空白（旧记录只有时间点，次数按 1 次算）。
+  static Future<void> _upgradeToV4(Database db) async {
+    await _createAttemptsTable(db);
+    final cols = await db.rawQuery('PRAGMA table_info(progress)');
+    final hasUpdated = cols.any((c) => c['name'] == 'updated');
+    if (!hasUpdated) return;
+    final rows = await db.query(
+      'progress',
+      columns: ['item_id', 'stars', 'score', 'updated'],
+      where: 'updated IS NOT NULL AND updated <> ""',
+    );
+    final batch = db.batch();
+    for (final r in rows) {
+      batch.insert('attempts', {
+        'item_id': r['item_id'],
+        'stars': r['stars'] ?? 0,
+        'score': (r['score'] as num?)?.toDouble() ?? -1,
+        'at': r['updated'],
+      });
+    }
+    await batch.commit(noResult: true);
+  }
+
   // ---- 设置 ----
 
   /// 读取一条设置；无记录返回 [def]
@@ -164,18 +207,47 @@ class ProgressDb {
   static Future<void> saveResult(String itemId, int stars,
       {double score = -1}) async {
     final db = await _open();
+    final now = DateTime.now().toIso8601String();
     await db.insert(
       'progress',
       {
         'item_id': itemId,
         'stars': stars,
         'done': 1,
-        'updated': DateTime.now().toIso8601String(),
+        'updated': now,
         'star_mode': 'new3',
         'score': score,
       },
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
+    // 同时留一条流水；流水写失败不能影响成绩保存
+    try {
+      await db.insert('attempts', {
+        'item_id': itemId,
+        'stars': stars,
+        'score': score,
+        'at': now,
+      });
+    } catch (e) {
+      AppLog.append('db', '写练习流水失败: $e');
+    }
+  }
+
+  /// 读取 [from] 之后的所有跟读流水（周报用），按时间正序
+  static Future<List<Map<String, dynamic>>> attemptsSince(DateTime from) async {
+    final db = await _open();
+    return db.query(
+      'attempts',
+      where: 'at >= ?',
+      whereArgs: [from.toIso8601String()],
+      orderBy: 'at ASC',
+    );
+  }
+
+  /// 清空练习流水（清空进度时一起清，避免周报和进度不一致）
+  static Future<void> clearAttempts() async {
+    final db = await _open();
+    await db.delete('attempts');
   }
 
   /// 读取某条进度；无记录返回 null
@@ -206,6 +278,8 @@ class ProgressDb {
   static Future<void> clearAll() async {
     final db = await _open();
     await db.delete('progress');
+    // 进度清了，流水也要清，否则周报还会显示"本周练过"
+    await db.delete('attempts');
   }
 
   // ---- 弱项复习（错题本）----
@@ -266,13 +340,14 @@ class ProgressDb {
 
   // ---- 备份 / 恢复 ----
 
-  /// 导出为可读 JSON（进度 + 设置 + 知识卡记录）。
+  /// 导出为可读 JSON（进度 + 设置 + 知识卡记录 + 练习流水）。
   /// 也是"导出到下载目录"的数据源。
   static Future<String> exportJson() async {
     final db = await _open();
     final progress = await db.query('progress');
     final settings = await db.query('settings');
     final riddles = await db.query('riddles_seen');
+    final attempts = await db.query('attempts');
     return const JsonEncoder.withIndent('  ').convert({
       'app': '快乐英语',
       'schema': schemaVersion,
@@ -280,6 +355,7 @@ class ProgressDb {
       'progress': progress,
       'settings': settings,
       'riddles_seen': riddles,
+      'attempts': attempts,
     });
   }
 
@@ -432,6 +508,17 @@ class ProgressDb {
         for (final row in riddles) {
           if (row is Map) {
             await txn.insert('riddles_seen', Map<String, dynamic>.from(row),
+                conflictAlgorithm: ConflictAlgorithm.replace);
+          }
+        }
+      }
+      // 练习流水：老备份里没有这一段，有才恢复
+      final attempts = data['attempts'];
+      if (attempts is List) {
+        await txn.delete('attempts');
+        for (final row in attempts) {
+          if (row is Map) {
+            await txn.insert('attempts', Map<String, dynamic>.from(row),
                 conflictAlgorithm: ConflictAlgorithm.replace);
           }
         }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../data/content_loader.dart';
+import '../data/content_index.dart';
 import '../data/models.dart';
 import '../data/progress_db.dart';
 import '../main.dart';
@@ -45,18 +45,8 @@ class _ReviewPageState extends State<ReviewPage> {
   Future<void> _load() async {
     if (mounted) setState(() => _loading = true);
     try {
-      final data = await ContentLoader.load();
+      final index = await buildContentIndex();
       final rows = await ProgressDb.weakItems();
-
-      // 建 progressKey -> 教材位置 的索引，一次遍历全内容
-      final index = <String, ({Book book, Unit unit, Item item})>{};
-      for (final b in data.books) {
-        for (final u in b.units) {
-          for (final it in u.allItems) {
-            index[u.progressKey(it)] = (book: b, unit: u, item: it);
-          }
-        }
-      }
 
       final out = <_Weak>[];
       var missing = 0;
@@ -104,29 +94,11 @@ class _ReviewPageState extends State<ReviewPage> {
     if (mounted) await _load();
   }
 
-  static const _cnNum = [
-    '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'
-  ];
-
-  static String _gradeName(String g) {
-    const names = {
-      '1': '一年级',
-      '2': '二年级',
-      '3': '三年级',
-      '4': '四年级',
-      '5': '五年级',
-      '6': '六年级',
-    };
-    return names[g] ?? '$g 年级';
-  }
-
-  static String _where(_Weak w) {
-    final n = int.tryParse(w.book.bookId);
-    final vol = (n != null && n >= 1 && n <= 12) ? '第${_cnNum[n - 1]}册' : '';
-    final unitTitle =
-        w.unit.titleEn.isNotEmpty ? w.unit.titleEn : w.unit.title;
-    return '${_gradeName(w.book.grade)} $vol · $unitTitle';
-  }
+  static String _where(_Weak w) => whereLabel((
+        book: w.book,
+        unit: w.unit,
+        item: w.item,
+      ));
 
   @override
   Widget build(BuildContext context) {

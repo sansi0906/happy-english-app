@@ -8,6 +8,7 @@ import '../widgets/safe_tap.dart';
 import 'book_page.dart';
 import 'review_page.dart';
 import 'settings_page.dart';
+import 'weekly_report_page.dart';
 
 /// 首页 V2：年级选择改成两列网格，一屏看全，不再让家长滚半天。
 class HomePage extends StatefulWidget {
@@ -23,6 +24,8 @@ class _HomePageState extends State<HomePage> {
   String? _error;
   /// 待复习条数（右上角角标）；失败不影响首页，按 0 处理
   int _weak = 0;
+  /// 本周练习次数（周报卡用）
+  int _weekTimes = 0;
 
   @override
   void initState() {
@@ -34,8 +37,11 @@ class _HomePageState extends State<HomePage> {
     try {
       final d = await ContentLoader.load();
       int weak = 0;
+      int week = 0;
       try {
         weak = await ProgressDb.weakCount();
+        final monday = _mondayOf(DateTime.now());
+        week = (await ProgressDb.attemptsSince(monday)).length;
       } catch (_) {
         // 进度库读不出来时只需要没有角标，不必影响首页
       }
@@ -43,6 +49,7 @@ class _HomePageState extends State<HomePage> {
         setState(() {
           _data = d;
           _weak = weak;
+          _weekTimes = week;
           _loading = false;
         });
       }
@@ -56,14 +63,36 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  /// 从复习页返回后刷新角标（练达标了数量会减少）
+  static DateTime _mondayOf(DateTime d) {
+    final day = DateTime(d.year, d.month, d.day);
+    return day.subtract(Duration(days: day.weekday - 1));
+  }
+
+  /// 从复习页/周报返回后刷新计数（练达标会减少待复习、增加本周练习次数）
+  Future<void> _refreshCounters() async {
+    try {
+      final weak = await ProgressDb.weakCount();
+      final monday = _mondayOf(DateTime.now());
+      final week = (await ProgressDb.attemptsSince(monday)).length;
+      if (mounted) {
+        setState(() {
+          _weak = weak;
+          _weekTimes = week;
+        });
+      }
+    } catch (_) {}
+  }
+
   Future<void> _openReview() async {
     await Navigator.of(context)
         .push(MaterialPageRoute(builder: (_) => const ReviewPage()));
-    try {
-      final weak = await ProgressDb.weakCount();
-      if (mounted) setState(() => _weak = weak);
-    } catch (_) {}
+    await _refreshCounters();
+  }
+
+  Future<void> _openReport() async {
+    await Navigator.of(context)
+        .push(MaterialPageRoute(builder: (_) => const WeeklyReportPage()));
+    await _refreshCounters();
   }
 
   @override
@@ -160,9 +189,12 @@ class _HomePageState extends State<HomePage> {
                     tooltip: '设置',
                     icon: const Icon(Icons.settings_outlined,
                         color: kDark, size: 28),
-                    onPressed: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const SettingsPage()),
-                    ),
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(
+                              builder: (_) => const SettingsPage()))
+                          .then((_) => _refreshCounters());
+                    },
                   ),
                 ],
               ),
@@ -194,12 +226,16 @@ class _HomePageState extends State<HomePage> {
                             sub: g.$3,
                             color: g.$4,
                             icon: g.$5,
-                            onTap: () => Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (_) =>
-                                    BookSelectorPage(grade: g.$1, data: data),
-                              ),
-                            ),
+                            onTap: () {
+                              Navigator.of(context)
+                                  .push(
+                                    MaterialPageRoute(
+                                      builder: (_) => BookSelectorPage(
+                                          grade: g.$1, data: data),
+                                    ),
+                                  )
+                                  .then((_) => _refreshCounters());
+                            },
                           ),
                         ),
                     ],
@@ -207,7 +243,61 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
 
-              const SizedBox(height: 26),
+              const SizedBox(height: 20),
+
+              // 本周学习报告：家长最关心的一句话总结，点开看详情
+              SafeTap(
+                onTap: _openReport,
+                borderRadius: BorderRadius.circular(kRadius),
+                child: Container(
+                  padding: const EdgeInsets.all(18),
+                  decoration: BoxDecoration(
+                    color: kWhite,
+                    borderRadius: BorderRadius.circular(kRadius),
+                    border: Border.all(color: kLine),
+                    boxShadow: kShadow,
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: kBlueSoft,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: const Icon(Icons.insights_rounded,
+                            color: kBlue, size: 22),
+                      ),
+                      const SizedBox(width: 14),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('本周学习报告',
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w700,
+                                    color: kDark)),
+                            const SizedBox(height: 3),
+                            Text(
+                              _weekTimes == 0
+                                  ? '这周还没跟读，点开看看'
+                                  : '本周练了 $_weekTimes 次 · 点开看详情',
+                              style: const TextStyle(
+                                  fontSize: 15, color: kMuted),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Icon(Icons.chevron_right_rounded,
+                          color: kMuted, size: 28),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 14),
               Container(
                 padding: const EdgeInsets.all(18),
                 decoration: BoxDecoration(
