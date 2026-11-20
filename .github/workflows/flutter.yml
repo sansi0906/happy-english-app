@@ -118,23 +118,10 @@ jobs:
 
       - run: flutter pub get
 
-      # 正式签名：仓库里不放密钥，改用 secrets 注入。
-      # 需要配两个 secret：KEYSTORE_BASE64（jks 的 base64）、KEY_PROPERTIES（整份 key.properties 内容）。
-      # 没配也能跑，只是回退 debug 签名——同一台手机上会因签名不同而装不上，
-      # 升级包必须用同一个 keystore，所以正式用请务必配齐。
-      - name: 注入正式签名
-        working-directory: 快乐英语/kuaile_yingyu
-        env:
-          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
-          KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
-        run: |
-          if [ -z "$KEYSTORE_BASE64" ]; then
-            echo "::warning::未配置 KEYSTORE_BASE64，本次用 debug 签名（仅可用于测试）"
-            exit 0
-          fi
-          echo "$KEYSTORE_BASE64" | base64 -d > android/app/kuaile-release.jks
-          printf '%s\n' "$KEY_PROPERTIES" > android/key.properties
-          echo "已注入正式签名"
+      # 签名说明：仓库不放 keystore，CI 也不注入，所以这里构建出来的是 debug 签名包，
+      # 只用来验证「能编出来 + 体积门禁」。正式包在本地出：
+      #   flutter build apk --release --target-platform android-arm64
+      # （本地有 android/key.properties 就自动用 release 签名）
 
       # jni 插件走 CMake，需要 NDK 和对应版本的 CMake。
       # runner 不保证预装 CMake 3.22.1，本地能跑通是因为 SDK 里正好有这个版本。
