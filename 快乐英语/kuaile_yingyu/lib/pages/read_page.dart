@@ -45,7 +45,7 @@ class _ReadPageState extends State<ReadPage> {
       return;
     }
     // 点读页固定正常语速：跟读页的"慢速"开关不应串到这里
-    await AudioService.play(item.audioAsset, slow: false);
+    await AudioService.play(item.audioAsset);
     if (mounted) setState(() => _playingId = item.id);
   }
 

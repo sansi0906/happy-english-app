@@ -128,7 +128,7 @@ class _WordPageState extends State<WordPage> {
                       // 发音按钮
                       SafeTap(
                         borderRadius: BorderRadius.circular(30),
-                        onTap: () => AudioService.play(w.audioAsset, slow: false),
+                        onTap: () => AudioService.play(w.audioAsset),
                         child: Container(
                           width: 128,
                           padding: const EdgeInsets.symmetric(vertical: 12),

@@ -377,8 +377,8 @@ class _SpeakDetailPageState extends State<SpeakDetailPage> {
                             onTap: () async {
                               // 先取 messenger，避免 await 之后再使用 context
                               final messenger = ScaffoldMessenger.of(context);
-                              final ok = await AudioService.play(it.audioAsset,
-                                  slow: false);
+                              final ok =
+                                  await AudioService.play(it.audioAsset);
                               if (!ok) {
                                 messenger.showSnackBar(
                                   const SnackBar(

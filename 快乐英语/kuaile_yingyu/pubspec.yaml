@@ -40,9 +40,9 @@ dependencies:
   sqflite: ^2.4.1
   path: ^1.9.0
   path_provider: ^2.1.4
-  # 本地离线语音识别（Vosk 活跃 fork，POC 结论主引擎）
+  # 本地离线语音识别（跟读打分主引擎，模型在 assets/models/）
   vosk_flutter_service: ^0.1.3
-  # 录音（WAV/PCM16，喂 Vosk 双识别器做混合打分）
+  # 录音（WAV/PCM16，喂 Vosk 识别器打分）
   record: ^6.1.0
 
 dev_dependencies:
