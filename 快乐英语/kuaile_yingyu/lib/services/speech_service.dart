@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:record/record.dart';
@@ -264,9 +265,15 @@ class SpeechService {
       if (ok) {
         final src = File(srcPath);
         if (src.existsSync()) src.deleteSync();
+      } else {
+        // V1.5.5：归档失败不再静默——原因写在 RecordingsStore.lastError，
+        // 这里补一条日志，设置页/诊断可查
+        debugPrint('录音归档失败: ${RecordingsStore.lastError ?? "未知原因"}');
       }
-    } catch (_) {
-      // 归档失败不阻塞打分结果
+    } catch (e, st) {
+      // 归档失败不阻塞打分结果，但必须留痕
+      debugPrint('录音归档异常: $e');
+      debugPrintStack(stackTrace: st);
     }
   }
 

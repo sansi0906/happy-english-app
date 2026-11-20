@@ -25,15 +25,15 @@ class _ReadPageState extends State<ReadPage> {
   @override
   void initState() {
     super.initState();
-    // 播放完成自动恢复为播放按钮
-    AudioService.onComplete = () {
+    // 播放完成自动恢复为播放按钮（绑定本页为持有者，避免跨页串台）
+    AudioService.bindCompletion(this, () {
       if (mounted) setState(() => _playingId = null);
-    };
+    });
   }
 
   @override
   void dispose() {
-    AudioService.onComplete = null;
+    AudioService.releaseCompletion(this);
     AudioService.stop();
     super.dispose();
   }

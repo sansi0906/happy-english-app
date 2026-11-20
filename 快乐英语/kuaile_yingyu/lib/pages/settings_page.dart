@@ -4,6 +4,7 @@ import '../data/progress_db.dart';
 import '../main.dart';
 import '../services/recordings_store.dart';
 import '../widgets/safe_tap.dart';
+import 'diagnostic_page.dart';
 import 'recordings_page.dart';
 
 /// 危险操作色（比主题橙更红，一眼能分辨"会删东西"）
@@ -23,7 +24,8 @@ class _SettingsPageState extends State<SettingsPage> {
   final _nameCtrl = TextEditingController();
   bool _nameLoaded = false;
   int _learned = 0;
-  ({int count, int bytes}) _recStats = (count: 0, bytes: 0);
+  ({int count, int bytes, bool error}) _recStats =
+      (count: 0, bytes: 0, error: false);
 
   @override
   void initState() {
@@ -237,8 +239,12 @@ class _SettingsPageState extends State<SettingsPage> {
                   icon: Icons.mic_rounded,
                   color: kGreen,
                   title: '本机录音',
-                  sub: '只存在这台手机上，不会上传',
-                  value: '${_recStats.count} 条 · $recMb MB',
+                  sub: _recStats.error
+                      ? '读取失败：${RecordingsStore.lastError ?? "未知原因"}'
+                      : '只存在这台手机上，不会上传',
+                  value: _recStats.error
+                      ? '读取失败'
+                      : '${_recStats.count} 条 · $recMb MB',
                 ),
                 if (_recStats.count > 0) ...[
                   const Divider(height: 1, color: kLine),
@@ -292,6 +298,19 @@ class _SettingsPageState extends State<SettingsPage> {
                 const _AboutLine('人教精通版第 5–12 册 · 三至六年级'),
                 const _AboutLine('纯离线 · 无账号 · 无广告 · 数据只在本机'),
               ],
+            ),
+          ),
+          const _SectionLabel('诊断'),
+          _Card(
+            padding: EdgeInsets.zero,
+            child: _ActionRow(
+              icon: Icons.bug_report_outlined,
+              color: kBlue,
+              title: '诊断日志',
+              sub: '音频、录音出问题时，把这里的内容发我',
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const DiagnosticPage()),
+              ),
             ),
           ),
         ],

@@ -1,12 +1,11 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:path_provider/path_provider.dart';
 
 import 'pages/home_page.dart';
+import 'services/app_log.dart';
 import 'services/audio_service.dart';
 
 /// 主题色板（UI V2.0）
@@ -32,15 +31,8 @@ const kShadow = [
 
 /// 异常落盘：真机没有连接 ide 时，靠这个文件定位闪退/异常
 Future<void> _logFatal(Object error, StackTrace stack) async {
-  final line = '${DateTime.now().toIso8601String()}  $error\n$stack\n\n';
-  debugPrint('[APP-ERROR] $line');
-  try {
-    final dir = await getApplicationSupportDirectory();
-    await File('${dir.path}/app_error.log')
-        .writeAsString(line, mode: FileMode.append, flush: true);
-  } catch (_) {
-    // 日志本身失败不能影响主流程
-  }
+  debugPrint('[APP-ERROR] $error\n$stack');
+  await AppLog.error(error, stack);
 }
 
 void main() {
